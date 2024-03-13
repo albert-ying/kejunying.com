@@ -1,0 +1,95 @@
+baseurl = "/"
+title = "Kejun Albert Ying 「应可钧」"
+theme = "typography"
+
+ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "index\\.html", "about\\.html", "static/blog/\\*_files/", "README.md", ".venv"]
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+    introtag = "introduction"
+
+    intro = "Hello! I'm a PhD candidate at [Harvard Medical School](https://hms.harvard.edu/), [Vadim Gladyshev lab](https://gladyshevlab.bwh.harvard.edu/). My research interests include aging and omics, with a focus on the cause of aging, epigenetics, metabolism, and multi-omics. My recent work focuses on [the causal role of DNA methylation in aging and age-related diseases, and I built the first causal biomarker of aging](https://www.nature.com/articles/s43587-023-00557-0). I also built the [ClockBase](https://clockbase.org) ([preprint](https://www.biorxiv.org/content/10.1101/2023.02.28.530532v1)), which provides a resource for the scientific community to quantify and explore biological ages of more than 2.5 million samples on GEO, thus facilitating discovery of new longevity interventions and age-accelerating conditions. I'm also interested in **machine learning** and **protein design**."
+
+    favicon = "avatar.jpg"
+    highlightstyle  = "foundation"
+
+    iconsource = "simple-icons"
+
+    description = "Kejun (Albert) Ying's personal website | 应可钧的个人网站"
+    keywords = "personal, science"
+
+    customcss = ["custom_style.css"]
+
+    umami       = false
+    umamilink   = "https://analytics-danielroelfs.netlify.app/script.js"
+    umamiid     = "10185115-89df-427f-9aea-8c3575857825"
+# recent news
+    [[params.news]]
+        date = "2024-03"
+        name = "Website is alive!"
+        url = ""
+        
+    
+    # Social links
+    [[params.social]]
+        name = "GitHub"
+        icon = "github"
+        weight = 1
+        url = "https://github.com/albert-ying/"
+    [[params.social]]
+        name = "LinkedIn"
+        icon = "linkedin"
+        weight = 2
+        url = "https://www.linkedin.com/in/kejun-albert-ying/"
+    [[params.social]]
+        name = "Twitter"
+        icon = "x"
+        weight = 4
+        url = "https://twitter.com/kejunying/"
+    [[params.social]]
+        name = "ORCID"
+        icon = "orcid"
+        weight = 5
+        url = "https://orcid.org/0000-0002-1791-6176"
+    [[params.social]]
+        name = "Google Scholar"
+        icon = "googlescholar"
+        weight = 6
+        url = "https://scholar.google.com/citations?user=JS7AdkcAAAAJ&hl=en"
+    [[params.social]]
+        name = "Mail"
+        icon = "gmail"
+        weight = 7
+        url = "mailto:kying@g.harvard.edu"
+
+# Menu links
+[menu]
+    [[menu.main]]
+        name = "Home"
+        url  = "/"
+        weight = 1
+    [[menu.main]]
+        name = "news"
+        url  = "/news"
+        weight = 2
+    [[menu.main]]
+        name = "Publications"
+        url = "/publications"
+        weight = 4
+    [[menu.main]]
+        name = "academic CV"
+        url = "/cv"
+        weight = 5
+    [[menu.main]]
+        name = "about"
+        url = "/about"
+        weight = 6
+    [[menu.main]]
+        name = "poetry"
+        url = "/poetry"    
+        weight = 7

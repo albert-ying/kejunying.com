@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta name="description" content="//localhost:1313/">
+    <meta name="keywords" content="personal, science">
+
+    <meta property="og:site_name" content="Kejun Albert Ying">
+    <meta property="og:title" content="Kejun Albert Ying">
+    <meta property="og:description" content="How I Create Manhattan Plots Using ggplot">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="//localhost:1313/blog/how-i-create-manhattan-plots-using-ggplot/">
+    <meta property="og:image" content="//localhost:1313/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="//localhost:1313/blog/how-i-create-manhattan-plots-using-ggplot/">
+    <meta name="twitter:image" content="//localhost:1313/">
+
+    
+    <link rel="stylesheet" type="text/css" href="//localhost:1313/css/style.css">
+    
+    
+    
+        
+        <link rel="stylesheet" href="/custom_style.css" integrity="">
+    
+
+    <link rel="stylesheet" href="https://use.typekit.net/jxt2fnp.css"> 
+    <link rel="stylesheet" href="https://use.typekit.net/uwd7war.css"> 
+    <link href="https://fonts.cdnfonts.com/css/cooper-hewitt" rel="stylesheet">
+    
+    
+        <meta name="description" content="Kejun (Albert) Ying&#39;s personal website">
+    
+
+    
+        
+            <link rel="shortcut icon" href="/Albert_headshot.jpg">
+        
+    
+
+    
+    
+    
+    
+    
+    <title>how i create manhattan plots using ggplot | kejun albert ying</title>
+</head><body><div id="top-stripe"></div><div id="content">
+
+    <div class="article-nav-outer">
+        <div class="article-nav-inner">
+            <a class="internal" hyphens="none" href='/blog'>← back to blog</a>
+        </div>
+    </div>
+
+<h2 class="article-title">How I Create Manhattan Plots Using ggplot</h2>
+<div id="doc">
+    <div class="hanging-subtitle">
+        
+                
+        
+            
+                <p>24 April 2019</p>
+            
+        
+    </div>
+<h2 id="introduction">Introduction</h2>
+<p>There are many ways to create a Manhattan plot. There&rsquo;s a number of online tools that create Manhattan plots for you, it&rsquo;s implemented in a number of toolboxes that are often used in genetics, and there&rsquo;s a couple of packages for R that can create these plots. However, these options often don&rsquo;t offer the customizability that some people (like me) would want. One of the most flexible ways to plot a Manhattan plot (I know of) is the <code>{manhattan}</code> package, but how nice would it be to have full control over the properties of the plot. Therefore, whenever I need to create a Manhattan plot, my preference is to go to the awesome <code>{ggplot2}</code> package. In my opinion, it gives me more control over the lay-out and properties of the Manhattan plot, so I thought I&rsquo;d go through how I go about creating Manhattan plots in R using the <code>{ggplot2}</code> package. I&rsquo;ve tried this code on GWAS summary statistics from several sources, and it works for a bunch of them. Because data can look somewhat different, I&rsquo;ll describe the concept behind some of the code, as to show what my reasoning is behind each step. One thing I should point out is that it&rsquo;s probably best to run this code on a computer that is a little bit powerful, since it will need to deal with an enormous amount of SNPs, that will create massive dataframes and plot objects.</p>
+<h2 id="import-data-into-r">Import data into R</h2>
+<p>The first step, as always, is to load the packages we need. I personally prefer to use as little packages as possible and write most of the code myself, because that gives me total control over what happens to my data. However, there are some packages (in particular some of the packages developed by Hadley Wickham) that are very powerful. So, all code described below depends on one of two packages, the <code>{tidyverse}</code> package, which includes the <code>{ggplot2}</code> and <code>{dplyr}</code> package. Next, I load the file that contains the GWAS summary statistics. Different tools use different file formats. The file I use is the output from PLINK with the <code>--meta-analysis</code> flag. This file can simple be loaded as a table. Here I use a function from our own <code>{normentR}</code> package, called <code>simulateGWAS()</code>, which does as the name suggest, and simulate the output from a GWAS analysis.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tidyverse)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(ggtext)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(normentR)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">set.seed</span>(<span style="color:#ae81ff">2404</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>gwas_data_load <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">simulateGWAS</span>(nSNPs <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e6</span>, nSigCols <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  janitor<span style="color:#f92672">::</span><span style="color:#a6e22e">clean_names</span>()
+</span></span></code></pre></div><pre><code>GENERATING SIMULATED GWAS DATASET
+1. Generating random rs IDs
+2. Generate list of N per SNP
+3. Generating BETA
+4. Generating SE
+5. Generating R^2
+6. Generating T-values
+7. Generating P-values
+8. Adding significant column in chromosome 4
+9. Adding significant column in chromosome 5
+10. Adding significant column in chromosome 7
+DONE!
+</code></pre>
+<p>This will create a dataframe with as many rows as there are SNPs in the summary statistics file. The columns and column names depend on what tools and functions have been used. But it should at least have a column with the chromosome (probably called <code>CHR</code>), the position of the SNP on the chromosome (probably called <code>BP</code>), the p-value (in a column called <code>P</code>), and the SNP name (in a column aptly named <code>SNP</code>). There can be multiple columns with differently weighted or corrected p-values. I usually use just the regular normal <code>P</code> column. Since I don&rsquo;t like capital letters in column names, I use the <code>clean_names()</code> function from the <code>{janitor}</code> package to clean those up. This function replaces all capital letters with lowercase letters in a clean way and adds underscores where appropriate.</p>
+<p>A vast majority of the datapoints will overlap in the non-significant region of the Manhattan plot, these data points are not particularly informative, and it&rsquo;s possible to select a random number of SNPs in this region to make it less computationally heavy. The data I used here does not have such a large volume, so I only needed to filter a small number of SNPs (10% in this case).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>sig_data <span style="color:#f92672">&lt;-</span> gwas_data_load <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">subset</span>(p <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.05</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>notsig_data <span style="color:#f92672">&lt;-</span> gwas_data_load <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">subset</span>(p <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0.05</span>) <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(chr) <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">sample_frac</span>(<span style="color:#ae81ff">0.1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>gwas_data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">bind_rows</span>(sig_data, notsig_data)
+</span></span></code></pre></div><h2 id="preparing-the-data">Preparing the data</h2>
+<p>Since the only columns we have indicating position are the chromosome number and the base pair position of the SNP on that chromosome, we want to combine those so that we have one column with position that we can use for the x-axis. So, what we want to do is to create a column with cumulative base pair position in a way that puts the SNPs on the first chromosome first, and the SNPs on chromosome 22 last. I create a data frame frame called <code>data_cum</code> (for cumulative), which selects the largest position for each chromosome, and then calculates the cumulative sum of those. Since we don&rsquo;t need to add anything to the first chromosome, we move everything one row down (using the <code>lag()</code> function). We then merge this data frame with the original dataframe and calculate a the cumulative basepair position for each SNP by adding the relative position and the adding factor together. This will create a column (here called <code>bp_cum</code>) in which the relative base pair position is the position as if it was stitched together. This code is shown below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>data_cum <span style="color:#f92672">&lt;-</span> gwas_data <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(chr) <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">summarise</span>(max_bp <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span>(bp)) <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">mutate</span>(bp_add <span style="color:#f92672">=</span> <span style="color:#a6e22e">lag</span>(<span style="color:#a6e22e">cumsum</span>(max_bp), default <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>)) <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">select</span>(chr, bp_add)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>gwas_data <span style="color:#f92672">&lt;-</span> gwas_data <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">inner_join</span>(data_cum, by <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;chr&#34;</span>) <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">mutate</span>(bp_cum <span style="color:#f92672">=</span> bp <span style="color:#f92672">+</span> bp_add)
+</span></span></code></pre></div><p>When this is done, the next thing I want to do is to get a couple of parameters that I&rsquo;ll use for the plot later. First, I want the centre position of each chromosome. This position I&rsquo;ll use later to place the labels on the x-axis of the Manhattan plot neatly in the middle of each chromosome. In order to get this position, I&rsquo;ll pipe the <code>gwas_data</code> dataframe into this powerful <code>{dplyr}</code> function which I then ask to calculate the difference between the maximum and minimum cumulative base pair position for each chromosome and divide it by two to get the middle of each chromosome. I also want to set the limit of the y-axis, as not to cut off any highly significant SNPs. If you want to compare multiple GWAS statistics, then I highly recommend to hard code the limit of the y-axis, and then explore the data beforehand to make sure your chosen limit does not cut off any SNPs. Since the y-axis will be log transformed, we need an integer that is lower than the largest negative exponent. But since the y-axis will be linear and positive, I transform the largest exponent to positive and add 2, to give some extra space on the top edge of the plot. When plotting, I actually convert it back to a log scale, but it&rsquo;s a bit easier to add a constant to it by transforming it to a regular integer first.</p>
+<div class="sidenote"  style="padding-top: 5em;">Note that the 5e-8 threshold <a href="https://doi.org/10.1038%2Fejhg.2015.269">has its own issues</a></div>
+<p>Then, we also want to indicate the significance threshold, I prefer to save this in a variable. Here, I choose to get a Bonferroni-corrected threshold, which is 0.05 divided by the number of SNPs in the summary statistics. Usually, I would use the &ldquo;default&rdquo; threshold of 0.05 divided by 1e-6 which is 5e-8. However, in the data I had I believed it to be best to use the Bonferroni-corrected threshold to be a little bit more conservative given the dataset I had. These three parameters were calculated as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>axis_set <span style="color:#f92672">&lt;-</span> gwas_data <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(chr) <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">summarize</span>(center <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(bp_cum))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ylim <span style="color:#f92672">&lt;-</span> gwas_data <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">filter</span>(p <span style="color:#f92672">==</span> <span style="color:#a6e22e">min</span>(p)) <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">mutate</span>(ylim <span style="color:#f92672">=</span> <span style="color:#a6e22e">abs</span>(<span style="color:#a6e22e">floor</span>(<span style="color:#a6e22e">log10</span>(p))) <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>) <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">pull</span>(ylim)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sig <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">0.05</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">nrow</span>(gwas_data_load)
+</span></span></code></pre></div><h2 id="plotting-the-data">Plotting the data</h2>
+<p>Finally, we&rsquo;re ready to plot the data. As promised, I use the <code>ggplot()</code> function for this. I build this up like I would any other <code>ggplot</code> object, each SNP will be one point on the plot. Each SNP will be colored based on the chromosome. I manually set the colors, add the labels based on the definitions I determined earlier, and set the y limits to the limit calculated before as well. I add a horizontal dashed line indicating the significance threshold. In Manhattan plots we really don&rsquo;t need a grid, all that would be nice are horizontal grid lines, so I keep those but remove vertical lines. Manhattan plots can be a bit intimidating, so I prefer them as minimal as possible. Shown below is the code I use to create the plot and to save the plot as an image.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>manhplot <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ggplot</span>(gwas_data, <span style="color:#a6e22e">aes</span>(
+</span></span><span style="display:flex;"><span>  x <span style="color:#f92672">=</span> bp_cum, y <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">log10</span>(p),
+</span></span><span style="display:flex;"><span>  color <span style="color:#f92672">=</span> <span style="color:#a6e22e">as_factor</span>(chr), size <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">log10</span>(p)
+</span></span><span style="display:flex;"><span>)) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_hline</span>(
+</span></span><span style="display:flex;"><span>    yintercept <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">log10</span>(sig), color <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;grey40&#34;</span>,
+</span></span><span style="display:flex;"><span>    linetype <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;dashed&#34;</span>
+</span></span><span style="display:flex;"><span>  ) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_point</span>(alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.75</span>) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">scale_x_continuous</span>(
+</span></span><span style="display:flex;"><span>    label <span style="color:#f92672">=</span> axis_set<span style="color:#f92672">$</span>chr,
+</span></span><span style="display:flex;"><span>    breaks <span style="color:#f92672">=</span> axis_set<span style="color:#f92672">$</span>center
+</span></span><span style="display:flex;"><span>  ) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">scale_y_continuous</span>(expand <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>), limits <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">0</span>, ylim)) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">scale_color_manual</span>(values <span style="color:#f92672">=</span> <span style="color:#a6e22e">rep</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;#276FBF&#34;</span>, <span style="color:#e6db74">&#34;#183059&#34;</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">unique</span>(<span style="color:#a6e22e">length</span>(axis_set<span style="color:#f92672">$</span>chr))
+</span></span><span style="display:flex;"><span>  )) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">scale_size_continuous</span>(range <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">0.5</span>, <span style="color:#ae81ff">3</span>)) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">labs</span>(
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">=</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;-log&lt;sub&gt;10&lt;/sub&gt;(p)&#34;</span>
+</span></span><span style="display:flex;"><span>  ) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">theme_minimal</span>() <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">theme</span>(
+</span></span><span style="display:flex;"><span>    legend.position <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;none&#34;</span>,
+</span></span><span style="display:flex;"><span>    panel.grid.major.x <span style="color:#f92672">=</span> <span style="color:#a6e22e">element_blank</span>(),
+</span></span><span style="display:flex;"><span>    panel.grid.minor.x <span style="color:#f92672">=</span> <span style="color:#a6e22e">element_blank</span>(),
+</span></span><span style="display:flex;"><span>    axis.title.y <span style="color:#f92672">=</span> <span style="color:#a6e22e">element_markdown</span>(),
+</span></span><span style="display:flex;"><span>    axis.text.x <span style="color:#f92672">=</span> <span style="color:#a6e22e">element_text</span>(angle <span style="color:#f92672">=</span> <span style="color:#ae81ff">60</span>, size <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>, vjust <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>  )
+</span></span></code></pre></div><p>I opt to include some white space on the x-axis around the Manhattan plot to give it some space to &ldquo;breathe&rdquo;, but this is personal preference. This white space can be removed by adding <code>expand = c(0,0)</code> to the <code>scale_x_continuous()</code> function to get a more compact plot. I also added a size aesthetic. It is possible to render the plot once it&rsquo;s created, but due to the size of the object, in this instance I&rsquo;d recommend to directly save it to a .png file instead of a pdf. It&rsquo;s possible to save it to a pdf anyway, but due to the size of the object, this will be an enormous file, but of course this depends on the resources at your disposal. If you do save it as an image, I personally like to save it in a ratio that is wider than it is tall. This is both for aesthetic reasons, and to prevent the labels on the x-axis to clash for the chromosomes of shorter length. Of course, this being a <code>ggplot()</code> object, it&rsquo;s possible to add onto this at will. One thing that you can do is to manually annotate the plot using the <code>annotate()</code>, <code>geom_text()</code>, or the <code>geom_label_repel()</code> function. The latter is implemented in the <code>{ggrepel}</code> package, and is actually quite a neat function. Do make sure to only annotate a selected number of SNPs, otherwise it will likely crash your session! I&rsquo;ve included a Manhattan plot of some simulated data below to show how it turned out for me when I ran the code described above.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">print</span>(manhplot)
+</span></span></code></pre></div><img src="index.markdown_strict_files/figure-markdown_strict/print-plot-1.png" width="1152" />
+<p><strong>EDIT (2021-03-26)</strong>: Had to revisit some old code because I have now adopted better practices in both naming conventions and coding style. I moved away from using periods in variable names. I practically always use <code>janitor::clean_names()</code> to turn messy/ugly variable names into clean variable names. I also removed the (rather slow) for-loop in favor of a more elegant (<em>I think</em>) tidyverse solution. Biggest change that&rsquo;ll actually affect the result is in first section, where we remove superfluous datapoints with a high p-value. Here I now added the simple <code>group_by(chr)</code> line that&rsquo;ll make the split in the final plot less visible (try it both with and without that line to see what the difference is). I also adjusted the text according to the code updates. You can still access the older version in the history of the GitHub repository (<a href="https://www.github.com/danielroelfs/danielroelfs.com">danielroelfs/danielroelfs.com</a>). It&rsquo;s kinda fun to revisit older code and see how my process has improved, hope it&rsquo;ll help you too!</p>
+
+</div>
+
+        </div>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/foundation.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>
+  hljs.highlightAll();
+</script>
+
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+  MathJax = {
+      tex: {
+        inlineMath: [ ['$','$'] ]
+      }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+
+
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+  feather.replace()
+</script>
+
+<div id="nav-border" class="container">
+    
+    <div class="nav-outer">
+        <div class="nav-inner">
+            
+                
+                    
+                        <a class="internal" hyphens="none" href="/">
+                            
+                            Home
+                        </a>
+                    
+                
+                    
+                        <a class="internal" hyphens="none" href="/blog">
+                            
+                            Blog
+                        </a>
+                    
+                
+                    
+                
+                    
+                        <a class="internal" hyphens="none" href="/publications">
+                            
+                            Publications
+                        </a>
+                    
+                
+                    
+                        <a class="internal" hyphens="none" href="/cv">
+                            
+                            CV
+                        </a>
+                    
+                
+                    
+                        <a class="internal" hyphens="none" href="/about">
+                            
+                            About
+                        </a>
+                    
+                
+            
+        </div>
+    </div>
+    
+</div>
+
+</body>
+</html>

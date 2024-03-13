@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta name="description" content="//localhost:1313/">
+    <meta name="keywords" content="personal, science">
+
+    <meta property="og:site_name" content="Kejun Albert Ying">
+    <meta property="og:title" content="Kejun Albert Ying">
+    <meta property="og:description" content="How I Plot ERPs in R">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="//localhost:1313/blog/how-i-plot-erps-in-r/">
+    <meta property="og:image" content="//localhost:1313/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="//localhost:1313/blog/how-i-plot-erps-in-r/">
+    <meta name="twitter:image" content="//localhost:1313/">
+
+    
+    <link rel="stylesheet" type="text/css" href="//localhost:1313/css/style.css">
+    
+    
+    
+        
+        <link rel="stylesheet" href="/custom_style.css" integrity="">
+    
+
+    <link rel="stylesheet" href="https://use.typekit.net/jxt2fnp.css"> 
+    <link rel="stylesheet" href="https://use.typekit.net/uwd7war.css"> 
+    <link href="https://fonts.cdnfonts.com/css/cooper-hewitt" rel="stylesheet">
+    
+    
+        <meta name="description" content="Kejun (Albert) Ying&#39;s personal website">
+    
+
+    
+        
+            <link rel="shortcut icon" href="/Albert_headshot.jpg">
+        
+    
+
+    
+    
+    
+    
+    
+    <title>how i plot erps in r | kejun albert ying</title>
+</head><body><div id="top-stripe"></div><div id="content">
+
+    <div class="article-nav-outer">
+        <div class="article-nav-inner">
+            <a class="internal" hyphens="none" href='/blog'>← back to blog</a>
+        </div>
+    </div>
+
+<h2 class="article-title">How I Plot ERPs in R</h2>
+<div id="doc">
+    <div class="hanging-subtitle">
+        
+                
+        
+            
+                <p>30 March 2019</p>
+            
+        
+    </div>
+<h2 id="introduction">Introduction</h2>
+<p>Plotting ERPs is one of the essential skills in EEG neuroscience. There are many possible ways of going about this task, some better than others. Myself, I use either MATLAB or R to plot ERPs. In my experience, MATLAB is by far the preferred method since most of the EEG analysis takes place in MATLAB already, but I believe that there&rsquo;s some merit to using R. One of my main arguments is aesthetics. Using for instance the <code>{ggplot2}</code> package for the ERP adds a more unified look if you&rsquo;re using ggplot for the rest of the visualizations of the statistics as well. Another argument could be that it&rsquo;s easier to add statistical information to the ERP. When I read EEG articles, I find that the ERP plots are sometimes difficult to read, and that they don&rsquo;t supply any information about the statistical error in the grand averaged ERP. Of course, I have my own code for plotting grand averaged ERP in MATLAB showing the confidence interval for each ERP too, but I find it easier and prettier in R.
+However, MATLAB is the gold standard within EEG research and getting the data from MATLAB to R requires some trickery. I could not possibly claim that the code I use is the best way to do this. I&rsquo;m 100% sure there are probably better, quicker, and more elegant ways available of going about this, but I could not find such code on the internet. That&rsquo;s why I thought I&rsquo;d share my method of going about it, but again please keep in mind that there are probably better ways of going about this.
+At this point I also feel the obligation to point out that a package called erp.easy exists that was purpose built for working with ERPs and ERP statistics in R. However, I couldn&rsquo;t get it to work with my data, so that&rsquo;s where the necessity for me came from to build my own code. I&rsquo;ll share my code underneath and I&rsquo;ll annotate the code where necessary.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tidyverse)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(normentR)
+</span></span></code></pre></div><h2 id="loading-the-data">Loading the data</h2>
+<p>Since I cannot share participants&rsquo; data, I used an open EEG dataset downloaded <a href="https://sccn.ucsd.edu/~arno/fam2data/publicly_available_EEG_data.html" target="_blank">here</a>, this data comes from a psychophysics group of 5 participants with 2 conditions. It came in the EEGLAB format, same as my own data. The first step is to take the data out of MATLAB and take it to a format that can be easily understood by R. The most convenient way I thought of was to take the <code>EEG.data</code> field, transform it into a two-dimensional metrix and store it in a .csv file.</p>
+<p>If you have a large amount of participants, I can recommend to only extract data from the channels of interest or the conditions of interest. One can make one file per channel or participant, or one large file that contains everything. I usually choose the latter, and that&rsquo;s what I&rsquo;ll work with here. So my file looks as follows: one column with the channel, one column with the ID, one with the condition (or trigger). If I&rsquo;m doing a between-groups analysis, I&rsquo;ll also have a column with the group. All the other columns are the amplitudes with across the timepoints. I also have a file with the timepoints for each value. i.e. with epoch of 500 milliseconds ranging from 100 milliseconds pre-stimulus to 400 milliseconds post-stimulus, all the timepoints according to the sampling rate are the values in this file. It is basically nothing more than a print of the values in the <code>EEG.times</code> field from the EEGLAB dataset. I&rsquo;ll load this list of time points here also.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_delim</span>(<span style="color:#e6db74">&#34;./data/all_channels_erp.txt&#34;</span>,
+</span></span><span style="display:flex;"><span>  delim <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;\t&#34;</span>, col_names <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>times <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_table</span>(<span style="color:#e6db74">&#34;./data/times.txt&#34;</span>, col_names <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>)
+</span></span></code></pre></div><div class="sidenote" >The <code>janitor</code> package helps cleaning up column names, in this instance it converts all default columns (e.g. <code>V1</code>) to lowercase (i.e. <code>v1</code>)</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>erp_data <span style="color:#f92672">&lt;-</span> data <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  janitor<span style="color:#f92672">::</span><span style="color:#a6e22e">clean_names</span>() <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">rename</span>(
+</span></span><span style="display:flex;"><span>    channel <span style="color:#f92672">=</span> v1,
+</span></span><span style="display:flex;"><span>    id <span style="color:#f92672">=</span> v2,
+</span></span><span style="display:flex;"><span>    condition <span style="color:#f92672">=</span> v3
+</span></span><span style="display:flex;"><span>  ) <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">mutate</span>(
+</span></span><span style="display:flex;"><span>    id <span style="color:#f92672">=</span> <span style="color:#a6e22e">as_factor</span>(id),
+</span></span><span style="display:flex;"><span>    condition <span style="color:#f92672">=</span> <span style="color:#a6e22e">as_factor</span>(condition)
+</span></span><span style="display:flex;"><span>  )
+</span></span></code></pre></div><h2 id="preparing-the-data">Preparing the data</h2>
+<p>Then I specify a variable with the channels of interest. These will be the channels I&rsquo;ll average across later.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>coi <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;P1&#34;</span>, <span style="color:#e6db74">&#34;P2&#34;</span>, <span style="color:#e6db74">&#34;Pz&#34;</span>, <span style="color:#e6db74">&#34;P3&#34;</span>, <span style="color:#e6db74">&#34;P4&#34;</span>, <span style="color:#e6db74">&#34;PO3&#34;</span>, <span style="color:#e6db74">&#34;PO4&#34;</span>, <span style="color:#e6db74">&#34;POz&#34;</span>)
+</span></span></code></pre></div><p>Then I calculate the means across channels and conditions. This goes in two steps. First I&rsquo;ll select only the channels of interest, then I&rsquo;ll group by ID, condition, and channel. And then calculate the average of every other column, in this case all columns starting with &ldquo;v&rdquo;. Then I&rsquo;ll do the same, except now I&rsquo;ll group by ID and condition. So then we have one average ERP for every condition in all participants.</p>
+<div class="sidenote" >The <code>summarise()</code> function will throw a warning about the grouping variable, this can be silenced by setting <code>.groups = &quot;drop&quot;</code></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>erp_data_chan_mean <span style="color:#f92672">&lt;-</span> erp_data <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">filter</span>(channel <span style="color:#f92672">%in%</span> coi) <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(id, condition, channel) <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">summarise</span>(<span style="color:#a6e22e">across</span>(<span style="color:#a6e22e">starts_with</span>(<span style="color:#e6db74">&#34;v&#34;</span>), <span style="color:#f92672">~</span> <span style="color:#a6e22e">mean</span>(.x, na.rm <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>))) <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ungroup</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>erp_data_cond_mean <span style="color:#f92672">&lt;-</span> erp_data_chan_mean <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(id, condition) <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">summarise</span>(<span style="color:#a6e22e">across</span>(<span style="color:#a6e22e">starts_with</span>(<span style="color:#e6db74">&#34;v&#34;</span>), <span style="color:#f92672">~</span> <span style="color:#a6e22e">mean</span>(.x, na.rm <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>))) <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ungroup</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>mean_erp <span style="color:#f92672">&lt;-</span> erp_data_cond_mean
+</span></span></code></pre></div><h2 id="calculate-grand-average-and-confidence-interval">Calculate grand average and confidence interval</h2>
+<p>The next piece of code calculates the grand average. I will also add the time for each timepoint in milliseconds from the &ldquo;times.txt&rdquo; file we loaded earlier. Afterwards, I will alculate the confidence interval and then transform it from the interval relative to the mean to the absolute values representing the upper and lower boundaries of the confidence interval. Here I use a confidence interval of 95%. We first transform from wide to long format using the <code>pivot_longer()</code> function from the <code>{tidyr}</code> package. I merge the data frame containing the times to the long data frame with the mean ERP so that we have a column with numerical time points. Then we calculate the average amplitude per time point. Then using the <code>CI()</code> function from the <code>{Rmisc}</code> package, we calculate the upper and lower bounds of the confidence interval and add each as a separate column in the data frame.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>times <span style="color:#f92672">&lt;-</span> times <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">pivot_longer</span>(
+</span></span><span style="display:flex;"><span>    cols <span style="color:#f92672">=</span> <span style="color:#a6e22e">everything</span>(),
+</span></span><span style="display:flex;"><span>    names_to <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;index&#34;</span>, values_to <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;time&#34;</span>
+</span></span><span style="display:flex;"><span>  ) <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">mutate</span>(timepoint <span style="color:#f92672">=</span> <span style="color:#a6e22e">str_glue</span>(<span style="color:#e6db74">&#34;v{row_number() + 3}&#34;</span>)) <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">select</span>(<span style="color:#f92672">-</span>index)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>erp_plotdata <span style="color:#f92672">&lt;-</span> mean_erp <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">pivot_longer</span>(
+</span></span><span style="display:flex;"><span>    cols <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">c</span>(id, condition),
+</span></span><span style="display:flex;"><span>    names_to <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;timepoint&#34;</span>, values_to <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;amplitude&#34;</span>
+</span></span><span style="display:flex;"><span>  ) <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">inner_join</span>(times, by <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;timepoint&#34;</span>) <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(condition, time) <span style="color:#f92672">|&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">summarise</span>(
+</span></span><span style="display:flex;"><span>    mean_amplitude <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(amplitude),
+</span></span><span style="display:flex;"><span>    ci_lower <span style="color:#f92672">=</span> Rmisc<span style="color:#f92672">::</span><span style="color:#a6e22e">CI</span>(amplitude, ci <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.95</span>)[<span style="color:#e6db74">&#34;lower&#34;</span>],
+</span></span><span style="display:flex;"><span>    ci_upper <span style="color:#f92672">=</span> Rmisc<span style="color:#f92672">::</span><span style="color:#a6e22e">CI</span>(amplitude, ci <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.95</span>)[<span style="color:#e6db74">&#34;upper&#34;</span>]
+</span></span><span style="display:flex;"><span>  )
+</span></span></code></pre></div><h2 id="preparing-to-plot">Preparing to plot</h2>
+<p>Before we can start plotting, I just wanted to share one piece of code I found on StackOverflow. The question there was to move the x-axis and y-axis line towards 0, rather than the edge of the plot. You can find the question (and answers) <a href="https://stackoverflow.com/questions/39071002/moving-x-or-y-axis-together-with-tick-labels-to-the-middle-of-a-single-ggplot-n" target="_blank">here</a>. I combined two answers into a function that moves both the y- and the x-axis to 0. It is my personal preference to have a line indicating 0. This makes the plots easier to read and looks prettier too, but of course this is subjective. Alternatively we could also add a <code>geom_hline()</code> and <code>geom_vline()</code>, both with intercept at 0, and turn the axes off (as default in <code>theme_norment()</code>. This will still give you the lines at x=0 and y=0 but will keep the axis labels at 0.</p>
+<p>I personally prefer to have a plot that is as clean as possible, to really put focus on the ERP curve. So I&rsquo;d typically turn off the grid lines. I also remove one of the 0-ticks to avoid any awkward overlay with the axes, especially since the 0 is also indicated by the axis line already.</p>
+<p>I take the colors from our own <code>{normentR}</code> package. I ask for two colors from the &ldquo;logo&rdquo; palette.</p>
+<p>After running the chunk below, we have a beautiful ERP with a nice confidence interval. I hope this was helpful and informative. Good luck!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>colors <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">norment_pal</span>(palette <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;logo&#34;</span>)(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>erp_plot <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ggplot</span>(erp_plotdata, <span style="color:#a6e22e">aes</span>(
+</span></span><span style="display:flex;"><span>  x <span style="color:#f92672">=</span> time, y <span style="color:#f92672">=</span> mean_amplitude,
+</span></span><span style="display:flex;"><span>  colour <span style="color:#f92672">=</span> condition, group <span style="color:#f92672">=</span> condition
+</span></span><span style="display:flex;"><span>)) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_ribbon</span>(<span style="color:#a6e22e">aes</span>(ymin <span style="color:#f92672">=</span> ci_lower, ymax <span style="color:#f92672">=</span> ci_upper, fill <span style="color:#f92672">=</span> condition),
+</span></span><span style="display:flex;"><span>    alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.1</span>, linetype <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>  ) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_line</span>(linewidth <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.75</span>) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">scale_color_manual</span>(values <span style="color:#f92672">=</span> colors) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">scale_fill_manual</span>(values <span style="color:#f92672">=</span> colors) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">scale_x_continuous</span>(breaks <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">-2000</span>, <span style="color:#ae81ff">2000</span>, <span style="color:#ae81ff">500</span>))) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">scale_y_continuous</span>(breaks <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">-12</span>, <span style="color:#ae81ff">-1</span>, <span style="color:#ae81ff">2</span>), <span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">2</span>))) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">coord_cartesian</span>() <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">labs</span>(
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Time (ms)&#34;</span>,
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Amplitude (µV)&#34;</span>
+</span></span><span style="display:flex;"><span>  ) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">theme_norment</span>(ticks <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>, grid <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">theme</span>(
+</span></span><span style="display:flex;"><span>    legend.position <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">0.9</span>, <span style="color:#ae81ff">0.1</span>),
+</span></span><span style="display:flex;"><span>    axis.text.x <span style="color:#f92672">=</span> <span style="color:#a6e22e">element_text</span>(vjust <span style="color:#f92672">=</span> <span style="color:#ae81ff">-0.1</span>)
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">shift_axes</span>(erp_plot, x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, y <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>)
+</span></span></code></pre></div><img src="index.markdown_strict_files/figure-markdown_strict/erp-plot-1.png" width="1152" />
+<p><strong>EDIT (2023-10-30)</strong>: In the process of making some general updates to this site, I also revisited some of the code here. I improved the standard somewhat from when I first wrote this post in 2019 and brought it up to the code standards of 2023. The old version is of course available on GitHub.</p>
+
+</div>
+
+        </div>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/foundation.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>
+  hljs.highlightAll();
+</script>
+
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+  MathJax = {
+      tex: {
+        inlineMath: [ ['$','$'] ]
+      }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+
+
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+  feather.replace()
+</script>
+
+<div id="nav-border" class="container">
+    
+    <div class="nav-outer">
+        <div class="nav-inner">
+            
+                
+                    
+                        <a class="internal" hyphens="none" href="/">
+                            
+                            Home
+                        </a>
+                    
+                
+                    
+                        <a class="internal" hyphens="none" href="/blog">
+                            
+                            Blog
+                        </a>
+                    
+                
+                    
+                
+                    
+                        <a class="internal" hyphens="none" href="/publications">
+                            
+                            Publications
+                        </a>
+                    
+                
+                    
+                        <a class="internal" hyphens="none" href="/cv">
+                            
+                            CV
+                        </a>
+                    
+                
+                    
+                        <a class="internal" hyphens="none" href="/about">
+                            
+                            About
+                        </a>
+                    
+                
+            
+        </div>
+    </div>
+    
+</div>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+---
+title: CV
+format:
+  quarto-cv-pdf: default
+author: Kejun "Albert" Ying
+date: last-modified
+address: "New Research Building, Harvard Medical School, Boston, MA, 02115"
+email: kying@g.harvard.edu|albertkying@gmail.com
+fontsize: 11pt
+urlcolor: mycolor
+# urlcolor: black
+github: albert-ying
+orcid: 0000-0002-1791-6176
+web: 6178003292
+fontawesome: yes
+nocite: '@*'
+bibliography: 
+  peer: peer-reviewed.bib
+validate-yaml: false
+csl: apa-cv.csl
+---
+
+# Education
+\hrule
+
+**Harvard University** \hfill Cambridge, MA  
+*Ph.D., Biological Science in Public Health* \hfill 2019 -- Expected 2024
+
+\vspace{-0.5\baselineskip}
+- Advisor: Dr. Vadim Gladyshev
+- Dissertation Advisory Committee: Dr. Brendan Manning, Dr. David Sinclair, Dr. Shamil Sunyaev
+- Focused on understanding the mechanism of aging through multi-omic modeling & causal inference
+
+**Harvard University** \hfill Cambridge, MA  
+*M.S., Computational Science Engineering* \hfill 2022 -- Expected 2024
+
+\vspace{-0.5\baselineskip}
+- Secondary field during Ph.D. study
+
+**University of California, Berkeley** \hfill Berkeley, CA  
+*Visiting Student, Integrative Biology* \hfill 2017 -- 2018
+
+**Sun Yat-Sen University** \hfill Guangzhou, China  
+*B.S., Life Science* \hfill 2015 -- 2019
+
+\vspace{-0.5\baselineskip}
+- Thesis: Screening for the Interactome of hTERC based on Molecular Fluorescence Complementation System in Living Cells
+- Yat-Sen Honor School Program (Top 0.5%)
+- National college admissions exam (Top 0.6%)
+
+# Grants
+\hrule
+
+**Using causal aging biomarkers and protein design to develop novel anti-aging interventions** \hfill NIH/NIA
+F99/K00, *Transition to Aging Research for Predoctoral Students*  \hfill 2024 -- 2028
+
+- Award Document Number: FAG088431A (PI)
+- Received a *perfect* Impact Score of **10**
+
+# Publications
+\hrule
+\vspace{0.2cm}
+
+::: {#refs-peer}
+:::
+
+# Presentations
+\hrule
+
+## Oral Presentations
+
+**4th TimePie Longevity Forum** \hfill Shanghai, China  
+*Causal Aging Biomarker as a Tool for Unbiased Anti-Aging Therapy Screening* \hfill 2023
+
+**Global Congress on Aesthetic and Anti-Aging (GCAA2023)** \hfill Singapore  
+*Causal Aging Biomarker as a Tool for Unbiased Anti-Aging Therapy Screening* \hfill 2023
+
+**10th Aging Research and Drug Discovery conference (ARDD2023)** \hfill Copenhagen, Denmark  
+*Causal Epigenetic Age Uncouples Damage and Adaptation* \hfill 2023
+
+**AGE 2023 51st Annual Meeting** \hfill Oklahoma City, OK  
+*Causal Epigenetic Age Uncouples Damage and Adaptation* \hfill 2023
+
+**Broad Institute MPG Retreat** \hfill Cambridge, MA  
+*Causal Epigenetic Age Uncouples Damage and Adaptation* \hfill 2023
+
+**Harvard GRIP Presentations** \hfill Boston, MA  
+*Causal Epigenetic Age Uncouples Damage and Adaptation* \hfill 2022
+
+**Targeting Metabesity 2022**, 'Honorable Mention' \hfill Virtual Conference  
+*Causal Epigenetic Age Uncouples Damage and Adaptation* \hfill 2022
+
+**GSA 2021 Annual Scientific Meeting** \hfill Virtual Conference  
+*Genetic and phenotypic evidence for causal relationships between aging and COVID-19* \hfill 2021
+
+## Poster Presentations
+
+**Biomarker of Aging Symposium** \hfill Novato, CA  
+*Causal Aging Biomarker as a Tool for Unbiased Anti-Aging Therapy Screening* \hfill 2023
+
+**Gordon Research Conference, Systems Aging** \hfill Maine, MA  
+*Causal Epigenetic Age Uncouples Damage and Adaptation* \hfill 2022
+
+## Invited Talks
+
+**Chinese University of Hong Kong**, hosted by Dr. Xin Wang \hfill Hong Kong, China  
+*Causal Aging Biomarker as a Tool for Systemic Anti-Aging Therapy Screening* \hfill 2023
+
+**Peking University**, hosted by Dr. Jingdong Han \hfill Beijing, China  
+*Causal Aging Biomarker and ClockBase* \hfill 2023
+
+**Everything Epigenetics**, podcast hosted by Hannah Went \hfill Online Podcast  
+*Causal Epigenetic Age Uncouples Damage and Adaptation* \hfill 2023
+
+**Chinese Academy of Sciences**, hosted by Dr. Xuming Zhou \hfill Beijing, China  
+*Causal Epigenetic Age Uncouples Damage and Adaptation* \hfill 2022
+
+**Foresight Institute**, hosted by Allison Duettmann \hfill Online Seminar  
+*Genetic Variation, Aging & Relationship to COVID-19 | Joris Deelen, Albert Ying* \hfill 2020
+
+# Research Experience
+\hrule
+
+**Harvard Medical School** \hfill Boston, MA  
+*Graduate Researcher, Vadim Gladyshev’s Lab* \hfill 2020 -- Present
+
+**Boston Children’s Hospital** \hfill Boston, MA  
+*Rotation Student, Eric Greer’s Lab* \hfill 2020
+
+**Harvard Medical School** \hfill Boston, MA  
+*Rotation Student, David Sinclair’s Lab* \hfill 2019
+
+**Harvard T. H. Chan School of Public Health** \hfill Boston, MA  
+*Rotation Student, Brendan Manning’s Lab* \hfill 2019
+
+**Sun Yat-Sen University** \hfill Guangzhou, China  
+*Undergraduate Researcher, Zhou Songyang’s Lab* \hfill 2018 -- 2019
+
+**University of Edinburgh** \hfill Edinburgh, UK  
+*Undergraduate Researcher, Xia Shen’s Lab* \hfill 2018
+
+**University of Washington** \hfill Seattle, WA  
+*Undergraduate Researcher, Matt Kaeberlein’s Lab* \hfill 2018
+
+**Buck Institute for Research on Aging** \hfill Novato, CA  
+*Undergraduate Researcher, Judith Campisi’s Lab* \hfill 2018
+
+**University of California, Berkeley** \hfill Berkeley, CA  
+*Undergraduate Researcher, Danica Chen’s Lab* \hfill 2017
+
+**Sun Yat-Sen University** \hfill Guangzhou, China  
+*Undergraduate Researcher, Yikang Rong’s Lab* \hfill 2015 -- 2017
+
+
+# Honors
+\hrule
+
+**Best Poster Award**, Inaugural Biomarker of Aging Symposium \hfill 2023
+
+**Student Spotlight**, Harvard Chan School of Public Health \hfill 2023
+
+**Best Poster Award**, Gordon Research Conference, Systems Aging \hfill 2022
+
+**Hackathon Winner**, Longevity Hackathon, VitaDAO \hfill 2021
+
+**Yan-Sen Honor School Program**, Sun Yat-Sen University \hfill 2016 -- 2019
+
+**Yan-Sen Scholarship**, Sun Yat-Sen University \hfill 2016 -- 2019
+
+# Professional Experience
+\hrule
+
+## Service & Leadership
+
+**President**, Harvard Interdisciplinary Discussion on Disease and Health \hfill 2024 -- Present
+
+**Advisory Committee Member**, Massachusetts Community Health & Healthy Aging Funds \hfill 2024 -- Present
+
+**Organizing Committee Member**, Biomarker of Aging Symposium \hfill 2023
+
+## Teaching & Mentoring
+
+**Mentor**, Yuanpei Young Scholars Program \hfill 2023 -- 2024
+
+**Instructor**, Harvard Public Health Symposium For Young Generation \hfill 2023
+
+## Journals Reviewed
+
+*Nature Aging*, *Nature Communications*, *BMC Nephrology*, *Lipids in Health and Disease*, *Clinical Proteomics*, *Evidence-Based Complementary and Alternative Medicine*, *Scientific Report*
+
+# References
+\hrule
+
+**Dr. Vadim Gladyshev**, Dissertation Advisor \hfill vgladyshev\@bwh.harvard.edu  
+Professor of Medicine, Harvard Medical School
+
+**Dr. Steve Horvath**, Collaborator \hfill shorvath\@mednet.ucla.edu  
+Professor of Human Genetics, UCLA
+
+**Dr. David Sinclair**, Dissertation Advisory Committee \hfill david_sinclair\@hms.harvard.edu  
+Professor of Genetics, Harvard Medical School
+
+**Dr. Matt Kaeberlein**, Advisor \hfill kaeber\@uw.edu  
+Professor of Pathology, University of Washington
+
+<!-- 
+**Dr. Tony Wyss-Coray**, Advisor \hfill twc\@stanford.edu  
+Professor of Neurology, Stanford University
+
+**Dr. David Baker** (Advisor) \hfill dabaker\@uw.edu  
+Professor of Biochemistry, University of Washington -->

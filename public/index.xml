@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kejun Albert Ying 「应可钧」</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content on Kejun Albert Ying 「应可钧」</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 06 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>To-be-added</title>
+      <link>//localhost:1313/news/placeholder/</link>
+      <pubDate>Thu, 06 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/news/placeholder/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>//localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/about/</guid>
+      <description>Hello! I&amp;rsquo;m a PhD candidate at Harvard Medical School, Vadim Gladyshev lab. My research interests include aging and omics, with a focus on the cause of aging, epigenetics, metabolism, and multi-omics. My recent work focuses on the causal role of DNA methylation in aging and age-related diseases, and I built the first causal biomarker of aging. I also built the ClockBase (preprint), which provides a resource for the scientific community to quantify and explore biological ages of more than 2.</description>
+    </item>
+    <item>
+      <title>Curriculum Vitae</title>
+      <link>//localhost:1313/cv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/cv/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>Poetry</title>
+      <link>//localhost:1313/poetry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/poetry/</guid>
+      <description>In my free time I write poetry in ancient chinese style.&#xA;准确来说是填词，对我的词风影响最大的是花间词派。&#xA;To be added.</description>
+    </item>
+    <item>
+      <title>Publications</title>
+      <link>//localhost:1313/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/publications/</guid>
+      <description>Selection of publications. For a full list see my Google Scholar profile&#xA;2024 K Ying, H Liu, AE Tarkhov, MC Sadler, AT Lu, M Moqri, S Horvath, Z Kutalik, X Shen, VN Gladyshev (2024) Causality-Enriched Epigenetic Age Uncouples Damage and Adaptation. Nature Aging (Featured on the February cover). doi: 10.1038/s43587-023-00557-0&#xA;M Moqri, C Herzog, JR Poganik, K Ying, JN Justice, DW Belsky, AT Higgins-Chen, BH Chen, AA Cohen, G Fuellen, S Hägg, RE Marioni, M Widschwendter, K Fortney, PO Fedichev, A Zhavoronkov, N Barzilai, J Lasky-Su, DP Kiel, BK Kennedy, S Cummings, PE Slagboom, E Verdin, AB Maier, V Sebastiano, MP Snyder, VN Gladyshev, S Horvath, L Ferrucci (2024) Validation of Biomarkers of Aging.</description>
+    </item>
+  </channel>
+</rss>

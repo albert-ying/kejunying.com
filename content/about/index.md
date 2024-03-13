@@ -1,0 +1,14 @@
+---
+title: About
+description: About
+hidetopnav: true
+---
+
+
+{{< sidenote  >}}
+
+![](../../avatar.png)
+
+{{< /sidenote  >}}
+
+Hello! I'm a PhD candidate at [Harvard Medical School](https://hms.harvard.edu/), [Vadim Gladyshev lab](https://gladyshevlab.bwh.harvard.edu/). My research interests include aging and omics, with a focus on the cause of aging, epigenetics, metabolism, and multi-omics. My recent work focuses on [the causal role of DNA methylation in aging and age-related diseases, and I built the first causal biomarker of aging](https://www.nature.com/articles/s43587-023-00557-0). I also built the [ClockBase](https://clockbase.org) ([preprint](https://www.biorxiv.org/content/10.1101/2023.02.28.530532v1)), which provides a resource for the scientific community to quantify and explore biological ages of more than 2.5 million samples on GEO, thus facilitating discovery of new longevity interventions and age-accelerating conditions. I'm also interested in **machine learning** and **protein design**.
