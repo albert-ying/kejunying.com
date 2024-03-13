@@ -7,7 +7,7 @@ hidetopnav: true
 
 {{< sidenote  >}}
 
-![](../../avatar.png)
+![](avatar.jpg)
 
 {{< /sidenote  >}}
 
