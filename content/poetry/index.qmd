@@ -26,7 +26,13 @@ In my free time I write poetry in ancient chinese style.
 
 准确来说是填词，对我的词风影响最大的是花间词派。
 
-To be added.
+Here is one example:
+
+<!-- ![后庭花破子 冬夜偶提 ](hthpz.jpg){width="50%"} -->
+<img src="hthpz.jpg" alt="后庭花破子 冬夜偶提" width="50%">
+
+
+To be updated soon.
 
 <!-- See the website for my photography here: <a href="https://photography.danielroelfs.com" target="_blank">photography.danielroelfs.com</a> -->
 
