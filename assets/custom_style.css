@@ -33,7 +33,7 @@ body > * {
   font-size: 90%;
   font-weight: 500;
   font-style: normal;
-  margin-left: 11rem;
+  margin-left: 6rem;
   margin-right: 2.5rem;
   text-rendering: optimizeLegibility;
 }
@@ -79,6 +79,7 @@ body > * {
 .sidenote {
   font-size: 110%; 
   margin-bottom: 1rem;
+  margin-left: -6rem;
   line-height: 1.35;
   color: #bfa770;
 }
