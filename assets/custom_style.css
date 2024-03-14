@@ -17,7 +17,7 @@ body {
   position: relative;
   font-variant-numeric: oldstyle-nums;
   max-width: 1200px;
-  min-width: 500px;
+  min-width: 400px;
   width: 100%;
   min-height: 100%;
   margin-left: auto;
@@ -33,7 +33,7 @@ body > * {
   font-size: 90%;
   font-weight: 500;
   font-style: normal;
-  margin-left: 6rem;
+  margin-left: 8rem;
   margin-right: 2.5rem;
   text-rendering: optimizeLegibility;
 }
@@ -79,9 +79,33 @@ body > * {
 .sidenote {
   font-size: 110%; 
   margin-bottom: 1rem;
-  margin-left: -6rem;
+  margin-left: -2rem;
   line-height: 1.35;
   color: #bfa770;
+}
+
+@media all and (max-width: 1200px) {
+  .sidenote {
+    color: #bfa770;
+    padding: 1rem 0.5rem 0 0;
+    margin-left: -2rem;
+  }
+
+  #doc .sidenote {
+    padding: 0.5rem 0.5rem 0.5rem 0.75rem !important;
+    border: 1px dashed #bfa770;
+    color: #bfa770;
+    padding: 1rem 0.5rem 0 0;
+    border-radius: 5px;
+    margin-left: -2rem;
+  }
+
+  #doc .sidenote:has(img) {
+    border: none;
+    color: #bfa770;
+    max-width: 30vw;
+    margin-left: -2rem;
+  }
 }
 
 
