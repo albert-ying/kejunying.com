@@ -145,6 +145,7 @@ img.icon {
   margin: 20px 0;
   font-family: 'playfair';
   font-size: 26px;
+  line-height: 2;
 }
 
 .fancy-quote::before {
