@@ -102,17 +102,6 @@ img.icon {
 }
 
 
-h2.article-title {
-  font-weight: 711;
-  /* text-transform: uppercase; */
-  font-variant-caps: normal;
-  line-height: 1.1;
-  font-size: 1.7rem;
-  letter-spacing: 0.07rem;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-}
-
 .menu-container {
   display: flex;
   justify-content: space-between;
@@ -143,6 +132,12 @@ h2.article-title {
   font-size: 26px;
 }
 
-img {
-  width: 15%;
+.img-small {
+  width: 50%; /* or any specific smaller size */
+  height: auto; /* maintain aspect ratio */
+}
+
+.img-container {
+  width: 50%;
+  margin: auto;
 }

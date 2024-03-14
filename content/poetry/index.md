@@ -28,9 +28,11 @@ In my free time I write poetry in ancient chinese style.
 
 Here is one example:
 
-<!-- ![后庭花破子 冬夜偶提 ](hthpz.jpg){width="50%"} -->
+<div class="img-container">
+后庭花破子 冬夜偶提 <br/> <br/>
+  <img src="hthpz.jpg" alt="后庭花破子 冬夜偶提" class="img-small">
+</div>
 
-<img src="hthpz.jpg" alt="后庭花破子 冬夜偶提" style="width: 2rem">
 
 To be updated soon.
 
