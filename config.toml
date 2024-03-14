@@ -30,9 +30,17 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
     umamiid     = "10185115-89df-427f-9aea-8c3575857825"
 # recent news
     [[params.news]]
-        date = "2024-03"
-        name = "Website is alive!"
-        url = ""
+        date = "2024-02"
+        name = "I received a *perfect* **Impact Score of 10** in the NIA **F99/K00** application!"
+        url = "https://x.com/KejunYing/status/1756086454709600378?s=20"
+    [[params.news]]
+        date = "2024-02"
+        name = "Our paper on the causal role of DNA methylation in aging featured on the cover of Nature Aging."
+        url = "https://www.nature.com/nataging/volumes/4/issues/2"
+    [[params.news]]
+        date = "2023-12"
+        name = "I received the best poster award on Inaugural Biomarker of Aging Symposium."
+        url = "https://x.com/KejunYing/status/1732771615824638318?s=20"
         
     
     # Social links
