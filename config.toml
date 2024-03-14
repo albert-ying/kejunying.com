@@ -1,5 +1,5 @@
 baseurl = "/"
-title = "Kejun Albert Ying 「应可钧」"
+title = "「应可钧」Kejun Albert Ying"
 theme = "typography"
 
 ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "index\\.html", "about\\.html", "static/blog/\\*_files/", "README.md", ".venv"]
@@ -21,7 +21,7 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
     iconsource = "simple-icons"
 
     description = "Kejun (Albert) Ying's personal website | 应可钧的个人网站"
-    keywords = "personal, science"
+    keywords = "personal, science, aging"
 
     customcss = ["custom_style.css"]
 
