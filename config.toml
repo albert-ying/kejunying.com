@@ -23,7 +23,7 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
     description = "Kejun (Albert) Ying's personal website | 应可钧的个人网站"
     keywords = "personal, science, aging"
 
-    customcss = ["assets/custom_style.css"]
+    customcss = ["custom_style.css"]
 
     umami       = false
     umamilink   = "https://analytics-danielroelfs.netlify.app/script.js"
