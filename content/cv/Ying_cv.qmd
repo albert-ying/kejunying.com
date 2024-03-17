@@ -59,10 +59,43 @@ F99/K00, *Transition to Aging Research for Predoctoral Students*  \hfill 2024 --
 
 # Publications
 \hrule
-\vspace{0.2cm}
 
-::: {#refs-peer}
-:::
+Moqri, M., Herzog, C., Poganik, J. R., \textbf{\underline{Ying, K.,}} Justice, J. N., Belsky, D. W., Higgins-Chen, A. T., Chen, B. H., Cohen, A. A., Fuellen, G., Hägg, S., Marioni, R. E., Widschwendter, M., Fortney, K., Fedichev, P. O., Zhavoronkov, A., Barzilai, N., Lasky-Su, J., Kiel, D. P., \... Ferrucci, L. (2024). Validation of biomarkers of aging. **Nature Medicine**, 1--13. <https://doi.org/10.1038/s41591-023-02784-9> 
+
+Griffin, P. T., Kane, A. E., Trapp, A., Li, J., Arnold, M., Poganik, J. R., Conway, R. J., McNamara, M. S., Meer, M. V., Hoffman, N., Amorim, J. A., Tian, X., MacArthur, M. R., Mitchell, S. J., Mueller, A. L., Carmody, C., Vera, D. L., Kerepesi, C., \textbf{\underline{Ying, K.,}} \... Sinclair, D. A. (2024). TIME-seq reduces time and cost of DNA methylation measurement for epigenetic clock construction. **Nature Aging**, 1--14. <https://doi.org/10.1038/s43587-023-00555-2> 
+
+\textbf{\underline{Ying, K.,}} Liu, H., Tarkhov, A. E., Sadler, M. C., Lu, A. T., Moqri, M., Horvath, S., Kutalik, Z., Shen, X., & Gladyshev, V. N. (2024). Causality-enriched epigenetic age uncouples damage and adaptation. **Nature Aging (Featured on the February Cover)**, 1--16. <https://doi.org/10.1038/s43587-023-00557-0> 
+
+\textbf{\underline{Ying, K.,}} Paulson, S., Perez-Guevara, M., Emamifar, M., Martinez, M. C., Kwon, D., Poganik, J. R., Moqri, M., & Gladyshev, V. N. (2023). *Biolearn, an open-source library for biomarkers of aging*. **bioRxiv**. <https://doi.org/10.1101/2023.12.02.569722> 
+
+Liberman, N., Rothi, M. H., Gerashchenko, M. V., Zorbas, C., Boulias, K., MacWhinnie, F. G., \textbf{\underline{Ying, A. K.,}} Flood Taylor, A., Al Haddad, J., Shibuya, H., Roach, L., Dong, A., Dellacona, S., Lafontaine, D. L. J., Gladyshev, V. N., & Greer, E. L. (2023). 18S rRNA methyltransferases DIMT1 and BUD23 drive intergenerational hormesis. **Molecular Cell**, *83*(18), 3268--3282.e7. <https://doi.org/10.1016/j.molcel.2023.08.014> 
+
+Bitto, A., Grillo, A. S., Ito, T. K., Stanaway, I. B., Nguyen, B. M. G., \textbf{\underline{Ying, K.,}} Tung, H., Smith, K., Tran, N., Velikanje, G., Urfer, S. R., Snyder, J. M., Barton, J., Sharma, A., Kayser, E.-B., Wang, L., Smith, D. L., Thompson, J. W., DuBois, L., \... Kaeberlein, M. (2023). Acarbose suppresses symptoms of mitochondrial disease in a mouse model of Leigh syndrome. **Nature Metabolism**, *5*(6), 955--967. <https://doi.org/10.1038/s42255-023-00815-w> 
+
+\textbf{\underline{Ying, K.,}} Tyshkovskiy, A., Trapp, A., Liu, H., Moqri, M., Kerepesi, C., & Gladyshev, V. N. (2023). *ClockBase : A comprehensive platform for biological age profiling in human and mouse*. **bioRxiv**. <https://doi.org/10.1101/2023.02.28.530532> 
+
+Tarkhov, A. E., Lindstrom-Vautrin, T., Zhang, S., \textbf{\underline{Ying, K.,}} Moqri, M., Zhang, B., & Gladyshev, V. N. (2022). *Nature of epigenetic aging from a single-cell perspective*. **bioRxiv**. <https://doi.org/10.1101/2022.09.26.509592> 
+
+Emmrich, S., Trapp, A., Tolibzoda Zakusilo, F., Straight, M. E., \textbf{\underline{Ying, A. K.,}} Tyshkovskiy, A., Mariotti, M., Gray, S., Zhang, Z., Drage, M. G., Takasugi, M., Klusmann, J.-H., Gladyshev, V. N., Seluanov, A., & Gorbunova, V. (2022). Characterization of naked mole-rat hematopoiesis reveals unique stem and progenitor cell patterns and neotenic traits. **The EMBO Journal**, *41*(15), e109694. <https://doi.org/10.15252/embj.2021109694> 
+
+Zhang, B., Tarkhov, A. E., Ratzan, W., \textbf{\underline{Ying, K.,}} Moqri, M., Poganik, J. R., Barre, B., Trapp, A., Zoller, J. A., Haghani, A., Horvath, S., Peshkin, L., & Gladyshev, V. N. (2022). *Epigenetic profiling and incidence of disrupted development point to gastrulation as aging ground zero in Xenopus laevis*. **bioRxiv**. <https://doi.org/10.1101/2022.08.02.502559> 
+
+Yang, Z., Macdonald-Dunlop, E., Chen, J., Zhai, R., Li, T., Richmond, A., Klarić, L., Pirastu, N., Ning, Z., Zheng, C., Wang, Y., Huang, T., He, Y., Guo, H., \textbf{\underline{Ying, K.,}} Gustafsson, S., Prins, B., Ramisch, A., Dermitzakis, E. T., \... Shen, X. (2022). Genetic Landscape of the ACE2 Coronavirus Receptor. **Circulation**, *145*(18), 1398--1411. <https://doi.org/10.1161/CIRCULATIONAHA.121.057888> 
+
+\textbf{\underline{Ying, K.,}} Zhai, R., Pyrkov, T. V., Shindyapina, A. V., Mariotti, M., Fedichev, P. O., Shen, X., & Gladyshev, V. N. (2021). Genetic and phenotypic analysis of the causal relationship between aging and COVID-19. **Communications Medicine**, *1*(1), 35. <https://doi.org/10.1038/s43856-021-00033-z> 
+
+Li, T., Ning, Z., Yang, Z., Zhai, R., Zheng, C., Xu, W., Wang, Y., \textbf{\underline{Ying, K.,}} Chen, Y., & Shen, X. (2021). Total genetic contribution assessment across the human genome. **Nature Communications**, *12*(1), 2845. <https://doi.org/10.1038/s41467-021-23124-w> 
+
+Castro, J. P., Shindyapina, A. V., Barbieri, A., \textbf{\underline{Ying, K.,}} Strelkova, O. S., Paulo, J. A., Tyshkovskiy, A., Meinl, R., Kerepesi, C., Petrashen, A. P., Mariotti, M., Meer, M., Hu, Y., Karamyshev, A., Losyev, G., Indzhykulian, A. A., Gygi, S. P., Sedivy, J. M., Manis, J. P., & Gladyshev, V. N. (2021). *Integrative analyses uncover mechanisms by which aging drives B cell lymphoma*. **bioRxiv**. <https://doi.org/10.1101/2021.02.23.432500> 
+
+Bitto, A., Tung, H., \textbf{\underline{Ying, K.,}} Smith, D. L., Kayser, E.-B., Morgan, P. G., Sedensky, M. M., & Kaeberlein, M. (2019). AGING AND MITOCHONDRIAL DISEASE: SHARED MECHANISMS AND THERAPIES? **Innovation in Aging**, *3*(Supplement_1), S395--S395. <https://doi.org/10.1093/geroni/igz038.1459> 
+
+Zhu, J., Xu, M., Liu, Y., Zhuang, L., \textbf{\underline{Ying, K.,}} Liu, F., Liu, D., Ma, W., & Songyang, Z. (2019). Phosphorylation of PLIN3 by AMPK promotes dispersion of lipid droplets during starvation. **Protein & Cell**, *10*(5), 382--387. <https://doi.org/10.1007/s13238-018-0593-9>
+
+# Patents
+\hrule
+
+V. N. Gladyshev, **K. Ying**, Mapping CpG sites to quantify aging traits (2024). *WO2024039905A2*
 
 # Presentations
 \hrule
