@@ -109,7 +109,7 @@ body > * {
   #doc .sidenote:has(img) {
     border: none;
     color: #bfa770;
-    max-width: 30vw;
+    max-width: 600px;
     margin-left: 0rem;
     min-width: 0%;
   }
