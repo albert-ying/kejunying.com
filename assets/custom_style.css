@@ -8,10 +8,10 @@
 
 @media all and (min-width: 60px) {
   img:not(.icon) {
-    margin-left: -6rem;
-    min-width: 120%;
+    min-width: 0%;
   }
 }
+
 
 body {
   position: relative;
@@ -84,6 +84,13 @@ body > * {
   color: #bfa770;
 }
 
+.sidenote a img {
+    min-width: 0%;
+    background: rgb(250, 224, 167);
+    border-radius: 100%;
+    padding: 1px;
+}
+
 @media all and (max-width: 1200px) {
   .sidenote {
     color: #bfa770;
@@ -104,6 +111,7 @@ body > * {
     color: #bfa770;
     max-width: 30vw;
     margin-left: 0rem;
+    min-width: 0%;
   }
 }
 
@@ -161,8 +169,71 @@ img.icon {
   width: 50%; /* or any specific smaller size */
   height: auto; /* maintain aspect ratio */
 }
+.img-tiny {
+  width: 10%; /* or any specific smaller size */
+  height: auto; /* maintain aspect ratio */
+}
 
 .img-container {
   width: 50%;
   margin: auto;
+}
+
+.article-nav-inner {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  opacity: 0.95;
+  left: 2rem;
+  top: 1rem;
+  width: 38rem;
+  border-bottom: 0.2rem solid #444;
+}
+
+h1, h2, h3 {
+  font-variant-caps: petite-caps;
+  font-variant-numeric: oldstyle-nums;
+}
+
+h4 {
+  font-family: 'Cooper Hewitt', sans-serif;
+  font-size: 100%;
+  font-variant-numeric: oldstyle-nums;
+}
+
+.os {
+  font-variant-caps: petite-caps;
+  font-variant-numeric: oldstyle-nums;
+}
+
+.signature {
+  font-variant-caps: petite-caps;
+  font-variant-numeric: oldstyle-nums;
+}
+
+th {
+  font-variant-caps: petite-caps;
+  font-variant-numeric: oldstyle-nums;
+}
+
+.article-nav-inner a.internal {
+  text-transform: none;
+  font-variant-caps: petite-caps;
+  font-variant-numeric: oldstyle-nums;
+}
+
+h2.article-title {
+  text-transform: none;
+  font-variant-caps: petite-caps;
+  font-variant-numeric: oldstyle-nums;
+}
+
+.nav-inner a.internal {
+  text-transform: none;
+  font-variant-caps: petite-caps;
+  font-variant-numeric: oldstyle-nums;
 }

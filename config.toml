@@ -26,7 +26,7 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
     customcss = ["custom_style.css"]
 
     umami       = true
-    umamilink   = "https://us.umami.is/script.js"
+    umamilink   = "https://kejunying.com/share/script.js"
     umamiid     = "ce4b7b41-6d20-47f0-81b2-e316006cc9f2"
 # recent news
     [[params.news]]
@@ -82,22 +82,22 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
         url  = "/"
         weight = 1
     [[menu.main]]
-        name = "news"
-        url  = "/news"
+        name = "Talks"
+        url  = "/talks"
         weight = 2
     [[menu.main]]
-        name = "Publications"
-        url = "/publications"
+        name = "Research"
+        url = "/research"
         weight = 4
     [[menu.main]]
-        name = "CV"
+        name = "Cv"
         url = "/cv"
         weight = 5
     [[menu.main]]
-        name = "about"
+        name = "About"
         url = "/about"
         weight = 6
     [[menu.main]]
-        name = "poetry"
+        name = "Poetry"
         url = "/poetry"    
         weight = 7

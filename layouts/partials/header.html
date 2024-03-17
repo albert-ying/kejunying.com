@@ -1,7 +1,7 @@
 <div id="nav-border" class="container">
     {{ if not .IsHome }}
     <div class="nav-outer">
-        <div class="nav-inner">
+        <div class="article-nav-inner">
             {{ with .Site.Menus.main }}
                 {{ range sort . "Weight" }}
                     {{ if ne .Identifier "hide-from-nav" }}
@@ -15,7 +15,7 @@
         </div>
     </div>
     {{ else }}
-    <div class="nav-outer">
+    <div class="article-nav-outer">
         <div class="nav-inner"></div>
     </div>
     {{ end }}
