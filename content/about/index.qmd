@@ -4,10 +4,6 @@ description: About
 hidetopnav: true
 ---
 
-<!-- {{< sidenote >}}
-![](avatar.png)
-{{< /sidenote >}} -->
-
 <img src="avatar.jpg" class="sidenote" style="min-width: initial; margin-top: 0rem;">
 
 
