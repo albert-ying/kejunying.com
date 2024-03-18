@@ -32,4 +32,4 @@ iframe {
 htmltools::includeHTML("./Ying_cv.html")
 ``` -->
 
-<iframe src="Ying_cv.html" onload="this.width=&#39;100%&#39;;this.height=screen.height*0.5;" frameBorder="0"></iframe>
+<iframe src="https://kejunying.com/cv/Ying_cv" onload="this.width=&#39;100%&#39;;this.height=screen.height*0.5;" frameBorder="0"></iframe>
