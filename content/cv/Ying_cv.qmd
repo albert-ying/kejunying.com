@@ -1,14 +1,14 @@
 ---
 title: CV
 format:
-  quarto-cv-pdf: default
+  quarto-cv-pdf:
+    keep_tex: true
 author: Kejun "Albert" Ying
 date: last-modified
 address: "New Research Building, Harvard Medical School, Boston, MA, 02115"
 email: kying@g.harvard.edu|albertkying@gmail.com
 fontsize: 11pt
 urlcolor: mycolor
-# urlcolor: black
 github: albert-ying
 orcid: 0000-0002-1791-6176
 web: 6178003292
@@ -59,6 +59,10 @@ F99/K00, *Transition to Aging Research for Predoctoral Students*  \hfill 2024 --
 
 # Publications
 \hrule
+<!-- \vspace{0.2cm}
+
+::: {#refs-peer}
+::: -->
 
 Moqri, M., Herzog, C., Poganik, J. R., \textbf{\underline{Ying, K.,}} Justice, J. N., Belsky, D. W., Higgins-Chen, A. T., Chen, B. H., Cohen, A. A., Fuellen, G., Hägg, S., Marioni, R. E., Widschwendter, M., Fortney, K., Fedichev, P. O., Zhavoronkov, A., Barzilai, N., Lasky-Su, J., Kiel, D. P., \... Ferrucci, L. (2024). Validation of biomarkers of aging. **Nature Medicine**, 1--13. <https://doi.org/10.1038/s41591-023-02784-9> 
 

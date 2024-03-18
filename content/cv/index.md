@@ -4,6 +4,7 @@ description: Curriculum Vitae
 hidetopnav: true
 ---
 
+
 <style type="text/css">
 body > * {
     margin-left: 3rem;
@@ -18,5 +19,17 @@ iframe {
     margin-left: -1rem;
 }
 </style>
+<!-- ```{r}
+#| label: iframe
+#| echo: FALSE
 
-<iframe src="Ying_cv.pdf" onload="this.width=&#39;100%&#39;;this.height=screen.height*0.6;" frameBorder="0"></iframe>
+# htmltools::tags$iframe(
+#   src = "./joelnitta-cv/Ying_cv.pdf",
+#   onload = "this.width='100%';this.height=screen.height*0.6;",
+#   frameBorder = "0"
+# )
+
+htmltools::includeHTML("./Ying_cv.html")
+``` -->
+
+<iframe src="Ying_cv.html" onload="this.width=&#39;100%&#39;;this.height=screen.height*0.5;" frameBorder="0"></iframe>
