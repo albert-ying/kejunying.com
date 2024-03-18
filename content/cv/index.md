@@ -19,17 +19,7 @@ iframe {
     margin-left: -1rem;
 }
 </style>
-<!-- ```{r}
-#| label: iframe
-#| echo: FALSE
 
-# htmltools::tags$iframe(
-#   src = "./joelnitta-cv/Ying_cv.pdf",
-#   onload = "this.width='100%';this.height=screen.height*0.6;",
-#   frameBorder = "0"
-# )
-
-htmltools::includeHTML("./Ying_cv.html")
-``` -->
+Download the PDF version [here](./Ying_cv.pdf).
 
 <iframe src="https://kejunying.com/cv/Ying_cv.html" onload="this.width=&#39;100%&#39;;this.height=screen.height*0.5;" frameBorder="0"></iframe>

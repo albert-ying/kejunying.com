@@ -8,6 +8,8 @@ date: last-modified
 address: "New Research Building, Harvard Medical School, Boston, MA, 02115"
 email: kying@g.harvard.edu|albertkying@gmail.com
 fontsize: 11pt
+fontcolor: darktext
+backgroundcolor: darkbackground
 urlcolor: mycolor
 github: albert-ying
 orcid: 0000-0002-1791-6176
