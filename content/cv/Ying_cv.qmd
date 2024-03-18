@@ -13,7 +13,7 @@ backgroundcolor: darkbackground
 urlcolor: mycolor
 github: albert-ying
 orcid: 0000-0002-1791-6176
-web: 6178003292
+web: kejunying.com
 fontawesome: yes
 nocite: '@*'
 bibliography: 
