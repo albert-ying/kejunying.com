@@ -50,8 +50,14 @@
 
     <script defer src="{{ .Site.Params.umamilink }}" data-website-id="{{ .Site.Params.umamiid }}"></script>
     <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
-    
+    <link rel="stylesheet" href="//unpkg.com/heti/umd/heti.min.css">
+    <script src="//unpkg.com/heti/umd/heti-addon.min.js"></script>
+    <script>
+        const heti = new Heti('.heti');
+        heti.autoSpacing(); // 自动进行中西文混排美化和标点挤压
+    </script>
     {{ $title := print .Title " | " .Site.Title }}
     {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
     <title>{{ lower $title }}</title>
+    
 </head>
