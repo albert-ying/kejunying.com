@@ -1,10 +1,44 @@
-@media all {html {font-size: 26px;}}
-@media all and (max-width: 1600px){html {font-size: 24px;}}
-@media all and (max-width: 1000px){html {font-size: 23px;}}
-@media all and (max-width: 880px){html {font-size: 22px;}}
-@media all and (max-width: 800px){html {font-size: 21px;}}
-@media all and (max-width: 600px){html {font-size: 20px;}}
-@media all and (max-width: 480px){html {font-size: 19px;}}
+@media all {
+  html {
+    font-size: 26px;
+  }
+}
+
+@media all and (max-width: 1600px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  html {
+    font-size: 23px;
+  }
+}
+
+@media all and (max-width: 880px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  html {
+    font-size: 21px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  html {
+    font-size: 19px;
+  }
+}
 
 @media all and (min-width: 60px) {
   img:not(.icon) {
@@ -28,7 +62,7 @@ body {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
-body > * {
+body>* {
   font-family: "source-serif-4", serif;
   font-size: 90%;
   font-weight: 500;
@@ -56,7 +90,7 @@ body > * {
   margin-top: 0rem;
 }
 
-.recent{
+.recent {
   font-size: 90%;
   margin-top: 0.2rem;
   margin-bottom: -0.2rem;
@@ -77,7 +111,7 @@ body > * {
 }
 
 .sidenote {
-  font-size: 110%; 
+  font-size: 110%;
   margin-bottom: 1rem;
   margin-left: -6rem;
   line-height: 1.35;
@@ -85,10 +119,10 @@ body > * {
 }
 
 .sidenote a img {
-    min-width: 0%;
-    background: rgb(250, 224, 167);
-    border-radius: 100%;
-    padding: 1px;
+  min-width: 0%;
+  background: rgb(250, 224, 167);
+  border-radius: 100%;
+  padding: 1px;
 }
 
 @media all and (max-width: 1200px) {
@@ -166,12 +200,17 @@ img.icon {
 }
 
 .img-small {
-  width: 50%; /* or any specific smaller size */
-  height: auto; /* maintain aspect ratio */
+  width: 50%;
+  /* or any specific smaller size */
+  height: auto;
+  /* maintain aspect ratio */
 }
+
 .img-tiny {
-  width: 10%; /* or any specific smaller size */
-  height: auto; /* maintain aspect ratio */
+  width: 10%;
+  /* or any specific smaller size */
+  height: auto;
+  /* maintain aspect ratio */
 }
 
 .img-container {
@@ -194,7 +233,9 @@ img.icon {
   border-bottom: 0.2rem solid #444;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-variant-caps: petite-caps;
   font-variant-numeric: oldstyle-nums;
 }
@@ -238,3 +279,68 @@ h2.article-title {
   font-variant-numeric: oldstyle-nums;
 }
 
+body {
+  position: relative;
+  font-variant-numeric: oldstyle-nums;
+  max-width: 1200px;
+  min-width: 400px;
+  width: 100%;
+  min-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(99, 99, 99);
+  background-color: ivory;
+  padding: 0;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+body.dark-mode {
+  color: #fae0a7;
+  background-color: #2f2c27;
+}
+
+body>* {
+  font-family: "source-serif-4", serif;
+  font-size: 90%;
+  font-weight: 500;
+  font-style: normal;
+  margin-left: 4rem;
+  margin-right: 2.5rem;
+  text-rendering: optimizeLegibility;
+}
+
+.sidenote {
+  font-size: 110%;
+  margin-bottom: 1rem;
+  margin-left: -6rem;
+  line-height: 1.35;
+  color: gray;
+}
+
+body.dark-mode .sidenote {
+  color: #bfa770;
+}
+
+.sidenote a img {
+  min-width: 0%;
+  background: ivory;
+  border-radius: 100%;
+  padding: 1px;
+}
+
+body.dark-mode .sidenote a img {
+  background: rgb(250, 224, 167);
+}
+
+img.icon {
+  width: initial;
+  height: 1.5rem;
+  background: ivory;
+  border-radius: 25%;
+  padding: 6px;
+  margin: 4px;
+}
+
+body.dark-mode img.icon {
+  background: rgb(250, 224, 167);
+}

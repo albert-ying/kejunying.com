@@ -25,3 +25,5 @@
     {{ $script := resources.Get . | minify }}
     <script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
 {{ end }}
+
+<div class="sidenote" style="margin-top: 2rem">{{ partial "toggle.html" . }}</div>
