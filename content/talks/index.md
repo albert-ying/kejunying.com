@@ -28,6 +28,11 @@ ul li a {
 
 # **2024**
 
+{{<sidenote>}}
+Upcoming
+{{</sidenote>}}
+
+- **Harvard GRIP Presentations** - Boston, MA
 
 {{<sidenote>}}
 April
