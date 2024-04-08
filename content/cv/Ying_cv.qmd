@@ -108,54 +108,72 @@ V. N. Gladyshev, **K. Ying**, Mapping CpG sites to quantify aging traits (2024).
 
 ## Oral Presentations
 
+**Harvard GRIP Presentations** \hfill Boston, MA  
+_Causal Aging Biomarker enpowers Unbiased Anti-Aging Therapy Screening_ \hfill 2024
+
 **4th TimePie Longevity Forum** \hfill Shanghai, China  
-*Causal Aging Biomarker as a Tool for Unbiased Anti-Aging Therapy Screening* \hfill 2023
+_Causal Aging Biomarker as a Tool for Unbiased Anti-Aging Therapy Screening_ \hfill 2023
 
 **Global Congress on Aesthetic and Anti-Aging (GCAA2023)** \hfill Singapore  
-*Causal Aging Biomarker as a Tool for Unbiased Anti-Aging Therapy Screening* \hfill 2023
+_Causal Aging Biomarker as a Tool for Unbiased Anti-Aging Therapy Screening_ \hfill 2023
 
 **10th Aging Research and Drug Discovery conference (ARDD2023)** \hfill Copenhagen, Denmark  
-*Causal Epigenetic Age Uncouples Damage and Adaptation* \hfill 2023
+_Causal Epigenetic Age Uncouples Damage and Adaptation_ \hfill 2023
 
 **AGE 2023 51st Annual Meeting** \hfill Oklahoma City, OK  
-*Causal Epigenetic Age Uncouples Damage and Adaptation* \hfill 2023
+_Causal Epigenetic Age Uncouples Damage and Adaptation_ \hfill 2023
 
 **Broad Institute MPG Retreat** \hfill Cambridge, MA  
-*Causal Epigenetic Age Uncouples Damage and Adaptation* \hfill 2023
+_Causal Epigenetic Age Uncouples Damage and Adaptation_ \hfill 2023
 
 **Harvard GRIP Presentations** \hfill Boston, MA  
-*Causal Epigenetic Age Uncouples Damage and Adaptation* \hfill 2022
+_Causal Epigenetic Age Uncouples Damage and Adaptation_ \hfill 2022
 
 **Targeting Metabesity 2022**, 'Honorable Mention' \hfill Virtual Conference  
-*Causal Epigenetic Age Uncouples Damage and Adaptation* \hfill 2022
+_Causal Epigenetic Age Uncouples Damage and Adaptation_ \hfill 2022
 
 **GSA 2021 Annual Scientific Meeting** \hfill Virtual Conference  
-*Genetic and phenotypic evidence for causal relationships between aging and COVID-19* \hfill 2021
+_Genetic and phenotypic evidence for causal relationships between aging and COVID-19_ \hfill 2021
 
 ## Poster Presentations
 
 **Biomarker of Aging Symposium** \hfill Novato, CA  
-*Causal Aging Biomarker as a Tool for Unbiased Anti-Aging Therapy Screening* \hfill 2023
+_Causal Aging Biomarker as a Tool for Unbiased Anti-Aging Therapy Screening_ \hfill 2023
 
 **Gordon Research Conference, Systems Aging** \hfill Maine, MA  
-*Causal Epigenetic Age Uncouples Damage and Adaptation* \hfill 2022
+_Causal Epigenetic Age Uncouples Damage and Adaptation_ \hfill 2022
 
 ## Invited Talks
 
-**Chinese University of Hong Kong**, hosted by Dr. Xin Wang \hfill Hong Kong, China  
-*Causal Aging Biomarker as a Tool for Systemic Anti-Aging Therapy Screening* \hfill 2023
+**MRC Integrative Epidemiology Unit Seminar** \hfill Bristol, UK  
+_Epigenetic Clocks and Mendelian Randomization_ \hfill 2024
 
-**Peking University**, hosted by Dr. Jingdong Han \hfill Beijing, China  
-*Causal Aging Biomarker and ClockBase* \hfill 2023
+**NIA EL Projects Joint Meeting**, National Institute on Aging \hfill Online Webinar  
+_Aging Clocks_ \hfill 2024
+
+**Biomarkers of Aging Challenge**, Foresight Institute \hfill Online Webinar  
+_Update Webinar with Foresight_ \hfill 2024
 
 **Everything Epigenetics**, podcast hosted by Hannah Went \hfill Online Podcast  
-*Causal Epigenetic Age Uncouples Damage and Adaptation* \hfill 2023
+_Causal Epigenetic Age Uncouples Damage and Adaptation_ \hfill 2024
+
+**Chinese University of Hong Kong**, hosted by Dr. Xin Wang \hfill Hong Kong, China  
+_Causal Aging Biomarker as a Tool for Systemic Anti-Aging Therapy Screening_ \hfill 2024
+
+**Everything Epigenetics**, podcast hosted by Hannah Went \hfill Online Podcast  
+_Causal Epigenetic Age Uncouples Damage and Adaptation_ \hfill 2023
+
+**Chinese University of Hong Kong**, hosted by Dr. Xin Wang \hfill Hong Kong, China  
+_Causal Aging Biomarker as a Tool for Systemic Anti-Aging Therapy Screening_ \hfill 2023
+
+**Peking University**, hosted by Dr. Jingdong Han \hfill Beijing, China  
+_Causal Aging Biomarker and ClockBase_ \hfill 2023
 
 **Chinese Academy of Sciences**, hosted by Dr. Xuming Zhou \hfill Beijing, China  
-*Causal Epigenetic Age Uncouples Damage and Adaptation* \hfill 2022
+_Causal Epigenetic Age Uncouples Damage and Adaptation_ \hfill 2022
 
 **Foresight Institute**, hosted by Allison Duettmann \hfill Online Seminar  
-*Genetic Variation, Aging & Relationship to COVID-19 | Joris Deelen, Albert Ying* \hfill 2020
+_Genetic Variation, Aging & Relationship to COVID-19 | Joris Deelen, Albert Ying_ \hfill 2020
 
 # Research Experience
 \hrule
@@ -222,6 +240,10 @@ V. N. Gladyshev, **K. Ying**, Mapping CpG sites to quantify aging traits (2024).
 **Mentor**, Yuanpei Young Scholars Program \hfill 2023 -- 2024
 
 **Instructor**, Harvard Public Health Symposium For Young Generation \hfill 2023
+
+## Students Supervised
+
+**Predoctoral Students**: Ali Doga Yucel, Siyuan Li, Hanna Liu, Han Weng
 
 ## Journals Reviewed
 
