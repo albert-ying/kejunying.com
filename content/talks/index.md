@@ -29,16 +29,10 @@ ul li a {
 # **2024**
 
 {{<sidenote>}}
-Upcoming
+April
 {{</sidenote>}}
 
 - **Harvard GRIP Presentations** - Boston, MA
-
--
-
-{{<sidenote>}}
-April
-{{</sidenote>}}
 
 - **NIA EL Projects Joint Meeting: Aging Clocks** - National Institute on Aging
 
