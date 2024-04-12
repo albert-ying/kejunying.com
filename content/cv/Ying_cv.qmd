@@ -6,7 +6,7 @@ format:
 author: Kejun "Albert" Ying
 date: last-modified
 address: "New Research Building, Harvard Medical School, Boston, MA, 02115"
-email: kying@g.harvard.edu|albertkying@gmail.com
+email: kying@g.harvard.edu
 fontsize: 11pt
 fontcolor: darktext
 backgroundcolor: darkbackground
@@ -26,7 +26,7 @@ csl: apa-cv.csl
 \hrule
 
 **Harvard University** \hfill Cambridge, MA  
-*Ph.D., Biological Science in Public Health* \hfill 2019 -- Expected 2024
+*Ph.D., Biological Science in Public Health* \hfill 2019 -- Expected May 2025
 
 \vspace{-0.5\baselineskip}
 - Advisor: Dr. Vadim Gladyshev
@@ -34,7 +34,7 @@ csl: apa-cv.csl
 - Focused on understanding the mechanism of aging through multi-omic modeling & causal inference
 
 **Harvard University** \hfill Cambridge, MA  
-*M.S., Computational Science Engineering* \hfill 2022 -- Expected 2024
+*M.S., Computational Science Engineering* \hfill 2022 -- Expected May 2024
 
 \vspace{-0.5\baselineskip}
 - Secondary field during Ph.D. study
@@ -61,10 +61,8 @@ F99/K00, *Transition to Aging Research for Predoctoral Students*  \hfill 2024 --
 
 # Publications
 \hrule
-<!-- \vspace{0.2cm}
 
-::: {#refs-peer}
-::: -->
+Goeminne, L. J. E., Eames, A., Tyshkovskiy, A., Argentieri, M. A., \textbf{\underline{Ying, K.,}} Moqri, M., & Gladyshev, V. N. (2024). Plasma-based organ-specific aging and mortality models unveil diseases as accelerated aging of organismal systems. **medRxiv**. <https://doi.org/10.1101/2024.04.08.24305469>
 
 Moqri, M., Herzog, C., Poganik, J. R., \textbf{\underline{Ying, K.,}} Justice, J. N., Belsky, D. W., Higgins-Chen, A. T., Chen, B. H., Cohen, A. A., Fuellen, G., Hägg, S., Marioni, R. E., Widschwendter, M., Fortney, K., Fedichev, P. O., Zhavoronkov, A., Barzilai, N., Lasky-Su, J., Kiel, D. P., \... Ferrucci, L. (2024). Validation of biomarkers of aging. **Nature Medicine**, 1--13. <https://doi.org/10.1038/s41591-023-02784-9> 
 

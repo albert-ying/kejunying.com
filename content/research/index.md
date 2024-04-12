@@ -48,6 +48,16 @@ Selection of publications. For a full list see my [Google Scholar profile](https
 <br/>
 
 {{<sidenote >}}
+<div class='altmetric-embed' data-badge-popover='bottom' data-doi='10.1101/2024.04.08.24305469' data-hide-less-than=10 data-badge-type="donut"></div>
+{{</sidenote >}}
+
+#### [Plasma-based Organ-specific Aging and Mortality Models Unveil Diseases as Accelerated Aging of Organismal Systems](https://doi.org/10.1101/2024.04.08.24305469)
+
+##### LJE Goeminne, A Eames, A Tyshkovskiy, MA Argentieri, <ins>**K Ying**</ins>, M Moqri, ..., VN Gladyshev
+
+***medRxiv***
+
+{{<sidenote >}}
 
 <div class='altmetric-embed' data-badge-popover='bottom' data-doi='10.1038/s41591-023-02784-9' data-hide-less-than=10 data-badge-type="donut"></div>
 
