@@ -30,6 +30,14 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
     umamiid     = "ce4b7b41-6d20-47f0-81b2-e316006cc9f2"
 # recent news
     [[params.news]]
+        date = "2024-10"
+        name = "My paper on centenarian LoF mutations is published in *Nature Communications*!"
+        url = "https://www.nature.com/articles/s41467-024-52967-2"
+    [[params.news]]
+        date = "2024-10"
+        name = "Congratulations to my postdoc co-mentor, David Baker, for winning the 2024 Nobel Prize in Chemistry!"
+        url = "https://www.nobelprize.org/prizes/chemistry/2024/press-release/"
+    [[params.news]]
         date = "2024-02"
         name = "I received a *perfect* **Impact Score of 10** in the NIA **F99/K00** application!"
         url = "https://x.com/KejunYing/status/1756086454709600378?s=20"
