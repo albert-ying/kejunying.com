@@ -31,6 +31,66 @@ Selection of publications. For a full list see my [Google Scholar profile](https
 
 # **2024**
 
+{{<sidenote >}}
+<div class='altmetric-embed' data-badge-popover='bottom' data-doi='10.1038/s41576-024-00799-7' data-hide-less-than=10 data-badge-type="donut"></div>
+{{</sidenote >}}
+
+#### [Causal Inference for Epigenetic Ageing](https://doi.org/10.1038/s41576-024-00799-7)
+
+##### <ins>**K Ying**</ins>
+
+***Nature Reviews Genetics***
+
+<br/>
+
+{{<sidenote >}}
+<div class='altmetric-embed' data-badge-popover='bottom' data-doi='10.1038/s41467-024-50098-2' data-hide-less-than=10 data-badge-type="donut"></div>
+{{</sidenote >}}
+
+#### [Depletion of Loss-of-function Germline Mutations in Centenarians Reveals Longevity Genes](https://doi.org/10.1038/s41467-024-50098-2)
+
+##### <ins>**K Ying**</ins>, JP Castro, AV Shindyapina, A Tyshkovskiy, M Moqri, LJE Goeminne, ..., VN Gladyshev
+
+***Nature Communications***
+
+<br/>
+
+{{<sidenote >}}
+<div class='altmetric-embed' data-badge-popover='bottom' data-doi='10.1101/2024.10.30.621013' data-hide-less-than=10 data-badge-type="donut"></div>
+{{</sidenote >}}
+
+#### [MethylGPT: A Foundation Model for the DNA Methylome](https://doi.org/10.1101/2024.10.30.621013)
+
+##### <ins>**K Ying**</ins>, J Song, H Cui, Y Zhang, S Li, X Chen, ..., VN Gladyshev
+
+***bioRxiv***
+
+<br/>
+
+{{<sidenote >}}
+<div class='altmetric-embed' data-badge-popover='bottom' data-doi='10.1101/2024.10.29.620782' data-hide-less-than=10 data-badge-type="donut"></div>
+{{</sidenote >}}
+
+#### [An Open Competition for Biomarkers of Aging](https://doi.org/10.1101/2024.10.29.620782)
+
+##### <ins>**K Ying**</ins>, S Paulson, J Reinhard, LPL Camillo, J Trauble, S Jokiel, ..., VN Gladyshev
+
+***bioRxiv***
+
+<br/>
+
+{{<sidenote >}}
+<div class='altmetric-embed' data-badge-popover='bottom' data-doi='10.1101/2024.09.21.570935' data-hide-less-than=10 data-badge-type="donut"></div>
+{{</sidenote >}}
+
+#### [High-dimensional Ageome Representations of Biological Aging across Functional Modules](https://doi.org/10.1101/2024.09.21.570935)
+
+##### <ins>**K Ying**</ins>, A Tyshkovskiy, Q Chen, E Latorre-Crespo, B Zhang, H Liu, ..., VN Gladyshev
+
+***bioRxiv***
+
+<br/>
+
 {{<sidenote  >}}
 <div class='altmetric-embed' data-badge-popover='bottom' data-doi='10.1038/s43587-023-00557-0' data-hide-less-than=10 data-badge-type="donut"></div>
 

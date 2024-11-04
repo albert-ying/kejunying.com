@@ -35,7 +35,7 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
         url = "https://www.nature.com/articles/s41467-024-52967-2"
     [[params.news]]
         date = "2024-10"
-        name = "Congratulations to my postdoc co-mentor, David Baker, for winning the 2024 Nobel Prize in Chemistry!"
+        name = "Congratulations to my postdoc co-mentor, David Baker, for winning the 2024 **Nobel Prize in Chemistry**!"
         url = "https://www.nobelprize.org/prizes/chemistry/2024/press-release/"
     [[params.news]]
         date = "2024-02"

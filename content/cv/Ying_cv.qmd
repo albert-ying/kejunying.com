@@ -62,9 +62,13 @@ F99/K00, *Transition to Aging Research for Predoctoral Students*  \hfill 2024 --
 
 ^†^ Corresponding author; ^\*^ Co-first author; ^+^ Contributed as consortium author
 
-\textbf{\underline{Ying, K.,}} Castro, J. P., Shindyapina, A. V., Tyshkovskiy, A., Moqri, M., Goeminne, L. J. E., Milman, S., Zhang, Z. D., Barzilai, N., & Gladyshev, V. N. (2024). Depletion of loss-of-function germline mutations in centenarians reveals longevity genes. **Nature Communications**, in press.
+Goeminne, L. J. E., Vladimirova, A., Eames, A., Tyshkovskiy, A., Argentieri, M. A., \textbf{\underline{Ying, K.,}} Moqri, M., & Gladyshev, V. N. (2024). Plasma protein-based organ-specific aging and mortality models unveil diseases as accelerated aging of organismal systems. **Cell Metabolism**, <https://doi.org/10.1016/j.cmet.2024.03.007>
 
-Lyu, YX.^\*^, Fu, Q.^\*^, Wilczok, D.^\*^, \textbf{\underline{Ying, K.$^{*}$}}, King, A., \..., Bakula, D. (2024). Longevity biotechnology: Bridging AI, biomarkers, geroscience and clinical applications for healthy longevity. **Aging**, in press.
+\textbf{\underline{Ying, K.$^{\dagger}$}} (2024). Causal inference for epigenetic ageing. **Nature Reviews Genetics**, 1--1. <https://doi.org/10.1038/s41576-024-00799-7>
+
+\textbf{\underline{Ying, K.,}} Castro, J. P., Shindyapina, A. V., Tyshkovskiy, A., Moqri, M., Goeminne, L. J. E., Milman, S., Zhang, Z. D., Barzilai, N., & Gladyshev, V. N. (2024). Depletion of loss-of-function germline mutations in centenarians reveals longevity genes. **Nature Communications**, *15*(1), 5956. <https://doi.org/10.1038/s41467-024-50098-2>
+
+Lyu, YX.^\*^, Fu, Q.^\*^, Wilczok, D.^\*^, \textbf{\underline{Ying, K.$^{*}$}}, King, A., \..., Bakula, D. (2024). Longevity biotechnology: Bridging AI, biomarkers, geroscience and clinical applications for healthy longevity. **Aging**, *16*(1), 1--25. <https://doi.org/10.18632/aging.205397>
 
 \textbf{\underline{Biomarkers of Aging Consortium$^{+}$}}, Herzog, C. M. S., Goeminne, L. J. E., Poganik, J. R., Barzilai, N., Belsky, D. W., Betts-LaCroix, J., Chen, B. H., Chen, M., Cohen, A. A., Cummings, S. R., Fedichev, P. O., Ferrucci, L., Fleming, A., Fortney, K., Furman, D., Gorbunova, V., Higgins-Chen, A., Hood, L., Horvath, S., \... Gladyshev, V. N. (2024). Challenges and recommendations for the translation of biomarkers of aging. **Nature Aging**, 1--12. <https://doi.org/10.1038/s43587-024-00683-3>
 
@@ -99,6 +103,12 @@ Zhu, J., Xu, M., Liu, Y., Zhuang, L., \textbf{\underline{Ying, K.,}} Liu, F., Li
 # Preprints
 \hrule
 
+\textbf{\underline{Ying, K.$^{\dagger}$,}} Song, J., Cui, H., Zhang, Y., Li, S., Chen, X., Liu, H., Eames, A., McCartney, D. L., Marioni, R. E., Poganik, J. R., Moqri, M., Wang, B., & Gladyshev, V. N. (2024). MethylGPT: a foundation model for the DNA methylome. **bioRxiv**. <https://doi.org/10.1101/2024.10.30.621013>
+
+\textbf{\underline{Ying, K.,}} Paulson, S., Reinhard, J., Camillo, L. P. L., Trauble, J., Jokiel, S., Biomarkers of Aging Consortium, Gobel, D., Herzog, C., Poganik, J. R., Moqri, M., & Gladyshev, V. N. (2024). An Open Competition for Biomarkers of Aging. **bioRxiv**. <https://doi.org/10.1101/2024.10.29.620782>
+
+\textbf{\underline{Ying, K.,}} Tyshkovskiy, A., Chen, Q., Latorre-Crespo, E., Zhang, B., Liu, H., Matei-Dediu, B., Poganik, J. R., Moqri, M., Kirschne, K., Lasky-Su, J., & Gladyshev, V. N. (2024). High-dimensional Ageome Representations of Biological Aging across Functional Modules. **bioRxiv**. <https://doi.org/10.1101/2024.09.21.570935>
+
 Galkin, F., Naumov, V., Pushkov, S., Sidorenko, D., Urban, A., Zagirova, D., Alawi, K. M., Aliper, A., Gumerov, R., Kalashnikov, A., Mukba, S., Pogorelskaya, A., Ren, F., Shneyderman, A., Tang, Q., Xiao, D., Tyshkovskiy, A., \textbf{\underline{Ying, K.,}} Gladyshev, V. N., & Zhavoronkov, A. (2024). Precious3GPT: Multimodal Multi-Species Multi-Omics Multi-Tissue Transformer for Aging Research and Drug Discovery. **bioRxiv**. <https://doi.org/10.1101/2024.07.25.605062>
 
 \textbf{\underline{Ying, K.,}} Paulson, S., Eames, A., Tyshkovskiy, A., Li, S., Perez-Guevara, M., Emamifar, M., Martínez, M. C., Kwon, D., Kosheleva, A., Snyder, M. P., Gobel, D., Herzog, C., Poganik, J. R., Biomarker of Aging Consortium, Moqri, M., & Gladyshev, V. N. (2024). *A Unified Framework for Systematic Curation and Evaluation of Aging Biomarkers*. **bioRxiv**. <https://doi.org/10.1101/2023.12.02.569722>
@@ -108,8 +118,6 @@ Tyshkovskiy, A., Kholdina, D., \textbf{\underline{Ying, K.,}} Davitadze, M., Mol
 Rothi, M. H., Sarkar, G. C., Al Haddad, J., Mitchell, W., \textbf{\underline{Ying, K.,}} Pohl, N., Sotomayor-Mena, R. G., Natale, J., Dellacono, S., Gladyshev, V. N., & Greer, E. L. (2024). The 18S rRNA Methyltransferase DIMT-1 Regulates Lifespan in the Germline Later in Life. **bioRxiv**. <https://doi.org/10.1101/2024.05.15.570935>
 
 Moqri, M., Poganik, J. R., Herzog, C., \textbf{\underline{Ying, K.,}} Chen, Q., Emamifar, M., Tyshkovskiy, A., Eames, A. W., Mur, J., Matei-Dediu, B., Goeminne, L., Mitchell, W., McCartney, D. L., Marioni, R. L., Lasky-Su, J. A., Snyder, M., & Gladyshev, V. N. (2024). Integrative epigenetics and transcriptomics identify aging genes in human blood. **bioRxiv**. <https://doi.org/10.1101/2024.05.30.596713>
-
-Goeminne, L. J. E., Eames, A., Tyshkovskiy, A., Argentieri, M. A., \textbf{\underline{Ying, K.,}} Moqri, M., & Gladyshev, V. N. (2024). Plasma-based organ-specific aging and mortality models unveil diseases as accelerated aging of organismal systems. **medRxiv**. <https://doi.org/10.1101/2024.04.08.24305469>
 
 \textbf{\underline{Ying, K.,}} Tyshkovskiy, A., Trapp, A., Liu, H., Moqri, M., Kerepesi, C., & Gladyshev, V. N. (2023). *ClockBase : A comprehensive platform for biological age profiling in human and mouse*. **bioRxiv**. <https://doi.org/10.1101/2023.02.28.530532> 
 
