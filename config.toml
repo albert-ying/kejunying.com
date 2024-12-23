@@ -71,8 +71,7 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
         url = "https://github.com/albert-ying/"
     [[params.social]]
         name = "LinkedIn"
-        # icon = "linkedin"
-        icon = "fab fa-linkedin"
+        icon = "link"
         weight = 2
         url = "https://www.linkedin.com/in/kejun-albert-ying/"
     [[params.social]]
