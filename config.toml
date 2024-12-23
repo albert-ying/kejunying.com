@@ -30,6 +30,10 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
     umamiid     = "ce4b7b41-6d20-47f0-81b2-e316006cc9f2"
 # recent news
     [[params.news]]
+        date = "2024-12"
+        name = "My interview with Brenda at A4LI is online!"
+        url = "https://a4li.org/scientist-spotlight-ep-14-albert-ying/"
+    [[params.news]]
         date = "2024-11"
         name = "We released the one of the first foundation models for the DNA methylome -- MethylGPT."
         url = "https://www.biorxiv.org/content/10.1101/2024.10.30.621013v2"
@@ -67,7 +71,8 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
         url = "https://github.com/albert-ying/"
     [[params.social]]
         name = "LinkedIn"
-        icon = "linkedin"
+        # icon = "linkedin"
+        icon = "fab fa-linkedin"
         weight = 2
         url = "https://www.linkedin.com/in/kejun-albert-ying/"
     [[params.social]]

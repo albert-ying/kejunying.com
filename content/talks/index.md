@@ -29,6 +29,23 @@ ul li a {
 # **2024**
 
 {{<sidenote>}}
+December
+{{</sidenote>}}
+
+- A4LI Scientist Spotlight Interview
+
+- <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/1wLk84b70TZQgAE4mUAOYs?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+{{<sidenote>}}
+November
+{{</sidenote>}}
+
+- **Biomarkers of Aging Symposium** - Boston, MA
+
+- <iframe width=800 height=300 src="https://www.youtube.com/embed/-NGMSeC6kAY?si=6d9UAXzOX924Bsp0"> </iframe>
+
+
+{{<sidenote>}}
 April
 {{</sidenote>}}
 
@@ -49,7 +66,7 @@ March
 - **MRC Integrative Epidemiology Unit Seminar** - Bristol, UK
 
 {{<sidenote>}}
-Fabruary
+February
 {{</sidenote>}}
 
 - **Everything Epigenetics**, podcast hosted by Hannah Went - Online Podcast
