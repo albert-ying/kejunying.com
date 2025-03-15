@@ -62,6 +62,8 @@ F99/K00, *Transition to Aging Research for Predoctoral Students*  \hfill 2024 --
 
 ^†^ Corresponding author; ^\*^ Co-first author; ^+^ Contributed as consortium author
 
+Gladyshev, V. N., Anderson, B., Barlit, H., ..., \textbf{\underline{Ying, K.,}} Yunes, J., Zhang, B., & Zhavoronkov, A. (2024). Disagreement on foundational principles of biological aging. **PNAS Nexus**, *3*(12), pgae499. <https://doi.org/10.1093/pnasnexus/pgae499>
+
 Goeminne, L. J. E., Vladimirova, A., Eames, A., Tyshkovskiy, A., Argentieri, M. A., \textbf{\underline{Ying, K.,}} Moqri, M., & Gladyshev, V. N. (2024). Plasma protein-based organ-specific aging and mortality models unveil diseases as accelerated aging of organismal systems. **Cell Metabolism**, <https://doi.org/10.1016/j.cmet.2024.03.007>
 
 \textbf{\underline{Ying, K.$^{\dagger}$}} (2024). Causal inference for epigenetic ageing. **Nature Reviews Genetics**, 1--1. <https://doi.org/10.1038/s41576-024-00799-7>
@@ -145,6 +147,9 @@ V. N. Gladyshev, **K. Ying**, "Mapping CpG sites to quantify aging traits" (2024
 
 ## Oral Presentations
 
+**Keystone Symposia: Aging: New Frontiers in Rejuvenation and Gerotherapeutics** \hfill Breckenridge, CO  
+_MethylGPT: A Foundation Model for the DNA Methylome_ \hfill 2025
+
 **Biomarkers of Aging Symposium** \hfill Boston, MA  
 _Standardization of aging biomarkers and BoA challenge_ \hfill 2024
 
@@ -175,21 +180,13 @@ _Causal Epigenetic Age Uncouples Damage and Adaptation_ \hfill 2022
 **GSA 2021 Annual Scientific Meeting** \hfill Virtual Conference  
 _Genetic and phenotypic evidence for causal relationships between aging and COVID-19_ \hfill 2021
 
-## Poster Presentations
-
-**CHSL Mechanisms of Aging Meeting** \hfill Cold Spring Harbor, NY  
-*A unified framework for systematic curation and evaluation of aging biomarkers* \hfill 2024  
-*Causal epigenetic age and transcriptomic clock facilitate systemic anti-aging therapy screening* \hfill 2024  
-*Depletion of loss-of-function germline mutations in centenarians reveals novel longevity genes* \hfill 2024  
-*High-dimensional representations of biological aging in functional modules* \hfill 2024  
-
-**Biomarker of Aging Symposium** \hfill Novato, CA  
-_Causal Aging Biomarker as a Tool for Unbiased Anti-Aging Therapy Screening_ \hfill 2023
-
-**Gordon Research Conference, Systems Aging** \hfill Maine, MA  
-_Causal Epigenetic Age Uncouples Damage and Adaptation_ \hfill 2022
-
 ## Invited Talks
+
+**St. Jude Children's Research Hospital**, hosted by Dr. Zhaoming Wang \hfill Memphis, TN  
+_MethylGPT and Causality-enriched Epigenetic Clock_ \hfill 2025
+
+**The Alliance for Longevity Initiatives Scientist Spotlight**, \hfill Online Podcast  
+_Episode 14: Albert Ying_ \hfill 2024
 
 **BioAge Seminar**, hosted by Dr. Robert Hughes & Dr. Paul Timmers \hfill Boston, MA  
 _Ageome: Biological age with higher-dimensionality_ \hfill 2024
@@ -224,20 +221,29 @@ _Causal Epigenetic Age Uncouples Damage and Adaptation_ \hfill 2022
 **Foresight Institute**, hosted by Allison Duettmann \hfill Online Seminar  
 _Genetic Variation, Aging & Relationship to COVID-19 | Joris Deelen, Albert Ying_ \hfill 2020
 
-# Research Experience
+# Experience
 \hrule
+
+**Avinasi Labs** \hfill San Francisco, CA  
+**Decentralized longevity data collection** *Co-founder* \hfill 2025 -- Present
+
+**University of Washington** \hfill Seattle, WA  
+**Protein Design** *Visiting Graduate Student, David Baker's Lab* \hfill 2025
+
+**Stanford University** \hfill Stanford, CA  
+**Proteomics** *Visiting Graduate Student, Tony Wyss-Coray's Lab* \hfill 2025
 
 **Harvard Medical School, Brigham and Women's Hospital** \hfill Boston, MA  
 **Biological Aging** *Graduate Researcher, Vadim Gladyshev’s Lab* \hfill 2020 -- Present
 
 **Harvard Medical School, Boston Children’s Hospital** \hfill Boston, MA  
-**RNA Modifications** *Rotation Student, Eric Greer’s Lab* \hfill 2020
+**RNA Modifications** *Graduate Researcher (Rotation), Eric Greer’s Lab* \hfill 2020
 
 **Harvard Medical School** \hfill Boston, MA  
-**IPSC Reprogramming & DNA methylation** *Rotation Student, David Sinclair’s Lab* \hfill 2019L
+**IPSC Reprogramming & DNA methylation** *Graduate Researcher (Rotation), David Sinclair’s Lab* \hfill 2019
 
 **Harvard T. H. Chan School of Public Health** \hfill Boston, MA  
-**mTORC1** *Rotation Student, Brendan Manning’s Lab* \hfill 2019
+**mTORC1** *Graduate Researcher (Rotation), Brendan Manning’s Lab* \hfill 2019
 
 **Sun Yat-Sen University** \hfill Guangzhou, China  
 **Telomere & Telomerase** *Undergraduate Researcher, Zhou Songyang’s Lab* \hfill 2018 -- 2019
@@ -259,6 +265,8 @@ _Genetic Variation, Aging & Relationship to COVID-19 | Joris Deelen, Albert Ying
 
 # Honors
 \hrule
+
+**Semifinalist**, Harvard President's Innovation Challenge, Health Care and Life Sciences Track \hfill 2025
 
 **Best Poster Award**, Inaugural Biomarker of Aging Symposium \hfill 2023
 
@@ -291,7 +299,7 @@ _Genetic Variation, Aging & Relationship to COVID-19 | Joris Deelen, Albert Ying
 
 ## Students Supervised
 
-**Predoctoral Students**: Ali Doga Yucel, Siyuan Li, Hanna Liu, Han Weng
+**Predoctoral Students**: Ali Doga Yucel, Siyuan Li, Hanna Liu, Donghyun Lee
 
 ## Journals Reviewed
 
