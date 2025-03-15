@@ -33,7 +33,7 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
 # recent news
     [[params.news]]
         date = "2025-03"
-        name = "I'm a semifinalist of Harvard President's Innovation Challenge, Health Care and Life Sciences Track."
+        name = "We are featured as semifinalist of Harvard President's Innovation Challenge, Health Care and Life Sciences Track."
         url = "https://www.harvard.edu/news/2025/03/2025-hpc-semifinalists-announced"
 
     [[params.news]]
