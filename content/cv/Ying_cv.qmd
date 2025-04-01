@@ -3,7 +3,7 @@ title: CV
 format:
   quarto-cv-pdf:
     keep_tex: true
-author: Kejun "Albert" Ying
+author: Kejun "Albert" Ying, Ph.D.
 date: last-modified
 address: "New Research Building, Harvard Medical School, Boston, MA, 02115"
 email: kying@g.harvard.edu
@@ -24,7 +24,7 @@ csl: apa-cv.csl
 \hrule
 
 **Harvard University** \hfill Cambridge, MA  
-*Ph.D., Biological Science in Public Health* \hfill 2019 -- Expected May 2025
+*Ph.D., Biological Science in Public Health* \hfill 2019 -- March 2025
 
 \vspace{-0.5\baselineskip}
 - Advisor: Dr. Vadim Gladyshev, Harvard Medical School, Brigham and Women's Hospital
@@ -47,6 +47,50 @@ csl: apa-cv.csl
 - Thesis: Screening for the Interactome of hTERC based on Molecular Fluorescence Complementation System in Living Cells
 - Yat-Sen Honor School Program (Top 0.5%)
 - National college admissions exam (Top 0.6%)
+
+
+# Experience
+\hrule
+
+**University of Washington** \hfill Seattle, WA  
+**Protein Design** *Visiting Scholar, David Baker's Lab* \hfill 2025 -- Present
+
+**Stanford University** \hfill Stanford, CA  
+**Proteomics** *Visiting Scholar, Tony Wyss-Coray's Lab* \hfill 2025 -- Present
+
+**Avinasi Labs** \hfill San Francisco, CA  
+**Decentralized longevity data collection** *Co-founder* \hfill 2025 -- Present
+
+**Harvard Medical School, Brigham and Women's Hospital** \hfill Boston, MA  
+**Biological Aging** *Graduate Researcher, Vadim Gladyshev’s Lab* \hfill 2020 -- Present
+
+**Harvard Medical School, Boston Children’s Hospital** \hfill Boston, MA  
+**RNA Modifications** *Graduate Researcher (Rotation), Eric Greer’s Lab* \hfill 2020
+
+**Harvard Medical School** \hfill Boston, MA  
+**IPSC Reprogramming & DNA methylation** *Graduate Researcher (Rotation), David Sinclair’s Lab* \hfill 2019
+
+**Harvard T. H. Chan School of Public Health** \hfill Boston, MA  
+**mTORC1** *Graduate Researcher (Rotation), Brendan Manning’s Lab* \hfill 2019
+
+**Sun Yat-Sen University** \hfill Guangzhou, China  
+**Telomere & Telomerase** *Undergraduate Researcher, Zhou Songyang’s Lab* \hfill 2018 -- 2019
+
+**University of Edinburgh** \hfill Edinburgh, UK  
+**Population genetics** *Undergraduate Researcher, Xia Shen’s Lab* \hfill 2018
+
+**University of Washington** \hfill Seattle, WA  
+**Acarbose & Rapamycin** *Undergraduate Researcher, Matt Kaeberlein’s Lab* \hfill 2018
+
+**Buck Institute for Research on Aging** \hfill Novato, CA  
+**Senolytics** *Undergraduate Researcher, Judith Campisi’s Lab* \hfill 2018
+
+**University of California, Berkeley** \hfill Berkeley, CA  
+**SIRT7** *Undergraduate Researcher, Danica Chen’s Lab* \hfill 2017
+
+**Sun Yat-Sen University** \hfill Guangzhou, China  
+**Telomere & DNA Methylation** *Undergraduate Researcher, Yikang Rong’s Lab* \hfill 2015 -- 2017
+
 
 # Grants
 \hrule
@@ -137,6 +181,8 @@ V. N. Gladyshev, **K. Ying**, "Mapping CpG sites to quantify aging traits" (2024
 # Software and Database
 \hrule
 
+**MethylGPT** (2024) \hfill <https://github.com/MethylGPT/MethylGPT>
+
 **Biolearn** (2024) \hfill <https://bio-learn.github.io/>
 
 **ClockBase** (2023) \hfill <https://www.clockbase.org/>
@@ -220,48 +266,6 @@ _Causal Epigenetic Age Uncouples Damage and Adaptation_ \hfill 2022
 
 **Foresight Institute**, hosted by Allison Duettmann \hfill Online Seminar  
 _Genetic Variation, Aging & Relationship to COVID-19 | Joris Deelen, Albert Ying_ \hfill 2020
-
-# Experience
-\hrule
-
-**Avinasi Labs** \hfill San Francisco, CA  
-**Decentralized longevity data collection** *Co-founder* \hfill 2025 -- Present
-
-**University of Washington** \hfill Seattle, WA  
-**Protein Design** *Visiting Graduate Student, David Baker's Lab* \hfill 2025
-
-**Stanford University** \hfill Stanford, CA  
-**Proteomics** *Visiting Graduate Student, Tony Wyss-Coray's Lab* \hfill 2025
-
-**Harvard Medical School, Brigham and Women's Hospital** \hfill Boston, MA  
-**Biological Aging** *Graduate Researcher, Vadim Gladyshev’s Lab* \hfill 2020 -- Present
-
-**Harvard Medical School, Boston Children’s Hospital** \hfill Boston, MA  
-**RNA Modifications** *Graduate Researcher (Rotation), Eric Greer’s Lab* \hfill 2020
-
-**Harvard Medical School** \hfill Boston, MA  
-**IPSC Reprogramming & DNA methylation** *Graduate Researcher (Rotation), David Sinclair’s Lab* \hfill 2019
-
-**Harvard T. H. Chan School of Public Health** \hfill Boston, MA  
-**mTORC1** *Graduate Researcher (Rotation), Brendan Manning’s Lab* \hfill 2019
-
-**Sun Yat-Sen University** \hfill Guangzhou, China  
-**Telomere & Telomerase** *Undergraduate Researcher, Zhou Songyang’s Lab* \hfill 2018 -- 2019
-
-**University of Edinburgh** \hfill Edinburgh, UK  
-**Population genetics** *Undergraduate Researcher, Xia Shen’s Lab* \hfill 2018
-
-**University of Washington** \hfill Seattle, WA  
-**Acarbose & Rapamycin** *Undergraduate Researcher, Matt Kaeberlein’s Lab* \hfill 2018
-
-**Buck Institute for Research on Aging** \hfill Novato, CA  
-**Senolytics** *Undergraduate Researcher, Judith Campisi’s Lab* \hfill 2018
-
-**University of California, Berkeley** \hfill Berkeley, CA  
-**SIRT7** *Undergraduate Researcher, Danica Chen’s Lab* \hfill 2017
-
-**Sun Yat-Sen University** \hfill Guangzhou, China  
-**Telomere & DNA Methylation** *Undergraduate Researcher, Yikang Rong’s Lab* \hfill 2015 -- 2017
 
 # Honors
 \hrule

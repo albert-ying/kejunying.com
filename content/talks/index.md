@@ -26,6 +26,16 @@ ul li a {
 }
 </style>
 
+# **2025**
+
+{{<sidenote>}}
+March
+{{</sidenote>}}
+
+- On the Quantification of Biological Age
+
+- <iframe style="border-radius:12px" src="https://www.youtube.com/embed/Tm7AtwLywEg?si=eN44fzVqaKqEgEbx" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
 # **2024**
 
 {{<sidenote>}}
