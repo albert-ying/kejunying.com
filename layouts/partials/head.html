@@ -10,14 +10,21 @@
     </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.cdnfonts.com">
+    <link rel="preconnect" href="https://use.typekit.net">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://d1bxh8uas1mnw7.cloudfront.net">
 
     {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-    <meta name="description" content="{{ if .IsPage }}{{ .Site.BaseURL }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta name="description" content="{{ if .IsPage }}{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     {{ with .Site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
+    <link rel="canonical" href="{{ .Permalink }}">
 
     <meta property="og:site_name" content="{{ .Site.Title }}">
     <meta property="og:title" content="{{ block "og-title" . }}{{ .Site.Title }}{{ end }}">
-    <meta property="og:description" content="{{ if .IsPage }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta property="og:description" content="{{ if .IsPage }}{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:image" content="{{ if .IsPage }}{{ .Site.BaseURL }}{{ .Params.thumbnail }}{{ else }}{{ .Site.BaseURL }}{{ .Site.Params.favicon }}{{ end }}">
@@ -37,10 +44,6 @@
     <link rel="stylesheet" href="https://use.typekit.net/jxt2fnp.css"> <!-- Source Serif 4-->
     <link rel="stylesheet" href="https://use.typekit.net/uwd7war.css"> <!-- Source Code -->
     <link href="https://fonts.cdnfonts.com/css/cooper-hewitt" rel="stylesheet">
-    
-    {{ if .Site.Params.description }}
-        <meta name="description" content="{{ .Site.Params.description }}">
-    {{ end }}
 
     {{ if .Site.Params.favicon }}
         {{ with .Site.Params.favicon }}
