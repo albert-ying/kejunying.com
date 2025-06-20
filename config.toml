@@ -13,7 +13,7 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
 [params]
     introtag = "introduction"
 
-    intro = "Hello! I'm a PhD candidate at [Harvard Medical School](https://hms.harvard.edu/), [Vadim Gladyshev lab](https://gladyshevlab.bwh.harvard.edu/). I've also received a M.Sc. in Computational Science and Engineering from [Harvard SEAS](https://seas.harvard.edu/). My research interests include aging and omics, with a focus on the cause of aging, epigenetics, metabolism, and multi-omics. I'm also interested in **machine learning** and **protein design**. I will be co-mentored by [David Baker](https://www.bakerlab.org/) at UW and Tony Wyss-Coray at Stanford University as a postdoc fellow in 2025." 
+    intro = "Hello! I'm a postdoc fellow at [Stanford University](https://med.stanford.edu/) in [Tony Wyss-Coray's lab](https://wyss-coray.stanford.edu/) and [University of Washington](https://www.washington.edu/) in [David Baker's lab](https://www.bakerlab.org/), supported by an F99K00 fellowship. I recently received my Ph.D. from [Harvard Medical School](https://hms.harvard.edu/) in [Vadim Gladyshev's lab](https://gladyshevlab.bwh.harvard.edu/) and an M.Sc. in Computational Science and Engineering from [Harvard SEAS](https://seas.harvard.edu/). My research merges aging biology with **protein design** to tackle neurodegeneration, focusing on the cause of aging, epigenetics, metabolism, and multi-omics. I'm building the next generation of therapeutics through **machine learning** and **protein design**." 
 
     favicon = "avatar.png"
     highlightstyle  = "foundation"
@@ -31,6 +31,10 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
     umamitag = "kejunying"
 
 # recent news
+    [[params.news]]
+        date = "2025-01"
+        name = "Excited to join Tony Wyss-Coray lab at Stanford University & Baker lab at Institute for Protein Design, University of Washington as F99K00 Postdoc fellow! Merging aging biology + protein design to tackle neurodegeneration. 🧬"
+        url = ""
     [[params.news]]
         date = "2025-03"
         name = "Officially Dr.Ying! I just successfully defended my Ph.D. at Harvard. "
