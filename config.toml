@@ -32,6 +32,10 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
 
 # recent news
     [[params.news]]
+        date = "2025-11"
+        name = "Our new paper in Nature Aging is published! With the Biomarkers of Aging Consortium, we present Biolearn, an open-source framework unifying 39 aging biomarkers across 20,000+ individuals from multiple cohorts."
+        url = "https://nature.com/articles/s43587-025-00987-y"
+    [[params.news]]
         date = "2025-01"
         name = "Excited to join Tony Wyss-Coray lab at Stanford University & Baker lab at Institute for Protein Design, University of Washington as F99K00 Postdoc fellow! Merging aging biology + protein design to tackle neurodegeneration. 🧬"
         url = ""
