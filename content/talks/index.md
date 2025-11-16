@@ -29,10 +29,47 @@ ul li a {
 # **2025**
 
 {{<sidenote>}}
+November
+{{</sidenote>}}
+
+- **Biomarkers of Aging Symposium 2025** - Boston, MA
+  - *Massive AI agent mining of aging-modifying interventions from millions of molecular profiles*
+
+-
+
+{{<sidenote>}}
+October
+{{</sidenote>}}
+
+- **ASHG 2025 Annual Meeting** - Boston, MA
+  - *Decoding the Aging Methylome: From Causal Inference to Foundation Models*
+
+-
+
+{{<sidenote>}}
+June
+{{</sidenote>}}
+
+- **6th TimePie Longevity Forum** - Shanghai, China
+  - *Massive AI agent mining of aging-modifying interventions from millions of molecular profiles*
+
+-
+
+{{<sidenote>}}
+May
+{{</sidenote>}}
+
+- **CSH-Asia Conference: Stem cell, Aging and Rejuvenation** - Suzhou, China
+  - *Massive AI agent mining of aging-modifying interventions from millions of molecular profiles*
+
+-
+
+{{<sidenote>}}
 March
 {{</sidenote>}}
 
-- On the Quantification of Biological Age
+- **Keystone Symposia: Aging: New Frontiers in Rejuvenation and Gerotherapeutics** - Breckenridge, CO
+  - *MethylGPT: A Foundation Model for the DNA Methylome*
 
 - <iframe width=800 height=300 src="https://www.youtube.com/embed/Tm7AtwLywEg?si=eN44fzVqaKqEgEbx"> </iframe>
 

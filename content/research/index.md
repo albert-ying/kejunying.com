@@ -29,6 +29,34 @@ ul li a {
 Selection of publications. For a full list see my [Google Scholar profile](https://scholar.google.com/citations?user=JS7AdkcAAAAJ&hl=en)
 
 
+# **2025**
+
+{{<sidenote >}}
+<div class='altmetric-embed' data-badge-popover='bottom' data-doi='10.1038/s43587-025-00987-y' data-hide-less-than=10 data-badge-type="donut"></div>
+{{</sidenote >}}
+
+#### [A Unified Framework for Systematic Curation and Evaluation of Aging Biomarkers](https://doi.org/10.1038/s43587-025-00987-y)
+
+##### <ins>**K Ying**</ins>, S Paulson, A Eames, A Tyshkovskiy, ..., VN Gladyshev
+
+***Nature Aging***
+
+`tldr`: This work presents a comprehensive framework for systematically curating and evaluating aging biomarkers, addressing the challenge of standardizing the assessment of biological age measurements.
+
+<br/>
+
+{{<sidenote >}}
+<div class='altmetric-embed' data-badge-popover='bottom' data-doi='10.1038/s41591-025-03831-3' data-hide-less-than=10 data-badge-type="donut"></div>
+{{</sidenote >}}
+
+#### [Disruption of the Cerebrospinal Fluid-Plasma Protein Balance in Cognitive Impairment and Aging](https://doi.org/10.1038/s41591-025-03831-3)
+
+##### A Farinas, J Rutledge, VA Bot, D Western, <ins>**K Ying**</ins>, KA Lawrence, HSH Oh, ..., T Wyss-Coray
+
+***Nature Medicine***
+
+<br/>
+
 # **2024**
 
 {{<sidenote >}}
