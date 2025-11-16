@@ -344,3 +344,63 @@ img.icon {
 body.dark-mode img.icon {
   background: rgb(250, 224, 167);
 }
+
+/* ==================== MINIMAL ANIMATION STYLES ==================== */
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Smooth transitions for interactive elements */
+.social-icons a {
+  transition: transform 0.3s ease;
+}
+
+.recent {
+  transition: opacity 0.2s ease;
+}
+
+/* Typing cursor */
+.fancy-quote.typing::after {
+  content: '|';
+  animation: blink 1s steps(1) infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Particle canvas */
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  #particle-canvas {
+    display: none !important;
+  }
+}
