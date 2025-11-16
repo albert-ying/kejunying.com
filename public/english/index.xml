@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Englishes on 「应可钧」Kejun Albert Ying</title>
+    <link>//localhost:1313/english/</link>
+    <description>Recent content in Englishes on 「应可钧」Kejun Albert Ying</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <atom:link href="//localhost:1313/english/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>//localhost:1313/english/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/english/about/</guid>
+      <description>Hello! I&amp;rsquo;m a PhD candidate at Harvard Medical School, Vadim Gladyshev lab. My research interests include aging and omics, with a focus on the cause of aging, epigenetics, metabolism, and multi-omics. My recent work focuses on the causal role of DNA methylation in aging and age-related diseases, and I built the first causal biomarker of aging. I also built the ClockBase (preprint), which provides a resource for the scientific community to quantify and explore biological ages of more than 2.</description>
+    </item>
+    <item>
+      <title>Curriculum Vitae</title>
+      <link>//localhost:1313/english/cv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/english/cv/</guid>
+      <description> </description>
+    </item>
+    <item>
+      <title>Poetry</title>
+      <link>//localhost:1313/english/poetry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/english/poetry/</guid>
+      <description>In my free time I write poetry in ancient chinese style.&#xA;准确来说是填词，对我的词风影响最大的是花间词派。&#xA;Here is one example:&#xA;后庭花破子 冬夜偶提 To be updated soon.</description>
+    </item>
+    <item>
+      <title>Research</title>
+      <link>//localhost:1313/english/research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/english/research/</guid>
+      <description>Selection of publications. For a full list see my Google Scholar profile&#xA;2024 Causality-Enriched Epigenetic Age Uncouples Damage and Adaptation K Ying, H Liu, AE Tarkhov, MC Sadler, AT Lu, M Moqri, &amp;hellip;, VN Gladyshev Nature Aging (Featured on the February cover)&#xA;tldr: This work established a novel framework to introduce causal information into epigenetic clocks, resulting in DamAge and AdaptAge—clocks that track detrimental and adaptive methylation changes, respectively.</description>
+    </item>
+    <item>
+      <title>Talks</title>
+      <link>//localhost:1313/english/talks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/english/talks/</guid>
+      <description> 2024 </description>
+    </item>
+  </channel>
+</rss>

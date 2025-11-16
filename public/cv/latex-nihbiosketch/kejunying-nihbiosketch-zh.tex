@@ -1,0 +1,218 @@
+%!TEX TS-program = xelatex
+\documentclass{nihbiosketch}
+
+% URL settings for better line breaks
+\PassOptionsToPackage{hyphens,spaces,obeyspaces}{url}
+\PassOptionsToPackage{breaklinks=true,hidelinks,unicode}{hyperref}
+
+% Make URLs more compact in bibliography
+\makeatletter
+\def\doi#1{\href{https://doi.org/#1}{\small doi:#1}}
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\makeatother
+
+% Adjust paragraph settings for better line breaks
+\setlength{\emergencystretch}{3em}
+\tolerance=1000
+
+% Add Chinese language support and font settings
+\usepackage{xeCJK}
+\usepackage{fontspec}
+\setCJKmainfont{STSong}
+\setmainfont[
+  BoldFont={Times New Roman Bold},
+  ItalicFont={Times New Roman Italic},
+  BoldItalicFont={Times New Roman Bold Italic}
+]{Times New Roman}
+
+%------------------------------------------------------------------------------
+
+\name{应可钧}
+\eracommons{KEJUNY}
+\position{博士，公共卫生生物科学}
+
+\begin{document}
+%------------------------------------------------------------------------------
+
+\begin{education}
+中山大学，中国广州      & 理学学士          & 2019年6月  & 生命科学 \\
+哈佛大学，马萨诸塞州剑桥             & 理学硕士          & 2024年4月  & 计算科学工程 \\
+哈佛大学，马萨诸塞州剑桥             & 哲学博士         & 2025年3月  & 公共卫生生物科学 \\
+\end{education}
+
+
+\section{个人陈述}
+
+\begin{statement}
+
+受对理解衰老复杂性的深厚兴趣驱使，我将我的学术生涯致力于这一领域的生物医学研究。在本科期间（2015-2019年），我在多个著名的衰老实验室积累了研究经验。在巴克衰老研究所与Judith Campisi博士合作时，我研究了衰老细胞和清除衰老细胞的药物。在华盛顿大学与Matt Kaeberlein博士合作时，我研究了mTOR信号通路和雷帕霉素对寿命的影响。在加州大学伯克利分校的Danica Chen实验室，我探索了Sirtuins与细胞衰老。我在周松杨博士实验室完成的本科论文研究了端粒和端粒酶。这些多样化的经验塑造了我对衰老的认识，使我意识到这是一个需要系统方法的多方面挑战。
+
+这一视角促使我在2019年进入哈佛大学攻读研究生，加入Vadim Gladyshev博士的实验室。我的博士研究集中在一个核心问题上：我们如何才能准确量化衰老并识别其因果因素？这一探索导致了因果关系信息生物标志物的开发，这些标志物可以区分有害和适应性衰老变化，为理解衰老机制提供了前所未有的洞察，并创造了更具针对性的干预目标。
+
+为了支持更广泛的研究社区，我开发了包括ClockBase和MethylGPT在内的计算资源。我还在该领域担任领导角色，帮助组织衰老生物标志物挑战赛，并担任衰老生物标志物研讨会的组织委员会成员。
+
+我的贡献得到了国家衰老研究所博士生向衰老研究过渡奖（F99/K00）的认可，获得了完美的影响分数10分。这项支持将使我能够推进因果关系信息生物标志物开发和蛋白质设计方面的研究，以开发新型抗衰老干预措施。我从本科时期探索衰老生物学的各个方面，到研究生时期开发开创性工具的轨迹，反映了我作为科学家的成长，以及我致力于将衰老生物学的见解转化为促进健康和长寿的干预措施的承诺。
+
+\end{statement}
+
+%------------------------------------------------------------------------------
+\section{职位、科研任命和荣誉}
+
+\subsection*{职位和科研任命}
+\begin{datetbl}
+2025--至今 & 访问学者，David Baker实验室，华盛顿大学，西雅图，华盛顿州\\
+2025--至今 & 访问学者，Tony Wyss-Coray实验室，斯坦福大学，斯坦福，加利福尼亚州\\
+2020--至今 & 研究生研究员，Vadim Gladyshev实验室，哈佛医学院，波士顿，马萨诸塞州 \\
+2020          & 研究生研究员（轮转），Eric Greer实验室，波士顿儿童医院，波士顿，马萨诸塞州 \\
+2019          & 研究生研究员（轮转），David Sinclair实验室，哈佛医学院，波士顿，马萨诸塞州 \\
+2019          & 研究生研究员（轮转），Brendan Manning实验室，哈佛公共卫生学院，波士顿，马萨诸塞州 \\
+2018--2019    & 本科研究员，松阳洲实验室，中山大学，中国广州 \\
+2018          & 本科研究员，Xia Shen实验室，爱丁堡大学，英国爱丁堡 \\
+2018          & 本科研究员，Matt Kaeberlein实验室，华盛顿大学，西雅图，华盛顿州 \\
+2018          & 本科研究员，Judith Campisi实验室，巴克衰老研究所，诺瓦托，加利福尼亚州 \\
+2017          & 本科研究员，Danica Chen实验室，加州大学伯克利分校，伯克利，加利福尼亚州 \\
+2015--2017    & 本科研究员，容益康实验室，中山大学，中国广州 \\
+\end{datetbl}
+
+\subsection*{其他经历和专业会员资格}
+\begin{datetbl}
+2024--至今 & 主席，哈佛跨学科疾病与健康讨论会 \\
+2024--至今 & 组织者，衰老生物标志物挑战赛 \\
+2024          & 组织委员会成员，2024年衰老生物标志物研讨会 \\
+2023          & 组织委员会成员，2023年衰老生物标志物研讨会 \\
+2023--2024    & 导师，元培青年学者计划 \\
+\end{datetbl}
+
+\subsection*{荣誉}
+\begin{datetbl}
+2025          & 半决赛入围者，哈佛校长创新挑战赛，医疗保健和生命科学赛道 \\
+2024--2028    & 美国国立卫生研究院/国家衰老研究所F99/K00衰老研究过渡奖（完美影响分数10分） \\
+2023          & 最佳海报奖，首届衰老生物标志物研讨会 \\
+2022          & 最佳海报奖，戈登研究会议，系统衰老 \\
+2021          & 黑客马拉松冠军，长寿黑客马拉松，VitaDAO \\
+2016--2019    & 逸仙荣誉学院项目，中山大学 \\
+2016--2019    & 逸仙奖学金，中山大学 \\
+\end{datetbl}
+
+%------------------------------------------------------------------------------
+
+\section{对科学的贡献}
+
+\begin{enumerate}
+
+\item \textbf{因果关系信息表观遗传衰老生物标志物的开发：} 
+我研究的一个重点是基于DNA甲基化模式开发先进的衰老生物标志物。我开发了第一个针对人类的因果关系信息DNA甲基化时钟，该时钟可以区分有害和适应性衰老变化（Ying et al., 2024a）。使用孟德尔随机化和机器学习模型，我识别了与衰老相关特征因果相关的CpG位点，从而开发了两个新的表观遗传时钟：DamAge和AdaptAge。我证明DamAge与不良状况（包括增加的死亡风险）相关，而AdaptAge则与有益的适应性变化相关。这项工作为理解生物衰老中的因果通路提供了新的见解，并创造了更具针对性的潜在干预目标。这种方法的重要性通过一篇关于表观遗传衰老因果推断方法的特邀观点文章得到认可（Ying, 2024），并导致了一项关于映射CpG位点以量化衰老特征的专利申请。
+
+\begin{enumerate}
+
+\item \textbf{Ying, K.}, Liu, H., Tarkhov, A. E., Sadler, M. C., Lu, A. T., Moqri, M., Horvath, S., Kutalik, Z., Shen, X., \& Gladyshev, V. N. (2024). Causality-enriched epigenetic age uncouples damage and adaptation. \textit{Nature Aging (Featured on the February Cover)}, 1--16. \doi{10.1038/s43587-023-00557-0}
+
+\item \textbf{Ying, K.} (2024). Causal inference for epigenetic ageing. \textit{Nature Reviews Genetics}, 1--1. \doi{10.1038/s41576-024-00799-7}
+
+\item Tarkhov, A. E., Lindstrom-Vautrin, T., Zhang, S., \textbf{Ying, K.}, Moqri, M., Zhang, B., Tyshkovskiy, A., Levy, O., \& Gladyshev, V. N. (2024). Nature of epigenetic aging from a single-cell perspective. \textit{Nature Aging}, 1--17. \doi{10.1038/s43587-023-00555-2}
+
+\item V. N. Gladyshev, \textbf{K. Ying}, "Mapping CpG sites to quantify aging traits" (2024). \textit{WO2024039905A2} (Patent)
+
+\end{enumerate}
+
+\item \textbf{生物年龄分析综合平台的创建：} 
+我为衰老研究社区开发了关键资源，这些资源有助于系统地分析和探索生物年龄。我创建了ClockBase（www.clockbase.org），这是一个平台，包含了基于多个衰老时钟模型对超过3,000个DNA甲基化和基因表达数据集（包含近300,000个样本）的生物年龄估计（Ying et al., 2023）。这一资源使研究人员能够识别潜在的抗衰老干预措施和加速衰老的条件。此外，我还开发了MethylGPT，这是一个DNA甲基组基础模型（Ying et al., 2024b），推进了我们分析衰老研究中表观遗传模式的能力。我在这一领域的研究工作通过在Keystone衰老研讨会和其他重要会议上的演讲邀请得到认可，并导致了一项关于生物年龄高维测量的临时专利申请。
+
+\begin{enumerate}
+
+\item \textbf{Ying, K.}, Tyshkovskiy, A., Trapp, A., Liu, H., Moqri, M., Kerepesi, C., \& Gladyshev, V. N. (2023). \textit{ClockBase: A comprehensive platform for biological age profiling in human and mouse}. bioRxiv. \doi{10.1101/2023.02.28.530532}
+
+\item \textbf{Ying, K.}, Song, J., Cui, H., Zhang, Y., Li, S., Chen, X., Liu, H., Eames, A., McCartney, D. L., Marioni, R. E., Poganik, J. R., Moqri, M., Wang, B., \& Gladyshev, V. N. (2024). MethylGPT: a foundation model for the DNA methylome. \textit{bioRxiv}. \doi{10.1101/2024.10.30.621013}
+
+\item \textbf{Ying, K.}, Tyshkovskiy, A., Chen, Q., Latorre-Crespo, E., Zhang, B., Liu, H., Matei-Dediu, B., Poganik, J. R., Moqri, M., Kirschne, K., Lasky-Su, J., \& Gladyshev, V. N. (2024). High-dimensional Ageome Representations of Biological Aging across Functional Modules. \textit{bioRxiv}. \doi{10.1101/2024.09.21.570935}
+
+\item V. N. Gladyshev, \textbf{K. Ying}, "High-dimensional measurement of biological age" (2024). \textit{Provisional Patent Application}
+
+\end{enumerate}
+
+\item \textbf{研究免疫和疾病相关的衰老和长寿遗传学：} 
+我的研究考察了衰老、遗传学和免疫之间的关系，特别是在COVID-19等疾病的背景下。我使用孟德尔随机化和多工具分析来研究与长寿相关的遗传因素如何影响COVID-19的易感性（Ying et al., 2021）。我发现支持更长寿命的遗传变异与较低的COVID-19感染和住院风险相关。我还识别了年龄相关的COVID-19严重程度的关键通路，包括Notch信号和免疫系统发育。在最近的工作中，我研究了百岁老人中功能缺失生殖系突变的模式（Ying et al., 2024c），识别了可能对年龄相关疾病提供保护的潜在长寿基因。这些发现为长寿和年龄相关疾病易感性的遗传基础提供了新的见解。
+
+\begin{enumerate}
+
+\item \textbf{Ying, K.}, Zhai, R., Pyrkov, T. V., Shindyapina, A. V., Mariotti, M., Fedichev, P. O., Shen, X., \& Gladyshev, V. N. (2021). Genetic and phenotypic analysis of the causal relationship between aging and COVID-19. \textit{Communications Medicine}, 1(1), 35. \doi{10.1038/s43856-021-00033-z}
+
+\item \textbf{Ying, K.}, Castro, J. P., Shindyapina, A. V., Tyshkovskiy, A., Moqri, M., Goeminne, L. J. E., Milman, S., Zhang, Z. D., Barzilai, N., \& Gladyshev, V. N. (2024). Depletion of loss-of-function germline mutations in centenarians reveals longevity genes. \textit{Nature Communications}, 15(1), 5956. \doi{10.1038/s41467-024-50098-2}
+
+\item Yang, Z., Macdonald-Dunlop, E., Chen, J., Zhai, R., Li, T., Richmond, A., Klarić, L., Pirastu, N., Ning, Z., Zheng, C., Wang, Y., Huang, T., He, Y., Guo, H., \textbf{Ying, K.}, Gustafsson, S., ... Shen, X. (2022). Genetic Landscape of the ACE2 Coronavirus Receptor. \textit{Circulation}, 145(18), 1398--1411. \doi{10.1161/CIRCULATIONAHA.121.057888}
+
+\item Castro, J. P., Shindyapina, A. V., Barbieri, A., \textbf{Ying, K.}, Strelkova, O. S., Paulo, J. A., Tyshkovskiy, A., Meinl, R., Kerepesi, C., Petrashen, A. P., Mariotti, M., Meer, M. V., Hu, Y., Karamyshev, A., Losyev, G., Galhardo, M., Logarinho, E., Indzhykulian, A. A., Gygi, S. P., ... Gladyshev, V. N. (2024). Age-associated clonal B cells drive B cell lymphoma in mice. \textit{Nature Aging}, 4(8), 1--15. \doi{10.1038/s43587-024-00671-7}
+
+\end{enumerate}
+
+\item \textbf{探索衰老和年龄相关疾病中的因果表观遗传改变：} 
+理解表观遗传变化是否因果影响寿命和衰老相关结果一直是我研究的中心主题。在Eric Greer博士实验室轮转期间，我使用非靶向质谱研究了秀丽隐杆线虫中的RNA修饰，为显示18S rRNA甲基化可以跨世代影响寿命和抗压能力的研究做出了贡献（Liberman et al., 2023）。在我的论文工作中，我实施了基于遗传学的因果推断方法来识别影响寿命的DNA甲基化位点，区分衰老过程中的有害和适应性表观遗传变化。我还通过分析单细胞DNA甲基化数据（Zhang et al., 2022）为理解单细胞水平的DNAm时钟做出了贡献，帮助注释衰老相关位点并阐明这些生物标志物的潜在机制。我在这一领域的研究得到了NIH F99/K00博士生向衰老研究过渡奖的认可。
+
+\begin{enumerate}
+
+\item Liberman, N., Rothi, M. H., Gerashchenko, M. V., Zorbas, C., Boulias, K., MacWhinnie, F. G., \textbf{Ying, A. K.}, Flood Taylor, A., Al Haddad, J., Shibuya, H., Roach, L., Dong, A., Dellacona, S., Lafontaine, D. L. J., Gladyshev, V. N., \& Greer, E. L. (2023). 18S rRNA methyltransferases DIMT1 and BUD23 drive intergenerational hormesis. \textit{Molecular Cell}, 83(18), 3268--3282.e7. \doi{10.1016/j.molcel.2023.08.014}
+
+\item Li, T., Ning, Z., Yang, Z., Zhai, R., Zheng, C., Xu, W., Wang, Y., \textbf{Ying, K.}, Chen, Y., \& Shen, X. (2021). Total genetic contribution assessment across the human genome. \textit{Nature Communications}, 12(1), 2845. \doi{10.1038/s41467-021-23124-w}
+
+\item Zhang, B., Tarkhov, A. E., Ratzan, W., \textbf{Ying, K.}, Moqri, M., Poganik, J. R., Barre, B., Trapp, A., Zoller, J. A., Haghani, A., Horvath, S., Peshkin, L., \& Gladyshev, V. N. (2022). \textit{Epigenetic profiling and incidence of disrupted development point to gastrulation as aging ground zero in Xenopus laevis}. bioRxiv. \doi{10.1101/2022.08.02.502559}
+
+\item Rothi, M. H., Sarkar, G. C., Al Haddad, J., Mitchell, W., \textbf{Ying, K.}, Pohl, N., Sotomayor-Mena, R. G., Natale, J., Dellacona, S., Gladyshev, V. N., \& Greer, E. L. (2024). The 18S rRNA Methyltransferase DIMT-1 Regulates Lifespan in the Germline Later in Life. \textit{bioRxiv}. \doi{10.1101/2024.05.15.570935}
+
+\end{enumerate}
+
+\item \textbf{衰老生物标志物标准化和社区工作的领导：} 
+我为建立衰老生物标志物领域的标准和社区基础设施做出了贡献。作为衰老生物标志物研讨会的组织委员会成员和衰老生物标志物挑战赛的组织者（Ying et al., 2024d），我帮助开发了系统评估衰老生物标志物的框架（Ying et al., 2024e）。作为衰老生物标志物联盟的成员，我共同撰写了解决生物标志物转化挑战的论文（Biomarkers of Aging Consortium et al., 2024）。我还开发了包括Biolearn在内的计算工具来支持衰老研究。
+
+\begin{enumerate}
+
+\item \textbf{Ying, K.}, Paulson, S., Reinhard, J., Camillo, L. P. L., Trauble, J., Jokiel, S., Biomarkers of Aging Consortium, Gobel, D., Herzog, C., Poganik, J. R., Moqri, M., \& Gladyshev, V. N. (2024). An Open Competition for Biomarkers of Aging. \textit{bioRxiv}. \doi{10.1101/2024.10.29.620782}
+
+\item \textbf{Ying, K.}, Paulson, S., Eames, A., Tyshkovskiy, A., Li, S., Perez-Guevara, M., Emamifar, M., Martínez, M. C., Kwon, D., Kosheleva, A., Snyder, M. P., Gobel, D., Herzog, C., Poganik, J. R., Biomarker of Aging Consortium, Moqri, M., \& Gladyshev, V. N. (2024). \textit{A Unified Framework for Systematic Curation and Evaluation of Aging Biomarkers}. bioRxiv. \doi{10.1101/2023.12.02.569722}
+
+\item \textbf{Biomarkers of Aging Consortium}, Herzog, C. M. S., Goeminne, L. J. E., Poganik, J. R., Barzilai, N., Belsky, D. W., Betts-LaCroix, J., Chen, B. H., Chen, M., Cohen, A. A., Cummings, S. R., Fedichev, P. O., Ferrucci, L., Fleming, A., Fortney, K., Furman, D., Gorbunova, V., Higgins-Chen, A., Hood, L., Horvath, S., ... Gladyshev, V. N. (2024). Challenges and recommendations for the translation of biomarkers of aging. \textit{Nature Aging}, 1--12. \doi{10.1038/s43587-024-00683-3}
+
+\item Moqri, M., Herzog, C., Poganik, J. R., \textbf{Biomarkers of Aging Consortium}, Justice, J., Belsky, D. W., Higgins-Chen, A., Moskalev, A., Fuellen, G., Cohen, A. A., Bautmans, I., Widschwendter, M., Ding, J., Fleming, A., Mannick, J., Han, J.-D. J., Zhavoronkov, A., Barzilai, N., Kaeberlein, M., ... Gladyshev, V. N. (2023). Biomarkers of aging for the identification and evaluation of longevity interventions. \textit{Cell}, 186(18), 3758--3775. \doi{10.1016/j.cell.2023.08.003}
+
+\end{enumerate}
+
+\end{enumerate}
+
+\subsection*{已发表工作完整列表：} 
+\url{https://www.ncbi.nlm.nih.gov/myncbi/kejun.ying.1/bibliography/public/}
+
+%------------------------------------------------------------------------------
+
+\section{学术表现}
+\begin{tabular}{lll}
+\textbf{年份} & \textbf{课程名称} & \textbf{成绩} \\
+\hline
+\multicolumn{3}{l}{\textbf{哈佛大学}} \\
+2019 & 实验室轮转 & A \\
+2019 & 生物科学交流 & A- \\
+2019 & 编程导论 & A \\
+2019 & 公共卫生生物统计学和流行病学核心原理 & A- \\
+2020 & 遗传流行病学原理 & B \\
+2020 & 科学行为 & SAT \\
+2020 & 细胞代谢和人类疾病 & SEM \\
+2020 & 基因组数据处理 & SEM \\
+2020 & 实验室轮转 & SEM \\
+2020 & 人类营养的生物学基础 & SEM \\
+2020 & 衰老的分子机制 & SEM \\
+2021 & 营养和代谢疾病的分子基础 & SAT \\
+2021 & 基因表达高级主题 & A- \\
+2021 & 数据科学1：数据科学导论 & C+ \\
+2021 & 分子代谢高级主题 & A- \\
+2021 & 数据科学2：数据科学高级主题 & B- \\
+2021 & 衰老和氧化还原生物学 & SAT \\
+2022 & 高级科学计算：数据随机方法 & B \\
+2022 & 衰老和氧化还原生物学 & SAT \\
+2023 & 数学建模 & A- \\
+\end{tabular}
+
+\vspace{1em}
+\noindent\textbf{哈佛大学SAT/UNS说明：} 满意（SAT）成绩包括从A到C-的字母成绩；不满意（UNS）成绩代表低于C-的工作，被视为不及格成绩。选择SAT/UNS评分方式的课程学生不能获得字母成绩。
+
+\vspace{0.5em}
+\noindent 2020年春季学期从2020年3月10日起因新型冠状病毒COVID-19疫情爆发而受到严重影响。强制实施满意（SEM）/不满意（UEM）评分。本学期出现的其他成绩是在3月10日之前提交的。
+
+\end{document} 

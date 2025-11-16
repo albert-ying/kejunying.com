@@ -1,0 +1,155 @@
+---
+title: CV
+format:
+  quarto-cv-pdf:
+    keep_tex: true
+author: Kejun "Albert" Ying
+date: last-modified
+fontsize: 11pt
+validate-yaml: false
+csl: apa-cv.csl
+nocite: '@*'
+---
+
+# Education
+\hrule
+
+**Harvard University** \hfill Cambridge, MA  
+Ph.D., Biological Sciences in Public Health \hfill 2019 -- 2025
+
+**Harvard University** \hfill Cambridge, MA  
+M.S., Computational Science and Engineering \hfill 2023 -- 2024
+
+**Sun Yat-Sen University** \hfill Guangzhou, China  
+B.S., Life Science \hfill 2015 -- 2019
+
+# Experience
+\hrule
+
+**Stanford University & University of Washington** \hfill Stanford, CA & Seattle, WA  
+Postdoctoral Researcher, Protein Design and Aging \hfill Jun 2025 -- Present
+
+- Analyze protein folding patterns using computational modeling software
+- Process experimental data from aging studies and maintain research files
+- Perform statistical analysis on biological samples using Python and R
+- Collaborate with laboratory members on protein structure research projects
+
+**Harvard Medical School, Brigham and Women's Hospital** \hfill Boston, MA  
+Graduate Researcher, Biological Aging \hfill Mar 2020 -- May 2025
+
+- Analyzed DNA methylation patterns in aging populations using bioinformatics tools
+- Processed genomic sequencing data and performed quality control checks
+- Conducted statistical modeling of age-related biological changes
+- Organized tissue samples and coordinated with clinical collaborators
+- Prepared research figures and contributed to scientific manuscript writing
+
+**Harvard Medical School, Boston Children's Hospital** \hfill Boston, MA  
+Graduate Researcher (Rotation), RNA Biology \hfill Jan 2020 -- Mar 2020
+
+- Extracted RNA from C. elegans samples and performed qPCR experiments
+- Analyzed gene expression data using standard bioinformatics pipelines
+- Maintained worm cultures and conducted lifespan measurement experiments
+
+**Harvard Medical School** \hfill Boston, MA  
+Graduate Researcher (Rotation), Cell Biology \hfill Oct 2019 -- Dec 2019
+
+- Cultured mouse fibroblast cells and performed cellular reprogramming experiments
+- Conducted immunofluorescence staining and microscopy imaging
+- Analyzed cell morphology changes using image analysis software
+
+**Harvard T. H. Chan School of Public Health** \hfill Boston, MA  
+Graduate Researcher (Rotation), Molecular Biology \hfill Jul 2019 -- Oct 2019
+
+- Performed Western blot experiments to measure protein expression levels
+- Conducted cell viability assays under different treatment conditions
+- Analyzed metabolic pathway data and prepared laboratory reports
+
+**Undergraduate Research (multiple laboratories)** \hfill 2015 -- 2019
+
+- Conducted PCR amplification and gel electrophoresis experiments
+- Measured telomere length in human blood samples using qPCR
+- Performed population genetics analysis using standard statistical software
+- Maintained laboratory equipment and prepared experimental reagents
+
+# Publications
+\hrule
+
+^†^ Corresponding author; ^\*^ Co-first author; ^+^ Contributed as consortium author
+
+## Published Papers
+
+Ying, K., Paulson, S., Eames, A., Tyshkovskiy, A., ..., Gladyshev, V. N. (2025). *A Unified Framework for Systematic Curation and Evaluation of Aging Biomarkers*. **Nature Aging (in press)**. <https://doi.org/10.1101/2023.12.02.569722>
+
+Wu, X.^\*^, Liu, H.^\*^, Ying, K.$^{*\dagger}$ (2025). Biological Age, Aging Clocks, and the Interplay with Lymphoid Neoplasms: Mechanisms and Clinical Frontiers. **Lymphatics**, *3*(3), 19. <https://doi.org/10.3390/lymphatics3030019>
+
+Ying, K.$^{\dagger}$ (2024). Causal inference for epigenetic ageing. **Nature Reviews Genetics**, 1--1. <https://doi.org/10.1038/s41576-024-00799-7>
+
+Ying, K., Castro, J. P., Shindyapina, A. V., ..., Gladyshev, V. N. (2024). Depletion of loss-of-function germline mutations in centenarians reveals longevity genes. **Nature Communications**, *15*(1), 5956. <https://doi.org/10.1038/s41467-024-50098-2>
+
+Ying, K., Liu, H., Tarkhov, A. E., ..., Gladyshev, V. N. (2024). Causality-enriched epigenetic age uncouples damage and adaptation. **Nature Aging (February Cover)**, 1--16. <https://doi.org/10.1038/s43587-023-00557-0> 
+
+Ying, K., Zhai, R., Pyrkov, T. V., ..., Gladyshev, V. N. (2021). Genetic and phenotypic analysis of the causal relationship between aging and COVID-19. **Communications Medicine**, *1*(1), 35. <https://doi.org/10.1038/s43856-021-00033-z> 
+
+Farinas, A., Rutledge, J., Bot, V. A., Western, D., Ying, K., Lawrence, K. A., Oh, H. S. H., ..., Wyss-Coray, T. (2025). Disruption of the cerebrospinal fluid–plasma protein balance in cognitive impairment and aging. **Nature Medicine**, 1--12. <https://doi.org/10.1038/s41591-025-03831-3>
+
+Rothi, M.H., Sarkar, G.C., Haddad, J.A., Mitchell, W., Ying, K.,  et al. (2025). The 18S rRNA methyltransferase DIMT-1 regulates lifespan in the germline later in life. **Nature Communications**, 16, 6944. <https://doi.org/10.1038/s41467-025-62323-7>
+
+Grzeczka, A., Iqbal, S., Ying, K., Kordowitzki, P. (2025). Circular RNAs as regulators and biomarkers of mammalian ovarian ageing. **GeroScience**, 1--19. <https://doi.org/10.1007/s11357-025-01798-0>
+
+Jacques, E., Herzog, C., Ying, K., \... Gladyshev, V. N. (2025). Invigorating discovery and clinical translation of aging biomarkers. **Nature Aging**, 1--5.
+
+Goeminne, L. J. E., Vladimirova, A., Eames, A., Tyshkovskiy, A., Argentieri, M. A., Ying, K., Moqri, M., & Gladyshev, V. N. (2025). Plasma protein-based organ-specific aging and mortality models unveil diseases as accelerated aging of organismal systems. **Cell Metabolism**, <https://doi.org/10.1016/j.cmet.2024.03.007>
+
+Gladyshev, V. N., Anderson, B., Barlit, H., ..., Ying, K., Yunes, J., Zhang, B., & Zhavoronkov, A. (2024). Disagreement on foundational principles of biological aging. **PNAS Nexus**, *3*(12), pgae499. <https://doi.org/10.1093/pnasnexus/pgae499>
+
+Lyu, YX.^\*^, Fu, Q.^\*^, Wilczok, D.^\*^, Ying, K.$^{*}$, King, A., \..., Bakula, D. (2024). Longevity biotechnology: Bridging AI, biomarkers, geroscience and clinical applications for healthy longevity. **Aging**, *16*(1), 1--25. <https://doi.org/10.18632/aging.205397>
+
+Biomarkers of Aging Consortium$^{+}$, Herzog, C. M. S., Goeminne, L. J. E., Poganik, J. R., ..., Gladyshev, V. N. (2024). Challenges and recommendations for the translation of biomarkers of aging. **Nature Aging**, 1--12. <https://doi.org/10.1038/s43587-024-00683-3>
+
+Castro, J. P., Shindyapina, A. V., Barbieri, A., Ying, K., ..., Gladyshev, V. N. (2024). Age-associated clonal B cells drive B cell lymphoma in mice. **Nature Aging**, *4*(8), 1--15. <https://doi.org/10.1038/s43587-024-00671-7>
+
+Moqri, M., ..., de Sena Brandine, G., Ying, K., Tarkhov, A., ..., Sebastiano, V. (2024). PRC2-AgeIndex as a universal biomarker of aging and rejuvenation. **Nature Communications**, *15*(1), 5956. <https://doi.org/10.1038/s41467-024-50098-2>
+
+Tarkhov, A. E., Lindstrom-Vautrin, T., Zhang, S., Ying, K., Moqri, M., ..., Gladyshev, V. N. (2024). Nature of epigenetic aging from a single-cell perspective. **Nature Aging**, 1--17. <https://doi.org/10.1038/s43587-023-00555-2> 
+
+Moqri, M., Herzog, C., Poganik, J. R., Ying, K., ... Ferrucci, L. (2024). Validation of biomarkers of aging. **Nature Medicine**, 1--13. <https://doi.org/10.1038/s41591-023-02784-9> 
+
+Griffin, P. T., ..., Kerepesi, C., Ying, K., ..., Sinclair, D. A. (2024). TIME-seq reduces time and cost of DNA methylation measurement for epigenetic clock construction. **Nature Aging**, 1--14. <https://doi.org/10.1038/s43587-023-00555-2> 
+
+Moqri, M., Herzog, C., Poganik, J. R., Biomarkers of Aging Consortium$^{+}$, ... Gladyshev, V. N. (2023). Biomarkers of aging for the identification and evaluation of longevity interventions. **Cell**, *186*(18), 3758--3775. <https://doi.org/10.1016/j.cell.2023.08.003>
+
+Liberman, N., Rothi, M. H., Gerashchenko, M. V., Zorbas, C., Boulias, K., MacWhinnie, F. G., Ying, A. K., Flood Taylor, A., ..., Greer, E. L. (2023). 18S rRNA methyltransferases DIMT1 and BUD23 drive intergenerational hormesis. **Molecular Cell**, *83*(18), 3268--3282.e7. <https://doi.org/10.1016/j.molcel.2023.08.014> 
+
+Bitto, A., Grillo, A. S., Ito, T. K., Stanaway, I. B., Nguyen, B. M. G., Ying, K., ... Kaeberlein, M. (2023). Acarbose suppresses symptoms of mitochondrial disease in a mouse model of Leigh syndrome. **Nature Metabolism**, *5*(6), 955--967. <https://doi.org/10.1038/s42255-023-00815-w> 
+
+Emmrich, S., Trapp, A., Tolibzoda Zakusilo, F., Straight, M. E., Ying, A. K., Tyshkovskiy, A., ..., Gorbunova, V. (2022). Characterization of naked mole-rat hematopoiesis reveals unique stem and progenitor cell patterns and neotenic traits. **The EMBO Journal**, *41*(15), e109694. <https://doi.org/10.15252/embj.2021109694> 
+
+Yang, Z., ..., Guo, H., Ying, K., Gustafsson, S., ..., Shen, X. (2022). Genetic Landscape of the ACE2 Coronavirus Receptor. **Circulation**, *145*(18), 1398--1411. <https://doi.org/10.1161/CIRCULATIONAHA.121.057888> 
+
+Li, T., Ning, Z., Yang, Z., Zhai, R., Zheng, C., Xu, W., Wang, Y., Ying, K., Chen, Y., & Shen, X. (2021). Total genetic contribution assessment across the human genome. **Nature Communications**, *12*(1), 2845. <https://doi.org/10.1038/s41467-021-23124-w> 
+
+Zhu, J., Xu, M., Liu, Y., Zhuang, L., Ying, K., Liu, F., ..., Songyang, Z. (2019). Phosphorylation of PLIN3 by AMPK promotes dispersion of lipid droplets during starvation. **Protein & Cell**, *10*(5), 382--387. <https://doi.org/10.1007/s13238-018-0593-9>
+
+## Preprints
+
+Ying, K.$^{\dagger}$, Song, J., Cui, H., ..., Gladyshev, V. N$^{\dagger}$. (2024). MethylGPT: a foundation model for the DNA methylome. **bioRxiv** *(Nature Machine Intelligence submitted)*. <https://doi.org/10.1101/2024.10.30.621013>
+
+Ying, K., Paulson, S., Reinhard, J., ..., Gladyshev, V. N. (2024). An Open Competition for Biomarkers of Aging. **bioRxiv**. <https://doi.org/10.1101/2024.10.29.620782>
+
+Ying, K., Tyshkovskiy, A., Chen, Q., ..., Gladyshev, V. N. (2024). High-dimensional Ageome Representations of Biological Aging across Functional Modules. **bioRxiv** *(Nature Aging 2nd Revision)*. <https://doi.org/10.1101/2024.09.21.570935>
+
+Ying, K., Tyshkovskiy, A., Trapp, A., ..., Gladyshev, V. N. (2023). *ClockBase: A comprehensive platform for biological age profiling in human and mouse*. **bioRxiv**. *(Updated Version, Nature submitted)* <https://doi.org/10.1101/2023.02.28.530532> 
+
+Mavrommatis, C., Belsky, D., Ying, K., Moqri, M., Campbell, A., Richmond, A., ..., Gladyshev, V. N. (2025). *An unbiased comparison of 14 epigenetic clocks in relation to 10-year onset of 174 disease outcomes in 18,859 individuals*. **medRxiv**. <https://doi.org/10.1101/2025.07.14.25331494>
+
+Zhang, O., ..., Wang, J., Ying, K., Kang, Y., Hsieh, C.-y., & Hou, T. (2025). *Graph Neural Networks in Modern AI-aided Drug Discovery*. **arXiv**. <https://arxiv.org/abs/2506.06915>
+
+Galkin, F., ..., Tyshkovskiy, A., Ying, K., Gladyshev, V. N., & Zhavoronkov, A. (2024). Precious3GPT: Multimodal Multi-Species Multi-Omics Multi-Tissue Transformer for Aging Research and Drug Discovery. **bioRxiv**. <https://doi.org/10.1101/2024.07.25.605062>
+
+Tyshkovskiy, A., Kholdina, D., Ying, K., Davitadze, M., ..., Gladyshev, V. N. (2024). Transcriptomic Hallmarks of Mortality Reveal Universal and Specific Mechanisms of Aging, Chronic Disease, and Rejuvenation. **bioRxiv**. <https://doi.org/10.1101/2024.07.04.601982>
+
+Moqri, M., Poganik, J. R., Herzog, C., Ying, K., Chen, Q., ..., Gladyshev, V. N. (2024). Integrative epigenetics and transcriptomics identify aging genes in human blood. **bioRxiv**. <https://doi.org/10.1101/2024.05.30.596713>
+
+Rothi, M. H., Sarkar, G. C., Al Haddad, J., Mitchell, W., Ying, K., Pohl, N., ..., Greer, E. L. (2024). The 18S rRNA Methyltransferase DIMT-1 Regulates Lifespan in the Germline Later in Life. **bioRxiv**. <https://doi.org/10.1101/2024.05.15.570935>
+
+Zhang, B., Tarkhov, A. E., Ratzan, W., Ying, K., Moqri, M., ..., Gladyshev, V. N. (2022). *Epigenetic profiling and incidence of disrupted development point to gastrulation as aging ground zero in Xenopus laevis*. **bioRxiv**. <https://doi.org/10.1101/2022.08.02.502559> 

@@ -1,0 +1,352 @@
+---
+title: CV
+format:
+  quarto-cv-pdf:
+    keep_tex: true
+author: Kejun "Albert" Ying, Ph.D.
+date: last-modified
+address: "290 Jane Stanford Way, Stanford, CA 94305"
+email: keying@stanford.edu | kying0@uw.edu
+fontsize: 11pt
+fontcolor: darktext
+backgroundcolor: darkbackground
+urlcolor: mycolor
+github: albert-ying
+orcid: 0000-0002-1791-6176
+web: kejunying.com
+fontawesome: yes
+nocite: '@*'
+validate-yaml: false
+csl: apa-cv.csl
+---
+
+# Education & Professional Training
+\hrule
+
+**Stanford University & University of Washington** \hfill Stanford, CA & Seattle, WA  
+*Postdoctoral Researcher, Tony Wyss-Coray's Lab & David Baker's Lab (co-mentorship)* \hfill Jun 2025 -- Present
+
+\vspace{-0.5\baselineskip}
+- Co-advised by Dr. Wyss-Coray and Baker under NIH/NIA F99/K00 Fellowship
+- Merging aging biology and protein design to tackle neurodegeneration
+- Focused on the *de novo* design of disaggregase to act against protein aggregation in neurons
+- Building advanced aging clock and the foundation model for proteomic data
+
+**Harvard University** \hfill Cambridge, MA  
+*Ph.D., Biological Science in Public Health* \hfill July 2019 -- May 2025
+
+\vspace{-0.5\baselineskip}
+- Dissertation: "On the Quantification of Aging"
+- Advisor: Dr. Vadim Gladyshev, Harvard Medical School, Brigham and Women's Hospital
+- Dissertation Advisory Committee: Dr. Brendan Manning, Dr. David Sinclair, Dr. Shamil Sunyaev
+- Focused on understanding the mechanism of aging through multi-omic modeling & causal inference
+- Built the **first causality-enriched aging clock** / **current largest biological age database and agentic system (ClockBase, 2.5M+ samples)** / **first foundation model for the DNA methylome (MethylGPT)**
+
+**Harvard University** \hfill Cambridge, MA  
+*M.S., Computational Science Engineering* \hfill July 2023 -- May 2024
+
+\vspace{-0.5\baselineskip}
+- Secondary field during Ph.D. study
+
+**University of California, Berkeley** \hfill Berkeley, CA  
+*Visiting Student, Integrative Biology* \hfill Aug 2017 -- Dec 2017
+
+**Sun Yat-Sen University** \hfill Guangzhou, China  
+*B.S., Life Science* \hfill Sep 2015 -- Jun 2019
+
+\vspace{-0.5\baselineskip}
+- Thesis: Screening for the Interactome of hTERC based on Molecular Fluorescence Complementation System in Living Cells
+- Yat-Sen Honor School Program (Top 0.5%)
+- National college admissions exam (Top 0.6%)
+
+
+# Research Experience
+\hrule
+
+**Stanford University & University of Washington** \hfill Stanford, CA & Seattle, WA  
+**Protein Design for Aging** *Postdoctoral Researcher, Wyss-Coray's Lab & Baker's Lab* \hfill Jun 2025 -- Present  
+*Visiting Scholar, Wyss-Coray's Lab & Baker's Lab* \hfill Nov 2024 -- May 2025
+
+**Avinasi Labs** \hfill San Francisco, CA  
+**Decentralized longevity data collection** *Co-founder* \hfill Jan 2025 -- Present
+
+**Harvard Medical School, Brigham and Women's Hospital** \hfill Boston, MA  
+**Biological Aging** *Graduate Researcher, Vadim Gladyshev's Lab* \hfill Mar 2020 -- May 2025
+
+**Harvard Medical School, Boston Children's Hospital** \hfill Boston, MA  
+**RNA Modifications** *Graduate Researcher (Rotation), Eric Greer's Lab* \hfill Jan 2020 -- Mar 2020
+
+**Harvard Medical School** \hfill Boston, MA  
+**Cell Reprogramming** *Graduate Researcher (Rotation), David Sinclair's Lab* \hfill Oct 2019 -- Dec 2019
+
+**Harvard T. H. Chan School of Public Health** \hfill Boston, MA  
+**mTORC1** *Graduate Researcher (Rotation), Brendan Manning's Lab* \hfill July 2019 -- Oct 2019
+
+**Undergraduate Research** \hfill 2015 -- 2019
+
+- **Sun Yat-Sen University**, *Telomere & Telomerase* \hfill Zhou Songyang's Lab
+- **University of Edinburgh**, *Population genetics* \hfill Xia Shen's Lab
+- **University of Washington**, *Acarbose & Rapamycin* \hfill Matt Kaeberlein's Lab
+- **Buck Institute for Research on Aging**, *Senolytics* \hfill Judith Campisi's Lab
+- **University of California, Berkeley**, *SIRT7* \hfill Danica Chen's Lab
+- **Sun Yat-Sen University**, *Telomere & DNA Methylation* \hfill Yikang Rong's Lab
+
+# Grants
+\hrule
+
+**Using causal aging biomarkers and protein design to develop novel anti-aging interventions** \hfill NIH/NIA
+F99/K00, *Transition to Aging Research for Predoctoral Students*  \hfill 2024 -- 2028
+
+- Award Document Number: FAG088431A (PI)
+- Received a *perfect* Impact Score of **10**
+
+# Publications
+\hrule
+
+^†^ Corresponding author; ^\*^ Co-first author; ^+^ Contributed as consortium author
+
+## Selected Publications & Preprints
+
+\textbf{\underline{Ying, K.,}} Paulson, S., Eames, A., Tyshkovskiy, A., ..., Gladyshev, V. N. (2025). *A Unified Framework for Systematic Curation and Evaluation of Aging Biomarkers*. **Nature Aging (in press)**. <https://doi.org/10.1101/2023.12.02.569722>
+
+Wu, X.^\*^, Liu, H.^\*^, \textbf{\underline{Ying, K.$^{*\dagger}$}} (2025). Biological Age, Aging Clocks, and the Interplay with Lymphoid Neoplasms: Mechanisms and Clinical Frontiers. **Lymphatics**, *3*(3), 19. <https://doi.org/10.3390/lymphatics3030019>
+
+\textbf{\underline{Ying, K.$^{\dagger}$}} (2024). Causal inference for epigenetic ageing. **Nature Reviews Genetics**, 1--1. <https://doi.org/10.1038/s41576-024-00799-7>
+
+\textbf{\underline{Ying, K.,}} Castro, J. P., Shindyapina, A. V., ..., Gladyshev, V. N. (2024). Depletion of loss-of-function germline mutations in centenarians reveals longevity genes. **Nature Communications**, *15*(1), 5956. <https://doi.org/10.1038/s41467-024-50098-2>
+
+\textbf{\underline{Ying, K.,}} Liu, H., Tarkhov, A. E., ..., Gladyshev, V. N. (2024). Causality-enriched epigenetic age uncouples damage and adaptation. **Nature Aging (February Cover)**, 1--16. <https://doi.org/10.1038/s43587-023-00557-0> 
+
+\textbf{\underline{Ying, K.,}} Zhai, R., Pyrkov, T. V., ..., Gladyshev, V. N. (2021). Genetic and phenotypic analysis of the causal relationship between aging and COVID-19. **Communications Medicine**, *1*(1), 35. <https://doi.org/10.1038/s43856-021-00033-z> 
+
+
+\textbf{\underline{Ying, K.$^{\dagger}$,}} Song, J., Cui, H., ..., Gladyshev, V. N$^{\dagger}$. (2024). MethylGPT: a foundation model for the DNA methylome. **bioRxiv** *(Nature Machine Intelligence submitted)*. <https://doi.org/10.1101/2024.10.30.621013>
+
+\textbf{\underline{Ying, K.,}} Paulson, S., Reinhard, J., ..., Gladyshev, V. N. (2024). An Open Competition for Biomarkers of Aging. **bioRxiv**. <https://doi.org/10.1101/2024.10.29.620782>
+
+\textbf{\underline{Ying, K.,}} Tyshkovskiy, A., Chen, Q., ..., Gladyshev, V. N. (2024). High-dimensional Ageome Representations of Biological Aging across Functional Modules. **bioRxiv** *(Nature Aging 2nd Revision)*. <https://doi.org/10.1101/2024.09.21.570935>
+
+\textbf{\underline{Ying, K.,}} Tyshkovskiy, A., Trapp, A., ..., Gladyshev, V. N. (2023). *ClockBase: A comprehensive platform for biological age profiling in human and mouse*. **bioRxiv**. *(Updated Version, Nature submitted)* <https://doi.org/10.1101/2023.02.28.530532> 
+
+## Other Publications
+
+Farinas, A., Rutledge, J., Bot, V. A., Western, D., \textbf{\underline{Ying, K.,}} Lawrence, K. A., Oh, H. S. H., ..., Wyss-Coray, T. (2025). Disruption of the cerebrospinal fluid–plasma protein balance in cognitive impairment and aging. **Nature Medicine**, 1--12. <https://doi.org/10.1038/s41591-025-03831-3>
+
+Rothi, M.H., Sarkar, G.C., Haddad, J.A., Mitchell, W., \textbf{\underline{Ying, K.,}}  et al. (2025). The 18S rRNA methyltransferase DIMT-1 regulates lifespan in the germline later in life. **Nature Communications**, 16, 6944. <https://doi.org/10.1038/s41467-025-62323-7>
+
+Grzeczka, A., Iqbal, S., \textbf{\underline{Ying, K.,}} Kordowitzki, P. (2025). Circular RNAs as regulators and biomarkers of mammalian ovarian ageing. **GeroScience**, 1--19. <https://doi.org/10.1007/s11357-025-01798-0>
+
+Jacques, E., Herzog, C., \textbf{\underline{Ying, K.,}} \... Gladyshev, V. N. (2025). Invigorating discovery and clinical translation of aging biomarkers. **Nature Aging**, 1--5.
+
+Goeminne, L. J. E., Vladimirova, A., Eames, A., Tyshkovskiy, A., Argentieri, M. A., \textbf{\underline{Ying, K.,}} Moqri, M., & Gladyshev, V. N. (2025). Plasma protein-based organ-specific aging and mortality models unveil diseases as accelerated aging of organismal systems. **Cell Metabolism**, <https://doi.org/10.1016/j.cmet.2024.03.007>
+
+Gladyshev, V. N., Anderson, B., Barlit, H., ..., \textbf{\underline{Ying, K.,}} Yunes, J., Zhang, B., & Zhavoronkov, A. (2024). Disagreement on foundational principles of biological aging. **PNAS Nexus**, *3*(12), pgae499. <https://doi.org/10.1093/pnasnexus/pgae499>
+
+Lyu, YX.^\*^, Fu, Q.^\*^, Wilczok, D.^\*^, \textbf{\underline{Ying, K.$^{*}$}}, King, A., \..., Bakula, D. (2024). Longevity biotechnology: Bridging AI, biomarkers, geroscience and clinical applications for healthy longevity. **Aging**, *16*(1), 1--25. <https://doi.org/10.18632/aging.205397>
+
+\textbf{\underline{Biomarkers of Aging Consortium$^{+}$}}, Herzog, C. M. S., Goeminne, L. J. E., Poganik, J. R., ..., Gladyshev, V. N. (2024). Challenges and recommendations for the translation of biomarkers of aging. **Nature Aging**, 1--12. <https://doi.org/10.1038/s43587-024-00683-3>
+
+Castro, J. P., Shindyapina, A. V., Barbieri, A., \textbf{\underline{Ying, K.,}} ..., Gladyshev, V. N. (2024). Age-associated clonal B cells drive B cell lymphoma in mice. **Nature Aging**, *4*(8), 1--15. <https://doi.org/10.1038/s43587-024-00671-7>
+
+Moqri, M., ..., de Sena Brandine, G., \textbf{\underline{Ying, K.,}} Tarkhov, A., ..., Sebastiano, V. (2024). PRC2-AgeIndex as a universal biomarker of aging and rejuvenation. **Nature Communications**, *15*(1), 5956. <https://doi.org/10.1038/s41467-024-50098-2>
+
+Tarkhov, A. E., Lindstrom-Vautrin, T., Zhang, S., \textbf{\underline{Ying, K.,}} Moqri, M., ..., Gladyshev, V. N. (2024). Nature of epigenetic aging from a single-cell perspective. **Nature Aging**, 1--17. <https://doi.org/10.1038/s43587-023-00555-2> 
+
+Moqri, M., Herzog, C., Poganik, J. R., \textbf{\underline{Ying, K.,}}, ... Ferrucci, L. (2024). Validation of biomarkers of aging. **Nature Medicine**, 1--13. <https://doi.org/10.1038/s41591-023-02784-9> 
+
+Griffin, P. T., ..., Kerepesi, C., \textbf{\underline{Ying, K.,}} ..., Sinclair, D. A. (2024). TIME-seq reduces time and cost of DNA methylation measurement for epigenetic clock construction. **Nature Aging**, 1--14. <https://doi.org/10.1038/s43587-023-00555-2> 
+
+Moqri, M., Herzog, C., Poganik, J. R., \textbf{\underline{Biomarkers of Aging Consortium$^{+}$}}, ... Gladyshev, V. N. (2023). Biomarkers of aging for the identification and evaluation of longevity interventions. **Cell**, *186*(18), 3758--3775. <https://doi.org/10.1016/j.cell.2023.08.003>
+
+Liberman, N., Rothi, M. H., Gerashchenko, M. V., Zorbas, C., Boulias, K., MacWhinnie, F. G., \textbf{\underline{Ying, A. K.,}} Flood Taylor, A., ..., Greer, E. L. (2023). 18S rRNA methyltransferases DIMT1 and BUD23 drive intergenerational hormesis. **Molecular Cell**, *83*(18), 3268--3282.e7. <https://doi.org/10.1016/j.molcel.2023.08.014> 
+
+Bitto, A., Grillo, A. S., Ito, T. K., Stanaway, I. B., Nguyen, B. M. G., \textbf{\underline{Ying, K.,}} ... Kaeberlein, M. (2023). Acarbose suppresses symptoms of mitochondrial disease in a mouse model of Leigh syndrome. **Nature Metabolism**, *5*(6), 955--967. <https://doi.org/10.1038/s42255-023-00815-w> 
+
+Emmrich, S., Trapp, A., Tolibzoda Zakusilo, F., Straight, M. E., \textbf{\underline{Ying, A. K.,}} Tyshkovskiy, A., ..., Gorbunova, V. (2022). Characterization of naked mole-rat hematopoiesis reveals unique stem and progenitor cell patterns and neotenic traits. **The EMBO Journal**, *41*(15), e109694. <https://doi.org/10.15252/embj.2021109694> 
+
+Yang, Z., ..., Guo, H., \textbf{\underline{Ying, K.,}} Gustafsson, S., ..., Shen, X. (2022). Genetic Landscape of the ACE2 Coronavirus Receptor. **Circulation**, *145*(18), 1398--1411. <https://doi.org/10.1161/CIRCULATIONAHA.121.057888> 
+
+Li, T., Ning, Z., Yang, Z., Zhai, R., Zheng, C., Xu, W., Wang, Y., \textbf{\underline{Ying, K.,}} Chen, Y., & Shen, X. (2021). Total genetic contribution assessment across the human genome. **Nature Communications**, *12*(1), 2845. <https://doi.org/10.1038/s41467-021-23124-w> 
+
+Zhu, J., Xu, M., Liu, Y., Zhuang, L., \textbf{\underline{Ying, K.,}} Liu, F., ..., Songyang, Z. (2019). Phosphorylation of PLIN3 by AMPK promotes dispersion of lipid droplets during starvation. **Protein & Cell**, *10*(5), 382--387. <https://doi.org/10.1007/s13238-018-0593-9>
+
+
+## Other Preprints
+
+Mavrommatis, C., Belsky, D., \textbf{\underline{Ying, K.,}} Moqri, M., Campbell, A., Richmond, A., ..., Gladyshev, V. N. (2025). *An unbiased comparison of 14 epigenetic clocks in relation to 10-year onset of 174 disease outcomes in 18,859 individuals*. **medRxiv**. <https://doi.org/10.1101/2025.07.14.25331494>
+
+Zhang, O., ..., Wang, J., \textbf{\underline{Ying, K.,}} Kang, Y., Hsieh, C.-y., & Hou, T. (2025). *Graph Neural Networks in Modern AI-aided Drug Discovery*. **arXiv**. <https://arxiv.org/abs/2506.06915>
+
+Galkin, F., ..., Tyshkovskiy, A., \textbf{\underline{Ying, K.,}} Gladyshev, V. N., & Zhavoronkov, A. (2024). Precious3GPT: Multimodal Multi-Species Multi-Omics Multi-Tissue Transformer for Aging Research and Drug Discovery. **bioRxiv**. <https://doi.org/10.1101/2024.07.25.605062>
+
+Tyshkovskiy, A., Kholdina, D., \textbf{\underline{Ying, K.,}} Davitadze, M., ..., Gladyshev, V. N. (2024). Transcriptomic Hallmarks of Mortality Reveal Universal and Specific Mechanisms of Aging, Chronic Disease, and Rejuvenation. **bioRxiv**. <https://doi.org/10.1101/2024.07.04.601982>
+
+Moqri, M., Poganik, J. R., Herzog, C., \textbf{\underline{Ying, K.,}} Chen, Q., ..., Gladyshev, V. N. (2024). Integrative epigenetics and transcriptomics identify aging genes in human blood. **bioRxiv**. <https://doi.org/10.1101/2024.05.30.596713>
+
+Rothi, M. H., Sarkar, G. C., Al Haddad, J., Mitchell, W., \textbf{\underline{Ying, K.,}} Pohl, N., ..., Greer, E. L. (2024). The 18S rRNA Methyltransferase DIMT-1 Regulates Lifespan in the Germline Later in Life. **bioRxiv**. <https://doi.org/10.1101/2024.05.15.570935>
+
+Zhang, B., Tarkhov, A. E., Ratzan, W., \textbf{\underline{Ying, K.,}} Moqri, M., ..., Gladyshev, V. N. (2022). *Epigenetic profiling and incidence of disrupted development point to gastrulation as aging ground zero in Xenopus laevis*. **bioRxiv**. <https://doi.org/10.1101/2022.08.02.502559> 
+
+
+# Patents
+\hrule
+
+V. N. Gladyshev, **K. Ying**, "High-dimensional measurement of biological age" (2024). *Provisional Patent Application*
+
+V. N. Gladyshev, **K. Ying**, "Mapping CpG sites to quantify aging traits" (2024). *WO2024039905A2*
+
+# Software and Database
+\hrule
+
+**MethylGPT** (2024) \hfill <https://github.com/MethylGPT/MethylGPT>
+
+**Biolearn** (2024) \hfill <https://bio-learn.github.io/>
+
+**ClockBase** (2023) \hfill <https://www.clockbase.org/>
+
+
+# Presentations
+\hrule
+
+## Oral Presentations
+
+**Keystone Symposia: Aging: New Frontiers in Rejuvenation and Gerotherapeutics** \hfill Breckenridge, CO  
+_MethylGPT: A Foundation Model for the DNA Methylome_ \hfill 2025
+
+**Biomarkers of Aging Symposium** \hfill Boston, MA  
+_Standardization of aging biomarkers and BoA challenge_ \hfill 2024
+
+**Harvard GRIP Presentations** \hfill Boston, MA  
+_Causal Aging Biomarker empowers Unbiased Anti-Aging Therapy Screening_ \hfill 2024
+
+**4th TimePie Longevity Forum** \hfill Shanghai, China  
+_Causal Aging Biomarker as a Tool for Unbiased Anti-Aging Therapy Screening_ \hfill 2023
+
+**Global Congress on Aesthetic and Anti-Aging (GCAA2023)** \hfill Singapore  
+_Causal Aging Biomarker as a Tool for Unbiased Anti-Aging Therapy Screening_ \hfill 2023
+
+**10th Aging Research and Drug Discovery conference (ARDD2023)** \hfill Copenhagen, Denmark  
+_Causal Epigenetic Age Uncouples Damage and Adaptation_ \hfill 2023
+
+**AGE 2023 51st Annual Meeting** \hfill Oklahoma City, OK  
+_Causal Epigenetic Age Uncouples Damage and Adaptation_ \hfill 2023
+
+**Broad Institute MPG Retreat** \hfill Cambridge, MA  
+_Causal Epigenetic Age Uncouples Damage and Adaptation_ \hfill 2023
+
+**Harvard GRIP Presentations** \hfill Boston, MA  
+_Causal Epigenetic Age Uncouples Damage and Adaptation_ \hfill 2022
+
+**Targeting Metabesity 2022**, 'Honorable Mention' \hfill Virtual Conference  
+_Causal Epigenetic Age Uncouples Damage and Adaptation_ \hfill 2022
+
+**GSA 2021 Annual Scientific Meeting** \hfill Virtual Conference  
+_Genetic and phenotypic evidence for causal relationships between aging and COVID-19_ \hfill 2021
+
+## Invited Talks
+
+**St. Jude Children's Research Hospital**, hosted by Dr. Zhaoming Wang \hfill Memphis, TN  
+_MethylGPT and Causality-enriched Epigenetic Clock_ \hfill 2025
+
+**The Alliance for Longevity Initiatives Scientist Spotlight**, \hfill Online Podcast  
+_Episode 14: Albert Ying_ \hfill 2024
+
+**BioAge Seminar**, hosted by Dr. Robert Hughes & Dr. Paul Timmers \hfill Boston, MA  
+_Ageome: Biological age with higher-dimensionality_ \hfill 2024
+
+**MRC Integrative Epidemiology Unit Seminar** \hfill Bristol, UK  
+_Epigenetic Clocks and Mendelian Randomization_ \hfill 2024
+
+**NIA EL Projects Joint Meeting**, National Institute on Aging \hfill Online Webinar  
+_Aging Clocks_ \hfill 2024
+
+**Biomarkers of Aging Challenge**, Foresight Institute \hfill Online Webinar  
+_Update Webinar with Foresight_ \hfill 2024
+
+**Everything Epigenetics**, podcast hosted by Hannah Went \hfill Online Podcast  
+_Causal Epigenetic Age Uncouples Damage and Adaptation_ \hfill 2024
+
+**Chinese University of Hong Kong**, hosted by Dr. Xin Wang \hfill Hong Kong, China  
+_Causal Aging Biomarker as a Tool for Systemic Anti-Aging Therapy Screening_ \hfill 2024
+
+**Everything Epigenetics**, podcast hosted by Hannah Went \hfill Online Podcast  
+_Causal Epigenetic Age Uncouples Damage and Adaptation_ \hfill 2023
+
+**Chinese University of Hong Kong**, hosted by Dr. Xin Wang \hfill Hong Kong, China  
+_Causal Aging Biomarker as a Tool for Systemic Anti-Aging Therapy Screening_ \hfill 2023
+
+**Peking University**, hosted by Dr. Jingdong Han \hfill Beijing, China  
+_Causal Aging Biomarker and ClockBase_ \hfill 2023
+
+**Chinese Academy of Sciences**, hosted by Dr. Xuming Zhou \hfill Beijing, China  
+_Causal Epigenetic Age Uncouples Damage and Adaptation_ \hfill 2022
+
+**Foresight Institute**, hosted by Allison Duettmann \hfill Online Seminar  
+_Genetic Variation, Aging & Relationship to COVID-19 | Joris Deelen, Albert Ying_ \hfill 2020
+
+# Honors
+\hrule
+
+**Semifinalist**, Harvard President's Innovation Challenge, Health Care and Life Sciences Track \hfill 2025
+
+**Best Poster Award**, Inaugural Biomarker of Aging Symposium \hfill 2023
+
+**Best Poster Award**, Gordon Research Conference, Systems Aging \hfill 2022
+
+**Hackathon Winner**, Longevity Hackathon, VitaDAO \hfill 2021
+
+**Yat-Sen Honor School Program**, Sun Yat-Sen University \hfill 2016 -- 2019
+
+**Yat-Sen Scholarship**, Sun Yat-Sen University \hfill 2016 -- 2019
+
+# Professional Experience
+\hrule
+
+## Service & Leadership
+
+**Core Member**, Biomarkers of Aging Consortium \hfill 2024 -- Present
+
+**Organizer**, Biomarker of Aging Challenge \hfill 2024 -- Present
+
+**President**, Harvard Interdisciplinary Discussion on Disease and Health \hfill 2024 -- 2025
+
+**Agenda Contributor**, World Economic Forum \hfill 2024
+
+**Organizing Committee Member**, Biomarker of Aging Symposium 2024 \hfill 2024
+
+**Organizing Committee Member**, Biomarker of Aging Symposium 2023 \hfill 2023
+
+## Teaching & Mentoring
+
+**Mentor**, Yuanpei Young Scholars Program \hfill 2023 -- 2024
+
+**Instructor**, Harvard Public Health Symposium For Young Generation \hfill 2023
+
+## Students Supervised
+
+**Predoctoral Students**: Ali Doga Yucel, Siyuan Li, Hanna Liu, Donghyun Lee, Yikun Zhang
+
+## Journals Reviewed
+
+*Nature Aging*, *Nature Communications*, *Communications Medicine*, *Genome Medicine*, *BMC Nephrology*, *Lipids in Health and Disease*, *Clinical Proteomics*, *Evidence-Based Complementary and Alternative Medicine*, *Scientific Reports*
+
+# References
+\hrule
+
+**Dr. Tony Wyss-Coray**, Postdoctoral Co-Advisor \hfill twc\@stanford.edu  
+D.H. Chen Distinguished Professor of Neurology and Neurological Sciences, Stanford University
+
+**Dr. David Baker**, Postdoctoral Co-Advisor \hfill dbaker\@uw.edu  
+Professor of Biochemistry, University of Washington
+
+**Dr. Vadim Gladyshev**, Dissertation Advisor \hfill vgladyshev\@bwh.harvard.edu  
+Professor of Medicine, Harvard Medical School
+
+**Dr. Steve Horvath**, Collaborator \hfill shorvath\@mednet.ucla.edu  
+Professor of Human Genetics, UCLA
+
+**Dr. David Sinclair**, Dissertation Advisory Committee \hfill david_sinclair\@hms.harvard.edu  
+Professor of Genetics, Harvard Medical School
+
+**Dr. Matt Kaeberlein**, Advisor \hfill kaeber\@uw.edu  
+Professor of Pathology, University of Washington

@@ -1,0 +1,204 @@
+%!TEX TS-program = xelatex
+\documentclass{nihbiosketch}
+
+% URL settings for better line breaks
+\PassOptionsToPackage{hyphens,spaces,obeyspaces}{url}
+\PassOptionsToPackage{breaklinks=true,hidelinks,unicode}{hyperref}
+
+% Make URLs more compact in bibliography
+\makeatletter
+\def\doi#1{\href{https://doi.org/#1}{\small doi:#1}}
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\makeatother
+
+% Adjust paragraph settings for better line breaks
+\setlength{\emergencystretch}{3em}
+\tolerance=1000
+
+% Enhanced Chinese font support with xeCJK
+\usepackage{xeCJK}
+\setCJKmainfont[BoldFont=STHeiti]{STSong}
+\setCJKsansfont[BoldFont=STHeiti]{STHeiti}
+\setCJKmonofont{STFangsong}
+
+% Override default font for English text while maintaining Arial
+\setmainfont[Mapping=tex-text]{Arial}
+\setsansfont{Arial}
+
+% Remove bold from English text in bibliography
+\AtBeginDocument{
+  \let\textbf\relax
+  \let\textbf\normalfont
+}
+
+% Adjust CJK spacing
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+% Adjust section spacing for bilingual text
+\titlespacing{\section}{0pt}{20pt}{10pt}
+\titlespacing{\subsection}{0pt}{15pt}{7.5pt}
+
+%------------------------------------------------------------------------------
+
+\name{应可钧（Albert）}
+\eracommons{KEJUNY}
+\position{博士，公共卫生生物科学}
+
+\begin{document}
+%------------------------------------------------------------------------------
+
+\begin{education}
+中山大学，中国广州      & 理学学士          & 2019年6月  & 生命科学 \\
+哈佛大学，美国马萨诸塞州剑桥    & 理学硕士          & 2024年4月  & 计算科学与工程 \\
+哈佛大学，美国马萨诸塞州剑桥    & 哲学博士         & 2025年3月  & 公共卫生生物科学 \\
+\end{education}
+
+
+\section{个人陈述}
+
+\begin{statement}
+受衰老生物学研究的深深吸引，我将自己的学术生涯致力于衰老生物医学研究。在本科期间（2015-2019），我在多个著名的衰老实验室进行实习，每次经历都让我对衰老生物学的复杂性有了独特的认识。
+
+我有幸在巴克衰老研究所的Judith Campisi实验室工作，研究衰老细胞和衰老清除剂的潜力。在华盛顿大学Matt Kaeberlein实验室期间，我专注于mTOR信号通路和雷帕霉素对寿命的影响。在加州大学伯克利分校，在Danica Chen的指导下，我探索了Sirtuin蛋白家族及其在细胞衰老中的作用。我的本科论文在中山大学宋尧实验室完成，研究端粒和端粒酶的动态变化。这些多样化的经历让我认识到衰老是一个需要系统方法解决的多方面问题。
+
+这种认识促使我在2019年前往哈佛大学深造，加入了著名衰老研究者Vadim Gladyshev的实验室。在攻读博士学位期间，我专注于研究DNA甲基化在衰老和年龄相关疾病中的因果作用。我的工作culminated在开发出第一个因果衰老生物标志物。此外，我建立了ClockBase，这是一个量化和探索超过30万个样本生物年龄的资源，从而促进了新的长寿干预和加速衰老条件的发现。
+
+最近，我开发了MethylGPT，这是一个DNA甲基组的基础模型，并创建了跨功能模块的高维Ageome生物衰老表征。我还参与组织了衰老生物标志物挑战赛，并担任衰老生物标志物研讨会的组织委员会成员。
+
+我获得了NIA博士生向衰老研究过渡奖（F99/K00），影响分数为满分10分，这将对我职业生涯的下一阶段起到重要作用。在其支持下，我计划推进因果性指导的生物标志物开发工作，并将其应用于蛋白质设计，开发新型抗衰老干预措施。
+
+\end{statement}
+
+%------------------------------------------------------------------------------
+\section{职位、科研任命和荣誉}
+
+\subsection*{职位和科研任命}
+\begin{datetbl}
+2025--至今 & 访问学者，David Baker实验室，华盛顿大学，西雅图 \\
+2025--至今 & 访问学者，Tony Wyss-Coray实验室，斯坦福大学，斯坦福 \\
+2020--至今 & 研究生研究员，Vadim Gladyshev实验室，哈佛医学院，波士顿 \\
+2020       & 研究生研究员（轮转），Eric Greer实验室，波士顿儿童医院，波士顿 \\
+2019       & 研究生研究员（轮转），David Sinclair实验室，哈佛医学院，波士顿 \\
+2019       & 研究生研究员（轮转），Brendan Manning实验室，哈佛公共卫生学院，波士顿 \\
+2018--2019 & 本科研究员，宋尧实验室，中山大学，广州 \\
+2018       & 本科研究员，Xia Shen实验室，爱丁堡大学，爱丁堡 \\
+2018       & 本科研究员，Matt Kaeberlein实验室，华盛顿大学，西雅图 \\
+2018       & 本科研究员，Judith Campisi实验室，巴克衰老研究所，诺瓦托 \\
+2017       & 本科研究员，Danica Chen实验室，加州大学伯克利分校，伯克利 \\
+2015--2017 & 本科研究员，荣毅康实验室，中山大学，广州 \\
+\end{datetbl}
+
+\subsection*{其他经历和专业会员资格}
+\begin{datetbl}
+2024--至今 & 主席，哈佛疾病与健康跨学科讨论会 \\
+2024--至今 & 组织者，衰老生物标志物挑战赛 \\
+2024       & 组织委员会成员，2024年衰老生物标志物研讨会 \\
+2023       & 组织委员会成员，2023年衰老生物标志物研讨会 \\
+2023--2024 & 导师，元培青年学者计划 \\
+\end{datetbl}
+
+\subsection*{荣誉}
+\begin{datetbl}
+2025       & 半决赛入围者，哈佛校长创新挑战赛，医疗保健和生命科学赛道 \\
+2024--2028 & NIH/NIA F99/K00衰老研究过渡奖（满分影响分数10分） \\
+2023       & 最佳海报奖，首届衰老生物标志物研讨会 \\
+2022       & 最佳海报奖，戈登研究会议，系统衰老 \\
+2021       & 黑客马拉松冠军，长寿黑客马拉松，VitaDAO \\
+2016--2019 & 研森荣誉学院项目，中山大学 \\
+2016--2019 & 研森奖学金，中山大学 \\
+\end{datetbl}
+
+%------------------------------------------------------------------------------
+
+\section{对科学的贡献}
+
+\begin{enumerate}
+
+\item \textbf{开发因果性指导的表观遗传衰老生物标志物：} 
+我研究的一个重点是基于DNA甲基化模式开发先进的衰老生物标志物。作为第一作者，我开发了首个人类因果性指导的DNA甲基化时钟，将损伤性和适应性衰老变化分开。使用孟德尔随机化和机器学习模型，我识别出与衰老相关特征有因果联系的CpG位点，开发出两个新型表观遗传时钟：DamAge和AdaptAge。我证明DamAge与不良状况（如死亡风险增加）相关，而AdaptAge则与有益适应相关。这项工作显著推进了我们对生物衰老因果通路的理解。
+
+\begin{enumerate}
+
+\item \textbf{应可钧}等。因果性富集的表观遗传年龄解耦损伤和适应。\textit{Nature Aging（二月封面文章）}，1--16。\doi{10.1038/s43587-023-00557-0}
+
+\item \textbf{应可钧}。表观遗传衰老的因果推断。\textit{Nature Reviews Genetics}，1--1。\doi{10.1038/s41576-024-00799-7}
+
+\item Tarkhov, A. E.等。从单细胞视角看表观遗传衰老的本质。\textit{Nature Aging}，1--17。\doi{10.1038/s43587-023-00555-2}
+
+\item V. N. Gladyshev，\textbf{应可钧}。"映射CpG位点以量化衰老特征"（2024）。\textit{WO2024039905A2}（专利）
+
+\end{enumerate}
+
+
+\item \textbf{创建综合生物年龄分析平台：} 
+我为衰老研究社区开发了关键资源，促进生物年龄的系统分析和探索。作为第一作者，我创建了ClockBase（www.clockbase.org），这是一个基于多个衰老时钟模型应用于超过3,000个DNA甲基化和基因表达数据集的平台，涵盖近30万个样本。该资源促进了新型抗衰老药物候选物的发现和加速衰老条件的识别。此外，我最近开发了MethylGPT，这是一个DNA甲基组的基础模型，提升了我们分析和解释衰老研究中表观遗传模式的能力。
+
+\begin{enumerate}
+
+\item \textbf{应可钧}等。ClockBase：人类和小鼠生物年龄分析的综合平台。\textit{bioRxiv}。\doi{10.1101/2023.02.28.530532}
+
+\item \textbf{应可钧}等。MethylGPT：DNA甲基组的基础模型。\textit{bioRxiv}。\doi{10.1101/2024.10.30.621013}
+
+\item \textbf{应可钧}等。跨功能模块生物衰老的高维Ageome表征。\textit{bioRxiv}。\doi{10.1101/2024.09.21.570935}
+
+\item V. N. Gladyshev，\textbf{应可钧}。"生物年龄的高维测量"（2024）。\textit{临时专利申请}
+
+\end{enumerate}
+
+
+\item \textbf{研究衰老和长寿遗传学与免疫和疾病的关系：} 
+我的研究深入探讨了衰老、遗传学和免疫之间的复杂关系，特别是在COVID-19等疾病背景下。作为第一作者，我利用孟德尔随机化和多工具分析探索了与长寿相关的遗传因素如何影响COVID-19易感性，发现支持长寿的遗传变异与降低COVID-19感染和住院风险显著相关。我还识别出年龄相关COVID-19严重程度的关键通路，包括Notch信号和免疫系统发育。此外，我的工作发现了百岁老人中功能缺失型胚系突变的耗竭模式，揭示了可能保护against年龄相关疾病的长寿基因。
+
+\begin{enumerate}
+
+\item \textbf{应可钧}等。衰老与COVID-19因果关系的遗传和表型分析。\textit{Communications Medicine}，1(1)，35。\doi{10.1038/s43856-021-00033-z}
+
+\item \textbf{应可钧}等。百岁老人功能缺失型胚系突变的耗竭揭示长寿基因。\textit{Nature Communications}，15(1)，5956。\doi{10.1038/s41467-024-50098-2}
+
+\item Yang, Z.等。ACE2冠状病毒受体的遗传景观。\textit{Circulation}，145(18)，1398--1411。\doi{10.1161/CIRCULATIONAHA.121.057888}
+
+\item Castro, J. P.等。年龄相关克隆B细胞驱动小鼠B细胞淋巴瘤。\textit{Nature Aging}，4(8)，1--15。\doi{10.1038/s43587-024-00671-7}
+
+\end{enumerate}
+
+
+\item \textbf{探索衰老和年龄相关疾病中的因果表观遗传改变：} 
+理解表观遗传改变是否因果影响寿命和衰老相关结果一直是我研究的核心主题。在Eric Greer实验室轮转期间，我使用非靶向质谱研究秀丽隐杆线虫中的RNA修饰，发现18S rRNA甲基化可以跨代因果影响寿命和抗压能力。在我的论文工作中，我提出并实施了基于遗传学的因果推断方法，以识别影响寿命的因果DNA甲基化位点，将衰老过程中的损伤性和适应性表观遗传改变分开。我还通过分析单细胞DNA甲基化数据，帮助注释衰老相关位点并阐明这些生物标志物的潜在机制，为理解单细胞水平的DNAm时钟做出了贡献。
+
+\begin{enumerate}
+
+\item Liberman, N.等。18S rRNA甲基转移酶DIMT1和BUD23驱动代际荷尔蒙作用。\textit{Molecular Cell}，83(18)，3268--3282.e7。\doi{10.1016/j.molcel.2023.08.014}
+
+\item Li, T.等。人类基因组的总遗传贡献评估。\textit{Nature Communications}，12(1)，2845。\doi{10.1038/s41467-021-23124-w}
+
+\item Zhang, B.等。表观遗传分析和发育中断发生率指向原肠胚形成作为非洲爪蟾衰老的零点。\textit{bioRxiv}。\doi{10.1101/2022.08.02.502559}
+
+\item Rothi, M. H.等。18S rRNA甲基转移酶DIMT-1在生命后期调节生殖系寿命。\textit{bioRxiv}。\doi{10.1101/2024.05.15.570935}
+
+\end{enumerate}
+
+\end{enumerate}
+
+\subsection*{已发表工作完整列表：} 
+\url{https://www.ncbi.nlm.nih.gov/myncbi/kejun.ying.1/bibliography/public/}
+
+
+\end{document}
+
+%------------------------------------------------------------------------------
+
+\section{研究支持}
+
+\subsection*{正在进行的研究支持}
+
+\grantinfo{F99/K00 FAG088431A}{\textbf{应可钧}（PI）}{2024--2028}
+{使用因果衰老生物标志物和蛋白质设计开发新型抗衰老干预措施}
+{本研究的目标是推进因果生物标志物开发及其在蛋白质设计中的应用，以开发新型抗衰老干预措施。}
+{角色：PI}
+
+%------------------------------------------------------------------------------
+
+\subsection*{已完成的研究支持}
+
+% 如适用，在此添加已完成的研究支持 
