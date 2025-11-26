@@ -132,8 +132,6 @@ Wu, X.^\*^, Liu, H.^\*^, \textbf{\underline{Ying, K.$^{*\dagger}$}} (2025). Biol
 
 \textbf{\underline{Ying, K.,}} Tyshkovskiy, A., Chen, Q., ..., Gladyshev, V. N. (2024). High-dimensional Ageome Representations of Biological Aging across Functional Modules. **bioRxiv (Nature Aging 2nd Revision)**. <https://doi.org/10.1101/2024.09.21.570935>
 
-\textbf{\underline{Ying, K.,}} Tyshkovskiy, A., Trapp, A., ..., Gladyshev, V. N. (2023). ClockBase: A comprehensive platform for biological age profiling in human and mouse. **bioRxiv**. <https://doi.org/10.1101/2023.02.28.530532> 
-
 ## Other Publications
 
 Zhang, O., Lin, H., Zhang, X., Wang, X., Wu, Z., Ye, Q., Zhao, W., Wang, J., \textbf{\underline{Ying, K.,}}, Kang, Y., Hsieh, C.-Y., Hou, T. (2025). Graph neural networks in modern AI-aided drug discovery. **Chemical Reviews**, 125, 10001–10103. <https://doi.org/10.1021/acs.chemrev.5b00254>
@@ -190,8 +188,6 @@ Mavrommatis, C., Belsky, D., \textbf{\underline{Ying, K.,}} Moqri, M., Campbell,
 Galkin, F., ..., Tyshkovskiy, A., \textbf{\underline{Ying, K.,}} Gladyshev, V. N., & Zhavoronkov, A. (2024). Precious3GPT: Multimodal Multi-Species Multi-Omics Multi-Tissue Transformer for Aging Research and Drug Discovery. **bioRxiv**. <https://doi.org/10.1101/2024.07.25.605062>
 
 Tyshkovskiy, A., Kholdina, D., \textbf{\underline{Ying, K.,}} Davitadze, M., ..., Gladyshev, V. N. (2024). Transcriptomic Hallmarks of Mortality Reveal Universal and Specific Mechanisms of Aging, Chronic Disease, and Rejuvenation. **bioRxiv**. <https://doi.org/10.1101/2024.07.04.601982>
-
-Moqri, M., Poganik, J. R., Herzog, C., \textbf{\underline{Ying, K.,}} Chen, Q., ..., Gladyshev, V. N. (2024). Integrative epigenetics and transcriptomics identify aging genes in human blood. **bioRxiv**. <https://doi.org/10.1101/2024.05.30.596713>
 
 Rothi, M. H., Sarkar, G. C., Al Haddad, J., Mitchell, W., \textbf{\underline{Ying, K.,}} Pohl, N., ..., Greer, E. L. (2024). The 18S rRNA Methyltransferase DIMT-1 Regulates Lifespan in the Germline Later in Life. **bioRxiv**. <https://doi.org/10.1101/2024.05.15.570935>
 

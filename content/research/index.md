@@ -57,6 +57,20 @@ Selection of publications. For a full list see my [Google Scholar profile](https
 
 <br/>
 
+{{<sidenote >}}
+<div class='altmetric-embed' data-badge-popover='bottom' data-doi='10.1101/2023.02.28.530532' data-hide-less-than=10 data-badge-type="donut"></div>
+{{</sidenote >}}
+
+#### [Autonomous AI Agents Discover Aging Interventions from Millions of Molecular Profiles](https://doi.org/10.1101/2023.02.28.530532)
+
+##### <ins>**K Ying**</ins>, A Tyshkovskiy, A Moldakozhayev, H Wang, ..., L Cong, A Regev, J Leskovec, T Wyss-Coray, VN Gladyshev
+
+***bioRxiv***
+
+`tldr`: ClockBase Agent employs specialized AI agents that autonomously reanalyze 43,602 intervention-control comparisons through multiple aging biomarkers, revealing thousands of age-modifying effects including 500+ interventions that significantly reduce biological age. We experimentally validated ouabain, demonstrating reduced frailty and improved cardiac function in aged mice.
+
+<br/>
+
 # **2024**
 
 {{<sidenote >}}
@@ -196,22 +210,6 @@ Selection of publications. For a full list see my [Google Scholar profile](https
 ##### A Bitto, AS Grillo, TK Ito, IB Stanaway, BMG Nguyen, <ins>**K Ying**</ins>, ..., M Kaeberlein
 
 ***Nature Metabolism***
-
-{{<sidenote >}}
-
-<div class='altmetric-embed' data-badge-popover='bottom' data-doi='10.1101/2023.02.28.530532' data-hide-less-than=10 data-badge-type="donut"></div>
-
-<img src="https://lh4.googleusercontent.com/_t5umxBnHGExx7Rj3I4ZJgCcib99i4I7yN8ViHtwJmZmjavmDb_i605h76mVszX3SILrBag25BFfJ39vrVOaBDI=w16383" class='img-small'></img>
-
-{{</sidenote >}}
-
-#### [ClockBase: A Comprehensive Platform for Biological Age Profiling in Human and Mouse](https://doi.org/10.1101/2023.02.28.530532)
-
-##### <ins>**K Ying**</ins>, A Tyshkovskiy, A Trapp, H Liu, M Moqri, C Kerepesi, VN Gladyshev
-
-***bioRxiv***
-
-`tldr:` ClockBase is a comprehensive platform offering biological age estimates from over 2,000 DNA methylation datasets and nearly 200,000 samples using various aging clock models. It includes an online interface for data analysis and visualization. The platform facilitated the identification of potential anti-aging drugs, thereby aiding in the discovery of interventions for longevity and conditions that accelerate aging. The website is [clockbase.org](clockbase.org).
 
 {{<sidenote >}}
 

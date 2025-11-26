@@ -60,8 +60,7 @@
         heti.autoSpacing(); // 自动进行中西文混排美化和标点挤压
     </script>
     
-    <!-- Minimal Animation System -->
-    <script defer src="{{ "/animations.js" | relURL }}"></script>
+    <script defer src="/animations.js"></script>
     
     {{ $title := print .Title " | " .Site.Title }}
     {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}

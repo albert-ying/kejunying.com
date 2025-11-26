@@ -1,0 +1,181 @@
+%!TEX TS-program = xelatex
+\documentclass{nihbiosketch}
+
+% URL settings for better line breaks
+\PassOptionsToPackage{hyphens,spaces,obeyspaces}{url}
+\PassOptionsToPackage{breaklinks=true,hidelinks,unicode}{hyperref}
+
+% Make URLs more compact in bibliography
+\makeatletter
+\def\doi#1{\href{https://doi.org/#1}{\small doi:#1}}
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\makeatother
+
+% Adjust paragraph settings for better line breaks
+\setlength{\emergencystretch}{3em}
+\tolerance=1000
+
+%------------------------------------------------------------------------------
+
+\name{Ying, Kejun}
+\eracommons{KEJUNY}
+\position{K00 Postdoctoral Fellow}
+
+\begin{document}
+%------------------------------------------------------------------------------
+
+\begin{education}
+Sun Yat-Sen University, Guangzhou, China      & B.S.          & 06/2019  & Life Science \\
+Harvard University, Cambridge, MA             & M.S.          & 05/2024  & Computational Science Engineering \\
+Harvard University, Cambridge, MA             & Ph.D.         & 05/2025  & Biological Science in Public Health \\
+Stanford University, Stanford, CA             & Postdoc       & Present  & Neurology (Tony Wyss-Coray's Lab) \\
+University of Washington, Seattle, WA          & Postdoc       & Present  & Protein Design (David Baker's Lab, co-mentorship) \\
+\end{education}
+
+
+\section{Personal Statement}
+
+\begin{statement}
+
+My research vision is to establish cellular aging as a tractable computational problem with engineered solutions by integrating causal AI models with evolutionary protein design. I aim to understand fundamental mechanisms of how cells maintain physiological function across the lifespan and translate these insights into precision therapeutics.
+
+My training bridges computational and experimental approaches to aging biology. During my Ph.D. with Vadim Gladyshev at Harvard, I developed causality-enriched epigenetic clocks, foundation models for DNA methylation, and AI platforms for systematic intervention discovery. My postdoctoral work with Tony Wyss-Coray at Stanford on plasma proteomics and with David Baker at the University of Washington on protein design has prepared me to combine computational discovery with experimental validation and therapeutic engineering. This interdisciplinary training positions me to address fundamental questions in biochemistry and biophysics using modern computational and systems biology approaches.
+
+UCSF's Department of Biochemistry and Biophysics provides an ideal environment for my research program. The department's strength in structural biology, computational biology, and systems approaches aligns perfectly with my vision. I envision collaborations with faculty in cryo-EM for structural characterization of engineered proteins, mass spectrometry experts for proteomic validation, and computational biologists for developing causal AI frameworks. The Mission Bay Campus's state-of-the-art facilities, including advanced microscopy, cryo-EM, and high-throughput screening capabilities, would enable comprehensive investigation of cellular aging mechanisms and validation of designed therapeutics. I would benefit from UCSF's collaborative culture and contribute by bringing expertise in causal inference, foundation models, and protein engineering while mentoring diverse students in quantitative approaches to fundamental biology.
+
+My future research program will develop causal multimodal foundation models to identify aging mechanisms, build AI agent platforms for intervention discovery, and engineer therapeutic proteins informed by evolutionary principles. This integrated approach will advance our understanding of cellular physiology while creating new tools for intervention in age-related cellular dysfunction.
+
+\end{statement}
+
+%------------------------------------------------------------------------------
+\section{Positions, Scientific Appointments, and Honors}
+
+\subsection*{Positions and Scientific Appointments}
+\begin{datetbl}
+2025--Present & Postdoctoral Researcher, Tony Wyss-Coray's Lab \& David Baker's Lab (co-mentorship), Stanford University \& University of Washington \\
+2025--Present & Co-Founder, Avinasi Labs, San Francisco, CA\\
+2020--2025 & Graduate Researcher, Vadim Gladyshev's Lab, Harvard Medical School, Boston, MA \\
+2020          & Graduate Researcher (Rotation), Eric Greer's Lab, Boston Children's Hospital, Boston, MA \\
+2019          & Graduate Researcher (Rotation), David Sinclair's Lab, Harvard Medical School, Boston, MA \\
+2019          & Graduate Researcher (Rotation), Brendan Manning's Lab, Harvard T. H. Chan School of Public Health, Boston, MA \\
+2018--2019    & Undergraduate Researcher, Zhou Songyang's Lab, Sun Yat-Sen University, Guangzhou, China \\
+2018          & Undergraduate Researcher, Xia Shen's Lab, University of Edinburgh, Edinburgh, UK \\
+2018          & Undergraduate Researcher, Matt Kaeberlein's Lab, University of Washington, Seattle, WA \\
+2018          & Undergraduate Researcher, Judith Campisi's Lab, Buck Institute for Research on Aging, Novato, CA \\
+2017          & Undergraduate Researcher, Danica Chen's Lab, University of California, Berkeley, Berkeley, CA \\
+2015--2017    & Undergraduate Researcher, Yikang Rong's Lab, Sun Yat-Sen University, Guangzhou, China \\
+\end{datetbl}
+
+\subsection*{Other Experience and Professional Memberships}
+\begin{datetbl}
+2023--Present & Core Member, Biomarkers of Aging Consortium \\
+2024--Present & Organizer, Biomarker of Aging Challenge \\
+2024--2025 & President, Harvard Interdisciplinary Discussion on Disease and Health \\
+2024          & Organizing Committee Member, Biomarker of Aging Symposium 2024 \\
+2023          & Organizing Committee Member, Biomarker of Aging Symposium 2023 \\
+2023--2024    & Mentor, Yuanpei Young Scholars Program \\
+\end{datetbl}
+
+\subsection*{Honors}
+\begin{datetbl}
+2025          & Semifinalist, Harvard President's Innovation Challenge, Health Care and Life Sciences Track \\
+2024--2028    & NIH/NIA F99/K00 Transition to Aging Research Award (Perfect Impact Score of 10) \\
+2023          & Best Poster Award, Inaugural Biomarker of Aging Symposium \\
+2022          & Best Poster Award, Gordon Research Conference, Systems Aging \\
+2021          & Hackathon Winner, Longevity Hackathon, VitaDAO \\
+2016--2019    & Yan-Sen Honor School Program, Sun Yat-Sen University \\
+2016--2019    & Yan-Sen Scholarship, Sun Yat-Sen University \\
+\end{datetbl}
+
+%------------------------------------------------------------------------------
+
+\section{Contribution to Science}
+
+\begin{enumerate}
+
+\item \textbf{Development of causality-informed epigenetic biomarkers of aging:} 
+A key focus of my research has been developing advanced biomarkers of aging based on DNA methylation patterns. I developed the first causality-informed DNA methylation clock for humans that distinguishes between damaging and adaptive aging changes (Ying et al., 2024a). Using Mendelian Randomization and machine learning models, I identified CpG sites causally linked to aging-related traits, leading to the development of two novel epigenetic clocks: DamAge and AdaptAge. I demonstrated that DamAge is associated with adverse conditions including increased mortality risk, while AdaptAge is linked to beneficial adaptations. This work provides new insights into the causal pathways involved in biological aging and creates more specific targets for potential interventions. The significance of this approach was recognized through an invited perspective on causal inference methods for epigenetic aging (Ying, 2024), and has led to a patent application for mapping CpG sites to quantify aging traits.
+
+\begin{enumerate}
+
+\item \textbf{Ying, K.}, Liu, H., Tarkhov, A. E., Sadler, M. C., Lu, A. T., Moqri, M., Horvath, S., Kutalik, Z., Shen, X., \& Gladyshev, V. N. (2024). Causality-enriched epigenetic age uncouples damage and adaptation. \textit{Nature Aging (Featured on the February Cover)}, 1--16. PMID: 38243142; PMCID: PMC11070280
+
+\item \textbf{Ying, K.} (2024). Causal inference for epigenetic ageing. \textit{Nature Reviews Genetics}, 26(1), 3--3. PMID: 39472743
+
+\item Tarkhov, A. E., Lindstrom-Vautrin, T., Zhang, S., \textbf{Ying, K.}, Moqri, M., Zhang, B., Tyshkovskiy, A., Levy, O., \& Gladyshev, V. N. (2024). Nature of epigenetic aging from a single-cell perspective. \textit{Nature Aging}, 4(6), 854--870. PMID: 38724733
+
+\item V. N. Gladyshev, \textbf{K. Ying}, "Mapping CpG sites to quantify aging traits" (2024). \textit{WO2024039905A2} (Patent)
+
+\end{enumerate}
+
+
+\item \textbf{Creation of comprehensive platforms for biological age profiling:} 
+I have developed critical resources for the aging research community that facilitate systematic profiling and exploration of biological age. I created ClockBase (www.clockbase.org), a platform featuring biological age estimates based on multiple aging clock models applied to over 3,000 DNA methylation and gene expression datasets. Building on this foundation, I developed autonomous AI agent frameworks that systematically mine aging interventions from millions of molecular profiles (Ying et al., 2025a). I contributed to establishing unified frameworks for systematic curation and evaluation of aging biomarkers (Ying et al., 2025b). Additionally, I have developed MethylGPT, a foundation model for the DNA methylome (Ying et al., 2024b), advancing our ability to analyze epigenetic patterns in aging research. My work on biological age measurement has been recognized through invitations to present at the Keystone Symposia on Aging and other prominent conferences, and has resulted in a provisional patent application for high-dimensional measurement of biological age.
+
+\begin{enumerate}
+
+\item \textbf{Ying, K.}, Tyshkovskiy, A., Moldakozhayev, A., Wang, H., Magalhaes, C. G. D., Iqbal, S., Garza, A. E., Tskhay, A., Poganik, J. R., Huang, K., Qu, Y., Glubokov, D., Jin, C., Lee, D., Liu, H., Leote, C., Trapp, A., Camillo, L. P. de L., Kerepesi, C., Moqri, M., Zhang, O., Jiang, K., Galkin, F., Zhavoronkov, A., Raamsdonk, J. M. V., Wang, M., Cong, L., Regev, A., Leskovec, J., Wyss-Coray, T., \& Gladyshev, V. N. (2025). Autonomous AI agents discover aging interventions from millions of molecular profiles. \textit{bioRxiv}, 2023.02.28.530532.
+
+\item \textbf{Ying, K.}, Paulson, S., Eames, A., Tyshkovskiy, A., Li, S., Eynon, N., Jacques, M., Grolaux, R., Seale, K., Jacques, E., Goeminne, L. J. E., Cipriano, A., Perez-Guevara, M., Emamifar, M., Casas Martínez, M., Kwon, D., Kosheleva, A., Snyder, M., Gobel, D., Herzog, C., McCartney, D. L., Marioni, R. E., Lasky-Su, J., Poganik, J. R., Moqri, M., \& Gladyshev, V. N. (2025). A unified framework for systematic curation and evaluation of aging biomarkers. \textit{Nature Aging}, 1--17.
+
+\item \textbf{Ying, K.}, Song, J., Cui, H., Zhang, Y., Li, S., Chen, X., Liu, H., Eames, A., McCartney, D. L., Marioni, R. E., Poganik, J. R., Moqri, M., Wang, B., \& Gladyshev, V. N. (2024). MethylGPT: a foundation model for the DNA methylome. \textit{bioRxiv}. PMID: 39574641; PMCID: PMC11580859
+
+\item \textbf{Ying, K.}, Tyshkovskiy, A., Chen, Q., Latorre-Crespo, E., Zhang, B., Liu, H., Matei-Dediu, B., Poganik, J. R., Moqri, M., Kirschner, K., Lasky-Su, J., \& Gladyshev, V. N. (2024). High-dimensional Ageome Representations of Biological Aging across Functional Modules. \textit{bioRxiv}. PMID: 39345525; PMCID: PMC11429788
+
+\item V. N. Gladyshev, \textbf{K. Ying}, "High-dimensional measurement of biological age" (2024). \textit{Provisional Patent Application}
+
+\end{enumerate}
+
+
+\item \textbf{Investigating aging and genetics of longevity in relation to immunity and disease:} 
+My research has examined relationships between aging, genetics, and immunity, particularly in the context of diseases like COVID-19. I utilized Mendelian Randomization and multi-instrument analyses to investigate how genetic factors associated with longevity influence susceptibility to COVID-19 (Ying et al., 2021). I found that genetic variations supporting longer life are associated with lower risk of COVID-19 infection and hospitalization. I also identified key pathways in age-related COVID-19 severity, including Notch signaling and immune system development. In more recent work, I examined patterns of loss-of-function germline mutations in centenarians (Ying et al., 2024c), identifying potential longevity genes that may offer protection against age-related diseases. These findings provide new insights into the genetic basis of longevity and age-related disease susceptibility.
+
+\begin{enumerate}
+
+\item \textbf{Ying, K.}, Zhai, R., Pyrkov, T. V., Shindyapina, A. V., Mariotti, M., Fedichev, P. O., Shen, X., \& Gladyshev, V. N. (2021). Genetic and phenotypic analysis of the causal relationship between aging and COVID-19. \textit{Communications Medicine}, 1(1), 35. PMID: 35602207; PMCID: PMC9053191
+
+\item \textbf{Ying, K.}, Castro, J. P., Shindyapina, A. V., Tyshkovskiy, A., Moqri, M., Goeminne, L. J. E., Milman, S., Zhang, Z. D., Barzilai, N., \& Gladyshev, V. N. (2024). Depletion of loss-of-function germline mutations in centenarians reveals longevity genes. \textit{Nature Communications}, 15(1), 9030. PMID: 39424787; PMCID: PMC11489729
+
+\item Yang, Z., Macdonald-Dunlop, E., Chen, J., Zhai, R., Li, T., Richmond, A., Klarić, L., Pirastu, N., Ning, Z., Zheng, C., Wang, Y., Huang, T., He, Y., Guo, H., \textbf{Ying, K.}, Gustafsson, S., ... Shen, X. (2022). Genetic Landscape of the ACE2 Coronavirus Receptor. \textit{Circulation}, 145(18), 1398--1411. PMID: 35387486; PMCID: PMC9047645
+
+\item Castro, J. P., Shindyapina, A. V., Barbieri, A., \textbf{Ying, K.}, Strelkova, O. S., Paulo, J. A., Tyshkovskiy, A., Meinl, R., Kerepesi, C., Petrashen, A. P., Mariotti, M., Meer, M. V., Hu, Y., Karamyshev, A., Losyev, G., Galhardo, M., Logarinho, E., Indzhykulian, A. A., Gygi, S. P., ... Gladyshev, V. N. (2024). Age-associated clonal B cells drive B cell lymphoma in mice. \textit{Nature Aging}, 4(10), 1403--1417. PMID: 39117982
+
+\end{enumerate}
+
+
+\item \textbf{Exploring causal epigenetic alterations in aging and age-related conditions:} 
+Understanding whether epigenetic changes causally affect lifespan and aging-related outcomes has been a central theme in my research. During my rotation in Dr. Eric Greer's lab, I studied RNA modifications in C. elegans using untargeted Mass spectrometry, contributing to research showing that 18S rRNA methylation can affect longevity and stress resistance across generations (Liberman et al., 2023). For my thesis work, I implemented genetic-based causal inference methods to identify DNA methylation sites affecting lifespan, differentiating damaging from adaptive epigenetic changes during aging. I also contributed to understanding DNAm clocks at the single-cell level through analysis of single-cell DNA methylation data (Zhang et al., 2022), helping annotate aging-related loci and elucidating the mechanisms underlying these biomarkers. The significance of my research in this area has been recognized with an NIH F99/K00 Transition to Aging Research award for predoctoral students.
+
+\begin{enumerate}
+
+\item Liberman, N., Rothi, M. H., Gerashchenko, M. V., Zorbas, C., Boulias, K., MacWhinnie, F. G., \textbf{Ying, A. K.}, Flood Taylor, A., Al Haddad, J., Shibuya, H., Roach, L., Dong, A., Dellacona, S., Lafontaine, D. L. J., Gladyshev, V. N., \& Greer, E. L. (2023). 18S rRNA methyltransferases DIMT1 and BUD23 drive intergenerational hormesis. \textit{Molecular Cell}, 83(18), 3268--3282.e7. PMID: 37689068; PMCID: PMC11990152
+
+\item Li, T., Ning, Z., Yang, Z., Zhai, R., Zheng, C., Xu, W., Wang, Y., \textbf{Ying, K.}, Chen, Y., \& Shen, X. (2021). Total genetic contribution assessment across the human genome. \textit{Nature Communications}, 12(1), 2845. PMID: 33990588; PMCID: PMC8121943
+
+\item Zhang, B., Tarkhov, A. E., Ratzan, W., \textbf{Ying, K.}, Moqri, M., Poganik, J. R., Barre, B., Trapp, A., Zoller, J. A., Haghani, A., Horvath, S., Peshkin, L., \& Gladyshev, V. N. (2022). \textit{Epigenetic profiling and incidence of disrupted development point to gastrulation as aging ground zero in Xenopus laevis}. bioRxiv.
+
+\item Rothi, M. H., Sarkar, G. C., Al Haddad, J., Mitchell, W., \textbf{Ying, K.}, Pohl, N., Sotomayor-Mena, R. G., Natale, J., Dellacona, S., Gladyshev, V. N., \& Greer, E. L. (2024). The 18S rRNA Methyltransferase DIMT-1 Regulates Lifespan in the Germline Later in Life. \textit{bioRxiv}. PMID: 38798397; PMCID: PMC11118296
+
+\end{enumerate}
+
+\item \textbf{Leadership in aging biomarker standardization and community efforts:} 
+I have contributed to establishing standards and community infrastructure in the aging biomarker field. As an organizing committee member for the Biomarker of Aging Symposium and organizer of the Biomarker of Aging Challenge (Ying et al., 2024d), I have helped develop frameworks for systematic evaluation of aging biomarkers. I contributed to establishing unified frameworks for curation and evaluation of aging biomarkers (Ying et al., 2025). As a member of the Biomarkers of Aging Consortium, I have co-authored papers addressing challenges in biomarker translation (Biomarkers of Aging Consortium et al., 2024). I have also developed computational tools to support aging research. 
+
+\begin{enumerate}
+
+\item \textbf{Ying, K.}, Paulson, S., Eames, A., Tyshkovskiy, A., Li, S., Eynon, N., Jacques, M., Grolaux, R., Seale, K., Jacques, E., Goeminne, L. J. E., Cipriano, A., Perez-Guevara, M., Emamifar, M., Casas Martínez, M., Kwon, D., Kosheleva, A., Snyder, M., Gobel, D., Herzog, C., McCartney, D. L., Marioni, R. E., Lasky-Su, J., Poganik, J. R., Moqri, M., \& Gladyshev, V. N. (2025). A unified framework for systematic curation and evaluation of aging biomarkers. \textit{Nature Aging}, 1--17.
+
+\item \textbf{Ying, K.}, Paulson, S., Reinhard, J., Camillo, L. P. L., Trauble, J., Jokiel, S., Biomarkers of Aging Consortium, Gobel, D., Herzog, C., Poganik, J. R., Moqri, M., \& Gladyshev, V. N. (2024). An Open Competition for Biomarkers of Aging. \textit{bioRxiv}. PMID: 39554132; PMCID: PMC11565782
+
+\item \textbf{Biomarkers of Aging Consortium}, Herzog, C. M. S., Goeminne, L. J. E., Poganik, J. R., Barzilai, N., Belsky, D. W., Betts-LaCroix, J., Chen, B. H., Chen, M., Cohen, A. A., Cummings, S. R., Fedichev, P. O., Ferrucci, L., Fleming, A., Fortney, K., Furman, D., Gorbunova, V., Higgins-Chen, A., Hood, L., Horvath, S., ... Gladyshev, V. N. (2024). Challenges and recommendations for the translation of biomarkers of aging. \textit{Nature Aging}, 1--12. PMID: 39660064; PMCID: PMC11630784
+
+\item Moqri, M., Herzog, C., Poganik, J. R., \textbf{Biomarkers of Aging Consortium}, Justice, J., Belsky, D. W., Higgins-Chen, A., Moskalev, A., Fuellen, G., Cohen, A. A., Bautmans, I., Widschwendter, M., Ding, J., Fleming, A., Mannick, J., Han, J.-D. J., Zhavoronkov, A., Barzilai, N., Kaeberlein, M., ... Gladyshev, V. N. (2023). Biomarkers of aging for the identification and evaluation of longevity interventions. \textit{Cell}, 186(18), 3758--3775. PMCID: PMC11090477
+
+\end{enumerate}
+
+\end{enumerate}
+
+\subsection*{Complete List of Published Work:} 
+\url{https://www.ncbi.nlm.nih.gov/myncbi/kejun.ying.1/bibliography/public/}
+
+\end{document}
