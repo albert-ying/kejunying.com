@@ -134,6 +134,8 @@ Wu, X.^\*^, Liu, H.^\*^, \textbf{\underline{Ying, K.$^{*\dagger}$}} (2025). Biol
 
 ## Other Publications
 
+Mavrommatis, C., Belsky, D. W., \textbf{\underline{Ying, K.,}} Moqri, M., Campbell, A., Richmond, A., Gladyshev, V. N., Chandra, T., McCartney, D. L., & Marioni, R. E. (2025). An unbiased comparison of 14 epigenetic clocks in relation to 174 incident disease outcomes. **Nature Communications**, *16*, 11164. <https://doi.org/10.1038/s41467-025-66106-y>
+
 Zhang, O., Lin, H., Zhang, X., Wang, X., Wu, Z., Ye, Q., Zhao, W., Wang, J., \textbf{\underline{Ying, K.,}}, Kang, Y., Hsieh, C.-Y., Hou, T. (2025). Graph neural networks in modern AI-aided drug discovery. **Chemical Reviews**, 125, 10001–10103. <https://doi.org/10.1021/acs.chemrev.5b00254>
 
 Zhang, O., ..., \textbf{\underline{Ying, K.,}} Huang, Y., Zhao, H., Kang, Y., Pan, P., Wang, J., Guo, D., Zheng, S., Hsieh, C.-Y., & Hou, T. (2025). ECloudGen: leveraging electron clouds as a latent variable to scale up structure-based molecular design. **Nature Computational Science**. <https://doi.org/10.1038/s43588-025-00886-7>
@@ -204,12 +206,13 @@ V. N. Gladyshev, **K. Ying**, "Mapping CpG sites to quantify aging traits" (2024
 # Software and Database
 \hrule
 
-**MethylGPT** (2024) \hfill <https://github.com/MethylGPT/MethylGPT>
+**ClockBase Agent** (2025) \hfill <https://www.clockbase.org/>
+
+**MethylGPT** (2024) \hfill <https://github.com/albert-ying/MethylGPT>
 
 **Biolearn** (2024) \hfill <https://bio-learn.github.io/>
 
-**ClockBase** (2023) \hfill <https://www.clockbase.org/>
-
+**ClockBase** (2023) \hfill <http://gladyshevlab.org:3838/ClockBase/>
 
 # Presentations
 \hrule

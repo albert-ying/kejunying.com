@@ -32,6 +32,14 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
 
 # recent news
     [[params.news]]
+        date = "2025-12"
+        name = "My alumni profile is featured on Harvard SEAS News!"
+        url = "https://seas.harvard.edu/news/2025/12/alumni-profile-kejun-ying-sm-24-phd-25"
+    [[params.news]]
+        date = "2025-12"
+        name = "ClockBase Agent is featured on MIT Technology Review China!"
+        url = "https://www.mittrchina.com/news/detail/15539"
+    [[params.news]]
         date = "2025-11"
         name = "ClockBase Agent preprint is out! We developed AI agents that autonomously discover aging interventions from millions of molecular profiles, identifying 500+ compounds that reduce biological age."
         url = "https://www.biorxiv.org/content/10.1101/2023.02.28.530532v4"
