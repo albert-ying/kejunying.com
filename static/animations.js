@@ -7,7 +7,106 @@
     // Check if user prefers reduced motion
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    // ==================== SCROLL TO TOP BUTTON ====================
+    function createScrollToTop() {
+        const btn = document.createElement('button');
+        btn.className = 'scroll-to-top';
+        btn.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        `;
+        btn.setAttribute('aria-label', 'Scroll to top');
+        btn.style.cssText = `
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(201, 169, 89, 0.9);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(201, 169, 89, 0.3);
+            z-index: 1000;
+        `;
+        
+        document.body.appendChild(btn);
+        
+        // Show/hide based on scroll position
+        let scrollTimeout;
+        window.addEventListener('scroll', function() {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(function() {
+                if (window.scrollY > 400) {
+                    btn.style.opacity = '1';
+                    btn.style.visibility = 'visible';
+                    btn.style.transform = 'translateY(0)';
+                } else {
+                    btn.style.opacity = '0';
+                    btn.style.visibility = 'hidden';
+                    btn.style.transform = 'translateY(10px)';
+                }
+            }, 50);
+        }, { passive: true });
+        
+        // Click to scroll
+        btn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Hover effect
+        btn.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-3px) scale(1.05)';
+            this.style.boxShadow = '0 6px 20px rgba(201, 169, 89, 0.4)';
+        });
+        
+        btn.addEventListener('mouseleave', function() {
+            this.style.transform = window.scrollY > 400 ? 'translateY(0)' : 'translateY(10px)';
+            this.style.boxShadow = '0 4px 15px rgba(201, 169, 89, 0.3)';
+        });
+    }
+
+    // ==================== READING PROGRESS BAR ====================
+    function createProgressBar() {
+        const bar = document.createElement('div');
+        bar.className = 'reading-progress';
+        bar.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, #c9a959, #8b7355);
+            z-index: 9999;
+            transition: width 0.1s ease-out;
+        `;
+        document.body.appendChild(bar);
+        
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / docHeight) * 100;
+            bar.style.width = Math.min(progress, 100) + '%';
+        }, { passive: true });
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
+        
+        // Create UI elements
+        createScrollToTop();
+        createProgressBar();
         
         if (prefersReducedMotion) {
             // Still show content, just skip animations
