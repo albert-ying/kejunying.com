@@ -120,5 +120,13 @@
         localStorage.setItem('darkMode', 'false');
       }
     });
+    
+    // Keyboard shortcut: Ctrl/Cmd + Shift + D
+    document.addEventListener('keydown', function(e) {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'D') {
+        e.preventDefault();
+        toggle.click();
+      }
+    });
   })();
 </script>
