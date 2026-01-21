@@ -1,8 +1,7 @@
 {{ define "main" }}
 
-
+<!-- Navigation Menu -->
 <div class="sidenote" style="margin-top: 0.4rem;">pages</div>
-
 
 <div class="menu-container">
     {{ range .Site.Menus.main }}
@@ -11,46 +10,55 @@
     {{ end }}
     {{ end }}
 </div>
-<div style="height: 2rem;"></div>
 
-<h1 class="title">{{ .Title | markdownify }}</h1>
-
-<div style="height: 1rem;"></div>
-
-<!-- <img src="/avatar.png" class="sidenote" style="width: 8rem; min-width: initial; margin-left: 0rem; margin-top: 0rem;"> -->
-
-<img src="https://kejunying.com/about/avatar.png" class="sidenote" style="min-width: initial; margin-top: 0rem;">
-
-<div style="background-color: #f0f8ff; border-left: 4px solid #4a90e2; padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 4px;">
-    <strong style="color: #2c5282; font-size: 1.1em;">📢 On the Job Market</strong><br>
-    <span style="color: #2d3748; margin-top: 0.5rem; display: inline-block;">I am actively seeking tenure-track faculty positions starting in 2026. My research focuses on aging biology, protein design, and AI-driven intervention discovery. Please feel free to reach out if you have opportunities or would like to discuss potential collaborations.</span>
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="avatar-container">
+        <img src="https://kejunying.com/about/avatar.png" alt="Kejun Albert Ying">
+    </div>
+    
+    <h1 class="title">{{ .Title | markdownify }}</h1>
 </div>
 
+<!-- Job Market Banner -->
+<div class="job-market-banner">
+    <div class="banner-header">
+        <span class="banner-icon">✦</span>
+        <h4 class="banner-title">On the Job Market</h4>
+    </div>
+    <p class="banner-text">I am actively seeking tenure-track faculty positions starting in 2026. My research focuses on aging biology, protein design, and AI-driven intervention discovery. Please feel free to reach out if you have opportunities or would like to discuss potential collaborations.</p>
+</div>
+
+<!-- Quote -->
 <blockquote class="fancy-quote">Solve aging first, and with time, we'll solve all remaining challenges of humanity.</blockquote>
 
+<!-- Introduction -->
 <p class="intro-text">{{ .Site.Params.intro | markdownify }}</p>
 
-<div style="height: 1.5rem;"></div>
+<div style="height: 2rem;"></div>
 
-
+<!-- News Section -->
 <div class="sidenote" style="margin-top: 0.1rem;">news</div>
 
+<div class="news-container">
 {{ range .Site.Params.news }}
     <div class="recent">
       <span class="date">{{.date}}</span>
       <a href="{{ .url }}">{{ .name | markdownify }}</a>
     </div>
 {{ end }}
-
+</div>
 
 <div style="height: 2.5rem;"></div>
+
+<!-- Social Links -->
 <div class="sidenote">socials</div>
-<div class="social-icons" style="margin-top: 0rem;">
+<div class="social-icons">
     {{ if eq .Site.Params.iconsource "simple-icons" }}
         {{ with .Site.Params.social }}
             {{ range sort . "weight" }}
-                <a href="{{ .url }}" {{ .html_attributes | safeHTMLAttr }}>
-                    <img class="icon" height="28" width="28" src="https://cdn.simpleicons.org/{{ .icon }}/444"/>
+                <a href="{{ .url }}" {{ .html_attributes | safeHTMLAttr }} aria-label="{{ .name }}">
+                    <img class="icon" height="28" width="28" src="https://cdn.simpleicons.org/{{ .icon }}/666666" alt="{{ .name }}"/>
                 </a>
             {{ end }}
         {{ end }}

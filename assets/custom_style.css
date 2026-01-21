@@ -1,42 +1,43 @@
+/* ==================== BASE TYPOGRAPHY ==================== */
 @media all {
-  html {
-    font-size: 26px;
-  }
-}
-
-@media all and (max-width: 1600px) {
-  html {
-    font-size: 24px;
-  }
-}
-
-@media all and (max-width: 1000px) {
-  html {
-    font-size: 23px;
-  }
-}
-
-@media all and (max-width: 880px) {
   html {
     font-size: 22px;
   }
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 1600px) {
   html {
     font-size: 21px;
   }
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 1000px) {
   html {
     font-size: 20px;
   }
 }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 880px) {
   html {
     font-size: 19px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  html {
+    font-size: 16px;
   }
 }
 
@@ -46,7 +47,7 @@
   }
 }
 
-
+/* ==================== BODY & LAYOUT ==================== */
 body {
   position: relative;
   font-variant-numeric: oldstyle-nums;
@@ -56,16 +57,22 @@ body {
   min-height: 100%;
   margin-left: auto;
   margin-right: auto;
-  color: #fae0a7;
-  background-color: #2f2c27;
+  color: #3d3d3d;
+  background-color: #faf8f5;
   padding: 0;
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.dark-mode {
+  color: #e8e4dc;
+  background-color: #1a1a1a;
 }
 
 body>* {
   font-family: "source-serif-4", serif;
   font-size: 90%;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
   margin-left: 4rem;
   margin-right: 2.5rem;
@@ -80,61 +87,189 @@ body>* {
 }
 
 #content {
-  width: 40rem;
-  padding: 3rem 1rem 4rem 0rem;
+  width: 42rem;
+  padding: 2rem 1rem 4rem 0rem;
 }
 
+/* ==================== HERO SECTION ==================== */
+.hero-section {
+  position: relative;
+  margin-bottom: 2rem;
+}
 
+.avatar-container {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin-bottom: 1.5rem;
+}
+
+.avatar-container img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid transparent;
+  background: linear-gradient(#faf8f5, #faf8f5) padding-box,
+              linear-gradient(135deg, #c9a959, #8b7355) border-box;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.dark-mode .avatar-container img {
+  background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
+              linear-gradient(135deg, #c9a959, #8b7355) border-box;
+}
+
+.avatar-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .avatar-container img:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ==================== JOB MARKET BANNER ==================== */
+.job-market-banner {
+  position: relative;
+  background: linear-gradient(135deg, #f8f4ed 0%, #fff9f0 100%);
+  border: 1px solid rgba(201, 169, 89, 0.3);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0 2rem 0;
+  overflow: hidden;
+}
+
+body.dark-mode .job-market-banner {
+  background: linear-gradient(135deg, #252525 0%, #2a2520 100%);
+  border-color: rgba(201, 169, 89, 0.25);
+}
+
+.job-market-banner::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #c9a959, #8b7355);
+  border-radius: 12px 0 0 12px;
+}
+
+.job-market-banner .banner-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.job-market-banner .banner-icon {
+  font-size: 1.1rem;
+}
+
+.job-market-banner .banner-title {
+  font-family: 'Cooper Hewitt', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #8b7355;
+  margin: 0;
+}
+
+body.dark-mode .job-market-banner .banner-title {
+  color: #c9a959;
+}
+
+.job-market-banner .banner-text {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+body.dark-mode .job-market-banner .banner-text {
+  color: #b8b4ac;
+}
+
+/* ==================== FANCY QUOTE ==================== */
+.fancy-quote {
+  position: relative;
+  margin: 2rem 0;
+  padding: 0 0 0 1.5rem;
+  font-family: 'source-serif-4', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #5a5a5a;
+  border-left: 3px solid #c9a959;
+}
+
+body.dark-mode .fancy-quote {
+  color: #c4bfb4;
+  border-left-color: #c9a959;
+}
+
+.fancy-quote::before,
+.fancy-quote::after {
+  content: none;
+}
+
+/* ==================== INTRO TEXT ==================== */
 .intro-text {
-  font-size: 90%;
-  margin-top: 0rem;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin-top: 0.5rem;
+  color: #4a4a4a;
 }
 
-.recent {
-  font-size: 90%;
-  margin-top: 0.2rem;
-  margin-bottom: -0.2rem;
+body.dark-mode .intro-text {
+  color: #c4bfb4;
 }
 
-.recent .date {
-  display: inline-block;
-  width: 4em;
-  /* Adjust the width as needed */
-  vertical-align: top;
-}
-
-.recent a {
-  display: inline-block;
-  max-width: calc(100% - 5em);
-  /* Subtract the width of the date plus some margin */
-  vertical-align: top;
-}
-
+/* ==================== SECTION LABELS ==================== */
 .sidenote {
-  font-size: 110%;
+  font-family: 'Cooper Hewitt', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   margin-bottom: 1rem;
   margin-left: -6rem;
   line-height: 1.35;
-  color: #bfa770;
+  color: #999;
+}
+
+body.dark-mode .sidenote {
+  color: #7a7568;
 }
 
 .sidenote a img {
   min-width: 0%;
-  background: rgb(250, 224, 167);
+  background: #faf8f5;
   border-radius: 100%;
   padding: 1px;
 }
 
+body.dark-mode .sidenote a img {
+  background: #c9a959;
+}
+
 @media all and (max-width: 1200px) {
   .sidenote {
-    color: #bfa770;
+    color: #888;
     padding: 1rem 0.5rem 0 0;
     margin-left: 0rem;
+  }
+  
+  body.dark-mode .sidenote {
+    color: #7a7568;
   }
 
   #doc .sidenote {
     padding: 0.5rem 0.5rem 0.5rem 0.75rem !important;
-    color: #bfa770;
+    color: #888;
     padding: 1rem 0.5rem 0 0;
     margin-left: 0rem;
     border-radius: 5px;
@@ -142,36 +277,154 @@ body>* {
 
   #doc .sidenote:has(img) {
     border: none;
-    color: #bfa770;
     max-width: 600px;
     margin-left: 0rem;
     min-width: 0%;
   }
 }
 
+/* ==================== NEWS/RECENT ITEMS ==================== */
+.recent {
+  font-size: 0.88rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+}
+
+body.dark-mode .recent {
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+.recent:last-child {
+  border-bottom: none;
+}
+
+.recent:hover {
+  background: rgba(201, 169, 89, 0.05);
+  margin-left: -0.5rem;
+  padding-left: 0.5rem;
+  border-radius: 4px;
+}
+
+body.dark-mode .recent:hover {
+  background: rgba(201, 169, 89, 0.08);
+}
+
+.recent .date {
+  display: inline-block;
+  width: 4.5em;
+  font-family: 'Cooper Hewitt', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #999;
+  vertical-align: top;
+}
+
+body.dark-mode .recent .date {
+  color: #7a7568;
+}
+
+.recent a {
+  display: inline-block;
+  max-width: calc(100% - 5.5em);
+  vertical-align: top;
+  color: #4a4a4a;
+  transition: color 0.2s ease;
+}
+
+body.dark-mode .recent a {
+  color: #c4bfb4;
+}
+
+.recent a:hover {
+  color: #8b7355;
+}
+
+body.dark-mode .recent a:hover {
+  color: #c9a959;
+}
+
+/* ==================== SOCIAL ICONS ==================== */
+.social-icons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .social-icons a:hover {
-  opacity: 100%;
-  color: rgb(0, 0, 0);
-  /* background: rgb(245, 174, 20); */
-  transition: color 0.2s;
-  border-radius: 50%;
+  transform: translateY(-2px);
 }
 
 img.icon {
   width: initial;
-  height: 1.5rem;
-  background: rgb(250, 224, 167);
-  border-radius: 25%;
-  padding: 6px;
-  margin: 4px;
+  height: 1.4rem;
+  background: #f0ebe4;
+  border-radius: 8px;
+  padding: 8px;
+  margin: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+body.dark-mode img.icon {
+  background: #2a2520;
+  filter: brightness(0.9);
+}
 
+.social-icons a:hover img.icon {
+  background: #c9a959;
+  box-shadow: 0 4px 12px rgba(201, 169, 89, 0.3);
+}
+
+body.dark-mode .social-icons a:hover img.icon {
+  background: #c9a959;
+}
+
+/* ==================== NAVIGATION ==================== */
 .menu-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+}
+
+.menu-container h3.list {
+  margin: 0;
+}
+
+.menu-container h3.list a.title {
+  font-family: 'Cooper Hewitt', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #666;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+}
+
+body.dark-mode .menu-container h3.list a.title {
+  color: #9a9590;
+}
+
+.menu-container h3.list a.title:hover {
+  color: #8b7355;
+  background: rgba(201, 169, 89, 0.1);
+}
+
+body.dark-mode .menu-container h3.list a.title:hover {
+  color: #c9a959;
+  background: rgba(201, 169, 89, 0.15);
 }
 
 .list {
@@ -182,62 +435,19 @@ img.icon {
   text-decoration: none;
 }
 
-.fancy-quote {
-  margin: 20px 0;
-  font-family: 'playfair';
-  font-size: 26px;
-  line-height: 2;
-}
-
-.fancy-quote::before {
-  content: "\201C";
-  font-size: 26px;
-}
-
-.fancy-quote::after {
-  content: "\201D";
-  font-size: 26px;
-}
-
-.img-small {
-  width: 50%;
-  /* or any specific smaller size */
-  height: auto;
-  /* maintain aspect ratio */
-}
-
-.img-tiny {
-  width: 10%;
-  /* or any specific smaller size */
-  height: auto;
-  /* maintain aspect ratio */
-}
-
-.img-container {
-  width: 50%;
-  margin: auto;
-}
-
-.article-nav-inner {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;
-  opacity: 0.95;
-  left: 2rem;
-  top: 1rem;
-  width: 38rem;
-  border-bottom: 0.2rem solid #444;
-}
-
+/* ==================== HEADINGS ==================== */
 h1,
 h2,
 h3 {
   font-variant-caps: petite-caps;
   font-variant-numeric: oldstyle-nums;
+  color: #2a2a2a;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #e8e4dc;
 }
 
 h4 {
@@ -261,10 +471,56 @@ th {
   font-variant-numeric: oldstyle-nums;
 }
 
+/* ==================== ARTICLE NAVIGATION ==================== */
+.article-nav-inner {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.95;
+  left: 2rem;
+  top: 1rem;
+  width: auto;
+  border-bottom: none;
+  background: rgba(250, 248, 245, 0.95);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+}
+
+body.dark-mode .article-nav-inner {
+  background: rgba(26, 26, 26, 0.95);
+}
+
 .article-nav-inner a.internal {
   text-transform: none;
-  font-variant-caps: petite-caps;
-  font-variant-numeric: oldstyle-nums;
+  font-family: 'Cooper Hewitt', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #666;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+body.dark-mode .article-nav-inner a.internal {
+  color: #9a9590;
+}
+
+.article-nav-inner a.internal:hover {
+  color: #8b7355;
+  background: rgba(201, 169, 89, 0.1);
+}
+
+body.dark-mode .article-nav-inner a.internal:hover {
+  color: #c9a959;
+  background: rgba(201, 169, 89, 0.15);
 }
 
 h2.article-title {
@@ -279,86 +535,27 @@ h2.article-title {
   font-variant-numeric: oldstyle-nums;
 }
 
-body {
-  position: relative;
-  font-variant-numeric: oldstyle-nums;
-  max-width: 1200px;
-  min-width: 400px;
-  width: 100%;
-  min-height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  color: rgb(99, 99, 99);
-  background-color: ivory;
-  padding: 0;
-  -webkit-font-smoothing: subpixel-antialiased;
+/* ==================== MISC IMAGE SIZES ==================== */
+.img-small {
+  width: 50%;
+  height: auto;
 }
 
-body.dark-mode {
-  color: #fae0a7;
-  background-color: #2f2c27;
+.img-tiny {
+  width: 10%;
+  height: auto;
 }
 
-body>* {
-  font-family: "source-serif-4", serif;
-  font-size: 90%;
-  font-weight: 500;
-  font-style: normal;
-  margin-left: 4rem;
-  margin-right: 2.5rem;
-  text-rendering: optimizeLegibility;
+.img-container {
+  width: 50%;
+  margin: auto;
 }
 
-.sidenote {
-  font-size: 110%;
-  margin-bottom: 1rem;
-  margin-left: -6rem;
-  line-height: 1.35;
-  color: gray;
-}
-
-body.dark-mode .sidenote {
-  color: #bfa770;
-}
-
-.sidenote a img {
-  min-width: 0%;
-  background: ivory;
-  border-radius: 100%;
-  padding: 1px;
-}
-
-body.dark-mode .sidenote a img {
-  background: rgb(250, 224, 167);
-}
-
-img.icon {
-  width: initial;
-  height: 1.5rem;
-  background: ivory;
-  border-radius: 25%;
-  padding: 6px;
-  margin: 4px;
-}
-
-body.dark-mode img.icon {
-  background: rgb(250, 224, 167);
-}
-
-/* ==================== TYPING ANIMATION STYLES ==================== */
+/* ==================== ANIMATIONS & TRANSITIONS ==================== */
 
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
-}
-
-/* Smooth transitions for interactive elements */
-.social-icons a {
-  transition: transform 0.3s ease;
-}
-
-.recent {
-  transition: opacity 0.2s ease;
 }
 
 /* Typing cursor */
@@ -366,6 +563,7 @@ html {
   content: '|';
   animation: blink 1s steps(1) infinite;
   margin-left: 2px;
+  font-style: normal;
 }
 
 @keyframes blink {
@@ -377,6 +575,65 @@ html {
   }
 }
 
+/* Subtle fade-in for page load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-section {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.job-market-banner {
+  animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.fancy-quote {
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.intro-text {
+  animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.news-container {
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+/* Link styling refinement */
+p a, .intro-text a {
+  color: #8b7355;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(139, 115, 85, 0.3);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+body.dark-mode p a,
+body.dark-mode .intro-text a {
+  color: #c9a959;
+  border-bottom-color: rgba(201, 169, 89, 0.3);
+}
+
+p a:hover, .intro-text a:hover {
+  border-bottom-color: #8b7355;
+}
+
+body.dark-mode p a:hover,
+body.dark-mode .intro-text a:hover {
+  border-bottom-color: #c9a959;
+}
+
+p a:after, .intro-text a:after {
+  content: none;
+}
+
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -386,5 +643,51 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* ==================== RESPONSIVE ADJUSTMENTS ==================== */
+@media all and (max-width: 1200px) {
+  .hero-section {
+    text-align: center;
+  }
+  
+  .avatar-container {
+    margin: 0 auto 1.5rem auto;
+  }
+  
+  .menu-container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .job-market-banner {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .avatar-container {
+    width: 110px;
+    height: 110px;
+  }
+  
+  .avatar-container img {
+    width: 110px;
+    height: 110px;
+  }
+  
+  .menu-container {
+    gap: 0.75rem;
+  }
+  
+  .menu-container h3.list a.title {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem;
   }
 }
