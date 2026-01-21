@@ -1166,3 +1166,43 @@ strong, b {
     background: none !important;
   }
 }
+
+/* ==================== CUSTOM SCROLLBAR ==================== */
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0ede8;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #c9a959, #8b7355);
+  border-radius: 5px;
+  border: 2px solid #f0ede8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #d4b86a, #9a846a);
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  border-color: #1a1a1a;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c9a959 #f0ede8;
+}
+
+body.dark-mode * {
+  scrollbar-color: #c9a959 #1a1a1a;
+}
