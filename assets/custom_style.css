@@ -109,10 +109,16 @@ body>* {
 }
 
 .avatar-container {
+  display: block;
   position: relative;
   width: 140px;
   height: 140px;
   margin-bottom: 1.5rem;
+  text-decoration: none;
+}
+
+.avatar-container:after {
+  content: none !important;
 }
 
 .avatar-container img {
