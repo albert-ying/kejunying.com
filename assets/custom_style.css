@@ -746,3 +746,77 @@ p a:after, .intro-text a:after {
     padding: 0.3rem 0.5rem;
   }
 }
+
+/* ==================== SCROLL-TRIGGERED ANIMATIONS ==================== */
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in-element.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Avatar 3D tilt transition */
+.avatar-container img {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* Social icons magnetic effect */
+.social-icons a {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* Hero section parallax support */
+.hero-section {
+  will-change: opacity, transform;
+}
+
+/* Link underline animation */
+.intro-text a, p a {
+  position: relative;
+  --underline-width: 0%;
+}
+
+.intro-text a::after, 
+p a::after {
+  content: '' !important;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: var(--underline-width, 0%);
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+/* Smooth color transitions for theme toggle */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+h1, h2, h3, p, a, .sidenote, .recent .date {
+  transition: color 0.4s ease;
+}
+
+.job-market-banner,
+.recent,
+img.icon,
+.theme-toggle {
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(201, 169, 89, 0.3);
+  color: inherit;
+}
+
+body.dark-mode ::selection {
+  background: rgba(201, 169, 89, 0.4);
+}
