@@ -110,15 +110,31 @@
       }
     });
 
+    // Create aria-live region for screen reader announcements
+    var srAnnounce = document.createElement('div');
+    srAnnounce.setAttribute('aria-live', 'polite');
+    srAnnounce.setAttribute('aria-atomic', 'true');
+    srAnnounce.className = 'sr-only';
+    srAnnounce.style.cssText = 'position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;';
+    document.body.appendChild(srAnnounce);
+    
+    function announceThemeChange(isDark) {
+      srAnnounce.textContent = isDark ? 'Dark mode enabled' : 'Light mode enabled';
+      setTimeout(function() { srAnnounce.textContent = ''; }, 1000);
+    }
+
     // Toggle dark mode on click
     toggle.addEventListener('click', function() {
       body.classList.toggle('dark-mode');
+      var isDark = body.classList.contains('dark-mode');
       
-      if (body.classList.contains('dark-mode')) {
+      if (isDark) {
         localStorage.setItem('darkMode', 'true');
       } else {
         localStorage.setItem('darkMode', 'false');
       }
+      
+      announceThemeChange(isDark);
     });
     
     // Keyboard shortcut: Ctrl/Cmd + Shift + D
