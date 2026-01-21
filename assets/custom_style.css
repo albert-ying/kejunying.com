@@ -285,12 +285,13 @@ body.dark-mode .job-market-banner .banner-title {
 .job-market-banner .banner-text {
   color: #555;
   font-size: 0.9rem;
+  font-weight: 500;
   line-height: 1.6;
   margin: 0;
 }
 
 body.dark-mode .job-market-banner .banner-text {
-  color: #b8b4ac;
+  color: #c0bab0;
 }
 
 /* ==================== FANCY QUOTE ==================== */
@@ -319,13 +320,14 @@ body.dark-mode .fancy-quote {
 /* ==================== INTRO TEXT ==================== */
 .intro-text {
   font-size: 0.95rem;
+  font-weight: 500;
   line-height: 1.75;
   margin-top: 0.5rem;
-  color: #4a4a4a;
+  color: #3a3a3a;
 }
 
 body.dark-mode .intro-text {
-  color: #c4bfb4;
+  color: #d0cbc0;
 }
 
 /* ==================== SECTION LABELS ==================== */
