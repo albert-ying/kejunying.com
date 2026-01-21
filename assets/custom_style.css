@@ -269,6 +269,12 @@ body.dark-mode .job-market-banner {
   width: 4px;
   background: linear-gradient(180deg, #c9a959, #8b7355);
   border-radius: 12px 0 0 12px;
+  transition: width 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-market-banner:hover::before {
+  width: 6px;
+  box-shadow: 0 0 10px rgba(201, 169, 89, 0.3);
 }
 
 .job-market-banner .banner-header {
