@@ -10,6 +10,16 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
     [markup.goldmark.renderer]
       unsafe = true
 
+# Sitemap configuration for SEO
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+# Minification for performance
+[minify]
+  minifyOutput = true
+
 [params]
     introtag = "introduction"
 
