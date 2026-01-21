@@ -110,9 +110,9 @@ csl: apa-cv.csl
 
 ## Selected Publications & Preprints
 
-\textbf{\underline{Ying, K.,}} Paulson, S., Eames, A., Tyshkovskiy, A., ..., Gladyshev, V. N. (2025). *A Unified Framework for Systematic Curation and Evaluation of Aging Biomarkers*. **Nature Aging**. <https://www.nature.com/articles/s43587-025-00987-y>
+Moqri, M.^\*^, \textbf{\underline{Ying, K.$^{*}$}}, Poganik, J.^\*^, Herzog, C.^\*^, ..., Marioni, R. E., Lasky-Su, J. A., Snyder, M. P., & Gladyshev, V. N. (2026). Integrative epigenetics and transcriptomics identify aging genes in human blood. **Nature Communications**, *16*, 67369. <https://doi.org/10.1038/s41467-025-67369-1>
 
-Moqri, M.^\*^, \textbf{\underline{Ying, K.$^{*}$}}, Poganik, J.^\*^, Herzog, C.^\*^, Chen, Q., Emamifar, M., ..., Gladyshev, V. N. (2025). Integrative epigenetics and transcriptomics identify aging genes in human blood. **Nature Communications (in press)**. <https://doi.org/10.1101/2024.05.30.596713>
+\textbf{\underline{Ying, K.,}} Paulson, S., Eames, A., Tyshkovskiy, A., ..., Gladyshev, V. N. (2025). *A Unified Framework for Systematic Curation and Evaluation of Aging Biomarkers*. **Nature Aging**. <https://www.nature.com/articles/s43587-025-00987-y>
 
 Wu, X.^\*^, Liu, H.^\*^, \textbf{\underline{Ying, K.$^{*\dagger}$}} (2025). Biological Age, Aging Clocks, and the Interplay with Lymphoid Neoplasms: Mechanisms and Clinical Frontiers. **Lymphatics**, *3*(3), 19. <https://doi.org/10.3390/lymphatics3030019>
 
@@ -124,9 +124,9 @@ Wu, X.^\*^, Liu, H.^\*^, \textbf{\underline{Ying, K.$^{*\dagger}$}} (2025). Biol
 
 \textbf{\underline{Ying, K.,}} Zhai, R., Pyrkov, T. V., ..., Gladyshev, V. N. (2021). Genetic and phenotypic analysis of the causal relationship between aging and COVID-19. **Communications Medicine**, *1*(1), 35. <https://doi.org/10.1038/s43856-021-00033-z> 
 
-\textbf{\underline{Ying, K.,$^{*\dagger}$}} Tyshkovskiy, A., Moldakozhayev, A., ..., Gladyshev, V. N. (2025). Autonomous AI Agents Discover Aging Interventions from Millions of Molecular Profiles. **bioRxiv (Updated Version, Nature submitted)**. <https://doi.org/10.1101/2023.02.28.530532> 
+\textbf{\underline{Ying, K.,$^{*\dagger}$}} Tyshkovskiy, A., Moldakozhayev, A., ..., Gladyshev, V. N. (2025). Autonomous AI Agents Discover Aging Interventions from Millions of Molecular Profiles. **bioRxiv (Nature under review)**. <https://doi.org/10.1101/2023.02.28.530532> 
 
-\textbf{\underline{Ying, K.$^{\dagger}$,}} Song, J., Cui, H., ..., Gladyshev, V. N$^{\dagger}$. (2024). MethylGPT: a foundation model for the DNA methylome. **bioRxiv (Nature Machine Intelligence submitted)**. <https://doi.org/10.1101/2024.10.30.621013>
+\textbf{\underline{Ying, K.$^{\dagger}$,}} Song, J., Cui, H., ..., Gladyshev, V. N$^{\dagger}$. (2024). MethylGPT: a foundation model for the DNA methylome. **bioRxiv (Nature Aging 1st Revision)**. <https://doi.org/10.1101/2024.10.30.621013>
 
 \textbf{\underline{Ying, K.,}} Paulson, S., Reinhard, J., ..., Gladyshev, V. N. (2024). An Open Competition for Biomarkers of Aging. **bioRxiv**. <https://doi.org/10.1101/2024.10.29.620782>
 

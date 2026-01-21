@@ -1,11 +1,24 @@
 // Modern Animation System for Kejun Ying's Website
-// Refined micro-interactions and subtle animations
+// Premium micro-interactions and polished animations
 
 (function() {
     'use strict';
 
     // Check if user prefers reduced motion
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // ==================== UTILITY FUNCTIONS ====================
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
 
     // ==================== SCROLL TO TOP BUTTON ====================
     function createScrollToTop() {
@@ -214,28 +227,176 @@
             });
         });
 
-        // ==================== AVATAR TILT EFFECT ====================
+        // ==================== AVATAR HOVER EFFECT ====================
         const avatar = document.querySelector('.avatar-container img');
         if (avatar) {
             const container = avatar.parentElement;
             
-            container.addEventListener('mousemove', function(e) {
-                const rect = this.getBoundingClientRect();
-                const x = (e.clientX - rect.left) / rect.width - 0.5;
-                const y = (e.clientY - rect.top) / rect.height - 0.5;
-                
-                avatar.style.transform = `
-                    perspective(500px)
-                    rotateY(${x * 10}deg)
-                    rotateX(${-y * 10}deg)
-                    scale(1.05)
-                `;
+            container.addEventListener('mouseenter', function() {
+                avatar.style.transform = 'scale(1.08)';
+                avatar.style.boxShadow = '0 16px 50px rgba(201, 169, 89, 0.35)';
             });
             
             container.addEventListener('mouseleave', function() {
-                avatar.style.transform = 'perspective(500px) rotateY(0) rotateX(0) scale(1)';
+                avatar.style.transform = 'scale(1)';
+                avatar.style.boxShadow = 'none';
             });
         }
+
+        // ==================== DATE BADGE HOVER EFFECTS ====================
+        const dateBadges = document.querySelectorAll('.recent .date');
+        dateBadges.forEach(badge => {
+            badge.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+                this.style.background = 'rgba(201, 169, 89, 0.2)';
+            });
+            
+            badge.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+                this.style.background = '';
+            });
+        });
+
+        // ==================== NAVIGATION LINK ANIMATIONS ====================
+        const navLinks = document.querySelectorAll('.menu-container h3.list a.title, .article-nav-inner a.internal');
+        navLinks.forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px) scale(1.02)';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // ==================== NEWS ITEM RIPPLE EFFECT ====================
+        const newsItems = document.querySelectorAll('.recent');
+        newsItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.cssText = `
+                    position: absolute;
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${x}px;
+                    top: ${y}px;
+                    background: rgba(201, 169, 89, 0.2);
+                    border-radius: 50%;
+                    transform: scale(0);
+                    animation: ripple 0.6s ease-out;
+                    pointer-events: none;
+                `;
+                
+                this.style.overflow = 'hidden';
+                this.appendChild(ripple);
+                
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        // Add ripple animation CSS
+        const rippleStyle = document.createElement('style');
+        rippleStyle.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(rippleStyle);
+
+        // ==================== JOB MARKET BANNER HOVER ====================
+        const jobBanner = document.querySelector('.job-market-banner');
+        if (jobBanner) {
+            jobBanner.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+                this.style.boxShadow = '0 8px 30px rgba(201, 169, 89, 0.15)';
+            });
+            
+            jobBanner.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '';
+            });
+        }
+
+        // ==================== HEADING HOVER EFFECTS ====================
+        const pageHeadings = document.querySelectorAll('h1, h2.article-title');
+        pageHeadings.forEach(heading => {
+            heading.style.transition = 'transform 0.3s ease, text-shadow 0.3s ease';
+            heading.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(4px)';
+            });
+            
+            heading.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0)';
+            });
+        });
+
+        // ==================== SMOOTH PAGE TRANSITIONS ====================
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.4s ease';
+        
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '1';
+        });
+
+        // ==================== CURSOR TRAIL EFFECT (SUBTLE) ====================
+        let cursorTrails = [];
+        const maxTrails = 5;
+        
+        document.addEventListener('mousemove', debounce(function(e) {
+            if (cursorTrails.length >= maxTrails) {
+                const oldTrail = cursorTrails.shift();
+                if (oldTrail && oldTrail.parentNode) {
+                    oldTrail.remove();
+                }
+            }
+            
+            const trail = document.createElement('div');
+            trail.style.cssText = `
+                position: fixed;
+                width: 6px;
+                height: 6px;
+                background: rgba(201, 169, 89, 0.3);
+                border-radius: 50%;
+                left: ${e.clientX - 3}px;
+                top: ${e.clientY - 3}px;
+                pointer-events: none;
+                z-index: 9998;
+                animation: trailFade 0.5s ease-out forwards;
+            `;
+            document.body.appendChild(trail);
+            cursorTrails.push(trail);
+            
+            setTimeout(() => {
+                if (trail && trail.parentNode) {
+                    trail.remove();
+                    cursorTrails = cursorTrails.filter(t => t !== trail);
+                }
+            }, 500);
+        }, 30));
+
+        // Add trail animation CSS
+        const trailStyle = document.createElement('style');
+        trailStyle.textContent = `
+            @keyframes trailFade {
+                0% {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                100% {
+                    opacity: 0;
+                    transform: scale(0);
+                }
+            }
+        `;
+        document.head.appendChild(trailStyle);
 
         // ==================== PARALLAX SUBTLE EFFECT ON SCROLL ====================
         let ticking = false;
@@ -245,8 +406,8 @@
             const heroSection = document.querySelector('.hero-section');
             
             if (heroSection && scrollY < 400) {
-                const opacity = Math.max(0, 1 - scrollY / 400);
-                const translate = scrollY * 0.3;
+                const opacity = Math.max(0.3, 1 - scrollY / 600);
+                const translate = scrollY * 0.2;
                 heroSection.style.opacity = opacity;
                 heroSection.style.transform = `translateY(${translate}px)`;
             }

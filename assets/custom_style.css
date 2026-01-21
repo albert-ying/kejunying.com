@@ -128,7 +128,7 @@ body.dark-mode {
 body>* {
   font-family: "source-serif-4", serif;
   font-size: 0.95rem;
-  font-weight: 450;
+  font-weight: 500;
   font-style: normal;
   line-height: 1.7;
   margin-left: 4rem;
@@ -139,7 +139,7 @@ body>* {
 
 /* Slightly bolder text in dark mode for better readability */
 body.dark-mode > * {
-  font-weight: 450;
+  font-weight: 520;
 }
 
 @media all and (max-width: 1200px) {
@@ -179,40 +179,7 @@ body.dark-mode > * {
   content: none !important;
 }
 
-/* Shine overlay effect */
-.avatar-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -75%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  z-index: 10;
-  border-radius: 50%;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.avatar-container:hover::before {
-  opacity: 1;
-  animation: avatarShine 0.6s ease-out;
-}
-
-@keyframes avatarShine {
-  0% {
-    left: -75%;
-  }
-  100% {
-    left: 125%;
-  }
-}
+/* Avatar hover effect - clean, no reflection */
 
 .avatar-container img {
   width: 140px;
@@ -243,21 +210,34 @@ body.dark-mode .avatar-container img:hover {
 /* ==================== JOB MARKET BANNER ==================== */
 .job-market-banner {
   position: relative;
-  background: linear-gradient(135deg, rgba(248, 244, 237, 0.9) 0%, rgba(255, 249, 240, 0.9) 100%);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(201, 169, 89, 0.3);
-  border-radius: 12px;
-  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, rgba(248, 244, 237, 0.95) 0%, rgba(255, 249, 240, 0.95) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 169, 89, 0.35);
+  border-radius: 14px;
+  padding: 1.35rem 1.75rem;
   margin: 1.5rem 0 2rem 0;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(139, 115, 85, 0.08);
+  box-shadow: 0 4px 24px rgba(139, 115, 85, 0.1);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+}
+
+.job-market-banner:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 35px rgba(201, 169, 89, 0.18);
+  border-color: rgba(201, 169, 89, 0.5);
 }
 
 body.dark-mode .job-market-banner {
-  background: linear-gradient(135deg, rgba(37, 37, 37, 0.85) 0%, rgba(42, 37, 32, 0.85) 100%);
-  border-color: rgba(201, 169, 89, 0.25);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, rgba(37, 37, 37, 0.9) 0%, rgba(42, 37, 32, 0.9) 100%);
+  border-color: rgba(201, 169, 89, 0.3);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode .job-market-banner:hover {
+  box-shadow: 0 8px 35px rgba(201, 169, 89, 0.15);
+  border-color: rgba(201, 169, 89, 0.45);
 }
 
 .job-market-banner::before {
@@ -462,17 +442,31 @@ body.dark-mode .recent:hover::before {
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.02em;
-  color: #b8b0a0;
-  padding: 0.2rem 0.5rem;
-  background: rgba(0, 0, 0, 0.03);
-  border-radius: 4px;
-  min-width: 4em;
+  color: #8b7355;
+  padding: 0.35rem 0.6rem;
+  background: rgba(201, 169, 89, 0.1);
+  border: 1px solid rgba(201, 169, 89, 0.2);
+  border-radius: 6px;
+  min-width: 4.5em;
   text-align: center;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
 }
 
 body.dark-mode .recent .date {
-  color: #7a7568;
-  background: rgba(255, 255, 255, 0.05);
+  color: #c9a959;
+  background: rgba(201, 169, 89, 0.15);
+  border-color: rgba(201, 169, 89, 0.25);
+}
+
+.recent .date:hover {
+  background: rgba(201, 169, 89, 0.2);
+  border-color: rgba(201, 169, 89, 0.4);
+  transform: scale(1.05);
+}
+
+body.dark-mode .recent .date:hover {
+  background: rgba(201, 169, 89, 0.25);
 }
 
 .recent a {
@@ -562,11 +556,13 @@ body.dark-mode img.icon {
 
 .social-icons a:hover img.icon {
   background: #c9a959;
-  box-shadow: 0 4px 12px rgba(201, 169, 89, 0.3);
+  box-shadow: 0 6px 20px rgba(201, 169, 89, 0.4);
+  transform: translateY(-2px) scale(1.1);
 }
 
 body.dark-mode .social-icons a:hover img.icon {
   background: #c9a959;
+  box-shadow: 0 6px 20px rgba(201, 169, 89, 0.35);
 }
 
 /* ==================== NAVIGATION ==================== */
@@ -586,30 +582,34 @@ body.dark-mode .social-icons a:hover img.icon {
 .menu-container h3.list a.title {
   font-family: 'Cooper Hewitt', sans-serif;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #666;
+  color: #555;
   text-decoration: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  transition: all 0.25s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body.dark-mode .menu-container h3.list a.title {
-  color: #9a9590;
+  color: #a5a095;
 }
 
 .menu-container h3.list a.title:hover {
   color: #8b7355;
-  background: rgba(201, 169, 89, 0.1);
-  transform: translateY(-2px);
+  background: rgba(201, 169, 89, 0.12);
+  border-color: rgba(201, 169, 89, 0.25);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 4px 12px rgba(201, 169, 89, 0.15);
 }
 
 body.dark-mode .menu-container h3.list a.title:hover {
   color: #c9a959;
-  background: rgba(201, 169, 89, 0.15);
-  transform: translateY(-2px);
+  background: rgba(201, 169, 89, 0.18);
+  border-color: rgba(201, 169, 89, 0.3);
+  box-shadow: 0 4px 12px rgba(201, 169, 89, 0.2);
 }
 
 /* Active/current page indicator */

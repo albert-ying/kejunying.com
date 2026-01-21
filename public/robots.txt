@@ -1,0 +1,11 @@
+# Robots.txt for kejunying.com
+# Allow all crawlers
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://kejunying.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

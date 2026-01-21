@@ -12,21 +12,65 @@ body > * {
 }
 
 #content {
-    width: 38rem;
+    width: 100%;
+    max-width: 60rem;
     padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
 }
 
 iframe {
     margin-left: -1rem;
 }
 
+/* Poetry annotations - positioned below the poem */
 .sidenote {
-  font-size: 80%; 
-  margin-bottom: 1rem;
-  margin-left: -10rem;
-  width: 45%;
-  line-height: 1.35;
-  color: #bfa770;
+  font-size: 0.85rem; 
+  font-weight: 500;
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  width: 100%;
+  max-width: 38rem;
+  line-height: 1.65;
+  color: #9a9080;
+  background: rgba(201, 169, 89, 0.05);
+  border-left: 3px solid #c9a959;
+  border-radius: 0 8px 8px 0;
+  margin-left: 0 !important;
+}
+
+body.dark-mode .sidenote {
+  background: rgba(201, 169, 89, 0.08);
+  color: #b8b0a0;
+}
+
+/* Chinese poetry vertical text */
+.heti--vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  height: auto;
+  max-height: 80vh;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+/* Separator styling */
+h1 {
+  font-size: 1rem !important;
+  color: rgba(201, 169, 89, 0.5) !important;
+  text-align: center;
+  margin: 3rem 0 !important;
+}
+
+@media all and (max-width: 1000px) {
+  .sidenote {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .heti--vertical {
+    max-height: 60vh;
+  }
 }
 
 </style>
