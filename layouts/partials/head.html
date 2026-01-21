@@ -38,7 +38,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@kejunying">
     <meta name="twitter:creator" content="@kejunying">
-    <meta name="twitter:title" content="{{ block "og-title" . }}{{ .Site.Title }}{{ end }}">
+    <meta name="twitter:title" content="{{ if .IsPage }}{{ .Title }} | {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}">
     <meta name="twitter:description" content="{{ if .IsPage }}{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <meta name="twitter:image" content="{{ .Site.BaseURL }}about/avatar.png">
 
