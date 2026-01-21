@@ -12,10 +12,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- Preconnect to external domains for performance -->
-    <link rel="preconnect" href="https://fonts.cdnfonts.com">
-    <link rel="preconnect" href="https://use.typekit.net">
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
+    <link rel="preconnect" href="https://use.typekit.net" crossorigin>
     <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="preconnect" href="https://d1bxh8uas1mnw7.cloudfront.net">
+    <link rel="preconnect" href="https://d1bxh8uas1mnw7.cloudfront.net" crossorigin>
+    
+    <!-- DNS prefetch for secondary resources -->
+    <link rel="dns-prefetch" href="https://fonts.cdnfonts.com">
+    <link rel="dns-prefetch" href="https://use.typekit.net">
 
     {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
     <meta name="description" content="{{ if .IsPage }}{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}{{ else }}{{ .Site.Params.description }}{{ end }}">
