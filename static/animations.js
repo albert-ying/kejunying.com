@@ -270,8 +270,8 @@
         });
 
         // ==================== NEWS ITEM RIPPLE EFFECT ====================
-        const newsItems = document.querySelectorAll('.recent');
-        newsItems.forEach(item => {
+        const newsItemsForRipple = document.querySelectorAll('.recent');
+        newsItemsForRipple.forEach(item => {
             item.addEventListener('click', function(e) {
                 const ripple = document.createElement('span');
                 const rect = this.getBoundingClientRect();
