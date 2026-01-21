@@ -1,0 +1,21 @@
+{
+  "name": "Kejun Albert Ying",
+  "short_name": "Kejun Ying",
+  "description": "Personal website of Kejun Albert Ying - Postdoctoral Researcher in Aging Biology",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf8f5",
+  "theme_color": "#c9a959",
+  "icons": [
+    {
+      "src": "/about/avatar.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/about/avatar.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

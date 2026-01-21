@@ -60,6 +60,12 @@
             <link rel="shortcut icon" href="{{ . | relURL }}">
         {{ end }}
     {{ end }}
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Kejun Ying">
 
     <script defer src="{{ .Site.Params.umamilink }}" data-website-id="{{ .Site.Params.umamiid }}"></script>
     <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
