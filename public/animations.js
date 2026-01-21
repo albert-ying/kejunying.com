@@ -346,57 +346,17 @@
             document.body.style.opacity = '1';
         });
 
-        // ==================== CURSOR TRAIL EFFECT (SUBTLE) ====================
-        let cursorTrails = [];
-        const maxTrails = 5;
-        
-        document.addEventListener('mousemove', debounce(function(e) {
-            if (cursorTrails.length >= maxTrails) {
-                const oldTrail = cursorTrails.shift();
-                if (oldTrail && oldTrail.parentNode) {
-                    oldTrail.remove();
-                }
-            }
-            
-            const trail = document.createElement('div');
-            trail.style.cssText = `
-                position: fixed;
-                width: 6px;
-                height: 6px;
-                background: rgba(201, 169, 89, 0.3);
-                border-radius: 50%;
-                left: ${e.clientX - 3}px;
-                top: ${e.clientY - 3}px;
-                pointer-events: none;
-                z-index: 9998;
-                animation: trailFade 0.5s ease-out forwards;
-            `;
-            document.body.appendChild(trail);
-            cursorTrails.push(trail);
-            
+        // ==================== STAGGERED NEWS ITEM ANIMATION ====================
+        const staggeredItems = document.querySelectorAll('.recent');
+        staggeredItems.forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
             setTimeout(() => {
-                if (trail && trail.parentNode) {
-                    trail.remove();
-                    cursorTrails = cursorTrails.filter(t => t !== trail);
-                }
-            }, 500);
-        }, 30));
-
-        // Add trail animation CSS
-        const trailStyle = document.createElement('style');
-        trailStyle.textContent = `
-            @keyframes trailFade {
-                0% {
-                    opacity: 1;
-                    transform: scale(1);
-                }
-                100% {
-                    opacity: 0;
-                    transform: scale(0);
-                }
-            }
-        `;
-        document.head.appendChild(trailStyle);
+                item.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+            }, 100 + (index * 50));
+        });
 
         // ==================== PARALLAX SUBTLE EFFECT ON SCROLL ====================
         let ticking = false;
