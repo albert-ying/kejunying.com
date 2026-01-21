@@ -440,14 +440,14 @@ body.dark-mode .recent:hover::before {
 
 .recent .date {
   flex-shrink: 0;
-  font-family: 'Cooper Hewitt', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
+  font-family: 'Cooper Hewitt', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
   letter-spacing: 0.02em;
-  color: #8b7355;
-  padding: 0.35rem 0.6rem;
-  background: rgba(201, 169, 89, 0.1);
-  border: 1px solid rgba(201, 169, 89, 0.2);
+  color: #7a6545;
+  padding: 0.4rem 0.65rem;
+  background: rgba(201, 169, 89, 0.12);
+  border: 1px solid rgba(201, 169, 89, 0.25);
   border-radius: 6px;
   min-width: 4.5em;
   text-align: center;
@@ -456,9 +456,9 @@ body.dark-mode .recent:hover::before {
 }
 
 body.dark-mode .recent .date {
-  color: #c9a959;
-  background: rgba(201, 169, 89, 0.15);
-  border-color: rgba(201, 169, 89, 0.25);
+  color: #d4b96a;
+  background: rgba(201, 169, 89, 0.18);
+  border-color: rgba(201, 169, 89, 0.3);
 }
 
 .recent .date:hover {
@@ -582,12 +582,12 @@ body.dark-mode .social-icons a:hover img.icon {
 }
 
 .menu-container h3.list a.title {
-  font-family: 'Cooper Hewitt', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-family: 'Cooper Hewitt', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #555;
+  color: #444;
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 8px;
@@ -596,7 +596,7 @@ body.dark-mode .social-icons a:hover img.icon {
 }
 
 body.dark-mode .menu-container h3.list a.title {
-  color: #a5a095;
+  color: #c5c0b8;
 }
 
 .menu-container h3.list a.title:hover {
@@ -637,7 +637,7 @@ body.dark-mode .menu-container h3.list a.title[aria-current="page"] {
 h1 {
   font-family: "source-serif-4", serif;
   font-size: 2.2rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02em;
   font-variant-caps: petite-caps;
