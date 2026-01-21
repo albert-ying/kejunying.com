@@ -1,15 +1,24 @@
 <footer class="site-footer">
     <div class="footer-content">
-        <span class="footer-text">Kejun Albert Ying</span>
-        <span class="footer-divider">·</span>
-        <span class="footer-text">Built with intention</span>
+        <div class="footer-links">
+            <a href="mailto:keying@stanford.edu" class="footer-link">Email</a>
+            <span class="footer-divider">·</span>
+            <a href="https://scholar.google.com/citations?user=JS7AdkcAAAAJ" class="footer-link" target="_blank" rel="noopener">Scholar</a>
+            <span class="footer-divider">·</span>
+            <a href="https://twitter.com/kejunying" class="footer-link" target="_blank" rel="noopener">Twitter</a>
+            <span class="footer-divider">·</span>
+            <a href="https://github.com/albert-ying" class="footer-link" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <div class="footer-copyright">
+            <span>© {{ now.Year }} Kejun Albert Ying</span>
+        </div>
     </div>
 </footer>
 
 <style>
 .site-footer {
     margin-top: 4rem;
-    padding: 2rem 0;
+    padding: 2rem 0 1.5rem 0;
     border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -19,26 +28,69 @@ body.dark-mode .site-footer {
 
 .footer-content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
+    gap: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-link {
     font-family: 'Cooper Hewitt', sans-serif;
     font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #888;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+body.dark-mode .footer-link {
+    color: #6a6560;
+}
+
+.footer-link:hover {
+    color: #8b7355;
+    background: rgba(201, 169, 89, 0.1);
+}
+
+body.dark-mode .footer-link:hover {
+    color: #c9a959;
+    background: rgba(201, 169, 89, 0.15);
+}
+
+.footer-link:after {
+    content: none !important;
+}
+
+.footer-divider {
+    color: #ccc;
+    font-size: 0.6rem;
+}
+
+body.dark-mode .footer-divider {
+    color: #444;
+}
+
+.footer-copyright {
+    font-family: 'Cooper Hewitt', sans-serif;
+    font-size: 0.65rem;
     font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #aaa;
 }
 
-body.dark-mode .footer-content {
+body.dark-mode .footer-copyright {
     color: #5a5550;
-}
-
-.footer-divider {
-    color: #ccc;
-}
-
-body.dark-mode .footer-divider {
-    color: #444;
 }
 </style>

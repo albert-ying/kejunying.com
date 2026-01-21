@@ -1,0 +1,103 @@
+{{ define "main" }}
+<div class="error-page">
+    <div class="error-content">
+        <div class="error-number">404</div>
+        <h1 class="error-title">Page Not Found</h1>
+        <p class="error-message">The page you're looking for seems to have wandered off into the aging process.</p>
+        <a href="{{ "" | relURL }}" class="error-button">
+            <span>Return Home</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+        </a>
+    </div>
+</div>
+
+<style>
+.error-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+    padding: 2rem;
+}
+
+.error-content {
+    max-width: 500px;
+}
+
+.error-number {
+    font-family: 'Cooper Hewitt', sans-serif;
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 1;
+    background: linear-gradient(135deg, #c9a959, #8b7355);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
+.error-title {
+    font-family: "source-serif-4", serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2a2a2a;
+    margin-bottom: 1rem;
+    font-variant-caps: petite-caps;
+}
+
+body.dark-mode .error-title {
+    color: #e8e4dc;
+}
+
+.error-message {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+body.dark-mode .error-message {
+    color: #9a9590;
+}
+
+.error-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(135deg, #c9a959, #8b7355);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: 'Cooper Hewitt', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(201, 169, 89, 0.3);
+}
+
+.error-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(201, 169, 89, 0.4);
+    background: linear-gradient(135deg, #d4b468, #9a8262);
+}
+
+.error-button:after {
+    content: none !important;
+}
+
+.error-button svg {
+    transition: transform 0.3s ease;
+}
+
+.error-button:hover svg {
+    transform: translateX(3px);
+}
+</style>
+{{ end }}
