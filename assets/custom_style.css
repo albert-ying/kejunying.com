@@ -332,19 +332,19 @@ body.dark-mode .intro-text {
 
 /* ==================== SECTION LABELS ==================== */
 .sidenote {
-  font-family: 'Cooper Hewitt', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-family: 'Cooper Hewitt', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-bottom: 1rem;
   margin-left: -6rem;
   line-height: 1.35;
-  color: #999;
+  color: #777;
 }
 
 body.dark-mode .sidenote {
-  color: #7a7568;
+  color: #9a968e;
 }
 
 .sidenote a img {
@@ -360,18 +360,18 @@ body.dark-mode .sidenote a img {
 
 @media all and (max-width: 1200px) {
   .sidenote {
-    color: #888;
+    color: #666;
     padding: 1rem 0.5rem 0 0;
     margin-left: 0rem;
   }
   
   body.dark-mode .sidenote {
-    color: #7a7568;
+    color: #9a968e;
   }
 
   #doc .sidenote {
     padding: 0.5rem 0.5rem 0.5rem 0.75rem !important;
-    color: #888;
+    color: #666;
     padding: 1rem 0.5rem 0 0;
     margin-left: 0rem;
     border-radius: 5px;
@@ -716,19 +716,19 @@ body.dark-mode .article-nav-inner {
 
 .article-nav-inner a.internal {
   text-transform: none;
-  font-family: 'Cooper Hewitt', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-family: 'Cooper Hewitt', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #666;
+  color: #555;
   padding: 0.3rem 0.6rem;
   border-radius: 4px;
   transition: all 0.2s ease;
 }
 
 body.dark-mode .article-nav-inner a.internal {
-  color: #9a9590;
+  color: #b5b0a8;
 }
 
 .article-nav-inner a.internal:hover {
