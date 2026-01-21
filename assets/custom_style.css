@@ -397,14 +397,22 @@ body.dark-mode .sidenote a img {
 
 .recent:hover {
   background: linear-gradient(135deg, rgba(201, 169, 89, 0.06) 0%, rgba(139, 115, 85, 0.03) 100%);
+  transform: translateX(4px);
+  box-shadow: 0 4px 15px rgba(139, 115, 85, 0.08);
 }
 
 .recent:hover::before {
-  height: 60%;
+  height: 80%;
+  box-shadow: 0 0 8px rgba(201, 169, 89, 0.3);
 }
 
 body.dark-mode .recent:hover {
   background: linear-gradient(135deg, rgba(201, 169, 89, 0.1) 0%, rgba(139, 115, 85, 0.05) 100%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .recent:hover::before {
+  box-shadow: 0 0 8px rgba(201, 169, 89, 0.4);
 }
 
 .recent .date {
