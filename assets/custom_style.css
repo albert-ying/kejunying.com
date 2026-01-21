@@ -597,11 +597,24 @@ body.dark-mode .menu-container h3.list a.title {
 .menu-container h3.list a.title:hover {
   color: #8b7355;
   background: rgba(201, 169, 89, 0.1);
+  transform: translateY(-2px);
 }
 
 body.dark-mode .menu-container h3.list a.title:hover {
   color: #c9a959;
   background: rgba(201, 169, 89, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Active/current page indicator */
+.menu-container h3.list a.title[aria-current="page"] {
+  color: #8b7355;
+  background: rgba(201, 169, 89, 0.15);
+}
+
+body.dark-mode .menu-container h3.list a.title[aria-current="page"] {
+  color: #c9a959;
+  background: rgba(201, 169, 89, 0.2);
 }
 
 .list {
