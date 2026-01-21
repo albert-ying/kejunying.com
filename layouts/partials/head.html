@@ -66,4 +66,49 @@
     {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
     <title>{{ lower $title }}</title>
     
+    <!-- Structured Data for SEO -->
+    {{ if .IsHome }}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kejun Albert Ying",
+        "alternateName": "应可钧",
+        "url": "{{ .Permalink }}",
+        "image": "{{ .Site.BaseURL }}about/avatar.png",
+        "jobTitle": "Postdoctoral Researcher",
+        "worksFor": [
+            {
+                "@type": "Organization",
+                "name": "Stanford University",
+                "url": "https://stanford.edu"
+            },
+            {
+                "@type": "Organization",
+                "name": "University of Washington",
+                "url": "https://uw.edu"
+            }
+        ],
+        "alumniOf": [
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Harvard University"
+            }
+        ],
+        "sameAs": [
+            "https://github.com/albert-ying",
+            "https://twitter.com/kejunying",
+            "https://scholar.google.com/citations?user=JS7AdkcAAAAJ",
+            "https://orcid.org/0000-0002-1791-6176",
+            "https://www.linkedin.com/in/kejun-albert-ying/"
+        ],
+        "knowsAbout": ["Aging Biology", "Protein Design", "Machine Learning", "Epigenetics", "Bioinformatics"]
+    }
+    </script>
+    {{ end }}
+    
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)">
+    
 </head>
