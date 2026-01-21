@@ -1,0 +1,16 @@
+/* TEAM */
+Name: Kejun Albert Ying
+Role: Owner, Researcher
+Site: https://kejunying.com
+Twitter: @kejunying
+Location: Stanford, California
+
+/* SITE */
+Last update: 2026/01
+Standards: HTML5, CSS3
+Components: Hugo, Quarto
+Software: VS Code, Cursor
+
+/* THANKS */
+Theme: Based on works by Daniel Roelfs and Matthew Butterick
+Fonts: Source Serif 4, Cooper Hewitt
