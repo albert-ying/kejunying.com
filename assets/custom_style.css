@@ -75,13 +75,18 @@ body.dark-mode {
 body>* {
   font-family: "source-serif-4", serif;
   font-size: 0.95rem;
-  font-weight: 400;
+  font-weight: 450;
   font-style: normal;
   line-height: 1.7;
   margin-left: 4rem;
   margin-right: 2.5rem;
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern" 1, "liga" 1;
+}
+
+/* Slightly bolder text in dark mode for better readability */
+body.dark-mode > * {
+  font-weight: 450;
 }
 
 @media all and (max-width: 1200px) {
