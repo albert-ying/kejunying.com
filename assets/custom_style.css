@@ -1,3 +1,11 @@
+/* ==================== FONT LOADING OPTIMIZATION ==================== */
+/* Ensure text remains visible during webfont load */
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* ==================== BASE TYPOGRAPHY ==================== */
 @media all {
   html {
