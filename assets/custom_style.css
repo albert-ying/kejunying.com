@@ -1045,18 +1045,20 @@ body.dark-mode #doc h1 {
   align-items: center;
   gap: 0.75rem;
   padding: 0.6rem 1.2rem;
-  background: linear-gradient(135deg, rgba(201, 169, 89, 0.12) 0%, rgba(139, 115, 85, 0.06) 100%);
-  border: 1px solid rgba(201, 169, 89, 0.25);
+  background: linear-gradient(135deg, rgba(201, 169, 89, 0.15) 0%, rgba(139, 115, 85, 0.08) 100%);
+  border: 1px solid rgba(201, 169, 89, 0.3);
   border-radius: 8px;
-  border-bottom: 1px solid rgba(201, 169, 89, 0.25);
-  font-size: 1.2rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  color: #6a5540;
+  border-bottom: 1px solid rgba(201, 169, 89, 0.3);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #5a4a35;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   font-variant-caps: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
 #doc h1[id^="20"]::before,
@@ -1082,9 +1084,10 @@ body.dark-mode #doc h1 {
 
 body.dark-mode #doc h1[id^="20"],
 body.dark-mode #doc h1[id^="19"] {
-  background: linear-gradient(135deg, rgba(201, 169, 89, 0.15) 0%, rgba(139, 115, 85, 0.08) 100%);
-  border-color: rgba(201, 169, 89, 0.3);
-  color: #c9a959;
+  background: linear-gradient(135deg, rgba(201, 169, 89, 0.2) 0%, rgba(139, 115, 85, 0.12) 100%);
+  border-color: rgba(201, 169, 89, 0.4);
+  color: #d4b96a;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 body.dark-mode #doc h1[id^="20"]:hover,
@@ -1093,12 +1096,14 @@ body.dark-mode #doc h1[id^="19"]:hover {
   box-shadow: 0 4px 15px rgba(201, 169, 89, 0.2);
 }
 
-/* Remove bold from year numbers for cleaner look and ensure normal font */
+/* Ensure strong element inside year headings has consistent styling */
 #doc h1[id^="20"] strong,
 #doc h1[id^="19"] strong {
-  font-weight: 800;
+  font-family: inherit;
+  font-weight: 700;
   font-variant: normal !important;
   font-variant-caps: normal !important;
+  color: inherit;
 }
 
 /* Publication card container */
@@ -1385,11 +1390,11 @@ strong, b {
   height: 100%;
   pointer-events: none;
   z-index: -1;
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 body.dark-mode #particle-canvas {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 /* ==================== ENHANCED HOVER CARDS ==================== */
