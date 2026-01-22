@@ -257,6 +257,28 @@ body.dark-mode .job-market-banner:hover {
   box-shadow: 0 0 10px rgba(201, 169, 89, 0.3);
 }
 
+/* Subtle shimmer effect on banner */
+.job-market-banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(201, 169, 89, 0.08),
+    transparent
+  );
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+.job-market-banner:hover::after {
+  left: 100%;
+}
+
 .job-market-banner .banner-header {
   display: flex;
   align-items: center;
@@ -986,6 +1008,18 @@ body.dark-mode ::selection {
 }
 
 /* ==================== RESEARCH PAGE ==================== */
+/* Force override theme's small-caps styling for all doc headings */
+#doc h1,
+#doc h2,
+#doc h3,
+main#content h1,
+main#content h2,
+main#content h3 {
+  font-variant-caps: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+}
+
 #doc h1 {
   font-family: 'Cooper Hewitt', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1.15rem;
@@ -996,11 +1030,75 @@ body.dark-mode ::selection {
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid rgba(201, 169, 89, 0.3);
+  font-variant-numeric: tabular-nums;
 }
 
 body.dark-mode #doc h1 {
   color: #d4b96a;
   border-bottom-color: rgba(201, 169, 89, 0.4);
+}
+
+/* Year heading specific styling for better readability */
+#doc h1[id^="20"],
+#doc h1[id^="19"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, rgba(201, 169, 89, 0.12) 0%, rgba(139, 115, 85, 0.06) 100%);
+  border: 1px solid rgba(201, 169, 89, 0.25);
+  border-radius: 8px;
+  border-bottom: 1px solid rgba(201, 169, 89, 0.25);
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #6a5540;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-variant-caps: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+}
+
+#doc h1[id^="20"]::before,
+#doc h1[id^="19"]::before {
+  content: '◆';
+  font-size: 0.6rem;
+  color: #c9a959;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+#doc h1[id^="20"]:hover,
+#doc h1[id^="19"]:hover {
+  background: linear-gradient(135deg, rgba(201, 169, 89, 0.18) 0%, rgba(139, 115, 85, 0.1) 100%);
+  border-color: rgba(201, 169, 89, 0.4);
+  transform: translateX(6px);
+  box-shadow: 0 4px 15px rgba(201, 169, 89, 0.15);
+}
+
+body.dark-mode #doc h1[id^="20"],
+body.dark-mode #doc h1[id^="19"] {
+  background: linear-gradient(135deg, rgba(201, 169, 89, 0.15) 0%, rgba(139, 115, 85, 0.08) 100%);
+  border-color: rgba(201, 169, 89, 0.3);
+  color: #c9a959;
+}
+
+body.dark-mode #doc h1[id^="20"]:hover,
+body.dark-mode #doc h1[id^="19"]:hover {
+  background: linear-gradient(135deg, rgba(201, 169, 89, 0.22) 0%, rgba(139, 115, 85, 0.12) 100%);
+  box-shadow: 0 4px 15px rgba(201, 169, 89, 0.2);
+}
+
+/* Remove bold from year numbers for cleaner look and ensure normal font */
+#doc h1[id^="20"] strong,
+#doc h1[id^="19"] strong {
+  font-weight: 800;
+  font-variant: normal !important;
+  font-variant-caps: normal !important;
 }
 
 /* Publication card container */
@@ -1131,6 +1229,27 @@ body.dark-mode #doc ul li strong {
   color: #e8e4dc;
 }
 
+/* Talk event styling */
+#doc ul li strong:first-child {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  background: rgba(201, 169, 89, 0.1);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+#doc ul li:hover strong:first-child {
+  background: rgba(201, 169, 89, 0.2);
+}
+
+body.dark-mode #doc ul li strong:first-child {
+  background: rgba(201, 169, 89, 0.15);
+}
+
+body.dark-mode #doc ul li:hover strong:first-child {
+  background: rgba(201, 169, 89, 0.25);
+}
+
 /* ==================== ABOUT PAGE ==================== */
 #doc .sidenote img {
   border-radius: 50%;
@@ -1255,6 +1374,193 @@ strong, b {
     border: 2px solid #000;
     background: none !important;
   }
+}
+
+/* ==================== PARTICLE BACKGROUND ==================== */
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+body.dark-mode #particle-canvas {
+  opacity: 0.5;
+}
+
+/* ==================== ENHANCED HOVER CARDS ==================== */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(139, 115, 85, 0.15);
+}
+
+body.dark-mode .hover-lift:hover {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* ==================== GLOWING ACCENTS ==================== */
+.glow-accent {
+  position: relative;
+}
+
+.glow-accent::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, rgba(201, 169, 89, 0.3), rgba(139, 115, 85, 0.1));
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  filter: blur(8px);
+}
+
+.glow-accent:hover::after {
+  opacity: 1;
+}
+
+/* ==================== ANIMATED GRADIENT BORDERS ==================== */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(135deg, #c9a959, #8b7355, #c9a959, #8b7355);
+  background-size: 300% 300%;
+  border-radius: inherit;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: gradient-shift 4s ease infinite;
+}
+
+.gradient-border:hover::before {
+  opacity: 1;
+}
+
+/* ==================== ENHANCED SIDENOTE FOR MONTHS ==================== */
+#doc .sidenote {
+  font-variant-caps: normal;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Month labels in talks page */
+.sidenote:not(:has(img)):not(:has(.altmetric-embed)) {
+  font-family: 'Cooper Hewitt', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8b7355;
+}
+
+body.dark-mode .sidenote:not(:has(img)):not(:has(.altmetric-embed)) {
+  color: #c9a959;
+}
+
+/* ==================== SMOOTH REVEAL ANIMATION ==================== */
+@keyframes slideReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+}
+
+.reveal-on-scroll.revealed {
+  animation: slideReveal 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* ==================== INTERACTIVE CURSOR GLOW ==================== */
+.cursor-glow {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(201, 169, 89, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+body:hover .cursor-glow {
+  opacity: 1;
+}
+
+body.dark-mode .cursor-glow {
+  background: radial-gradient(circle, rgba(201, 169, 89, 0.12) 0%, transparent 70%);
+}
+
+/* ==================== PUBLICATION CARD ENHANCEMENTS ==================== */
+#doc h4 {
+  position: relative;
+  overflow: hidden;
+}
+
+#doc h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #c9a959, transparent);
+  transition: left 0.5s ease;
+}
+
+#doc h4:hover::after {
+  left: 100%;
+}
+
+/* ==================== ENHANCED IFRAME CONTAINERS ==================== */
+#doc iframe {
+  position: relative;
+  border: 1px solid rgba(201, 169, 89, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#doc iframe:hover {
+  border-color: rgba(201, 169, 89, 0.4);
+  box-shadow: 0 8px 30px rgba(201, 169, 89, 0.15);
+}
+
+body.dark-mode #doc iframe:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
 /* ==================== CUSTOM SCROLLBAR ==================== */

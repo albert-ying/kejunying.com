@@ -1,11 +1,20 @@
 // Modern Animation System for Kejun Ying's Website
-// Premium micro-interactions and polished animations
+// Premium micro-interactions and polished animations with particle effects
 
 (function() {
     'use strict';
 
     // Check if user prefers reduced motion
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Color theme - gold/bronze palette
+    const COLORS = {
+        primary: '#c9a959',
+        secondary: '#8b7355',
+        accent: '#d4b96a',
+        light: 'rgba(201, 169, 89, 0.6)',
+        dark: 'rgba(139, 115, 85, 0.4)'
+    };
 
     // ==================== UTILITY FUNCTIONS ====================
     function debounce(func, wait) {
@@ -18,6 +27,195 @@
             clearTimeout(timeout);
             timeout = setTimeout(later, wait);
         };
+    }
+
+    // ==================== PARTICLE BACKGROUND SYSTEM ====================
+    function createParticleCanvas() {
+        const canvas = document.createElement('canvas');
+        canvas.id = 'particle-canvas';
+        document.body.insertBefore(canvas, document.body.firstChild);
+        
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let animationId;
+        let mouseX = 0;
+        let mouseY = 0;
+        
+        // Resize canvas
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', debounce(resizeCanvas, 100));
+        
+        // Particle class
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.3;
+                this.speedY = (Math.random() - 0.5) * 0.3;
+                this.opacity = Math.random() * 0.5 + 0.1;
+                this.pulseSpeed = Math.random() * 0.02 + 0.01;
+                this.pulsePhase = Math.random() * Math.PI * 2;
+                // Gold/bronze color variation
+                const colorChoice = Math.random();
+                if (colorChoice < 0.5) {
+                    this.color = COLORS.primary;
+                } else if (colorChoice < 0.8) {
+                    this.color = COLORS.secondary;
+                } else {
+                    this.color = COLORS.accent;
+                }
+            }
+            
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                
+                // Gentle mouse interaction
+                const dx = mouseX - this.x;
+                const dy = mouseY - this.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                if (distance < 150) {
+                    const force = (150 - distance) / 150 * 0.02;
+                    this.speedX -= dx * force * 0.01;
+                    this.speedY -= dy * force * 0.01;
+                }
+                
+                // Pulse effect
+                this.pulsePhase += this.pulseSpeed;
+                const pulse = Math.sin(this.pulsePhase) * 0.3 + 0.7;
+                this.currentOpacity = this.opacity * pulse;
+                
+                // Wrap around edges
+                if (this.x < -10) this.x = canvas.width + 10;
+                if (this.x > canvas.width + 10) this.x = -10;
+                if (this.y < -10) this.y = canvas.height + 10;
+                if (this.y > canvas.height + 10) this.y = -10;
+                
+                // Dampen speed
+                this.speedX *= 0.99;
+                this.speedY *= 0.99;
+                
+                // Add slight random drift
+                this.speedX += (Math.random() - 0.5) * 0.02;
+                this.speedY += (Math.random() - 0.5) * 0.02;
+            }
+            
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.globalAlpha = this.currentOpacity;
+                ctx.fill();
+            }
+        }
+        
+        // Create particles
+        const particleCount = Math.min(60, Math.floor(window.innerWidth / 25));
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+        
+        // Draw connections between nearby particles
+        function drawConnections() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < 120) {
+                        const opacity = (1 - distance / 120) * 0.15;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = COLORS.primary;
+                        ctx.globalAlpha = opacity;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+        
+        // Animation loop
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            drawConnections();
+            
+            particles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+            
+            ctx.globalAlpha = 1;
+            animationId = requestAnimationFrame(animate);
+        }
+        
+        // Track mouse position
+        document.addEventListener('mousemove', function(e) {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+        
+        // Start animation
+        if (!prefersReducedMotion) {
+            animate();
+        } else {
+            // Static particles for reduced motion
+            particles.forEach(particle => particle.draw());
+            drawConnections();
+        }
+        
+        // Pause when tab is not visible
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                cancelAnimationFrame(animationId);
+            } else if (!prefersReducedMotion) {
+                animate();
+            }
+        });
+    }
+
+    // ==================== CURSOR GLOW EFFECT ====================
+    function createCursorGlow() {
+        const glow = document.createElement('div');
+        glow.className = 'cursor-glow';
+        document.body.appendChild(glow);
+        
+        let currentX = 0;
+        let currentY = 0;
+        let targetX = 0;
+        let targetY = 0;
+        
+        document.addEventListener('mousemove', function(e) {
+            targetX = e.clientX;
+            targetY = e.clientY;
+        });
+        
+        function updateGlow() {
+            // Smooth follow
+            currentX += (targetX - currentX) * 0.08;
+            currentY += (targetY - currentY) * 0.08;
+            
+            glow.style.left = currentX + 'px';
+            glow.style.top = currentY + 'px';
+            
+            requestAnimationFrame(updateGlow);
+        }
+        
+        if (!prefersReducedMotion) {
+            updateGlow();
+        }
     }
 
     // ==================== SCROLL TO TOP BUTTON ====================
@@ -121,11 +319,17 @@
         createScrollToTop();
         createProgressBar();
         
+        // Create particle background (works even with reduced motion, just static)
+        createParticleCanvas();
+        
         if (prefersReducedMotion) {
             // Still show content, just skip animations
             document.body.style.opacity = '1';
             return;
         }
+        
+        // Create cursor glow effect
+        createCursorGlow();
 
         // ==================== INTERSECTION OBSERVER FOR SCROLL ANIMATIONS ====================
         const observerOptions = {
@@ -142,6 +346,19 @@
                 }
             });
         }, observerOptions);
+        
+        // Reveal observer for scroll animations
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Staggered reveal
+                    setTimeout(() => {
+                        entry.target.classList.add('revealed');
+                    }, index * 50);
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
 
         // Observe news items for staggered fade-in
         const newsItems = document.querySelectorAll('.recent');
@@ -149,6 +366,13 @@
             item.style.transitionDelay = `${index * 0.05}s`;
             item.classList.add('fade-in-element');
             fadeInObserver.observe(item);
+        });
+        
+        // Observe publication cards for reveal animation
+        const pubCards = document.querySelectorAll('#doc h4');
+        pubCards.forEach(card => {
+            card.classList.add('reveal-on-scroll');
+            revealObserver.observe(card);
         });
 
         // ==================== TYPING ANIMATION FOR QUOTE ====================
@@ -326,7 +550,7 @@
         }
 
         // ==================== HEADING HOVER EFFECTS ====================
-        const pageHeadings = document.querySelectorAll('h1, h2.article-title');
+        const pageHeadings = document.querySelectorAll('h1:not(#doc h1), h2.article-title');
         pageHeadings.forEach(heading => {
             heading.style.transition = 'transform 0.3s ease, text-shadow 0.3s ease';
             heading.addEventListener('mouseenter', function() {
@@ -336,6 +560,77 @@
             heading.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateX(0)';
             });
+        });
+
+        // ==================== YEAR HEADING PARTICLE BURST ====================
+        const yearHeadings = document.querySelectorAll('#doc h1[id^="20"]');
+        yearHeadings.forEach(heading => {
+            heading.addEventListener('click', function(e) {
+                createParticleBurst(e.clientX, e.clientY);
+            });
+        });
+        
+        function createParticleBurst(x, y) {
+            const particles = [];
+            const particleCount = 12;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.style.cssText = `
+                    position: fixed;
+                    left: ${x}px;
+                    top: ${y}px;
+                    width: 6px;
+                    height: 6px;
+                    background: ${Math.random() > 0.5 ? COLORS.primary : COLORS.secondary};
+                    border-radius: 50%;
+                    pointer-events: none;
+                    z-index: 9999;
+                `;
+                document.body.appendChild(particle);
+                particles.push(particle);
+                
+                const angle = (i / particleCount) * Math.PI * 2;
+                const velocity = 80 + Math.random() * 60;
+                const vx = Math.cos(angle) * velocity;
+                const vy = Math.sin(angle) * velocity;
+                
+                particle.animate([
+                    { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+                    { transform: `translate(${vx}px, ${vy}px) scale(0)`, opacity: 0 }
+                ], {
+                    duration: 600 + Math.random() * 200,
+                    easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
+                }).onfinish = () => particle.remove();
+            }
+        }
+
+        // ==================== PUBLICATION CARD HOVER GLOW ====================
+        const docH4s = document.querySelectorAll('#doc h4');
+        docH4s.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.background = 'linear-gradient(135deg, rgba(201, 169, 89, 0.08) 0%, rgba(139, 115, 85, 0.04) 100%)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.background = '';
+            });
+        });
+
+        // ==================== IFRAME LAZY ENHANCEMENT ====================
+        const iframes = document.querySelectorAll('#doc iframe');
+        iframes.forEach(iframe => {
+            iframe.style.opacity = '0';
+            iframe.style.transition = 'opacity 0.5s ease';
+            
+            iframe.addEventListener('load', function() {
+                this.style.opacity = '1';
+            });
+            
+            // Fallback if already loaded
+            if (iframe.contentDocument && iframe.contentDocument.readyState === 'complete') {
+                iframe.style.opacity = '1';
+            }
         });
 
         // ==================== SMOOTH PAGE TRANSITIONS ====================
