@@ -1,4 +1,5 @@
-# Sample workflow for building and deploying a Hugo site to GitHub Pages
+# Workflow for building and deploying a Hugo site to GitHub Pages
+# Includes automatic PDF CV to HTML conversion
 name: Deploy Hugo site to Pages
 
 on:
@@ -32,7 +33,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.116.1
+      HUGO_VERSION: 0.125.4
     steps:
       - name: Install Hugo CLI
         run: |
@@ -50,6 +51,23 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      
+      # Convert PDF CV to HTML using pdf2htmlEX
+      - name: Convert PDF CV to HTML
+        run: |
+          if [ -f "content/cv/Ying_cv.pdf" ]; then
+            echo "Converting Ying_cv.pdf to HTML..."
+            docker run --rm \
+              -v "${{ github.workspace }}/content/cv:/pdf" \
+              pdf2htmlex/pdf2htmlex:0.18.8.rc2-master-20200820-alpine-3.12.0-x86_64 \
+              --data-dir pdf2htmlEX \
+              --zoom 1.2 \
+              Ying_cv.pdf
+            echo "PDF to HTML conversion complete"
+          else
+            echo "Warning: Ying_cv.pdf not found, skipping conversion"
+          fi
+      
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
