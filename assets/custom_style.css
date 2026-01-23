@@ -2032,15 +2032,15 @@ body.dark-mode .pub-year {
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .pub-card-inner {
-    padding: 1.25rem;
+    padding: 1rem;
   }
   
   .pub-title {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
   
   .pub-year {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   
   .pub-figure img {
@@ -2048,8 +2048,20 @@ body.dark-mode .pub-year {
   }
   
   .pub-carousel {
-    margin: 1rem -0.5rem;
-    padding: 0 0.5rem;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    overflow: hidden;
+    perspective: none;
+  }
+  
+  .pub-carousel-track {
+    transform-style: flat;
+  }
+  
+  .pub-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+    padding: 0 0.25rem;
   }
   
   .pub-carousel-nav {
@@ -2062,23 +2074,17 @@ body.dark-mode .pub-year {
     height: 36px;
   }
   
-  /* Mobile news swipe indicator */
-  .news-swipe-hint {
-    display: flex;
-    justify-content: center;
-    gap: 0.3rem;
-    margin-top: 0.5rem;
+  .pub-tldr {
+    font-size: 0.8rem;
+    padding: 0.6rem;
   }
   
-  .news-swipe-hint span {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: rgba(201, 169, 89, 0.3);
+  .pub-authors {
+    font-size: 0.8rem;
   }
   
-  .news-swipe-hint span.active {
-    background: var(--color-gold);
+  .pub-journal {
+    font-size: 0.65rem;
   }
 }
 

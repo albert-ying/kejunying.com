@@ -723,56 +723,53 @@
             const maxIndex = Math.max(0, totalCards - visibleCards);
             currentIndex = Math.min(currentIndex, maxIndex);
             
-            // Calculate translation
-            const cardWidthPercent = 100 / visibleCards;
-            const gapCompensation = visibleCards > 1 ? (currentIndex * 1) : 0;
-            track.style.transform = `translateX(calc(-${currentIndex * cardWidthPercent}% - ${gapCompensation}rem))`;
+            // Calculate translation - simpler for mobile
+            if (visibleCards === 1) {
+                // Mobile: simple percentage-based translation
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            } else {
+                // Desktop: account for gaps
+                const cardWidthPercent = 100 / visibleCards;
+                const gapCompensation = currentIndex * 1;
+                track.style.transform = `translateX(calc(-${currentIndex * cardWidthPercent}% - ${gapCompensation}rem))`;
+            }
             
-            // Stage Manager style: center card is prominent, sides recede
+            // Apply visual effects to cards
             cards.forEach((card, index) => {
                 const cardInner = card.querySelector('.pub-card-inner');
                 const distance = index - currentIndex;
                 
-                // Calculate center position
-                const centerPos = visibleCards > 1 ? (visibleCards - 1) / 2 : 0;
-                const relativePos = visibleCards > 1 ? (index - currentIndex) - centerPos : distance;
-                
-                // Base scale and opacity based on distance from "focus"
-                let scale, translateZ, opacity, blur;
-                
                 if (visibleCards === 1) {
-                    // Single card - simple slide effect
-                    scale = distance === 0 ? 1 : 0.85;
-                    translateZ = distance === 0 ? 0 : -50;
-                    opacity = distance === 0 ? 1 : 0.4;
-                    blur = distance === 0 ? 0 : 2;
+                    // Mobile: simple show/hide, no 3D effects
+                    cardInner.style.transform = 'none';
+                    cardInner.style.opacity = distance === 0 ? 1 : 0.3;
+                    cardInner.style.filter = 'none';
                 } else {
-                    // Multi-card Stage Manager style
+                    // Desktop: Stage Manager style depth effect
+                    const centerPos = (visibleCards - 1) / 2;
+                    const relativePos = (index - currentIndex) - centerPos;
                     const absDistance = Math.abs(relativePos);
+                    
+                    let scale, translateZ, opacity;
+                    
                     if (absDistance < 0.5) {
-                        // Center/focal card
                         scale = 1;
                         translateZ = 20;
                         opacity = 1;
-                        blur = 0;
                     } else if (absDistance <= 1) {
-                        // Adjacent cards
                         scale = 0.95;
                         translateZ = 0;
                         opacity = 0.9;
-                        blur = 0;
                     } else {
-                        // Outer cards
                         scale = 0.88;
                         translateZ = -20;
                         opacity = 0.7;
-                        blur = 1;
                     }
+                    
+                    cardInner.style.transform = `translateZ(${translateZ}px) scale(${scale})`;
+                    cardInner.style.opacity = opacity;
+                    cardInner.style.filter = 'none';
                 }
-                
-                cardInner.style.transform = `translateZ(${translateZ}px) scale(${scale})`;
-                cardInner.style.opacity = opacity;
-                cardInner.style.filter = blur > 0 ? `blur(${blur}px)` : 'none';
             });
             
             // Update dots
