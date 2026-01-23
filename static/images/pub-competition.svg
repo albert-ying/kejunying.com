@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bgComp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#faf8f5"/>
+      <stop offset="100%" stop-color="#f0ede8"/>
+    </linearGradient>
+    <linearGradient id="goldComp" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c9a959"/>
+      <stop offset="100%" stop-color="#8b7355"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bgComp)" width="400" height="180" rx="8"/>
+  
+  <!-- Podium (competition winners) -->
+  <rect x="150" y="100" width="40" height="60" fill="url(#goldComp)" opacity="0.7" rx="2"/>
+  <text x="170" y="125" font-family="Inter, sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="700">1</text>
+  
+  <rect x="100" y="120" width="40" height="40" fill="url(#goldComp)" opacity="0.5" rx="2"/>
+  <text x="120" y="145" font-family="Inter, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="600">2</text>
+  
+  <rect x="200" y="130" width="40" height="30" fill="url(#goldComp)" opacity="0.3" rx="2"/>
+  <text x="220" y="150" font-family="Inter, sans-serif" font-size="12" fill="#8b7355" text-anchor="middle" font-weight="600">3</text>
+  
+  <!-- Trophy icon -->
+  <path d="M165 55 L175 55 L175 70 L170 80 L165 70 Z" fill="url(#goldComp)" opacity="0.8"/>
+  <rect x="167" y="80" width="6" height="8" fill="url(#goldComp)" opacity="0.6"/>
+  <rect x="163" y="88" width="14" height="4" fill="url(#goldComp)" opacity="0.6" rx="1"/>
+  
+  <!-- Bar chart representing biomarker evaluation -->
+  <rect x="280" y="110" width="15" height="50" fill="url(#goldComp)" opacity="0.6" rx="2"/>
+  <rect x="300" y="90" width="15" height="70" fill="url(#goldComp)" opacity="0.7" rx="2"/>
+  <rect x="320" y="120" width="15" height="40" fill="url(#goldComp)" opacity="0.5" rx="2"/>
+  <rect x="340" y="100" width="15" height="60" fill="url(#goldComp)" opacity="0.6" rx="2"/>
+  
+  <!-- Labels -->
+  <text x="60" y="90" font-family="Inter, sans-serif" font-size="10" fill="#8b7355" text-anchor="middle" opacity="0.8">Open</text>
+  <text x="60" y="103" font-family="Inter, sans-serif" font-size="10" fill="#8b7355" text-anchor="middle" opacity="0.8">Competition</text>
+  
+  <text x="317" y="55" font-family="Inter, sans-serif" font-size="9" fill="#8b7355" text-anchor="middle" opacity="0.7">Biomarker</text>
+  <text x="317" y="68" font-family="Inter, sans-serif" font-size="9" fill="#8b7355" text-anchor="middle" opacity="0.7">Evaluation</text>
+</svg>
