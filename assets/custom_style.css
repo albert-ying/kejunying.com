@@ -489,72 +489,88 @@ body.dark-mode .sidenote a img {
 
 /* ==================== NEWS/RECENT ITEMS ==================== */
 .news-container {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .news-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .news-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
 }
 
 .recent {
   position: relative;
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.6rem;
   font-size: 0.88rem;
-  padding: 0.9rem 1rem;
-  margin-left: -1rem;
+  padding: 1rem 1.25rem;
   border-radius: 10px;
-  background: transparent;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(250, 248, 245, 0.5) 100%);
+  border: 1px solid rgba(201, 169, 89, 0.12);
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.dark-mode .recent {
+  background: linear-gradient(135deg, rgba(30, 30, 30, 0.7) 0%, rgba(25, 25, 25, 0.5) 100%);
+  border-color: rgba(201, 169, 89, 0.15);
 }
 
 .recent::before {
   content: '';
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
   width: 3px;
-  height: 0;
-  background: linear-gradient(180deg, #c9a959, #8b7355);
-  border-radius: 2px;
-  transition: height 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  background: linear-gradient(180deg, rgba(201, 169, 89, 0.25), rgba(139, 115, 85, 0.15));
+  border-radius: 10px 0 0 10px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .recent:hover {
-  background: linear-gradient(135deg, rgba(201, 169, 89, 0.06) 0%, rgba(139, 115, 85, 0.03) 100%);
-  transform: translateX(4px);
-  box-shadow: 0 4px 15px rgba(139, 115, 85, 0.08);
+  background: linear-gradient(135deg, rgba(201, 169, 89, 0.08) 0%, rgba(139, 115, 85, 0.04) 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(139, 115, 85, 0.1);
+  border-color: rgba(201, 169, 89, 0.25);
 }
 
 .recent:hover::before {
-  height: 80%;
-  box-shadow: 0 0 8px rgba(201, 169, 89, 0.3);
+  background: linear-gradient(180deg, #c9a959, #8b7355);
 }
 
 body.dark-mode .recent:hover {
   background: linear-gradient(135deg, rgba(201, 169, 89, 0.1) 0%, rgba(139, 115, 85, 0.05) 100%);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  border-color: rgba(201, 169, 89, 0.35);
 }
 
 body.dark-mode .recent:hover::before {
-  box-shadow: 0 0 8px rgba(201, 169, 89, 0.4);
+  box-shadow: 0 0 8px rgba(201, 169, 89, 0.3);
 }
 
 .recent .date {
-  flex-shrink: 0;
+  align-self: flex-start;
   font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  color: #7a6545;
-  padding: 0.4rem 0.65rem;
-  background: rgba(201, 169, 89, 0.12);
-  border: 1px solid rgba(201, 169, 89, 0.25);
-  border-radius: 6px;
-  min-width: 4.5em;
-  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-bronze);
+  padding: 0.35rem 0.6rem;
+  background: rgba(201, 169, 89, 0.1);
+  border-radius: 4px;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: default;
 }
 
 body.dark-mode .recent .date {
