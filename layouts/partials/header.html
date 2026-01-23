@@ -1,13 +1,17 @@
 <div id="nav-border" class="container">
     {{ if not .IsHome }}
     <div class="nav-outer">
-        <div class="article-nav-inner">
+        <div class="article-nav-inner menu-container">
             {{ with .Site.Menus.main }}
                 {{ range sort . "Weight" }}
                     {{ if ne .Identifier "hide-from-nav" }}
-                        <a class="internal" hyphens="none" href="{{ .URL }}">
-                            {{ $text := print .Name | safeHTML }}
-                            {{ $text }}
+                        <a class="menu-item" href="{{ .URL }}">
+                            {{ if eq .Name "Talks" }}<img src="/images/icon-talks.svg" class="menu-icon" alt="">{{ end }}
+                            {{ if eq .Name "Research" }}<img src="/images/icon-research.svg" class="menu-icon" alt="">{{ end }}
+                            {{ if eq .Name "Cv" }}<img src="/images/icon-cv.svg" class="menu-icon" alt="">{{ end }}
+                            {{ if eq .Name "Contact" }}<img src="/images/icon-contact.svg" class="menu-icon" alt="">{{ end }}
+                            {{ if eq .Name "Poetry" }}<img src="/images/icon-poetry.svg" class="menu-icon" alt="">{{ end }}
+                            <span>{{ .Name | safeHTML }}</span>
                         </a>
                     {{ end }}
                 {{ end }}
