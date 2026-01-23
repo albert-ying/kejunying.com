@@ -698,6 +698,14 @@
         let currentIndex = 0;
         const totalCards = cards.length;
 
+        // Calculate visible cards based on screen width
+        function getVisibleCards() {
+            const width = window.innerWidth;
+            if (width >= 1400) return 3;
+            if (width >= 900) return 2;
+            return 1;
+        }
+
         // Create dots
         if (dotsContainer) {
             cards.forEach((_, index) => {
@@ -711,7 +719,14 @@
         const dots = dotsContainer ? dotsContainer.querySelectorAll('.pub-dot') : [];
 
         function updateCarousel() {
-            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            const visibleCards = getVisibleCards();
+            const maxIndex = Math.max(0, totalCards - visibleCards);
+            currentIndex = Math.min(currentIndex, maxIndex);
+            
+            // Calculate translation based on card width percentage
+            const cardWidthPercent = 100 / visibleCards;
+            const gapCompensation = visibleCards > 1 ? (currentIndex * 1) : 0; // Account for gap
+            track.style.transform = `translateX(calc(-${currentIndex * cardWidthPercent}% - ${gapCompensation}rem))`;
             
             // Update dots
             dots.forEach((dot, index) => {
@@ -720,16 +735,20 @@
 
             // Update buttons
             if (prevBtn) prevBtn.disabled = currentIndex === 0;
-            if (nextBtn) nextBtn.disabled = currentIndex === totalCards - 1;
+            if (nextBtn) nextBtn.disabled = currentIndex >= maxIndex;
         }
 
         function goToSlide(index) {
-            currentIndex = Math.max(0, Math.min(index, totalCards - 1));
+            const visibleCards = getVisibleCards();
+            const maxIndex = Math.max(0, totalCards - visibleCards);
+            currentIndex = Math.max(0, Math.min(index, maxIndex));
             updateCarousel();
         }
 
         function nextSlide() {
-            if (currentIndex < totalCards - 1) {
+            const visibleCards = getVisibleCards();
+            const maxIndex = Math.max(0, totalCards - visibleCards);
+            if (currentIndex < maxIndex) {
                 currentIndex++;
                 updateCarousel();
             }
@@ -769,18 +788,27 @@
             }
         }, { passive: true });
 
-        // Auto-play (optional - every 6 seconds)
+        // Handle resize
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(updateCarousel, 100);
+        });
+
+        // Auto-play (optional - every 5 seconds)
         let autoPlayInterval;
         
         function startAutoPlay() {
             autoPlayInterval = setInterval(() => {
-                if (currentIndex < totalCards - 1) {
+                const visibleCards = getVisibleCards();
+                const maxIndex = Math.max(0, totalCards - visibleCards);
+                if (currentIndex < maxIndex) {
                     nextSlide();
                 } else {
                     currentIndex = 0;
                     updateCarousel();
                 }
-            }, 6000);
+            }, 5000);
         }
 
         function stopAutoPlay() {
