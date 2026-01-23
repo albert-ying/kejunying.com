@@ -12,6 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
     <link rel="preconnect" href="https://use.typekit.net" crossorigin>
     <link rel="preconnect" href="https://www.googletagmanager.com">
@@ -20,6 +22,10 @@
     <!-- DNS prefetch for secondary resources -->
     <link rel="dns-prefetch" href="https://fonts.cdnfonts.com">
     <link rel="dns-prefetch" href="https://use.typekit.net">
+    
+    <!-- Preload critical Inter font -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
 
     {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
     <meta name="description" content="{{ if .IsPage }}{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}{{ else }}{{ .Site.Params.description }}{{ end }}">

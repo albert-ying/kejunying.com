@@ -874,4 +874,188 @@
         updateCarousel();
     }
 
+    // ==================== APPLE-STYLE POLISH ====================
+    
+    // Smooth scroll for all anchor links
+    function initSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    }
+
+    // Reading progress indicator
+    function initReadingProgress() {
+        const progressBar = document.createElement('div');
+        progressBar.className = 'reading-progress';
+        progressBar.innerHTML = '<div class="reading-progress-bar"></div>';
+        document.body.appendChild(progressBar);
+
+        const bar = progressBar.querySelector('.reading-progress-bar');
+        
+        function updateProgress() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            bar.style.width = `${progress}%`;
+            
+            // Show/hide based on scroll
+            progressBar.style.opacity = scrollTop > 100 ? '1' : '0';
+        }
+
+        window.addEventListener('scroll', updateProgress, { passive: true });
+        updateProgress();
+    }
+
+    // Back to top button
+    function initBackToTop() {
+        const btn = document.createElement('button');
+        btn.className = 'back-to-top';
+        btn.setAttribute('aria-label', 'Back to top');
+        btn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>`;
+        document.body.appendChild(btn);
+
+        function updateVisibility() {
+            btn.classList.toggle('visible', window.scrollY > 400);
+        }
+
+        btn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        window.addEventListener('scroll', updateVisibility, { passive: true });
+        updateVisibility();
+    }
+
+    // Enhanced scroll reveal with stagger
+    function initScrollReveal() {
+        const revealElements = document.querySelectorAll('.recent, .pub-card, #doc h2, #doc h4, #doc ul li');
+        
+        if (revealElements.length === 0) return;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Staggered delay based on index
+                    const delay = Math.min(index * 50, 300);
+                    entry.target.style.transitionDelay = `${delay}ms`;
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => {
+            el.classList.add('reveal-on-scroll');
+            observer.observe(el);
+        });
+    }
+
+    // Parallax effect for hero section
+    function initParallax() {
+        const hero = document.querySelector('.hero-section');
+        const avatar = document.querySelector('.avatar-container');
+        
+        if (!hero || !avatar || prefersReducedMotion) return;
+
+        let ticking = false;
+
+        function updateParallax() {
+            const scrollY = window.scrollY;
+            const maxScroll = 400;
+            
+            if (scrollY < maxScroll) {
+                const progress = scrollY / maxScroll;
+                const translateY = scrollY * 0.3;
+                const scale = 1 - (progress * 0.1);
+                const opacity = 1 - (progress * 0.5);
+                
+                avatar.style.transform = `translateY(${translateY}px) scale(${scale})`;
+                avatar.style.opacity = opacity;
+            }
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateParallax);
+                ticking = true;
+            }
+        }, { passive: true });
+    }
+
+    // Magnetic hover effect for buttons
+    function initMagneticHover() {
+        const magneticElements = document.querySelectorAll('.menu-item, .pub-nav-btn, .back-to-top, .theme-toggle');
+        
+        magneticElements.forEach(el => {
+            el.addEventListener('mousemove', (e) => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                
+                el.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+            });
+            
+            el.addEventListener('mouseleave', () => {
+                el.style.transform = '';
+            });
+        });
+    }
+
+    // Text reveal animation for headings
+    function initTextReveal() {
+        const headings = document.querySelectorAll('.hero-section .title, .job-market-banner .banner-title');
+        
+        headings.forEach(heading => {
+            const text = heading.textContent;
+            heading.innerHTML = '';
+            heading.style.opacity = '1';
+            
+            [...text].forEach((char, i) => {
+                const span = document.createElement('span');
+                span.textContent = char === ' ' ? '\u00A0' : char;
+                span.style.cssText = `
+                    display: inline-block;
+                    opacity: 0;
+                    transform: translateY(20px);
+                    animation: textRevealChar 0.5s ease forwards;
+                    animation-delay: ${i * 30}ms;
+                `;
+                heading.appendChild(span);
+            });
+        });
+    }
+
+    // Initialize all Apple-style enhancements
+    function initApplePolish() {
+        initSmoothScroll();
+        initReadingProgress();
+        initBackToTop();
+        initScrollReveal();
+        initParallax();
+        // initMagneticHover(); // Disabled - can interfere with other transforms
+        // initTextReveal(); // Disabled - can be too flashy
+    }
+
+    // Run after DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initApplePolish);
+    } else {
+        initApplePolish();
+    }
+
 })();
