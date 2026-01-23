@@ -1693,22 +1693,14 @@ body.dark-mode .pub-card-inner {
 
 .pub-figure {
   width: 100%;
-  height: auto;
-  aspect-ratio: 2 / 1;
   margin-bottom: 1rem;
   border-radius: 8px;
-  overflow: visible;
-  background: linear-gradient(135deg, rgba(201, 169, 89, 0.08) 0%, rgba(139, 115, 85, 0.03) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .pub-figure img {
   width: 100%;
   height: auto;
-  max-height: 180px;
-  object-fit: contain;
+  border-radius: 8px;
   transition: transform 0.3s ease;
 }
 

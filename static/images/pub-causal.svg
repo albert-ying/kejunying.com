@@ -1,33 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bgCausal" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#faf8f5"/>
       <stop offset="100%" stop-color="#f0ede8"/>
     </linearGradient>
-    <linearGradient id="gold4" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="goldCausal" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#c9a959"/>
       <stop offset="100%" stop-color="#8b7355"/>
     </linearGradient>
-  </defs>
-  <rect fill="url(#bg4)" width="400" height="200"/>
-  <!-- Causal diagram nodes -->
-  <circle cx="80" cy="100" r="25" fill="url(#gold4)" opacity="0.8"/>
-  <circle cx="200" cy="60" r="20" fill="url(#gold4)" opacity="0.6"/>
-  <circle cx="200" cy="140" r="20" fill="url(#gold4)" opacity="0.6"/>
-  <circle cx="320" cy="100" r="25" fill="url(#gold4)" opacity="0.8"/>
-  <!-- Causal arrows -->
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#8b7355"/>
+    <marker id="arrowCausal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#8b7355" opacity="0.7"/>
     </marker>
   </defs>
-  <line x1="105" y1="90" x2="175" y2="65" stroke="#8b7355" stroke-width="2" marker-end="url(#arrow)" opacity="0.7"/>
-  <line x1="105" y1="110" x2="175" y2="135" stroke="#8b7355" stroke-width="2" marker-end="url(#arrow)" opacity="0.7"/>
-  <line x1="220" y1="65" x2="290" y2="90" stroke="#8b7355" stroke-width="2" marker-end="url(#arrow)" opacity="0.7"/>
-  <line x1="220" y1="135" x2="290" y2="110" stroke="#8b7355" stroke-width="2" marker-end="url(#arrow)" opacity="0.7"/>
+  <rect fill="url(#bgCausal)" width="400" height="180" rx="8"/>
+  
+  <!-- DAG Nodes -->
+  <circle cx="70" cy="90" r="28" fill="url(#goldCausal)" opacity="0.7"/>
+  <text x="70" y="87" font-family="Inter, sans-serif" font-size="8" fill="#5a4a35" text-anchor="middle" font-weight="600">DNA</text>
+  <text x="70" y="98" font-family="Inter, sans-serif" font-size="7" fill="#5a4a35" text-anchor="middle">Methylation</text>
+  
+  <circle cx="200" cy="50" r="22" fill="url(#goldCausal)" opacity="0.5"/>
+  <text x="200" y="53" font-family="Inter, sans-serif" font-size="8" fill="#5a4a35" text-anchor="middle">Confounder</text>
+  
+  <circle cx="200" cy="130" r="22" fill="url(#goldCausal)" opacity="0.5"/>
+  <text x="200" y="133" font-family="Inter, sans-serif" font-size="8" fill="#5a4a35" text-anchor="middle">Mediator</text>
+  
+  <circle cx="330" cy="90" r="28" fill="url(#goldCausal)" opacity="0.7"/>
+  <text x="330" y="87" font-family="Inter, sans-serif" font-size="8" fill="#5a4a35" text-anchor="middle" font-weight="600">Aging</text>
+  <text x="330" y="98" font-family="Inter, sans-serif" font-size="7" fill="#5a4a35" text-anchor="middle">Traits</text>
+  
+  <!-- Causal arrows -->
+  <line x1="98" y1="80" x2="175" y2="55" stroke="#8b7355" stroke-width="2" marker-end="url(#arrowCausal)" opacity="0.6"/>
+  <line x1="98" y1="100" x2="175" y2="125" stroke="#8b7355" stroke-width="2" marker-end="url(#arrowCausal)" opacity="0.6"/>
+  <line x1="222" y1="55" x2="300" y2="80" stroke="#8b7355" stroke-width="2" marker-end="url(#arrowCausal)" opacity="0.6"/>
+  <line x1="222" y1="125" x2="300" y2="100" stroke="#8b7355" stroke-width="2" marker-end="url(#arrowCausal)" opacity="0.6"/>
+  
+  <!-- Direct causal path -->
+  <line x1="100" y1="90" x2="300" y2="90" stroke="#c9a959" stroke-width="2.5" marker-end="url(#arrowCausal)" opacity="0.8"/>
+  
   <!-- Confounding dotted line -->
-  <line x1="200" y1="80" x2="200" y2="120" stroke="#c9a959" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.5"/>
-  <!-- Labels -->
-  <text x="65" y="105" font-family="sans-serif" font-size="10" fill="#5a4a35">DNAm</text>
-  <text x="305" y="105" font-family="sans-serif" font-size="10" fill="#5a4a35">Age</text>
+  <line x1="200" y1="72" x2="200" y2="108" stroke="#8b7355" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.4"/>
 </svg>
