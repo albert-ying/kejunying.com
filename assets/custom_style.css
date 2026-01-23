@@ -191,6 +191,53 @@ body.dark-mode > * {
   padding: 2rem 1rem 4rem 0rem;
 }
 
+/* Widescreen optimizations */
+@media all and (min-width: 1400px) {
+  body {
+    max-width: 1400px;
+  }
+  
+  #content {
+    width: 52rem;
+  }
+  
+  .pub-carousel {
+    max-width: 1000px;
+  }
+  
+  .contact-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media all and (min-width: 1600px) {
+  body {
+    max-width: 1600px;
+  }
+  
+  #content {
+    width: 60rem;
+  }
+  
+  .pub-carousel {
+    max-width: 1100px;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  body {
+    max-width: 1800px;
+  }
+  
+  #content {
+    width: 70rem;
+  }
+  
+  .pub-carousel {
+    max-width: 1200px;
+  }
+}
+
 /* ==================== HERO SECTION ==================== */
 .hero-section {
   position: relative;
@@ -1645,9 +1692,10 @@ body.dark-mode * {
 .pub-carousel {
   position: relative;
   width: 100%;
-  max-width: 900px;
+  max-width: 850px;
   margin: 2rem auto;
   overflow: hidden;
+  padding: 0 1rem;
 }
 
 .pub-carousel-track {
