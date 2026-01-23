@@ -4,90 +4,31 @@ description: Contact information and biography
 hidetopnav: true
 ---
 
-<style>
-.contact-section {
-  background: linear-gradient(135deg, rgba(201, 169, 89, 0.08) 0%, rgba(139, 115, 85, 0.04) 100%);
-  border: 1px solid rgba(201, 169, 89, 0.2);
-  border-radius: 12px;
-  padding: 1.5rem 2rem;
-  margin-bottom: 2rem;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.95rem;
-}
-
-.contact-item a {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(201, 169, 89, 0.3);
-  transition: border-color 0.2s ease;
-}
-
-.contact-item a:hover {
-  border-color: #c9a959;
-}
-
-.contact-icon {
-  width: 18px;
-  height: 18px;
-  opacity: 0.7;
-}
-
-body.dark-mode .contact-section {
-  background: linear-gradient(135deg, rgba(201, 169, 89, 0.1) 0%, rgba(139, 115, 85, 0.06) 100%);
-  border-color: rgba(201, 169, 89, 0.3);
-}
-</style>
-
 ## Contact
 
 <div class="contact-section">
-
 <div class="contact-grid">
 <div class="contact-item">
-<span class="contact-icon">✉️</span>
-<a href="mailto:keying@stanford.edu">keying@stanford.edu</a>
+✉️ <a href="mailto:keying@stanford.edu">keying@stanford.edu</a>
 </div>
-
 <div class="contact-item">
-<span class="contact-icon">✉️</span>
-<a href="mailto:kying0@uw.edu">kying0@uw.edu</a>
+✉️ <a href="mailto:kying0@uw.edu">kying0@uw.edu</a>
 </div>
-
 <div class="contact-item">
-<span class="contact-icon">🐦</span>
-<a href="https://twitter.com/kejunying" target="_blank">@kejunying</a>
+🐦 <a href="https://twitter.com/kejunying" target="_blank">@kejunying</a>
 </div>
-
 <div class="contact-item">
-<span class="contact-icon">💼</span>
-<a href="https://www.linkedin.com/in/kejunying/" target="_blank">LinkedIn</a>
+💼 <a href="https://www.linkedin.com/in/kejunying/" target="_blank">LinkedIn</a>
 </div>
-
 <div class="contact-item">
-<span class="contact-icon">🔬</span>
-<a href="https://scholar.google.com/citations?user=JS7AdkcAAAAJ" target="_blank">Google Scholar</a>
+🔬 <a href="https://scholar.google.com/citations?user=JS7AdkcAAAAJ" target="_blank">Google Scholar</a>
 </div>
-
 <div class="contact-item">
-<span class="contact-icon">💻</span>
-<a href="https://github.com/albert-ying" target="_blank">GitHub</a>
+💻 <a href="https://github.com/albert-ying" target="_blank">GitHub</a>
 </div>
 </div>
 
 **Office**: 290 Jane Stanford Way, Stanford, CA 94305
-
 </div>
 
 ---

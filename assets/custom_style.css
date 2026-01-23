@@ -1870,3 +1870,212 @@ body.dark-mode .pub-tldr {
     right: 1rem;
   }
 }
+
+/* ==================== ENHANCED PAGE STYLING ==================== */
+
+/* Page titles */
+#doc h1:first-of-type,
+.page-title {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid rgba(201, 169, 89, 0.3);
+}
+
+/* Section headers with subtle accent */
+#doc h2 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-xl);
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--color-gold);
+}
+
+/* Talk/event list items */
+#doc ul li {
+  margin-bottom: 0.5rem;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, rgba(201, 169, 89, 0.04) 0%, transparent 100%);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+#doc ul li:hover {
+  background: linear-gradient(135deg, rgba(201, 169, 89, 0.08) 0%, rgba(139, 115, 85, 0.04) 100%);
+  transform: translateX(4px);
+}
+
+body.dark-mode #doc ul li {
+  background: linear-gradient(135deg, rgba(201, 169, 89, 0.06) 0%, transparent 100%);
+}
+
+body.dark-mode #doc ul li:hover {
+  background: linear-gradient(135deg, rgba(201, 169, 89, 0.1) 0%, rgba(139, 115, 85, 0.05) 100%);
+}
+
+/* Talk titles (bold text in list) */
+#doc ul li strong {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* Talk descriptions (italic text) */
+#doc ul li em {
+  color: var(--color-text-muted);
+  font-size: 0.92em;
+}
+
+/* Enhanced iframe containers for videos */
+#doc iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+  max-width: 100%;
+}
+
+body.dark-mode #doc iframe {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact section styling */
+.contact-section {
+  background: linear-gradient(135deg, rgba(201, 169, 89, 0.06) 0%, rgba(139, 115, 85, 0.03) 100%);
+  border: 1px solid rgba(201, 169, 89, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 2rem;
+  margin-bottom: 2.5rem;
+}
+
+body.dark-mode .contact-section {
+  background: linear-gradient(135deg, rgba(201, 169, 89, 0.08) 0%, rgba(139, 115, 85, 0.04) 100%);
+  border-color: rgba(201, 169, 89, 0.25);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.85rem;
+  margin: 1rem 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+body.dark-mode .contact-item {
+  background: rgba(30, 30, 30, 0.5);
+}
+
+.contact-item:hover {
+  background: rgba(201, 169, 89, 0.1);
+  transform: translateY(-2px);
+}
+
+.contact-item a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(201, 169, 89, 0.3);
+  transition: all 0.2s ease;
+}
+
+.contact-item a:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+/* Research publication cards */
+#doc h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-base);
+  line-height: 1.4;
+  margin-top: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+#doc h4 a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#doc h4 a:hover {
+  color: var(--color-gold);
+}
+
+/* Author lines */
+#doc h5 {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin: 0.25rem 0 0.5rem;
+}
+
+/* Highlighted author name */
+#doc h5 ins {
+  text-decoration: none;
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+/* Journal names */
+#doc p em:first-child {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--color-bronze);
+}
+
+body.dark-mode #doc p em:first-child {
+  color: var(--color-gold);
+}
+
+/* TLDR blocks */
+#doc p code {
+  background: rgba(201, 169, 89, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  font-size: 0.85em;
+  color: var(--color-bronze);
+}
+
+body.dark-mode #doc p code {
+  background: rgba(201, 169, 89, 0.15);
+  color: var(--color-gold);
+}
+
+/* Page dividers */
+#doc hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(201, 169, 89, 0.3) 50%, transparent 100%);
+  margin: 2rem 0;
+}
+
+/* About page avatar enhancement */
+#doc .sidenote img {
+  border: 3px solid rgba(201, 169, 89, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode #doc .sidenote img {
+  border-color: rgba(201, 169, 89, 0.4);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
