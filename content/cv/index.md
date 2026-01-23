@@ -11,15 +11,29 @@ body > * {
 }
 
 #content {
-    width: 38rem;
+    width: 50rem;
+    max-width: 100%;
     padding-bottom: 4rem;
 }
 
-iframe {
+.pdf-container {
+    width: 100%;
+    height: 85vh;
     margin-left: -1rem;
+    border: 1px solid rgba(201, 169, 89, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pdf-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 </style>
 
 [Download the PDF version](./Ying_cv.pdf).
 
-<iframe src="https://kejunying.com/cv/Ying_cv.html" onload="this.width=&#39;100%&#39;;this.height=screen.height*0.5;" frameBorder="0"></iframe>
+<div class="pdf-container">
+<iframe src="./Ying_cv.pdf" title="CV"></iframe>
+</div>
