@@ -677,5 +677,125 @@
             }
         }, { passive: true });
 
+        // ==================== PUBLICATIONS CAROUSEL ====================
+        initPublicationsCarousel();
+
     });
+
+    // Publications Carousel Initialization
+    function initPublicationsCarousel() {
+        const carousel = document.querySelector('.pub-carousel');
+        if (!carousel) return;
+
+        const track = carousel.querySelector('.pub-carousel-track');
+        const cards = carousel.querySelectorAll('.pub-card');
+        const dotsContainer = carousel.querySelector('.pub-dots');
+        const prevBtn = carousel.querySelector('.pub-nav-prev');
+        const nextBtn = carousel.querySelector('.pub-nav-next');
+        
+        if (!track || cards.length === 0) return;
+
+        let currentIndex = 0;
+        const totalCards = cards.length;
+
+        // Create dots
+        if (dotsContainer) {
+            cards.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.className = 'pub-dot' + (index === 0 ? ' active' : '');
+                dot.addEventListener('click', () => goToSlide(index));
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        const dots = dotsContainer ? dotsContainer.querySelectorAll('.pub-dot') : [];
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+
+            // Update buttons
+            if (prevBtn) prevBtn.disabled = currentIndex === 0;
+            if (nextBtn) nextBtn.disabled = currentIndex === totalCards - 1;
+        }
+
+        function goToSlide(index) {
+            currentIndex = Math.max(0, Math.min(index, totalCards - 1));
+            updateCarousel();
+        }
+
+        function nextSlide() {
+            if (currentIndex < totalCards - 1) {
+                currentIndex++;
+                updateCarousel();
+            }
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        }
+
+        // Event listeners
+        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+
+        // Keyboard navigation
+        carousel.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') prevSlide();
+            if (e.key === 'ArrowRight') nextSlide();
+        });
+
+        // Touch/swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        track.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        track.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) nextSlide();
+                else prevSlide();
+            }
+        }, { passive: true });
+
+        // Auto-play (optional - every 6 seconds)
+        let autoPlayInterval;
+        
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(() => {
+                if (currentIndex < totalCards - 1) {
+                    nextSlide();
+                } else {
+                    currentIndex = 0;
+                    updateCarousel();
+                }
+            }, 6000);
+        }
+
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+
+        // Pause on hover
+        carousel.addEventListener('mouseenter', stopAutoPlay);
+        carousel.addEventListener('mouseleave', startAutoPlay);
+
+        // Start auto-play
+        startAutoPlay();
+
+        // Initial state
+        updateCarousel();
+    }
+
 })();
