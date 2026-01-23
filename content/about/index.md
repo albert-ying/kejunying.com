@@ -18,7 +18,7 @@ hidetopnav: true
 <img src="/images/icon-twitter.svg" class="contact-icon" alt="Twitter"> <a href="https://twitter.com/kejunying" target="_blank">@kejunying</a>
 </div>
 <div class="contact-item">
-<img src="/images/icon-linkedin.svg" class="contact-icon" alt="LinkedIn"> <a href="https://www.linkedin.com/in/kejunying/" target="_blank">LinkedIn</a>
+<img src="/images/icon-linkedin.svg" class="contact-icon" alt="LinkedIn"> <a href="https://www.linkedin.com/in/kejun-albert-ying/" target="_blank">LinkedIn</a>
 </div>
 <div class="contact-item">
 <img src="/images/icon-scholar.svg" class="contact-icon" alt="Scholar"> <a href="https://scholar.google.com/citations?user=JS7AdkcAAAAJ" target="_blank">Google Scholar</a>

@@ -723,44 +723,56 @@
             const maxIndex = Math.max(0, totalCards - visibleCards);
             currentIndex = Math.min(currentIndex, maxIndex);
             
-            // Calculate translation based on card width percentage
+            // Calculate translation
             const cardWidthPercent = 100 / visibleCards;
-            const gapCompensation = visibleCards > 1 ? (currentIndex * 1) : 0; // Account for gap
+            const gapCompensation = visibleCards > 1 ? (currentIndex * 1) : 0;
             track.style.transform = `translateX(calc(-${currentIndex * cardWidthPercent}% - ${gapCompensation}rem))`;
             
-            // Apply 3D effects to cards
+            // Stage Manager style: center card is prominent, sides recede
             cards.forEach((card, index) => {
                 const cardInner = card.querySelector('.pub-card-inner');
                 const distance = index - currentIndex;
                 
+                // Calculate center position
+                const centerPos = visibleCards > 1 ? (visibleCards - 1) / 2 : 0;
+                const relativePos = visibleCards > 1 ? (index - currentIndex) - centerPos : distance;
+                
+                // Base scale and opacity based on distance from "focus"
+                let scale, translateZ, opacity, blur;
+                
                 if (visibleCards === 1) {
-                    // Single card view - subtle 3D rotation on transition
-                    if (distance === 0) {
-                        cardInner.style.transform = 'rotateY(0deg) scale(1)';
-                        cardInner.style.opacity = '1';
-                    } else if (distance < 0) {
-                        cardInner.style.transform = 'rotateY(15deg) scale(0.9)';
-                        cardInner.style.opacity = '0.6';
-                    } else {
-                        cardInner.style.transform = 'rotateY(-15deg) scale(0.9)';
-                        cardInner.style.opacity = '0.6';
-                    }
+                    // Single card - simple slide effect
+                    scale = distance === 0 ? 1 : 0.85;
+                    translateZ = distance === 0 ? 0 : -50;
+                    opacity = distance === 0 ? 1 : 0.4;
+                    blur = distance === 0 ? 0 : 2;
                 } else {
-                    // Multi-card view - depth effect
-                    const isVisible = index >= currentIndex && index < currentIndex + visibleCards;
-                    if (isVisible) {
-                        const posInView = index - currentIndex;
-                        const centerOffset = (visibleCards - 1) / 2;
-                        const distFromCenter = posInView - centerOffset;
-                        const rotateY = distFromCenter * -5;
-                        const scale = 1 - Math.abs(distFromCenter) * 0.03;
-                        cardInner.style.transform = `rotateY(${rotateY}deg) scale(${scale})`;
-                        cardInner.style.opacity = '1';
+                    // Multi-card Stage Manager style
+                    const absDistance = Math.abs(relativePos);
+                    if (absDistance < 0.5) {
+                        // Center/focal card
+                        scale = 1;
+                        translateZ = 20;
+                        opacity = 1;
+                        blur = 0;
+                    } else if (absDistance <= 1) {
+                        // Adjacent cards
+                        scale = 0.95;
+                        translateZ = 0;
+                        opacity = 0.9;
+                        blur = 0;
                     } else {
-                        cardInner.style.transform = 'rotateY(0deg) scale(0.95)';
-                        cardInner.style.opacity = '0.5';
+                        // Outer cards
+                        scale = 0.88;
+                        translateZ = -20;
+                        opacity = 0.7;
+                        blur = 1;
                     }
                 }
+                
+                cardInner.style.transform = `translateZ(${translateZ}px) scale(${scale})`;
+                cardInner.style.opacity = opacity;
+                cardInner.style.filter = blur > 0 ? `blur(${blur}px)` : 'none';
             });
             
             // Update dots
