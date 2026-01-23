@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#faf8f5"/>
+      <stop offset="100%" stop-color="#f0ede8"/>
+    </linearGradient>
+    <linearGradient id="gold2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c9a959"/>
+      <stop offset="100%" stop-color="#8b7355"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg2)" width="400" height="200"/>
+  <!-- AI Agent representation -->
+  <circle cx="200" cy="100" r="50" fill="none" stroke="url(#gold2)" stroke-width="3" opacity="0.8"/>
+  <circle cx="200" cy="100" r="35" fill="none" stroke="#c9a959" stroke-width="2" opacity="0.5"/>
+  <circle cx="200" cy="100" r="20" fill="url(#gold2)" opacity="0.6"/>
+  <!-- Data streams -->
+  <g stroke="#8b7355" stroke-width="1.5" opacity="0.4">
+    <line x1="50" y1="50" x2="150" y2="80"/>
+    <line x1="50" y1="100" x2="150" y2="100"/>
+    <line x1="50" y1="150" x2="150" y2="120"/>
+    <line x1="250" y1="80" x2="350" y2="50"/>
+    <line x1="250" y1="100" x2="350" y2="100"/>
+    <line x1="250" y1="120" x2="350" y2="150"/>
+  </g>
+  <!-- Data points -->
+  <circle cx="50" cy="50" r="4" fill="#c9a959" opacity="0.7"/>
+  <circle cx="50" cy="100" r="4" fill="#c9a959" opacity="0.7"/>
+  <circle cx="50" cy="150" r="4" fill="#c9a959" opacity="0.7"/>
+  <circle cx="350" cy="50" r="6" fill="#c9a959" opacity="0.9"/>
+  <circle cx="350" cy="100" r="6" fill="#c9a959" opacity="0.9"/>
+  <circle cx="350" cy="150" r="6" fill="#c9a959" opacity="0.9"/>
+  <!-- Clock hands -->
+  <line x1="200" y1="100" x2="200" y2="70" stroke="#8b7355" stroke-width="3" stroke-linecap="round"/>
+  <line x1="200" y1="100" x2="220" y2="100" stroke="#8b7355" stroke-width="2" stroke-linecap="round"/>
+</svg>

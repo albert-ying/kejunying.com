@@ -37,29 +37,18 @@
 
 <div style="height: 2rem;"></div>
 
-<!-- News Section -->
-<div class="sidenote" style="margin-top: 0.1rem;">news</div>
-
-<div class="news-container">
-{{ range .Site.Params.news }}
-    <div class="recent">
-      <span class="date">{{.date}}</span>
-      <a href="{{ .url }}">{{ .name | markdownify }}</a>
-    </div>
-{{ end }}
-</div>
-
-<div style="height: 2.5rem;"></div>
-
 <!-- Featured Publications Carousel -->
 <div class="sidenote">featured work</div>
 
 <div class="pub-carousel" tabindex="0" aria-label="Featured Publications">
     <div class="pub-carousel-track">
-        <!-- Publication 1 -->
+        <!-- Publication 1: Nature Aging 2025 -->
         <div class="pub-card">
             <div class="pub-card-inner">
                 <span class="pub-year">2025</span>
+                <div class="pub-figure">
+                    <img src="/images/pub-biolearn.svg" alt="Biomarkers Framework" loading="lazy">
+                </div>
                 <span class="pub-journal">Nature Aging</span>
                 <h3 class="pub-title"><a href="https://doi.org/10.1038/s43587-025-00987-y">A Unified Framework for Systematic Curation and Evaluation of Aging Biomarkers</a></h3>
                 <p class="pub-authors"><span class="highlight">K Ying</span>, S Paulson, A Eames, A Tyshkovskiy, ..., VN Gladyshev</p>
@@ -67,10 +56,13 @@
             </div>
         </div>
         
-        <!-- Publication 2 -->
+        <!-- Publication 2: ClockBase Agent -->
         <div class="pub-card">
             <div class="pub-card-inner">
                 <span class="pub-year">2025</span>
+                <div class="pub-figure">
+                    <img src="/images/pub-clockbase.svg" alt="ClockBase Agent" loading="lazy">
+                </div>
                 <span class="pub-journal">bioRxiv</span>
                 <h3 class="pub-title"><a href="https://doi.org/10.1101/2023.02.28.530532">Autonomous AI Agents Discover Aging Interventions from Millions of Molecular Profiles</a></h3>
                 <p class="pub-authors"><span class="highlight">K Ying</span>, A Tyshkovskiy, ..., T Wyss-Coray, VN Gladyshev</p>
@@ -78,10 +70,13 @@
             </div>
         </div>
         
-        <!-- Publication 3 -->
+        <!-- Publication 3: DamAge/AdaptAge -->
         <div class="pub-card">
             <div class="pub-card-inner">
                 <span class="pub-year">2024</span>
+                <div class="pub-figure">
+                    <img src="/images/pub-damage.svg" alt="DamAge AdaptAge" loading="lazy">
+                </div>
                 <span class="pub-journal">Nature Aging • Cover</span>
                 <h3 class="pub-title"><a href="https://doi.org/10.1038/s43587-023-00557-0">Causality-Enriched Epigenetic Age Uncouples Damage and Adaptation</a></h3>
                 <p class="pub-authors"><span class="highlight">K Ying</span>, H Liu, AE Tarkhov, ..., VN Gladyshev</p>
@@ -89,10 +84,13 @@
             </div>
         </div>
         
-        <!-- Publication 4 -->
+        <!-- Publication 4: Causal Inference -->
         <div class="pub-card">
             <div class="pub-card-inner">
                 <span class="pub-year">2024</span>
+                <div class="pub-figure">
+                    <img src="/images/pub-causal.svg" alt="Causal Inference" loading="lazy">
+                </div>
                 <span class="pub-journal">Nature Reviews Genetics</span>
                 <h3 class="pub-title"><a href="https://doi.org/10.1038/s41576-024-00799-7">Causal Inference for Epigenetic Ageing</a></h3>
                 <p class="pub-authors"><span class="highlight">K Ying</span></p>
@@ -100,10 +98,13 @@
             </div>
         </div>
         
-        <!-- Publication 5 -->
+        <!-- Publication 5: MethylGPT -->
         <div class="pub-card">
             <div class="pub-card-inner">
                 <span class="pub-year">2024</span>
+                <div class="pub-figure">
+                    <img src="/images/pub-methylgpt.svg" alt="MethylGPT" loading="lazy">
+                </div>
                 <span class="pub-journal">bioRxiv</span>
                 <h3 class="pub-title"><a href="https://doi.org/10.1101/2024.10.30.621013">MethylGPT: A Foundation Model for the DNA Methylome</a></h3>
                 <p class="pub-authors"><span class="highlight">K Ying</span>, J Song, H Cui, Y Zhang, ..., VN Gladyshev</p>
@@ -128,6 +129,20 @@
 </div>
 
 <p style="text-align: center; margin-top: 0.5rem;"><a href="/research/" style="font-size: 0.9rem; color: #c9a959;">View all publications →</a></p>
+
+<div style="height: 2rem;"></div>
+
+<!-- News Section -->
+<div class="sidenote" style="margin-top: 0.1rem;">news</div>
+
+<div class="news-container">
+{{ range .Site.Params.news }}
+    <div class="recent">
+      <span class="date">{{.date}}</span>
+      <a href="{{ .url }}">{{ .name | markdownify }}</a>
+    </div>
+{{ end }}
+</div>
 
 <div style="height: 2.5rem;"></div>
 
