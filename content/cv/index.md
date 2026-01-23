@@ -16,16 +16,17 @@ body > * {
     padding-bottom: 4rem;
 }
 
-.pdf-container {
+.cv-container {
     width: 100%;
     height: 85vh;
     margin-left: -1rem;
     border: 1px solid rgba(201, 169, 89, 0.3);
     border-radius: 8px;
     overflow: hidden;
+    background: #faf8f5;
 }
 
-.pdf-container iframe {
+.cv-container iframe {
     width: 100%;
     height: 100%;
     border: none;
@@ -34,6 +35,6 @@ body > * {
 
 [Download the PDF version](./Ying_cv.pdf).
 
-<div class="pdf-container">
-<iframe src="./Ying_cv.pdf" title="CV"></iframe>
+<div class="cv-container">
+<iframe src="/cv/Ying_cv.html" title="CV"></iframe>
 </div>
