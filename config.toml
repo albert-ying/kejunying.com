@@ -163,7 +163,7 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
         url = "/cv"
         weight = 5
     [[menu.main]]
-        name = "About"
+        name = "Contact"
         url = "/about"
         weight = 6
     [[menu.main]]
