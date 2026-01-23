@@ -1783,13 +1783,15 @@ body.dark-mode * {
   max-width: 100%;
   margin: 2rem auto;
   overflow: hidden;
-  padding: 0 1rem;
+  padding: 1rem 1rem 2rem;
+  perspective: 1200px;
 }
 
 .pub-carousel-track {
   display: flex;
   gap: 1rem;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-style: preserve-3d;
 }
 
 .pub-card {
@@ -1797,7 +1799,8 @@ body.dark-mode * {
   min-width: 100%;
   padding: 0 0.5rem;
   box-sizing: border-box;
-  transition: all 0.4s ease;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-style: preserve-3d;
 }
 
 /* Show multiple cards on wider screens */
@@ -1816,22 +1819,23 @@ body.dark-mode * {
 }
 
 .pub-card-inner {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 248, 245, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(250, 248, 245, 0.95) 100%);
   border: 1px solid rgba(201, 169, 89, 0.25);
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 1.5rem;
-  box-shadow: 0 4px 20px rgba(201, 169, 89, 0.08);
-  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(201, 169, 89, 0.1), 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
   overflow: hidden;
   height: 100%;
   display: flex;
   flex-direction: column;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
 }
 
 .pub-card-inner:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(201, 169, 89, 0.15);
+  box-shadow: 0 12px 40px rgba(201, 169, 89, 0.18), 0 4px 12px rgba(0, 0, 0, 0.06);
   border-color: rgba(201, 169, 89, 0.4);
 }
 

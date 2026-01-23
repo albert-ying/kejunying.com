@@ -728,6 +728,41 @@
             const gapCompensation = visibleCards > 1 ? (currentIndex * 1) : 0; // Account for gap
             track.style.transform = `translateX(calc(-${currentIndex * cardWidthPercent}% - ${gapCompensation}rem))`;
             
+            // Apply 3D effects to cards
+            cards.forEach((card, index) => {
+                const cardInner = card.querySelector('.pub-card-inner');
+                const distance = index - currentIndex;
+                
+                if (visibleCards === 1) {
+                    // Single card view - subtle 3D rotation on transition
+                    if (distance === 0) {
+                        cardInner.style.transform = 'rotateY(0deg) scale(1)';
+                        cardInner.style.opacity = '1';
+                    } else if (distance < 0) {
+                        cardInner.style.transform = 'rotateY(15deg) scale(0.9)';
+                        cardInner.style.opacity = '0.6';
+                    } else {
+                        cardInner.style.transform = 'rotateY(-15deg) scale(0.9)';
+                        cardInner.style.opacity = '0.6';
+                    }
+                } else {
+                    // Multi-card view - depth effect
+                    const isVisible = index >= currentIndex && index < currentIndex + visibleCards;
+                    if (isVisible) {
+                        const posInView = index - currentIndex;
+                        const centerOffset = (visibleCards - 1) / 2;
+                        const distFromCenter = posInView - centerOffset;
+                        const rotateY = distFromCenter * -5;
+                        const scale = 1 - Math.abs(distFromCenter) * 0.03;
+                        cardInner.style.transform = `rotateY(${rotateY}deg) scale(${scale})`;
+                        cardInner.style.opacity = '1';
+                    } else {
+                        cardInner.style.transform = 'rotateY(0deg) scale(0.95)';
+                        cardInner.style.opacity = '0.5';
+                    }
+                }
+            });
+            
             // Update dots
             dots.forEach((dot, index) => {
                 dot.classList.toggle('active', index === currentIndex);
@@ -795,7 +830,7 @@
             resizeTimer = setTimeout(updateCarousel, 100);
         });
 
-        // Auto-play (optional - every 5 seconds)
+        // Auto-play (every 3 seconds - cycles continuously)
         let autoPlayInterval;
         
         function startAutoPlay() {
@@ -805,10 +840,11 @@
                 if (currentIndex < maxIndex) {
                     nextSlide();
                 } else {
+                    // Smooth loop back to start
                     currentIndex = 0;
                     updateCarousel();
                 }
-            }, 5000);
+            }, 3000);
         }
 
         function stopAutoPlay() {
