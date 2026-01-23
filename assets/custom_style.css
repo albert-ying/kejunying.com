@@ -490,8 +490,22 @@ body.dark-mode .sidenote a img {
 /* ==================== NEWS/RECENT ITEMS ==================== */
 .news-container {
   display: flex;
-  flex-direction: column;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
   gap: 0.75rem;
+  padding-bottom: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.news-container::-webkit-scrollbar {
+  display: none;
+}
+
+.news-container .recent {
+  flex: 0 0 85%;
+  scroll-snap-align: start;
 }
 
 @media (min-width: 768px) {
@@ -501,6 +515,13 @@ body.dark-mode .sidenote a img {
     grid-auto-rows: min-content;
     align-items: start;
     gap: 1rem;
+    overflow-x: visible;
+    scroll-snap-type: none;
+    padding-bottom: 0;
+  }
+  
+  .news-container .recent {
+    flex: none;
   }
 }
 
@@ -1974,17 +1995,94 @@ body.dark-mode .pub-year {
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .pub-card-inner {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
   
   .pub-title {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   
   .pub-year {
-    font-size: 1.5rem;
-    top: 1rem;
-    right: 1rem;
+    font-size: 1.3rem;
+  }
+  
+  .pub-figure img {
+    border-radius: 6px;
+  }
+  
+  .pub-carousel {
+    margin: 1rem -0.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .pub-carousel-nav {
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .pub-nav-btn {
+    width: 36px;
+    height: 36px;
+  }
+  
+  /* Mobile news swipe indicator */
+  .news-swipe-hint {
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+    margin-top: 0.5rem;
+  }
+  
+  .news-swipe-hint span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(201, 169, 89, 0.3);
+  }
+  
+  .news-swipe-hint span.active {
+    background: var(--color-gold);
+  }
+}
+
+/* Mobile-first improvements */
+@media (max-width: 480px) {
+  body {
+    min-width: 320px;
+  }
+  
+  .hero-section .title {
+    font-size: 1.4rem;
+  }
+  
+  .intro-text {
+    font-size: 0.95rem;
+  }
+  
+  .pub-authors {
+    font-size: 0.75rem;
+  }
+  
+  .pub-tldr {
+    font-size: 0.78rem;
+    padding: 0.7rem;
+  }
+  
+  .recent {
+    padding: 0.85rem 1rem;
+  }
+  
+  .news-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .recent .date {
+    font-size: 0.65rem;
+  }
+  
+  .recent a {
+    font-size: 0.85rem;
   }
 }
 
