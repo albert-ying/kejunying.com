@@ -36,5 +36,5 @@ body > * {
 [Download the PDF version](./Ying_cv.pdf).
 
 <div class="cv-container">
-<iframe src="/cv/Ying_cv.html" title="CV"></iframe>
+<iframe src="./Ying_cv.pdf" title="CV"></iframe>
 </div>
