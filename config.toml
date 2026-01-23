@@ -43,71 +43,88 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
 # recent news
     [[params.news]]
         date = "2025-12"
+        category = "media"
         name = "My alumni profile is featured on Harvard SEAS News!"
         url = "https://seas.harvard.edu/news/2025/12/alumni-profile-kejun-ying-sm-24-phd-25"
     [[params.news]]
         date = "2025-12"
+        category = "media"
         name = "ClockBase Agent is featured on MIT Technology Review China!"
         url = "https://www.mittrchina.com/news/detail/15539"
     [[params.news]]
         date = "2025-11"
+        category = "publication"
         name = "ClockBase Agent preprint is out! We developed AI agents that autonomously discover aging interventions from millions of molecular profiles, identifying 500+ compounds that reduce biological age."
         url = "https://www.biorxiv.org/content/10.1101/2023.02.28.530532v4"
     [[params.news]]
         date = "2025-11"
+        category = "publication"
         name = "Our new paper in Nature Aging is published! With the Biomarkers of Aging Consortium, we present Biolearn, an open-source framework unifying 39 aging biomarkers across 20,000+ individuals from multiple cohorts."
         url = "https://nature.com/articles/s43587-025-00987-y"
     [[params.news]]
         date = "2025-01"
+        category = "career"
         name = "Excited to join Tony Wyss-Coray lab at Stanford University & Baker lab at Institute for Protein Design, University of Washington as F99K00 Postdoc fellow! Merging aging biology + protein design to tackle neurodegeneration. 🧬"
         url = ""
     [[params.news]]
         date = "2025-03"
+        category = "career"
         name = "Officially Dr. Ying! I successfully defended my Ph.D. at Harvard."
         url = "https://youtu.be/Tm7AtwLywEg?si=OdXa_ALebc1OsXSe"
     [[params.news]]
         date = "2025-03"
+        category = "award"
         name = "We are featured as semifinalist of Harvard President's Innovation Challenge, Health Care and Life Sciences Track."
         url = "https://www.harvard.edu/news/2025/03/2025-hpc-semifinalists-announced"
     [[params.news]]
         date = "2025-01"
+        category = "media"
         name = "MethylGPT is featured in Eric Topol's opinion piece in Science Magazine!"
         url = "https://www.science.org/doi/10.1126/science.adv4414"
     [[params.news]]
         date = "2025-01"
+        category = "career"
         name = "I co-founded Avinasi Labs, a platform fostering collaboration and data sharing to overcome fragmented data and funding barriers in longevity science."
         url = "https://www.avinasi.com/"
 
     [[params.news]]
         date = "2024-12"
+        category = "media"
         name = "My interview with Brenda at A4LI is online!"
         url = "https://a4li.org/scientist-spotlight-ep-14-albert-ying/"
     [[params.news]]
         date = "2024-11"
+        category = "publication"
         name = "We released the one of the first foundation models for the DNA methylome -- MethylGPT."
         url = "https://www.biorxiv.org/content/10.1101/2024.10.30.621013v2"
     [[params.news]]
         date = "2024-10"
+        category = "publication"
         name = "My perpective on causal inference in epigenetic aging is published in *Nature Reviews Genetics*!"
         url = "https://www.nature.com/articles/s41576-024-00799-7"
     [[params.news]]
         date = "2024-10"
+        category = "publication"
         name = "My paper on centenarian LoF mutations is published in *Nature Communications*!"
         url = "https://www.nature.com/articles/s41467-024-52967-2"
     [[params.news]]
         date = "2024-10"
+        category = "award"
         name = "Congratulations to my postdoc co-mentor, David Baker, for winning the 2024 **Nobel Prize in Chemistry**!"
         url = "https://www.nobelprize.org/prizes/chemistry/2024/press-release/"
     [[params.news]]
         date = "2024-02"
+        category = "award"
         name = "I received a *perfect* **Impact Score of 10** in the NIA **F99/K00** application!"
         url = "https://x.com/KejunYing/status/1756086454709600378?s=20"
     [[params.news]]
         date = "2024-02"
+        category = "publication"
         name = "Our paper on the causal role of DNA methylation in aging featured on the cover of Nature Aging."
         url = "https://www.nature.com/nataging/volumes/4/issues/2"
     [[params.news]]
         date = "2023-12"
+        category = "award"
         name = "I received the best poster award on Inaugural Biomarker of Aging Symposium."
         url = "https://x.com/KejunYing/status/1732771615824638318?s=20"
         

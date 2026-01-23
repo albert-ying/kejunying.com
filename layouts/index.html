@@ -137,8 +137,11 @@
 
 <div class="news-container">
 {{ range .Site.Params.news }}
-    <div class="recent">
-      <span class="date">{{.date}}</span>
+    <div class="recent" data-category="{{ .category }}">
+      <div class="news-header">
+        <img class="news-icon" src="/images/icon-{{ .category }}.svg" alt="{{ .category }}" loading="lazy">
+        <span class="date">{{.date}}</span>
+      </div>
       <a href="{{ .url }}">{{ .name | markdownify }}</a>
     </div>
 {{ end }}

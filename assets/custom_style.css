@@ -561,15 +561,32 @@ body.dark-mode .recent:hover::before {
   box-shadow: 0 0 8px rgba(201, 169, 89, 0.3);
 }
 
+.news-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.news-icon {
+  width: 22px;
+  height: 22px;
+  opacity: 0.8;
+  transition: all 0.25s ease;
+}
+
+.recent:hover .news-icon {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
 .recent .date {
-  align-self: flex-start;
   font-family: var(--font-sans);
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--color-bronze);
-  padding: 0.35rem 0.6rem;
+  padding: 0.3rem 0.55rem;
   background: rgba(201, 169, 89, 0.1);
   border-radius: 4px;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
