@@ -730,34 +730,40 @@ body.dark-mode .social-icons a:hover img.icon {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   padding: 0.5rem 0;
   margin-bottom: 1rem;
 }
 
-.menu-container h3.list {
-  margin: 0;
-}
-
-.menu-container h3.list a.title {
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   font-family: var(--font-sans);
-  font-size: 0.85rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #444;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.85rem;
   border-radius: 8px;
   border: 1px solid transparent;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-body.dark-mode .menu-container h3.list a.title {
+.menu-icon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .menu-item {
   color: #c5c0b8;
 }
 
-.menu-container h3.list a.title:hover {
+.menu-item:hover {
   color: #8b7355;
   background: rgba(201, 169, 89, 0.12);
   border-color: rgba(201, 169, 89, 0.25);
@@ -765,7 +771,12 @@ body.dark-mode .menu-container h3.list a.title {
   box-shadow: 0 4px 12px rgba(201, 169, 89, 0.15);
 }
 
-body.dark-mode .menu-container h3.list a.title:hover {
+.menu-item:hover .menu-icon {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+body.dark-mode .menu-item:hover {
   color: #c9a959;
   background: rgba(201, 169, 89, 0.18);
   border-color: rgba(201, 169, 89, 0.3);
@@ -773,14 +784,33 @@ body.dark-mode .menu-container h3.list a.title:hover {
 }
 
 /* Active/current page indicator */
-.menu-container h3.list a.title[aria-current="page"] {
+.menu-item[aria-current="page"] {
   color: #8b7355;
   background: rgba(201, 169, 89, 0.15);
 }
 
-body.dark-mode .menu-container h3.list a.title[aria-current="page"] {
+.menu-item[aria-current="page"] .menu-icon {
+  opacity: 1;
+}
+
+body.dark-mode .menu-item[aria-current="page"] {
   color: #c9a959;
   background: rgba(201, 169, 89, 0.2);
+}
+
+/* Contact page icons */
+.contact-icon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.8;
+  vertical-align: middle;
+  margin-right: 0.3rem;
+}
+
+/* Banner icon */
+.banner-icon {
+  width: 20px;
+  height: 20px;
 }
 
 .list {
@@ -1060,12 +1090,20 @@ p a:after, .intro-text a:after {
   }
   
   .menu-container {
-    gap: 0.75rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
-  .menu-container h3.list a.title {
-    font-size: 0.7rem;
-    padding: 0.3rem 0.5rem;
+  .menu-item {
+    font-size: 0.65rem;
+    padding: 0.35rem 0.5rem;
+    gap: 0.25rem;
+  }
+  
+  .menu-icon {
+    width: 14px;
+    height: 14px;
   }
 }
 

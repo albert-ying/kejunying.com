@@ -9,22 +9,22 @@ hidetopnav: true
 <div class="contact-section">
 <div class="contact-grid">
 <div class="contact-item">
-✉️ <a href="mailto:keying@stanford.edu">keying@stanford.edu</a>
+<img src="/images/icon-email.svg" class="contact-icon" alt="Email"> <a href="mailto:keying@stanford.edu">keying@stanford.edu</a>
 </div>
 <div class="contact-item">
-✉️ <a href="mailto:kying0@uw.edu">kying0@uw.edu</a>
+<img src="/images/icon-email.svg" class="contact-icon" alt="Email"> <a href="mailto:kying0@uw.edu">kying0@uw.edu</a>
 </div>
 <div class="contact-item">
-🐦 <a href="https://twitter.com/kejunying" target="_blank">@kejunying</a>
+<img src="/images/icon-twitter.svg" class="contact-icon" alt="Twitter"> <a href="https://twitter.com/kejunying" target="_blank">@kejunying</a>
 </div>
 <div class="contact-item">
-💼 <a href="https://www.linkedin.com/in/kejunying/" target="_blank">LinkedIn</a>
+<img src="/images/icon-linkedin.svg" class="contact-icon" alt="LinkedIn"> <a href="https://www.linkedin.com/in/kejunying/" target="_blank">LinkedIn</a>
 </div>
 <div class="contact-item">
-🔬 <a href="https://scholar.google.com/citations?user=JS7AdkcAAAAJ" target="_blank">Google Scholar</a>
+<img src="/images/icon-scholar.svg" class="contact-icon" alt="Scholar"> <a href="https://scholar.google.com/citations?user=JS7AdkcAAAAJ" target="_blank">Google Scholar</a>
 </div>
 <div class="contact-item">
-💻 <a href="https://github.com/albert-ying" target="_blank">GitHub</a>
+<img src="/images/icon-github.svg" class="contact-icon" alt="GitHub"> <a href="https://github.com/albert-ying" target="_blank">GitHub</a>
 </div>
 </div>
 

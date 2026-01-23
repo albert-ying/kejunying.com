@@ -6,7 +6,14 @@
 <div class="menu-container">
     {{ range .Site.Menus.main }}
     {{- if ne .Name "Home" -}}
-    <h3 class="list"><a class="title" href="{{ .URL }}">{{ .Name | markdownify }}</a></h3>
+    <a class="menu-item" href="{{ .URL }}">
+        {{ if eq .Name "Talks" }}<img src="/images/icon-talks.svg" class="menu-icon" alt="">{{ end }}
+        {{ if eq .Name "Research" }}<img src="/images/icon-research.svg" class="menu-icon" alt="">{{ end }}
+        {{ if eq .Name "Cv" }}<img src="/images/icon-cv.svg" class="menu-icon" alt="">{{ end }}
+        {{ if eq .Name "Contact" }}<img src="/images/icon-contact.svg" class="menu-icon" alt="">{{ end }}
+        {{ if eq .Name "Poetry" }}<img src="/images/icon-poetry.svg" class="menu-icon" alt="">{{ end }}
+        <span>{{ .Name | markdownify }}</span>
+    </a>
     {{ end }}
     {{ end }}
 </div>
@@ -23,7 +30,7 @@
 <!-- Job Market Banner -->
 <div class="job-market-banner">
     <div class="banner-header">
-        <span class="banner-icon">✦</span>
+        <img src="/images/icon-star.svg" class="banner-icon" alt="">
         <h4 class="banner-title">On the Job Market</h4>
     </div>
     <p class="banner-text">I am actively seeking tenure-track faculty positions starting in 2026. My research focuses on aging biology, protein design, and AI-driven intervention discovery. Please feel free to reach out if you have opportunities or would like to discuss potential collaborations.</p>
