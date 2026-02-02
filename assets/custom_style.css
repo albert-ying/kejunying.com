@@ -417,6 +417,146 @@ body.dark-mode .fancy-quote {
   content: none;
 }
 
+/* ==================== WIGNER QUOTE SECTION ==================== */
+.wigner-quote-section {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin: 2.5rem 0;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(201, 169, 89, 0.03) 0%, rgba(201, 169, 89, 0.01) 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(201, 169, 89, 0.15);
+}
+
+.wigner-portrait {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.wigner-portrait img {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.wigner-portrait img:hover {
+  transform: scale(1.05);
+}
+
+.wigner-caption {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #5a5a5a;
+  line-height: 1.4;
+}
+
+.wigner-nobel {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #888;
+}
+
+.wigner-quote-content {
+  flex: 1;
+}
+
+.wigner-quote {
+  position: relative;
+  font-family: 'source-serif-4', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #4a4a4a;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.aging-highlight {
+  position: relative;
+  font-weight: 600;
+  color: #c9a959;
+  background: linear-gradient(120deg, rgba(201, 169, 89, 0.15) 0%, rgba(201, 169, 89, 0.25) 100%);
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    background: linear-gradient(120deg, rgba(201, 169, 89, 0.15) 0%, rgba(201, 169, 89, 0.25) 100%);
+    box-shadow: 0 0 0 rgba(201, 169, 89, 0);
+  }
+  50% {
+    background: linear-gradient(120deg, rgba(201, 169, 89, 0.25) 0%, rgba(201, 169, 89, 0.35) 100%);
+    box-shadow: 0 0 15px rgba(201, 169, 89, 0.3);
+  }
+}
+
+/* Dark mode styles */
+body.dark-mode .wigner-quote-section {
+  background: linear-gradient(135deg, rgba(201, 169, 89, 0.08) 0%, rgba(201, 169, 89, 0.03) 100%);
+  border-color: rgba(201, 169, 89, 0.25);
+}
+
+body.dark-mode .wigner-portrait img {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .wigner-caption {
+  color: #c4bfb4;
+}
+
+body.dark-mode .wigner-nobel {
+  color: #9a968f;
+}
+
+body.dark-mode .wigner-quote {
+  color: #c4bfb4;
+}
+
+body.dark-mode .aging-highlight {
+  color: #d4b66a;
+  background: linear-gradient(120deg, rgba(201, 169, 89, 0.2) 0%, rgba(201, 169, 89, 0.3) 100%);
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(201, 169, 89, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(201, 169, 89, 0.4);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .wigner-quote-section {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.25rem;
+  }
+  
+  .wigner-portrait {
+    align-self: center;
+  }
+  
+  .wigner-portrait img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .wigner-quote {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+
 /* ==================== INTRO TEXT ==================== */
 .intro-text {
   font-size: 0.95rem;
@@ -1000,6 +1140,10 @@ html {
 
 .job-market-banner {
   animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.wigner-quote-section {
+  animation: fadeInUp 0.6s ease-out 0.15s both;
 }
 
 .fancy-quote {
