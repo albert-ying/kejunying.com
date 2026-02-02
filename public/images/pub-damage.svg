@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bgDam" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#faf8f5"/>
+      <stop offset="100%" stop-color="#f0ede8"/>
+    </linearGradient>
+    <linearGradient id="damage" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b13f54"/>
+      <stop offset="100%" stop-color="#8b3040"/>
+    </linearGradient>
+    <linearGradient id="adapt" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#51a1c4"/>
+      <stop offset="100%" stop-color="#3d8aad"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bgDam)" width="400" height="180" rx="8"/>
+  
+  <!-- DamAge trajectory (red) - going up = worse -->
+  <path d="M40,130 Q90,120 140,90 T240,50" stroke="url(#damage)" stroke-width="3.5" fill="none" opacity="0.85"/>
+  
+  <!-- AdaptAge trajectory (blue) - going down = adaptation -->
+  <path d="M40,50 Q90,60 140,90 T240,130" stroke="url(#adapt)" stroke-width="3.5" fill="none" opacity="0.85"/>
+  
+  <!-- Intersection point -->
+  <circle cx="140" cy="90" r="8" fill="#c9a959" opacity="0.9"/>
+  
+  <!-- Scattered dots showing data -->
+  <g opacity="0.5">
+    <circle cx="70" cy="115" r="3" fill="#b13f54"/>
+    <circle cx="110" cy="102" r="3" fill="#b13f54"/>
+    <circle cx="180" cy="65" r="3" fill="#b13f54"/>
+    <circle cx="220" cy="55" r="3" fill="#b13f54"/>
+    <circle cx="70" cy="65" r="3" fill="#51a1c4"/>
+    <circle cx="110" cy="78" r="3" fill="#51a1c4"/>
+    <circle cx="180" cy="115" r="3" fill="#51a1c4"/>
+    <circle cx="220" cy="125" r="3" fill="#51a1c4"/>
+  </g>
+  
+  <!-- Labels -->
+  <rect x="290" y="45" width="80" height="22" rx="4" fill="url(#damage)" opacity="0.2"/>
+  <text x="330" y="60" font-family="Inter, sans-serif" font-size="9" fill="#8b3040" text-anchor="middle" font-weight="600">DamAge</text>
+  
+  <rect x="290" y="115" width="80" height="22" rx="4" fill="url(#adapt)" opacity="0.2"/>
+  <text x="330" y="130" font-family="Inter, sans-serif" font-size="9" fill="#3d8aad" text-anchor="middle" font-weight="600">AdaptAge</text>
+  
+  <!-- Arrow indicators -->
+  <polygon points="250,50 258,46 258,54" fill="#b13f54" opacity="0.6"/>
+  <polygon points="250,130 258,126 258,134" fill="#51a1c4" opacity="0.6"/>
+</svg>

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c9a959;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#d4b96a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b7355;stop-opacity:1" />
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#c9a959;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#c9a959;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Subtle grid pattern -->
+  <g stroke="#c9a959" stroke-width="0.3" opacity="0.08">
+    <line x1="0" y1="50" x2="600" y2="50"/>
+    <line x1="0" y1="100" x2="600" y2="100"/>
+    <line x1="0" y1="150" x2="600" y2="150"/>
+    <line x1="0" y1="200" x2="600" y2="200"/>
+    <line x1="0" y1="250" x2="600" y2="250"/>
+    <line x1="100" y1="0" x2="100" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="300"/>
+    <line x1="300" y1="0" x2="300" y2="300"/>
+    <line x1="400" y1="0" x2="400" y2="300"/>
+    <line x1="500" y1="0" x2="500" y2="300"/>
+  </g>
+  
+  <!-- Main network nodes -->
+  <g filter="url(#softGlow)">
+    <!-- Central cluster -->
+    <circle cx="300" cy="150" r="8" fill="url(#goldGradient)" opacity="0.9"/>
+    <circle cx="250" cy="110" r="5" fill="#c9a959" opacity="0.7"/>
+    <circle cx="350" cy="110" r="5" fill="#c9a959" opacity="0.7"/>
+    <circle cx="250" cy="190" r="5" fill="#8b7355" opacity="0.7"/>
+    <circle cx="350" cy="190" r="5" fill="#8b7355" opacity="0.7"/>
+    
+    <!-- Outer nodes -->
+    <circle cx="150" cy="80" r="4" fill="#c9a959" opacity="0.5"/>
+    <circle cx="450" cy="80" r="4" fill="#c9a959" opacity="0.5"/>
+    <circle cx="150" cy="220" r="4" fill="#8b7355" opacity="0.5"/>
+    <circle cx="450" cy="220" r="4" fill="#8b7355" opacity="0.5"/>
+    
+    <!-- Far nodes -->
+    <circle cx="50" cy="150" r="3" fill="#d4b96a" opacity="0.4"/>
+    <circle cx="550" cy="150" r="3" fill="#d4b96a" opacity="0.4"/>
+    <circle cx="100" cy="50" r="2.5" fill="#c9a959" opacity="0.3"/>
+    <circle cx="500" cy="50" r="2.5" fill="#c9a959" opacity="0.3"/>
+    <circle cx="100" cy="250" r="2.5" fill="#8b7355" opacity="0.3"/>
+    <circle cx="500" cy="250" r="2.5" fill="#8b7355" opacity="0.3"/>
+  </g>
+  
+  <!-- Network connections -->
+  <g stroke="url(#goldGradient)" fill="none">
+    <!-- Central connections -->
+    <line x1="300" y1="150" x2="250" y2="110" stroke-width="1.5" opacity="0.5"/>
+    <line x1="300" y1="150" x2="350" y2="110" stroke-width="1.5" opacity="0.5"/>
+    <line x1="300" y1="150" x2="250" y2="190" stroke-width="1.5" opacity="0.5"/>
+    <line x1="300" y1="150" x2="350" y2="190" stroke-width="1.5" opacity="0.5"/>
+    
+    <!-- Cross connections -->
+    <line x1="250" y1="110" x2="350" y2="110" stroke-width="0.8" opacity="0.3"/>
+    <line x1="250" y1="190" x2="350" y2="190" stroke-width="0.8" opacity="0.3"/>
+    <line x1="250" y1="110" x2="250" y2="190" stroke-width="0.8" opacity="0.3"/>
+    <line x1="350" y1="110" x2="350" y2="190" stroke-width="0.8" opacity="0.3"/>
+    
+    <!-- Outer connections -->
+    <line x1="250" y1="110" x2="150" y2="80" stroke-width="0.8" opacity="0.3"/>
+    <line x1="350" y1="110" x2="450" y2="80" stroke-width="0.8" opacity="0.3"/>
+    <line x1="250" y1="190" x2="150" y2="220" stroke-width="0.8" opacity="0.3"/>
+    <line x1="350" y1="190" x2="450" y2="220" stroke-width="0.8" opacity="0.3"/>
+    
+    <!-- Far connections -->
+    <line x1="150" y1="80" x2="50" y2="150" stroke-width="0.5" opacity="0.2"/>
+    <line x1="450" y1="80" x2="550" y2="150" stroke-width="0.5" opacity="0.2"/>
+    <line x1="150" y1="220" x2="50" y2="150" stroke-width="0.5" opacity="0.2"/>
+    <line x1="450" y1="220" x2="550" y2="150" stroke-width="0.5" opacity="0.2"/>
+    <line x1="150" y1="80" x2="100" y2="50" stroke-width="0.4" opacity="0.15"/>
+    <line x1="450" y1="80" x2="500" y2="50" stroke-width="0.4" opacity="0.15"/>
+    <line x1="150" y1="220" x2="100" y2="250" stroke-width="0.4" opacity="0.15"/>
+    <line x1="450" y1="220" x2="500" y2="250" stroke-width="0.4" opacity="0.15"/>
+  </g>
+  
+  <!-- Floating particles -->
+  <g fill="#c9a959">
+    <circle cx="180" cy="130" r="1.5" opacity="0.4"/>
+    <circle cx="220" cy="160" r="1" opacity="0.3"/>
+    <circle cx="380" cy="140" r="1.5" opacity="0.4"/>
+    <circle cx="420" cy="170" r="1" opacity="0.3"/>
+    <circle cx="280" cy="70" r="1.2" opacity="0.35"/>
+    <circle cx="320" cy="230" r="1.2" opacity="0.35"/>
+  </g>
+  
+  <!-- Glowing orbs -->
+  <circle cx="300" cy="150" r="25" fill="url(#nodeGlow)"/>
+</svg>

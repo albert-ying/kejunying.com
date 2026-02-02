@@ -60,15 +60,21 @@ csl: apa-cv.csl
 - National college admissions exam (Top 0.6%)
 
 
-# Research Experience
+# Research & Professional Experience
 \hrule
 
 **Stanford University & University of Washington** \hfill Stanford, CA & Seattle, WA  
 **Protein Design for Aging** *Postdoctoral Researcher, Wyss-Coray's Lab & Baker's Lab* \hfill Jun 2025 -- Present  
 *Visiting Scholar, Wyss-Coray's Lab & Baker's Lab* \hfill Nov 2024 -- May 2025
 
+**Starter Studio, Inc. DBA Persist Ventures** \hfill Los Angeles, CA  
+**Commercializing AI Agent Systems** *Scientific Co-founder* \hfill Jan 2026 -- Present
+
+**Magnetar.bio** \hfill San Francisco, CA  
+**Drug discovery using AI/ML and semi-automated multi-omics** *Scientific Co-founder* \hfill Nov 2025 -- Present
+
 **Avinasi Labs** \hfill San Francisco, CA  
-**Decentralized longevity data collection** *Co-founder* \hfill Jan 2025 -- Present
+**Decentralized longevity data collection** *Scientific Co-founder* \hfill Jan 2025 -- Present
 
 **Harvard Medical School, Brigham and Women's Hospital** \hfill Boston, MA  
 **Biological Aging** *Graduate Researcher, Vadim Gladyshev's Lab* \hfill Mar 2020 -- May 2025
@@ -94,7 +100,23 @@ csl: apa-cv.csl
 # Grants
 \hrule
 
+**THRIVE: Transforming Health: Reclaiming Intrinsic Vitality for Everyone** \hfill ARPA-H PROSPR
+
+*Developing PROSPR Intrinsic Capacity score for predicting 20-year health outcomes*, \hfill 2026 -- 2031
+
+- USD $36 million over 5 years (Key Personnel)
+- Multi-institutional collaboration: Stanford University, Harvard University, Buck Institute for Research on Aging
+- Integrating multi-omics biomarkers and functional assessments across 19+ longitudinal databases to enable personalized health monitoring and accelerate clinical trials
+
+**Deep Continuum Foundation Research Grant (Conditional Commitment)** \hfill Deep Continuum Foundation
+
+*Foundational longevity research and AI-driven intervention discovery*, \hfill 2026 -- 2030
+
+- USD $250,000/year for 3 years (pending faculty appointment and institutional approval)
+- Supports mechanistic aging research and computational approaches to healthspan extension
+
 **K00 Post-doctoral Transition Award** \hfill NIH/NIA
+
 *Using causal aging biomarkers and protein design to develop novel anti-aging interventions*, \hfill 2025 -- 2028
 
 **F99 Transition to Aging Research for Predoctoral Students** \hfill NIH/NIA

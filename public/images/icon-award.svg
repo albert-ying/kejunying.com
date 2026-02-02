@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <linearGradient id="awardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c9a959"/>
+      <stop offset="100%" stop-color="#8b7355"/>
+    </linearGradient>
+  </defs>
+  <circle cx="12" cy="8" r="6" stroke="url(#awardGrad)"/>
+  <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" stroke="url(#awardGrad)"/>
+  <polygon points="12,5 13.09,7.26 15.64,7.64 13.82,9.41 14.18,11.95 12,10.77 9.82,11.95 10.18,9.41 8.36,7.64 10.91,7.26" fill="url(#awardGrad)" opacity="0.3" stroke="none"/>
+</svg>
