@@ -1145,6 +1145,10 @@ html {
   animation: fadeInUp 0.6s ease-out 0.3s both;
 }
 
+.clockbase-highlight {
+  animation: fadeInUp 0.6s ease-out 0.35s both;
+}
+
 .news-container {
   animation: fadeInUp 0.6s ease-out 0.4s both;
 }
@@ -2490,6 +2494,146 @@ body.dark-mode #doc p code {
 body.dark-mode #doc .sidenote img {
   border-color: rgba(201, 169, 89, 0.4);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ==================== CLOCKBASE AGENT HIGHLIGHT ==================== */
+.clockbase-highlight {
+  position: relative;
+  z-index: 1;
+  padding: 1.5rem 1.75rem;
+  background: linear-gradient(135deg, rgba(201, 169, 89, 0.08) 0%, rgba(139, 115, 85, 0.04) 100%);
+  border: 1px solid rgba(201, 169, 89, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clockbase-highlight:hover {
+  border-color: rgba(201, 169, 89, 0.4);
+  box-shadow: 0 4px 20px rgba(201, 169, 89, 0.1);
+}
+
+body.dark-mode .clockbase-highlight {
+  background: linear-gradient(135deg, rgba(201, 169, 89, 0.12) 0%, rgba(139, 115, 85, 0.06) 100%);
+  border-color: rgba(201, 169, 89, 0.25);
+}
+
+body.dark-mode .clockbase-highlight:hover {
+  border-color: rgba(201, 169, 89, 0.5);
+  box-shadow: 0 4px 20px rgba(201, 169, 89, 0.15);
+}
+
+.clockbase-badge {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  background: rgba(201, 169, 89, 0.15);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.6rem;
+}
+
+body.dark-mode .clockbase-badge {
+  background: rgba(201, 169, 89, 0.2);
+}
+
+.clockbase-title {
+  font-family: var(--font-sans);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin: 0 0 0.5rem 0;
+}
+
+.clockbase-description {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin: 0 0 0.75rem 0;
+}
+
+.clockbase-description a {
+  color: var(--color-bronze);
+  border-bottom: 1px solid rgba(139, 115, 85, 0.3);
+}
+
+body.dark-mode .clockbase-description a {
+  color: var(--color-gold);
+  border-bottom-color: rgba(201, 169, 89, 0.3);
+}
+
+.clockbase-link {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-gold);
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(201, 169, 89, 0.4);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.clockbase-link:hover {
+  background: rgba(201, 169, 89, 0.15);
+  border-color: var(--color-gold);
+}
+
+.clockbase-link:after {
+  content: none !important;
+}
+
+.clockbase-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.clockbase-link-paper {
+  color: var(--color-text-muted);
+  border-color: rgba(139, 115, 85, 0.3);
+}
+
+.clockbase-link-paper:hover {
+  color: var(--color-gold);
+}
+
+.clockbase-citation {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  opacity: 0.7;
+  margin: 0 0 0.75rem 0;
+  padding: 0.5rem 0.75rem;
+  border-left: 2px solid rgba(201, 169, 89, 0.3);
+  background: rgba(201, 169, 89, 0.04);
+  border-radius: 0 4px 4px 0;
+}
+
+.clockbase-citation a {
+  color: var(--color-bronze);
+}
+
+body.dark-mode .clockbase-citation a {
+  color: var(--color-gold);
+}
+
+.clockbase-citation a:after {
+  content: none !important;
+}
+
+/* ==================== HIDE SKIP LINK ON MOBILE ==================== */
+@media all and (max-width: 1200px) {
+  .skip-link {
+    display: none !important;
+  }
 }
 
 /* ==================== APPLE-STYLE POLISH ==================== */

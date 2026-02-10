@@ -90,24 +90,17 @@
     var body = document.body;
     var toggle = document.querySelector('.theme-toggle');
     
-    // Check for saved preference, otherwise use system preference
+    // Check for saved preference; default to light mode
     var savedTheme = localStorage.getItem('darkMode');
-    var systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
-    if (savedTheme === 'true' || (savedTheme === null && systemPrefersDark)) {
+    if (savedTheme === 'true') {
       body.classList.add('dark-mode');
     }
     
-    // Listen for system preference changes
+    // Listen for system preference changes (only if user hasn't chosen)
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
-      // Only auto-switch if user hasn't set a preference
-      if (localStorage.getItem('darkMode') === null) {
-        if (e.matches) {
-          body.classList.add('dark-mode');
-        } else {
-          body.classList.remove('dark-mode');
-        }
-      }
+      if (localStorage.getItem('darkMode') !== null) return;
+      // Default is light, don't auto-switch
     });
 
     // Create aria-live region for screen reader announcements
