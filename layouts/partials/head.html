@@ -51,9 +51,9 @@
     {{ $stylesheet := "css/style.css" }}
     <link rel="stylesheet" type="text/css" href="{{ $stylesheet | absURL }}">
     
-    <!-- Custom css -->
+    <!-- Custom css (fingerprinted for cache busting) -->
     {{ range .Site.Params.customcss }}
-        {{ $style := resources.Get . }}
+        {{ $style := resources.Get . | fingerprint }}
         <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
     {{ end }}
 
