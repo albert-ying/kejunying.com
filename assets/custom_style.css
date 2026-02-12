@@ -2782,3 +2782,48 @@ button:focus-visible {
     height: 44px;
   }
 }
+
+/* ==================== BLOG / LIST PAGE LAYOUT FIX ==================== */
+
+/* Make hanging-subtitle flow normally instead of absolute margin positioning */
+/* This prevents overlap with body text on typical viewport widths */
+#doc > .hanging-subtitle {
+  position: relative;
+  left: 0;
+  width: auto;
+  float: none;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+#doc > .hanging-subtitle p:first-child {
+  border-top: 2px solid var(--color-gold);
+  padding-top: 0.5rem;
+  display: inline-block;
+}
+
+#doc > .hanging-subtitle p {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-bronze);
+  margin-bottom: 0.15rem;
+  line-height: 1.4;
+}
+
+body.dark-mode #doc > .hanging-subtitle p {
+  color: var(--color-gold);
+  opacity: 0.7;
+}
+
+/* Blog post images */
+#doc img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  margin: 1.5rem 0;
+}
+
+body.dark-mode #doc img {
+  opacity: 0.9;
+}

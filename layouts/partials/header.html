@@ -1,12 +1,13 @@
 <div id="nav-border" class="container">
     {{ if not .IsHome }}
-    <div class="nav-outer">
-        <div class="article-nav-inner menu-container">
+    <div class="nav-outer" style="position: relative;">
+        <div class="article-nav-inner menu-container" style="position: relative; width: auto; left: auto; right: auto; border-top: none;">
             {{ with .Site.Menus.main }}
                 {{ range sort . "Weight" }}
                     {{ if ne .Identifier "hide-from-nav" }}
                         <a class="menu-item" href="{{ .URL }}">
                             {{ if eq .Name "Talks" }}<img src="/images/icon-talks.svg" class="menu-icon" alt="">{{ end }}
+                            {{ if eq .Name "Blog" }}<img src="/images/icon-blog.svg" class="menu-icon" alt="">{{ end }}
                             {{ if eq .Name "Research" }}<img src="/images/icon-research.svg" class="menu-icon" alt="">{{ end }}
                             {{ if eq .Name "Cv" }}<img src="/images/icon-cv.svg" class="menu-icon" alt="">{{ end }}
                             {{ if eq .Name "Contact" }}<img src="/images/icon-contact.svg" class="menu-icon" alt="">{{ end }}
