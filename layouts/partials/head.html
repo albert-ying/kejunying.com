@@ -33,9 +33,9 @@
     <link rel="canonical" href="{{ .Permalink }}">
 
     <meta property="og:site_name" content="{{ .Site.Title }}">
-    <meta property="og:title" content="{{ block "og-title" . }}{{ .Site.Title }}{{ end }}">
+    <meta property="og:title" content="{{ if .IsPage }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
     <meta property="og:description" content="{{ if .IsPage }}{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:image" content="{{ if .Params.thumbnail }}{{ .Site.BaseURL }}{{ .Params.thumbnail }}{{ else }}{{ .Site.BaseURL }}about/avatar.png{{ end }}">
     <meta property="og:image:width" content="{{ if .Params.thumbnail }}1200{{ else }}400{{ end }}">
