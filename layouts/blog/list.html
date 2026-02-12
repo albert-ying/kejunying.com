@@ -1,0 +1,25 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<div style="height: 2rem;"></div>
+{{ range $k, $v := .Pages.ByPublishDate.Reverse }}
+    <article class="blog-list-item">
+        <div class="blog-list-meta">
+            {{ if .Date }}
+                <time class="blog-list-date">{{ .Date.Format "Jan 2, 2006" }}</time>
+            {{ end }}
+            <span class="blog-list-readtime">{{ math.Round (div (countwords .Content) 200.0) }} min</span>
+        </div>
+        <h3 class="blog-list-title"><a class="title" href="{{ .Permalink }}">{{ .Title | lower | markdownify }}</a></h3>
+        {{ with .Params.description }}
+            <p class="blog-list-description">{{ . }}</p>
+        {{ end }}
+        {{ with .Params.tags }}
+            <div class="blog-list-tags">
+                {{ range . }}
+                    <span class="blog-list-tag">#{{ . }}</span>
+                {{ end }}
+            </div>
+        {{ end }}
+    </article>
+{{ end }}
+{{ end }}

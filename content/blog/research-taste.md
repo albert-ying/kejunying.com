@@ -4,6 +4,7 @@ date: 2026-02-11
 description: "If you think of all possible research directions as a graph, taste is the ability to find the high-leverage node after the topology just changed."
 author: "Albert Ying"
 tags: ["science", "research"]
+thumbnail: "blog/research-taste/topology.png"
 showdate: true
 draft: false
 ---
@@ -16,7 +17,7 @@ The network is not static, though. New technology doesn't just add nodes to the 
 
 ![Technology rewires the topology](/blog/research-taste/topology.png)
 
-Sydney Brenner had a [line](https://doi.org/10.1016/S0960-9822(02)01025-2) I keep coming back to: "Progress in science depends on new techniques, new discoveries and new ideas, probably in that order." I think what he was getting at is that techniques rewire the graph first. Discoveries and ideas follow from whoever has the taste to read the new topology.
+Sydney Brenner had a [line](https://www.nobelprize.org/prizes/medicine/2002/brenner/lecture/) I keep coming back to: "Progress in science depends on new techniques, new discoveries and new ideas, probably in that order." I think what he was getting at is that techniques rewire the graph first. Discoveries and ideas follow from whoever has the taste to read the new topology.
 
 CRISPR might be the cleanest example of this. For decades, it was known as part of a bacterial immune system, a defense against viral DNA. A contained node sitting in the microbiology corner of the graph. Then Doudna and Charpentier showed it could work as a programmable DNA editing tool ([Jinek et al., 2012](https://doi.org/10.1126/science.1225829)). That single move created a submodule that connected to almost everything else, because DNA sits at the center of biology. Any field that touches genes suddenly had a new, precise entry point. The topology of the graph changed.
 
