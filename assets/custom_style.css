@@ -46,9 +46,6 @@
   --radius-full: 50%;
 }
 
-/* Load Inter font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 /* Dark mode overrides */
 body.dark-mode {
   --color-text: #ece8e0;
@@ -458,7 +455,7 @@ body.dark-mode .fancy-quote {
 .wigner-nobel {
   font-size: 0.7rem;
   font-weight: 400;
-  color: #888;
+  color: #756a5e;
 }
 
 .wigner-quote-content {
@@ -572,12 +569,12 @@ body.dark-mode .intro-text {
   margin-left: -6rem;
   line-height: 1.35;
   color: var(--color-bronze);
-  opacity: 0.5;
+  opacity: 0.65;
 }
 
 body.dark-mode .sidenote {
   color: var(--color-gold);
-  opacity: 0.4;
+  opacity: 0.55;
 }
 
 .sidenote a img {
@@ -615,6 +612,10 @@ body.dark-mode .sidenote a img {
     max-width: 600px;
     margin-left: 0rem;
     min-width: 0%;
+  }
+
+  body.dark-mode #doc .sidenote {
+    color: #9a968e;
   }
 }
 
@@ -974,9 +975,6 @@ h1 {
 
 body.dark-mode h1 {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-body.dark-mode h1 {
   color: #f0ebe4;
 }
 
@@ -1246,18 +1244,6 @@ p a:after, .intro-text a:after {
   }
 }
 
-/* ==================== SCROLL-TRIGGERED ANIMATIONS ==================== */
-.fade-in-element {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.fade-in-element.fade-in-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* Avatar 3D tilt transition */
 .avatar-container img {
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
@@ -1379,10 +1365,10 @@ body.dark-mode #doc h1 {
   content: '◆';
   font-size: 0.6rem;
   color: #c9a959;
-  animation: pulse-glow 2s ease-in-out infinite;
+  animation: pulse-glow-year 2s ease-in-out infinite;
 }
 
-@keyframes pulse-glow {
+@keyframes pulse-glow-year {
   0%, 100% { opacity: 0.6; transform: scale(1); }
   50% { opacity: 1; transform: scale(1.2); }
 }
@@ -1433,6 +1419,8 @@ body.dark-mode #doc h1[id^="19"]:hover {
   margin-right: -1rem;
   border-radius: 8px;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
 
 #doc h4:hover {
@@ -1472,7 +1460,7 @@ body.dark-mode #doc h4 a:hover {
   font-size: 0.85rem;
   font-weight: 400;
   color: #666;
-  margin-bottom: 0.25rem;
+  margin: 0.25rem 0 0.5rem;
 }
 
 body.dark-mode #doc h5 {
@@ -1523,15 +1511,22 @@ body.dark-mode #doc p strong em {
 
 /* ==================== TALKS PAGE ==================== */
 #doc iframe {
+  position: relative;
   border-radius: 12px;
+  border: 1px solid rgba(201, 169, 89, 0.2);
   margin: 1rem 0 1.5rem 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   max-width: 100%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body.dark-mode #doc iframe {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
+
+/* Shared talk/research list styles */
+#doc ul li:before { content: ""; margin: 0; }
+#doc ul li p { margin-left: 0; }
 
 /* Talk list items */
 #doc ul li {
@@ -1569,6 +1564,17 @@ body.dark-mode #doc ul li:hover strong:first-child {
 }
 
 /* ==================== ABOUT PAGE ==================== */
+/* Override absolute positioning for sidenote avatar to prevent overlap */
+#doc img.sidenote {
+  position: relative;
+  left: auto;
+  width: 120px;
+  float: left;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
 #doc .sidenote img {
   border-radius: 50%;
   border: 3px solid transparent;
@@ -1660,7 +1666,7 @@ strong, b {
   }
   
   .theme-toggle,
-  .scroll-to-top,
+  .back-to-top,
   .reading-progress,
   .site-footer,
   .menu-container,
@@ -1710,78 +1716,6 @@ body.dark-mode #particle-canvas {
   opacity: 0.6;
 }
 
-/* ==================== ENHANCED HOVER CARDS ==================== */
-.hover-lift {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hover-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 35px rgba(139, 115, 85, 0.15);
-}
-
-body.dark-mode .hover-lift:hover {
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
-}
-
-/* ==================== GLOWING ACCENTS ==================== */
-.glow-accent {
-  position: relative;
-}
-
-.glow-accent::after {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  background: linear-gradient(135deg, rgba(201, 169, 89, 0.3), rgba(139, 115, 85, 0.1));
-  border-radius: inherit;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  filter: blur(8px);
-}
-
-.glow-accent:hover::after {
-  opacity: 1;
-}
-
-/* ==================== ANIMATED GRADIENT BORDERS ==================== */
-@keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.gradient-border {
-  position: relative;
-}
-
-.gradient-border::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  padding: 2px;
-  background: linear-gradient(135deg, #c9a959, #8b7355, #c9a959, #8b7355);
-  background-size: 300% 300%;
-  border-radius: inherit;
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  animation: gradient-shift 4s ease infinite;
-}
-
-.gradient-border:hover::before {
-  opacity: 1;
-}
-
 /* ==================== ENHANCED SIDENOTE FOR MONTHS ==================== */
 #doc .sidenote {
   font-variant-caps: normal;
@@ -1814,14 +1748,6 @@ body.dark-mode .sidenote:not(:has(img)):not(:has(.altmetric-embed)) {
   }
 }
 
-.reveal-on-scroll {
-  opacity: 0;
-}
-
-.reveal-on-scroll.revealed {
-  animation: slideReveal 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
 /* ==================== INTERACTIVE CURSOR GLOW ==================== */
 .cursor-glow {
   position: fixed;
@@ -1844,12 +1770,6 @@ body.dark-mode .cursor-glow {
   background: radial-gradient(circle, rgba(201, 169, 89, 0.12) 0%, transparent 70%);
 }
 
-/* ==================== PUBLICATION CARD ENHANCEMENTS ==================== */
-#doc h4 {
-  position: relative;
-  overflow: hidden;
-}
-
 #doc h4::after {
   content: '';
   position: absolute;
@@ -1863,13 +1783,6 @@ body.dark-mode .cursor-glow {
 
 #doc h4:hover::after {
   left: 100%;
-}
-
-/* ==================== ENHANCED IFRAME CONTAINERS ==================== */
-#doc iframe {
-  position: relative;
-  border: 1px solid rgba(201, 169, 89, 0.2);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #doc iframe:hover {
@@ -2330,18 +2243,6 @@ body.dark-mode #doc ul li:hover {
   font-size: 0.92em;
 }
 
-/* Enhanced iframe containers for videos */
-#doc iframe {
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  margin: 1rem 0;
-  max-width: 100%;
-}
-
-body.dark-mode #doc iframe {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
 /* Contact section styling */
 .contact-section {
   background: linear-gradient(135deg, rgba(201, 169, 89, 0.05) 0%, rgba(139, 115, 85, 0.02) 100%);
@@ -2415,42 +2316,6 @@ body.dark-mode .contact-item:hover {
   color: var(--color-gold);
 }
 
-/* Research publication cards */
-#doc h4 {
-  font-family: var(--font-sans);
-  font-weight: 600;
-  font-size: var(--text-base);
-  line-height: 1.4;
-  margin-top: 1.25rem;
-  margin-bottom: 0.25rem;
-}
-
-#doc h4 a {
-  color: var(--color-text);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-#doc h4 a:hover {
-  color: var(--color-gold);
-}
-
-/* Author lines */
-#doc h5 {
-  font-family: var(--font-sans);
-  font-weight: 400;
-  font-size: var(--text-sm);
-  color: var(--color-text-muted);
-  margin: 0.25rem 0 0.5rem;
-}
-
-/* Highlighted author name */
-#doc h5 ins {
-  text-decoration: none;
-  color: var(--color-gold);
-  font-weight: 600;
-}
-
 /* Journal names */
 #doc p em:first-child {
   font-style: normal;
@@ -2487,12 +2352,10 @@ body.dark-mode #doc p code {
 
 /* About page avatar enhancement */
 #doc .sidenote img {
-  border: 3px solid rgba(201, 169, 89, 0.3);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 body.dark-mode #doc .sidenote img {
-  border-color: rgba(201, 169, 89, 0.4);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -2629,25 +2492,16 @@ body.dark-mode .clockbase-citation a {
   content: none !important;
 }
 
-/* ==================== HIDE SKIP LINK ON MOBILE ==================== */
+/* ==================== SKIP LINK ON MOBILE ==================== */
 @media all and (max-width: 1200px) {
   .skip-link {
-    display: none !important;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
   }
 }
 
 /* ==================== APPLE-STYLE POLISH ==================== */
-
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-}
 
 /* Reading progress indicator */
 .reading-progress {
@@ -2928,6 +2782,9 @@ body.dark-mode .blog-share-link {
 body.dark-mode .blog-share-link:hover {
   background: rgba(201, 169, 89, 0.15);
 }
+
+/* Spacer utility */
+.spacer { height: 2rem; }
 
 /* ==================== BLOG LISTING PAGE ==================== */
 .blog-list-item {

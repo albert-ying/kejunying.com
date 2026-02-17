@@ -6,26 +6,6 @@ hidetopnav: true
 ---
 
 
-<style type="text/css">
-ul li:before {
-  content: "";
-  margin: 0;
-}
-
-ul li p {
-  margin-left: 0;
-}
-
-ul li p, .sidenote {
-  font-size: 80%;
-  line-height: 1.4;
-}
-
-ul li a {
-  padding: 0 2px 0 2px;
-}
-</style>
-
 Selection of publications. For a full list see my [Google Scholar profile](https://scholar.google.com/citations?user=JS7AdkcAAAAJ&hl=en)
 
 
@@ -136,7 +116,7 @@ Selection of publications. For a full list see my [Google Scholar profile](https
 {{<sidenote  >}}
 <div class='altmetric-embed' data-badge-popover='bottom' data-doi='10.1038/s43587-023-00557-0' data-hide-less-than=10 data-badge-type="donut"></div>
 
-<img src="https://media.springernature.com/w440/springer-static/cover-hires/journal/43587/4/2?as=webp&q=95" class='img-small'></img>
+<img src="https://media.springernature.com/w440/springer-static/cover-hires/journal/43587/4/2?as=webp&q=95" class='img-small' alt="Nature Aging February 2024 cover featuring DamAge and AdaptAge"></img>
 {{</sidenote  >}}
 
 #### [Causality-Enriched Epigenetic Age Uncouples Damage and Adaptation](https://doi.org/10.1038/s43587-023-00557-0) 

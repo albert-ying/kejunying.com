@@ -57,9 +57,12 @@
         <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
     {{ end }}
 
-    <link rel="stylesheet" href="https://use.typekit.net/jxt2fnp.css"> <!-- Source Serif 4-->
-    <link rel="stylesheet" href="https://use.typekit.net/uwd7war.css"> <!-- Source Code -->
-    <link href="https://fonts.cdnfonts.com/css/cooper-hewitt" rel="stylesheet">
+    <link rel="preload" href="https://use.typekit.net/jxt2fnp.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> <!-- Source Serif 4-->
+    <noscript><link rel="stylesheet" href="https://use.typekit.net/jxt2fnp.css"></noscript>
+    <link rel="preload" href="https://use.typekit.net/uwd7war.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> <!-- Source Code -->
+    <noscript><link rel="stylesheet" href="https://use.typekit.net/uwd7war.css"></noscript>
+    <link rel="preload" href="https://fonts.cdnfonts.com/css/cooper-hewitt" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.cdnfonts.com/css/cooper-hewitt"></noscript>
 
     {{ if .Site.Params.favicon }}
         {{ with .Site.Params.favicon }}
@@ -74,12 +77,14 @@
     <meta name="apple-mobile-web-app-title" content="Kejun Ying">
 
     <script defer src="{{ .Site.Params.umamilink }}" data-website-id="{{ .Site.Params.umamiid }}"></script>
-    <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+    <script defer type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
     <link rel="stylesheet" href="//unpkg.com/heti/umd/heti.min.css">
-    <script src="//unpkg.com/heti/umd/heti-addon.min.js"></script>
+    <script defer src="//unpkg.com/heti/umd/heti-addon.min.js"></script>
     <script>
-        const heti = new Heti('.heti');
-        heti.autoSpacing(); // 自动进行中西文混排美化和标点挤压
+        document.addEventListener('DOMContentLoaded', function() {
+            const heti = new Heti('.heti');
+            heti.autoSpacing();
+        });
     </script>
     
     <script defer src="/animations.js"></script>

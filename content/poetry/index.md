@@ -7,11 +7,6 @@ hidetopnav: true
 <style type="text/css">
 
 /* Poetry page specific styles */
-body > * {
-    margin-left: 2rem;
-    margin-right: 2rem;
-}
-
 #content {
     width: 100%;
     max-width: 100%;

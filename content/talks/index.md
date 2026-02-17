@@ -53,7 +53,7 @@ June
 - **6th TimePie Longevity Forum** - Shanghai, China
   - *Massive AI agent mining of aging-modifying interventions from millions of molecular profiles*
 
-- <iframe width=800 height=300 src="https://www.youtube.com/embed/B5QsunlbPP8"> </iframe>
+- <iframe width="100%" height=300 src="https://www.youtube.com/embed/B5QsunlbPP8" title="Talk: Massive AI Agent Mining of Aging-Modifying Interventions - TimePie Longevity Forum 2025"> </iframe>
 
 -
 
@@ -73,7 +73,7 @@ March
 - **Keystone Symposia: Aging: New Frontiers in Rejuvenation and Gerotherapeutics** - Breckenridge, CO
   - *MethylGPT: A Foundation Model for the DNA Methylome*
 
-- <iframe width=800 height=300 src="https://www.youtube.com/embed/Tm7AtwLywEg?si=eN44fzVqaKqEgEbx"> </iframe>
+- <iframe width="100%" height=300 src="https://www.youtube.com/embed/Tm7AtwLywEg?si=eN44fzVqaKqEgEbx" title="Talk: MethylGPT - A Foundation Model for the DNA Methylome - Keystone Symposia 2025"> </iframe>
 
 # **2024**
 
@@ -83,7 +83,7 @@ December
 
 - A4LI Scientist Spotlight Interview
 
-- <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/1wLk84b70TZQgAE4mUAOYs?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+- <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/1wLk84b70TZQgAE4mUAOYs?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Podcast: A4LI Scientist Spotlight Interview"></iframe>
 
 {{<sidenote>}}
 November
@@ -91,7 +91,7 @@ November
 
 - **Biomarkers of Aging Symposium** - Boston, MA
 
-- <iframe width=800 height=300 src="https://www.youtube.com/embed/-NGMSeC6kAY?si=6d9UAXzOX924Bsp0"> </iframe>
+- <iframe width="100%" height=300 src="https://www.youtube.com/embed/-NGMSeC6kAY?si=6d9UAXzOX924Bsp0" title="Talk: Biomarkers of Aging Symposium 2024"> </iframe>
 
 
 {{<sidenote>}}
@@ -110,7 +110,7 @@ March
 
 - **Biomarkers of Aging Challenge: Update Webinar with Foresight**, Foresight Institute - Online Webinar
 
-- <iframe width=800 height=300 src="https://www.youtube.com/embed/KbjjwwgoaLA"> </iframe>
+- <iframe width="100%" height=300 src="https://www.youtube.com/embed/KbjjwwgoaLA" title="Talk: Biomarkers of Aging Challenge Update Webinar - Foresight Institute"> </iframe>
 
 - **MRC Integrative Epidemiology Unit Seminar** - Bristol, UK
 
@@ -120,7 +120,7 @@ February
 
 - **Everything Epigenetics**, podcast hosted by Hannah Went - Online Podcast
 
-- <iframe width=800 height=300 src="https://www.youtube.com/embed/Rx5KCm1zEwI"> </iframe>
+- <iframe width="100%" height=300 src="https://www.youtube.com/embed/Rx5KCm1zEwI" title="Podcast: Everything Epigenetics with Hannah Went"> </iframe>
 
 -
 
@@ -141,7 +141,7 @@ December
 
 - **4th TimePie Longevity Forum** - Shanghai, China
 
-- <iframe width=800 height=300 src="https://www.youtube.com/embed/egB-YbKWmeE"> </iframe>
+- <iframe width="100%" height=300 src="https://www.youtube.com/embed/egB-YbKWmeE" title="Talk: 4th TimePie Longevity Forum 2023"> </iframe>
 
 -
 
@@ -160,7 +160,7 @@ August
 
 - **10th Aging Research and Drug Discovery conference (ARDD2023)** - Copenhagen, Denmark
 
-- <iframe width=800 height=300 src="https://www.youtube.com/embed/5Fnojh4H4SE"> </iframe>
+- <iframe width="100%" height=300 src="https://www.youtube.com/embed/5Fnojh4H4SE" title="Talk: 10th Aging Research and Drug Discovery Conference (ARDD2023)"> </iframe>
 
 - **Peking University**, hosted by Dr. Jingdong Han - Beijing, China
 
@@ -200,7 +200,7 @@ October
 
 - **Targeting Metabesity 2022**, 'Honorable Mention' - Virtual Conference
 
-- <iframe width=800 height=300 src="https://www.youtube.com/embed/JykxlJr1UNc?si=6d9UAXzOX924Bsp0"> </iframe>
+- <iframe width="100%" height=300 src="https://www.youtube.com/embed/JykxlJr1UNc?si=6d9UAXzOX924Bsp0" title="Talk: Targeting Metabesity 2022"> </iframe>
 
 -
 
@@ -222,6 +222,6 @@ August
 
 - **Foresight Institute**, hosted by Allison Duettmann - Online Seminar
 
-- <iframe width=800 height=300 src="https://www.youtube.com/embed/L0OqBrcetRA?si=L6cFoK-7W1cmqnao"> </iframe>
+- <iframe width="100%" height=300 src="https://www.youtube.com/embed/L0OqBrcetRA?si=L6cFoK-7W1cmqnao" title="Talk: Foresight Institute Seminar 2020"> </iframe>
 
 -

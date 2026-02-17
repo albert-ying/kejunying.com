@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://kejunying.com/"
 title = "「应可钧」Kejun Albert Ying"
 theme = "typography"
 
@@ -21,6 +21,7 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
   minifyOutput = true
 
 [params]
+    author = "Kejun Albert Ying"
     introtag = "introduction"
 
     intro = "Hello! I'm a postdoctoral fellow at [Stanford University](https://med.stanford.edu/) in [Tony Wyss-Coray's lab](https://wyss-coray.stanford.edu/) and [University of Washington](https://www.washington.edu/) in [David Baker's lab](https://www.bakerlab.org/), supported by an NIH/NIA F99K00 fellowship. I earned my Ph.D. in Biological Sciences from [Harvard Medical School](https://hms.harvard.edu/) (2025) in [Vadim Gladyshev's lab](https://gladyshevlab.bwh.harvard.edu/) and an M.Sc. in Computational Science and Engineering from [Harvard SEAS](https://seas.harvard.edu/) (2024). My research merges aging biology with **protein design** to tackle neurodegeneration, focusing on the causes of aging, epigenetics, metabolism, and multi-omics. I'm building the next generation of therapeutics through **machine learning** and **protein design**. " 
@@ -31,7 +32,7 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
     iconsource = "simple-icons"
 
     description = "Kejun (Albert) Ying's personal website | 应可钧的个人网站"
-    keywords = "personal, science, aging"
+    keywords = "aging biology, protein design, epigenetic clocks, machine learning, computational biology, Kejun Ying"
 
     customcss = ["custom_style.css"]
 
