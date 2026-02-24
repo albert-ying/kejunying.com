@@ -67,14 +67,14 @@ csl: apa-cv.csl
 **Protein Design for Aging** *Postdoctoral Researcher, Wyss-Coray's Lab & Baker's Lab* \hfill Jun 2025 -- Present  
 *Visiting Scholar, Wyss-Coray's Lab & Baker's Lab* \hfill Nov 2024 -- May 2025
 
-**Starter Studio, Inc. DBA Persist Ventures** \hfill Los Angeles, CA  
-**Commercializing AI Agent Systems** *Scientific Co-founder* \hfill Jan 2026 -- Present
+<!-- **Starter Studio, Inc. DBA Persist Ventures** \hfill Los Angeles, CA   -->
+<!-- **Commercializing AI Agent Systems** *Scientific Co-founder* \hfill Jan 2026 -- Present -->
 
-**Magnetar.bio** \hfill San Francisco, CA  
-**Drug discovery using AI/ML and semi-automated multi-omics** *Scientific Co-founder* \hfill Nov 2025 -- Present
+<!-- **Magnetar.bio** \hfill San Francisco, CA   -->
+<!-- **Drug discovery using AI/ML and semi-automated multi-omics** *Scientific Co-founder* \hfill Nov 2025 -- Present -->
 
-**Avinasi Labs** \hfill San Francisco, CA  
-**Decentralized longevity data collection** *Scientific Co-founder* \hfill Jan 2025 -- Present
+<!-- **Avinasi Labs** \hfill San Francisco, CA   -->
+<!-- **Decentralized longevity data collection** *Scientific Co-founder* \hfill Jan 2025 -- Present -->
 
 **Harvard Medical School, Brigham and Women's Hospital** \hfill Boston, MA  
 **Biological Aging** *Graduate Researcher, Vadim Gladyshev's Lab* \hfill Mar 2020 -- May 2025
