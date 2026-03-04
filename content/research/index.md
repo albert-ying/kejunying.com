@@ -8,6 +8,18 @@ hidetopnav: true
 
 Selection of publications. For a full list see my [Google Scholar profile](https://scholar.google.com/citations?user=JS7AdkcAAAAJ&hl=en)
 
+# **Software**
+
+#### [Autonomous Lab](https://autolab.kejunying.com)
+An MCP server that turns any senior-junior workflow into an autonomous AI loop. AI agents assume the working roles while the human moves into the editorial position. Works across research, software, consulting, and more. [GitHub](https://github.com/albert-ying/autonomous-lab) | [PyPI](https://pypi.org/project/autonomous-lab/)
+
+#### [Biolearn](https://bio-learn.github.io/)
+An open-source library for biomarkers of aging. [GitHub](https://github.com/bio-learn/biolearn)
+
+#### [ClockBase](https://clockbase.org)
+A comprehensive database of biological age measurements across public molecular datasets. [GitHub](https://github.com/albert-ying/clockbase)
+
+<br/>
 
 # **2025**
 

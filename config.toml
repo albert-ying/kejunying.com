@@ -43,6 +43,11 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
 
 # recent news
     [[params.news]]
+        date = "2026-02"
+        category = "software"
+        name = "Released Autonomous Lab — an MCP server that turns any senior-junior workflow into an autonomous AI loop. You make the decisions, AI handles the execution."
+        url = "https://autolab.kejunying.com"
+    [[params.news]]
         date = "2025-12"
         category = "media"
         name = "My alumni profile is featured on Harvard SEAS News!"
