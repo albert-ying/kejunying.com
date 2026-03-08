@@ -92,7 +92,7 @@ csl: apa-cv.csl
 
 - **Sun Yat-Sen University**, *Telomere & Telomerase* \hfill Zhou Songyang's Lab
 - **University of Edinburgh**, *Population genetics* \hfill Xia Shen's Lab
-- **University of Washington**, *Acarbose & Rapamycin* \hfill Matt Kaeberlein's Lab
+- **University of Washington**, *Acarbose & Raparycin* \hfill Matt Kaeberlein's Lab
 - **Buck Institute for Research on Aging**, *Senolytics* \hfill Judith Campisi's Lab
 - **University of California, Berkeley**, *SIRT7* \hfill Danica Chen's Lab
 - **Sun Yat-Sen University**, *Telomere & DNA Methylation* \hfill Yikang Rong's Lab
@@ -108,12 +108,12 @@ csl: apa-cv.csl
 - Multi-institutional collaboration: Stanford University, Harvard University, Buck Institute for Research on Aging
 - Integrating multi-omics biomarkers and functional assessments across 19+ longitudinal databases to enable personalized health monitoring and accelerate clinical trials
 
-**Deep Continuum Foundation Research Grant (Conditional Commitment)** \hfill Deep Continuum Foundation
+<!-- **Deep Continuum Foundation Research Grant (Conditional Commitment)** \hfill Deep Continuum Foundation
 
 *Foundational longevity research and AI-driven intervention discovery*, \hfill 2026 -- 2030
 
 - USD $250,000/year for 3 years (pending faculty appointment and institutional approval)
-- Supports mechanistic aging research and computational approaches to healthspan extension
+- Supports mechanistic aging research and computational approaches to healthspan extension -->
 
 **K00 Post-doctoral Transition Award** \hfill NIH/NIA
 
@@ -221,20 +221,27 @@ Zhang, B., Tarkhov, A. E., Ratzan, W., \textbf{\underline{Ying, K.,}} Moqri, M.,
 # Patents
 \hrule
 
-V. N. Gladyshev, **K. Ying**, "High-dimensional measurement of biological age" (2024). *Provisional Patent Application*
+V. N. Gladyshev, **K. Ying**, "High-dimensional measurement of biologicar age" (2024). *Provisional Patent Application*
 
 V. N. Gladyshev, **K. Ying**, "Mapping CpG sites to quantify aging traits" (2024). *WO2024039905A2*
 
 # Software and Database
 \hrule
 
-**ClockBase Agent** (2025) \hfill <https://www.clockbase.org/>
+**Autonomous Lab** (2026) \hfill <https://github.com/albert-ying/autonomous-lab>  
+*MCP server for multi-agent autonomous workflows; AI agents execute senior-junior loops while humans steer decisions.*
 
-**MethylGPT** (2024) \hfill <https://github.com/albert-ying/MethylGPT>
+**ClockBase Agent** (2025) \hfill <https://www.clockbase.org/>  
+*AI agent system that autonomously discovers aging-modifying interventions from ~2M human and mouse molecular profiles.*
 
-**Biolearn** (2024) \hfill <https://bio-learn.github.io/>
+**MethylGPT** (2024) \hfill <https://github.com/albert-ying/MethylGPT>  
+*Foundation model for the DNA methylome, pretrained on 226K+ methylation profiles from 5,281 datasets.*
 
-**ClockBase** (2023) \hfill <http://gladyshevlab.org:3838/ClockBase/>
+**Biolearn** (2024) \hfill <https://bio-learn.github.io/>  
+*Open-source Python library for biomarkers of aging analysis with reference implementations of common aging clocks.*
+
+**ClockBase** (2023) \hfill <http://gladyshevlab.org:3838/ClockBase/>  
+*Comprehensive platform for biological age profiling across multiple clocks in human and mouse (~300K samples).*
 
 # Presentations
 \hrule
