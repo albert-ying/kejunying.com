@@ -13,6 +13,8 @@ Jonathan Gorard recently wrote a [thread](https://x.com/getjonwithit/status/2032
 
 I think this framing applies to biology, with an important caveat.
 
+![DNA decompresses into organism complexity, which decays into somatic entropy](/blog/kolmogorov-complexity-aging/cover.png)
+
 The organism itself is low complexity. The human genome is roughly 750MB of raw sequence, with over 50% consisting of repeats ([Lander et al., 2001](https://doi.org/10.1038/35057062)), compressible to about 4MB of unique information. That 4MB decompresses into 37 trillion cells, hundreds of cell types, decades of coordinated development. Gene regulation, transcription, folding, morphogenesis: all steps in a decompression pipeline that unpacks a compact code into an organism. AlphaFold proved this for proteins ([Jumper et al., 2021](https://doi.org/10.1038/s41586-021-03819-2)). Sequence in, structure out. It works because protein structure has low Kolmogorov complexity relative to its apparent complexity. The information is already in the sequence. The model just learns to decompress it.
 
 Where the analogy breaks is aging.
