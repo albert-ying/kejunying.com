@@ -39,7 +39,7 @@ The foundation model question then becomes something different from what most pe
 
 *Inspired by [Jonathan Gorard's thread on Kolmogorov complexity and LLMs](https://x.com/getjonwithit/status/2032853995790692793). The quote from Vadim Gladyshev is from a conversation during my time in his lab at Harvard.*
 
-**Correction (2026-03-16):** An earlier version of this post stated the genome compresses to ~4MB. This was incorrect. The haploid human genome is ~750MB raw (~3.2 billion base pairs at 2 bits each). Over 50% is repetitive sequence, but even aggressively compressed the genome is in the hundreds of megabytes range, not single digits. The core argument is unchanged: 750MB is still remarkably compact for encoding 37 trillion cells.
+**Correction (2026-03-16):** An earlier version of this post stated the genome compresses to ~4MB. This was incorrect. The ~4MB figure corresponds to the cross-individual genetic variation (~3 million SNPs at 2 bits each), not the genome itself. The haploid human genome is ~750MB raw (~3.2 billion base pairs at 2 bits each), which can be further compressed due to over 50% repetitive sequence, but remains in the hundreds of megabytes range. The core argument is unchanged: 750MB is still remarkably compact for encoding 37 trillion cells.
 
 ---
 
