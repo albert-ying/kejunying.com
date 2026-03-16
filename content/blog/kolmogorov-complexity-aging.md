@@ -15,7 +15,7 @@ I think this framing applies to biology, with an important caveat.
 
 ![DNA decompresses into organism complexity, which decays into somatic entropy](/blog/kolmogorov-complexity-aging/cover.png)
 
-The organism itself is low complexity. The human genome is roughly 750MB of raw sequence, with over 50% consisting of repeats ([Lander et al., 2001](https://doi.org/10.1038/35057062)), compressible to about 4MB of unique information. That 4MB decompresses into 37 trillion cells, hundreds of cell types, decades of coordinated development. Gene regulation, transcription, folding, morphogenesis: all steps in a decompression pipeline that unpacks a compact code into an organism. AlphaFold proved this for proteins ([Jumper et al., 2021](https://doi.org/10.1038/s41586-021-03819-2)). Sequence in, structure out. It works because protein structure has low Kolmogorov complexity relative to its apparent complexity. The information is already in the sequence. The model just learns to decompress it.
+The organism itself is low complexity. The human genome is roughly 750MB of raw sequence, with over 50% consisting of repeats ([Lander et al., 2001](https://doi.org/10.1038/35057062)). Even at 750MB, this is a strikingly compact program for what it builds: 37 trillion cells, hundreds of cell types, decades of coordinated development. Gene regulation, transcription, folding, morphogenesis: all steps in a decompression pipeline that unpacks a compact code into an organism. AlphaFold proved this for proteins ([Jumper et al., 2021](https://doi.org/10.1038/s41586-021-03819-2)). Sequence in, structure out. It works because protein structure has low Kolmogorov complexity relative to its apparent complexity. The information is already in the sequence. The model just learns to decompress it.
 
 Where the analogy breaks is aging.
 
@@ -38,6 +38,8 @@ If aging has high Kolmogorov complexity, then solving it requires something evol
 The foundation model question then becomes something different from what most people in the field are pursuing. The goal should not be to compress a disease phenotype down to a few drug targets. The goal should be to map the full complexity of how biology decays, so we know what new programs to write.
 
 *Inspired by [Jonathan Gorard's thread on Kolmogorov complexity and LLMs](https://x.com/getjonwithit/status/2032853995790692793). The quote from Vadim Gladyshev is from a conversation during my time in his lab at Harvard.*
+
+**Correction (2026-03-16):** An earlier version of this post stated the genome compresses to ~4MB. This was incorrect. The haploid human genome is ~750MB raw (~3.2 billion base pairs at 2 bits each). Over 50% is repetitive sequence, but even aggressively compressed the genome is in the hundreds of megabytes range, not single digits. The core argument is unchanged: 750MB is still remarkably compact for encoding 37 trillion cells.
 
 ---
 
