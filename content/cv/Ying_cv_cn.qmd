@@ -68,8 +68,8 @@ csl: apa-cv.csl
 **衰老的蛋白质设计** *博士后研究员，Wyss-Coray实验室 & Baker实验室* \hfill 2025年6月至今  
 *访问学者，Wyss-Coray实验室 & Baker实验室* \hfill 2024年11月 -- 2025年5月
 
-**Avinasi Labs** \hfill San Francisco, CA  
-**去中心化长寿数据收集** *联合创始人* \hfill 2025年1月至今
+<!-- **Avinasi Labs** \hfill San Francisco, CA
+**去中心化长寿数据收集** *联合创始人* \hfill 2025年1月至今 -->
 
 **哈佛医学院，布莱根妇女医院** \hfill Boston, MA  
 **生物衰老** *研究生研究员，Vadim Gladyshev实验室* \hfill 2020年3月 -- 2025年5月
@@ -95,6 +95,18 @@ csl: apa-cv.csl
 # 基金资助
 \hrule
 
+**THRIVE：变革健康——为所有人恢复内在活力** \hfill ARPA-H PROSPR
+
+*开发PROSPR内在能力评分，用于预测20年健康结局*， \hfill 2026年 -- 2031年
+
+- 5年3600万美元（核心成员）
+- 多机构合作：斯坦福大学、哈佛大学、巴克老龄化研究所
+- 整合多组学生物标志物和功能评估，覆盖19+纵向数据库，实现个性化健康监测并加速临床试验
+
+**衰老与长寿奖** \hfill ResearchHub Foundation RFP
+
+*通过公开同行评审遴选的资助提案*， \hfill 2026年 -- 2027年
+
 **K00博士后过渡奖** \hfill NIH/NIA
 *利用因果衰老生物标志物和蛋白质设计开发新型抗衰老干预措施*， \hfill 2025年 -- 2028年
 
@@ -113,7 +125,7 @@ csl: apa-cv.csl
 
 \textbf{\underline{Ying, K.}}，Paulson, S.，Eames, A.，Tyshkovskiy, A.，...，Gladyshev, V. N. (2025). *A Unified Framework for Systematic Curation and Evaluation of Aging Biomarkers*。**Nat. Aging**. <https://www.nature.com/articles/s43587-025-00987-y>
 
-Moqri, M.^\*^，\textbf{\underline{Ying, K.$^{*}$}}，Poganik, J.^\*^，Herzog, C.^\*^，Chen, Q.，Emamifar, M.，...，Gladyshev, V. N. (2025). Integrative epigenetics and transcriptomics identify aging genes in human blood。**Nat. Commun.（已接受）**. <https://doi.org/10.1101/2024.05.30.596713>
+Moqri, M.^\*^，\textbf{\underline{Ying, K.$^{*}$}}，Poganik, J.^\*^，Herzog, C.^\*^，...，Marioni, R. E.，Lasky-Su, J. A.，Snyder, M. P.，& Gladyshev, V. N. (2026). Integrative epigenetics and transcriptomics identify aging genes in human blood。**Nat. Commun.**，*16*，67369. <https://doi.org/10.1038/s41467-025-67369-1>
 
 Wu, X.^\*^，Liu, H.^\*^，\textbf{\underline{Ying, K.$^{*\dagger}$}} (2025). Biological Age, Aging Clocks, and the Interplay with Lymphoid Neoplasms: Mechanisms and Clinical Frontiers。**Lymphatics**，*3*(3)，19. <https://doi.org/10.3390/lymphatics3030019>
 
@@ -125,17 +137,17 @@ Wu, X.^\*^，Liu, H.^\*^，\textbf{\underline{Ying, K.$^{*\dagger}$}} (2025). Bi
 
 \textbf{\underline{Ying, K.}}，Zhai, R.，Pyrkov, T. V.，...，Gladyshev, V. N. (2021). Genetic and phenotypic analysis of the causal relationship between aging and COVID-19。**Commun. Med.**，*1*(1)，35. <https://doi.org/10.1038/s43856-021-00033-z> 
 
-\textbf{\underline{Ying, K.$^{*\dagger}$}}，Tyshkovskiy, A.，Moldakozhayev, A.，...，Gladyshev, V. N. (2025). Massive AI agent mining of aging interventions from millions of molecular profiles。**bioRxiv（更新版本，Nature投稿中）**. <https://doi.org/10.1101/2023.02.28.530532> 
+\textbf{\underline{Ying, K.,$^{*\dagger}$}} Tyshkovskiy, A.，Moldakozhayev, A.，...，Gladyshev, V. N. (2025). Autonomous AI Agents Discover Aging Interventions from Millions of Molecular Profiles。**bioRxiv（Nature审稿中）**. <https://doi.org/10.1101/2023.02.28.530532> 
 
-\textbf{\underline{Ying, K.$^{\dagger}$}}，Song, J.，Cui, H.，...，Gladyshev, V. N$^{\dagger}$. (2024). MethylGPT: a foundation model for the DNA methylome。**bioRxiv（Nature Machine Intelligence投稿中）**. <https://doi.org/10.1101/2024.10.30.621013>
+\textbf{\underline{Ying, K.$^{\dagger}$,}} Song, J.，Cui, H.，...，Gladyshev, V. N$^{\dagger}$. (2024). MethylGPT: a foundation model for the DNA methylome。**bioRxiv（Nature Aging一审修订中）**. <https://doi.org/10.1101/2024.10.30.621013>
 
 \textbf{\underline{Ying, K.}}，Paulson, S.，Reinhard, J.，...，Gladyshev, V. N. (2024). An Open Competition for Biomarkers of Aging。**bioRxiv**. <https://doi.org/10.1101/2024.10.29.620782>
 
 \textbf{\underline{Ying, K.}}，Tyshkovskiy, A.，Chen, Q.，...，Gladyshev, V. N. (2024). High-dimensional Ageome Representations of Biological Aging across Functional Modules。**bioRxiv（Nature Aging二次修订中）**. <https://doi.org/10.1101/2024.09.21.570935>
 
-\textbf{\underline{Ying, K.}}，Tyshkovskiy, A.，Trapp, A.，...，Gladyshev, V. N. (2023). ClockBase: A comprehensive platform for biological age profiling in human and mouse。**bioRxiv**. <https://doi.org/10.1101/2023.02.28.530532> 
-
 ## 其他论文
+
+Mavrommatis, C.，Belsky, D. W.，\textbf{\underline{Ying, K.}}，Moqri, M.，Campbell, A.，Richmond, A.，Gladyshev, V. N.，Chandra, T.，McCartney, D. L.，& Marioni, R. E. (2025). An unbiased comparison of 14 epigenetic clocks in relation to 174 incident disease outcomes。**Nat. Commun.**，*16*，11164. <https://doi.org/10.1038/s41467-025-66106-y>
 
 Zhang, O.，Lin, H.，Zhang, X.，Wang, X.，Wu, Z.，Ye, Q.，Zhao, W.，Wang, J.，\textbf{\underline{Ying, K.}}，Kang, Y.，Hsieh, C.-Y.，Hou, T. (2025). Graph neural networks in modern AI-aided drug discovery。**Chem. Rev.**，125，10001--10103. <https://doi.org/10.1021/acs.chemrev.5b00254>
 
@@ -192,10 +204,6 @@ Galkin, F.，...，Tyshkovskiy, A.，\textbf{\underline{Ying, K.}}，Gladyshev, 
 
 Tyshkovskiy, A.，Kholdina, D.，\textbf{\underline{Ying, K.}}，Davitadze, M.，...，Gladyshev, V. N. (2024). Transcriptomic Hallmarks of Mortality Reveal Universal and Specific Mechanisms of Aging, Chronic Disease, and Rejuvenation。**bioRxiv**. <https://doi.org/10.1101/2024.07.04.601982>
 
-Moqri, M.，Poganik, J. R.，Herzog, C.，\textbf{\underline{Ying, K.}}，Chen, Q.，...，Gladyshev, V. N. (2024). Integrative epigenetics and transcriptomics identify aging genes in human blood。**bioRxiv**. <https://doi.org/10.1101/2024.05.30.596713>
-
-Rothi, M. H.，Sarkar, G. C.，Al Haddad, J.，Mitchell, W.，\textbf{\underline{Ying, K.}}，Pohl, N.，...，Greer, E. L. (2024). The 18S rRNA Methyltransferase DIMT-1 Regulates Lifespan in the Germline Later in Life。**bioRxiv**. <https://doi.org/10.1101/2024.05.15.570935>
-
 Zhang, B.，Tarkhov, A. E.，Ratzan, W.，\textbf{\underline{Ying, K.}}，Moqri, M.，...，Gladyshev, V. N. (2022). *Epigenetic profiling and incidence of disrupted development point to gastrulation as aging ground zero in Xenopus laevis*。**bioRxiv**. <https://doi.org/10.1101/2022.08.02.502559>
 
 # 专利
@@ -208,11 +216,20 @@ V. N. Gladyshev，**K. Ying**，"Mapping CpG sites to quantify aging traits" (20
 # 软件与数据库
 \hrule
 
-**MethylGPT** (2024) \hfill <https://github.com/MethylGPT/MethylGPT>
+**Autonomous Lab** (2026) \hfill <https://github.com/albert-ying/autonomous-lab>
+*面向多智能体自主工作流的MCP服务器；AI智能体执行高级-初级循环，人类把控决策。*
+
+**ClockBase Agent** (2025) \hfill <https://www.clockbase.org/>
+*自主发现衰老调节干预措施的AI智能体系统，覆盖约200万人类和小鼠分子谱。*
+
+**MethylGPT** (2024) \hfill <https://github.com/albert-ying/MethylGPT>
+*DNA甲基化组基础模型，在来自5,281个数据集的226K+甲基化谱上预训练。*
 
 **Biolearn** (2024) \hfill <https://bio-learn.github.io/>
+*用于衰老生物标志物分析的开源Python库，包含常用衰老时钟的参考实现。*
 
-**ClockBase** (2023) \hfill <https://www.clockbase.org/>
+**ClockBase** (2023) \hfill <http://gladyshevlab.org:3838/ClockBase/>
+*跨多种时钟的生物年龄综合分析平台，覆盖人类和小鼠（约30万样本）。*
 
 
 # 演讲报告
@@ -291,7 +308,10 @@ _因果表观遗传年龄解耦损伤与适应_ \hfill 2024年
 **香港中文大学**，王鑫博士主持 \hfill 香港，中国  
 _因果衰老生物标志物作为系统性抗衰老治疗筛选工具_ \hfill 2024年
 
-**香港中文大学**，王鑫博士主持 \hfill 香港，中国  
+**Everything Epigenetics**，Hannah Went主持的播客 \hfill 线上播客
+_因果表观遗传年龄解耦损伤与适应_ \hfill 2023年
+
+**香港中文大学**，王鑫博士主持 \hfill 香港，中国
 _因果衰老生物标志物作为系统性抗衰老治疗筛选工具_ \hfill 2023年
 
 **北京大学**，韩敬东博士主持 \hfill 北京，中国  
@@ -361,7 +381,7 @@ _遗传变异、衰老与COVID-19的关系 | Joris Deelen、Albert Ying_ \hfill 
 **Dr. Tony Wyss-Coray**，博士后联合导师 \hfill twc\@stanford.edu  
 D.H. Chen杰出神经学与神经科学教授，斯坦福大学
 
-**Dr. David Baker**，博士后联合导师 \hfill dbaker\@uw.edu  
+**Dr. David Baker**，博士后联合导师 \hfill dabaker\@uw.edu  
 生物化学教授，华盛顿大学
 
 **Dr. Vadim Gladyshev**，博士导师 \hfill vgladyshev\@bwh.harvard.edu  

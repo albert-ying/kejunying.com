@@ -115,6 +115,10 @@ csl: apa-cv.csl
 - USD $250,000/year for 3 years (pending faculty appointment and institutional approval)
 - Supports mechanistic aging research and computational approaches to healthspan extension -->
 
+**Aging and Longevity Award** \hfill ResearchHub Foundation RFP
+
+*Funded proposal selected through open peer review*, \hfill 2026 -- 2027
+
 **K00 Post-doctoral Transition Award** \hfill NIH/NIA
 
 *Using causal aging biomarkers and protein design to develop novel anti-aging interventions*, \hfill 2025 -- 2028
