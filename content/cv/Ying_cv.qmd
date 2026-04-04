@@ -20,51 +20,48 @@ validate-yaml: false
 csl: apa-cv.csl
 ---
 
-# Education & Professional Training
+# Education & Experience
 \hrule
 
+**Peking University, School of Basic Medical Sciences** \hfill Beijing, China  
+*Assistant Professor* \hfill Expected Fall 2026
+
 **Stanford University & University of Washington** \hfill Stanford, CA & Seattle, WA  
-*Postdoctoral Researcher, Tony Wyss-Coray's Lab & David Baker's Lab (co-mentorship)* \hfill Jun 2025 -- Present
+*Postdoctoral Researcher* \hfill Spring 2025 -- Present
 
 \vspace{-0.5\baselineskip}
-- Co-advised by Dr. Wyss-Coray and Baker under NIH/NIA F99/K00 Fellowship
-- Merging aging biology and protein design to tackle neurodegeneration
-- Focused on the *de novo* design of disaggregase to act against protein aggregation in neurons
-- Building advanced aging clock and the foundation model for proteomic data
+- Co-advised by Dr. Tony Wyss-Coray and Dr. David Baker
+- NIH/NIA F99/K00 Fellow
 
 **Harvard University** \hfill Cambridge, MA  
-*Ph.D., Biological Science in Public Health* \hfill July 2019 -- May 2025
+*Ph.D., Biological Science in Public Health* \hfill Fall 2019 -- Spring 2025
 
 \vspace{-0.5\baselineskip}
 - Dissertation: "On the Quantification of Aging"
 - Advisor: Dr. Vadim Gladyshev, Harvard Medical School, Brigham and Women's Hospital
 - Dissertation Advisory Committee: Dr. Brendan Manning, Dr. David Sinclair, Dr. Shamil Sunyaev
-- Focused on understanding the mechanism of aging through multi-omic modeling & causal inference
-- Built the **first causality-enriched aging clock** / **current largest biological age database and agentic system (ClockBase Agent, 2M+ samples, 40K analysis)** / **first foundation model for the DNA methylome (MethylGPT)**
 
 **Harvard University** \hfill Cambridge, MA  
-*M.S., Computational Science Engineering* \hfill July 2023 -- May 2024
+*M.S., Computational Science Engineering* \hfill Summer 2023 -- Spring 2024
 
 \vspace{-0.5\baselineskip}
 - Secondary field during Ph.D. study
 
 **University of California, Berkeley** \hfill Berkeley, CA  
-*Visiting Student, Integrative Biology* \hfill Aug 2017 -- Dec 2017
+*Visiting Student, Integrative Biology* \hfill Summer 2017 -- Fall 2017
 
-**Sun Yat-Sen University** \hfill Guangzhou, China  
-*B.S., Life Science* \hfill Sep 2015 -- Jun 2019
+**Sun Yat-Sen University (Yat-Sen Honor School)** \hfill Guangzhou, China  
+*B.S., Life Science* \hfill Fall 2015 -- Summer 2019
 
 \vspace{-0.5\baselineskip}
 - Thesis: Screening for the Interactome of hTERC based on Molecular Fluorescence Complementation System in Living Cells
-- Yat-Sen Honor School Program (Top 0.5%)
-- National college admissions exam (Top 0.6%)
+- Advisor: Dr. Zhou Songyang
 
 
-# Research & Professional Experience
+# Other Professional Experience
 \hrule
 
 **Stanford University & University of Washington** \hfill Stanford, CA & Seattle, WA  
-**Protein Design for Aging** *Postdoctoral Researcher, Wyss-Coray's Lab & Baker's Lab* \hfill Jun 2025 -- Present  
 *Visiting Scholar, Wyss-Coray's Lab & Baker's Lab* \hfill Nov 2024 -- May 2025
 
 <!-- **Starter Studio, Inc. DBA Persist Ventures** \hfill Los Angeles, CA   -->
@@ -75,9 +72,6 @@ csl: apa-cv.csl
 
 <!-- **Avinasi Labs** \hfill San Francisco, CA   -->
 <!-- **Decentralized longevity data collection** *Scientific Co-founder* \hfill Jan 2025 -- Present -->
-
-**Harvard Medical School, Brigham and Women's Hospital** \hfill Boston, MA  
-**Biological Aging** *Graduate Researcher, Vadim Gladyshev's Lab* \hfill Mar 2020 -- May 2025
 
 **Harvard Medical School, Boston Children's Hospital** \hfill Boston, MA  
 **RNA Modifications** *Graduate Researcher (Rotation), Eric Greer's Lab* \hfill Jan 2020 -- Mar 2020
@@ -99,6 +93,10 @@ csl: apa-cv.csl
 
 # Grants
 \hrule
+
+**Overseas High-Level Talent Program** \hfill National Natural Science Foundation of China
+
+*Funded proposal*, \hfill 2026 -- 2029
 
 **THRIVE: Transforming Health: Reclaiming Intrinsic Vitality for Everyone** \hfill ARPA-H PROSPR
 
@@ -160,6 +158,10 @@ Wu, X.^\*^, Liu, H.^\*^, \textbf{\underline{Ying, K.$^{*\dagger}$}} (2025). Biol
 
 ## Other Publications
 
+Zhavoronkov, A., \textbf{\underline{Ying, K.,}} & Wilczok, D. (2026). Peakspan: Defining, Quantifying and Extending the Boundaries of Peak Productive Lifespan. **Aging and Disease**. <https://doi.org/10.14336/AD.2026.0080>
+
+Kordowitzki, P., & \textbf{\underline{Ying, K.}} (2026). The pursuit of understanding human longevity. **npj Aging**, *12*(1), 25. <https://doi.org/10.1038/s41514-026-00339-z>
+
 Mavrommatis, C., Belsky, D. W., \textbf{\underline{Ying, K.,}} Moqri, M., Campbell, A., Richmond, A., Gladyshev, V. N., Chandra, T., McCartney, D. L., & Marioni, R. E. (2025). An unbiased comparison of 14 epigenetic clocks in relation to 174 incident disease outcomes. **Nature Communications**, *16*, 11164. <https://doi.org/10.1038/s41467-025-66106-y>
 
 Zhang, O., Lin, H., Zhang, X., Wang, X., Wu, Z., Ye, Q., Zhao, W., Wang, J., \textbf{\underline{Ying, K.,}}, Kang, Y., Hsieh, C.-Y., Hou, T. (2025). Graph neural networks in modern AI-aided drug discovery. **Chemical Reviews**, 125, 10001–10103. <https://doi.org/10.1021/acs.chemrev.5b00254>
@@ -208,6 +210,12 @@ Zhu, J., Xu, M., Liu, Y., Zhuang, L., \textbf{\underline{Ying, K.,}} Liu, F., ..
 
 
 ## Other Preprints
+
+Eames, A., Glubokov, D., Moldakozhayev, A., Yücel, A. D., Tyshkovskiy, A., \textbf{\underline{Ying, K.,}} Goeminne, L. J. E., de Magalhães, C. G., & Gladyshev, V. N. (2026). Anatomy of aging through organ-resolved multi-modal imaging and deep learning. **medRxiv**. <https://doi.org/10.64898/2026.03.14.26348392>
+
+Roberts, K. F., Abrams, Z. B., Cappelletti, L., Moqri, M., ..., \textbf{\underline{Ying, K.,}} ..., Reese, J. T. (2026). OpenScientist: evaluating an open agentic AI co-scientist to accelerate biomedical discovery. **medRxiv**. <https://doi.org/10.64898/2026.03.15.26348338>
+
+Wu, Y. C., Yin, M., Shi, B., Zhang, Z., ..., \textbf{\underline{Ying, K. A.,}} ..., Wang, M., & Cong, L. (2026). MedOS: AI-XR-Cobot World Model for Clinical Perception and Action. **medRxiv**. <https://doi.org/10.64898/2026.02.18.26345936>
 
 Zhang, O., Zhang, X., Lin, H., Tan, C., Wang, Q., Mo, Y., ..., \textbf{\underline{Ying, K.,}} Li, J., Zeng, Y., Lang, L., Pan, P., Cao, H., Song, Z., Qiang, B., Wang, J., Ji, P., Bai, L., Zhang, J., Hsieh, C.-Y., Heng, P. A., Sun, S., Hou, T., & Zheng, S. (2025). ODesign: A World Model for Biomolecular Interaction Design. **arXiv**. <https://odesign1.github.io/>
 
@@ -353,10 +361,9 @@ _Genetic Variation, Aging & Relationship to COVID-19 | Joris Deelen, Albert Ying
 
 **Yat-Sen Scholarship**, Sun Yat-Sen University \hfill 2016 -- 2019
 
-# Professional Experience
-\hrule
 
-## Service & Leadership
+# Service & Leadership
+\hrule
 
 **Board Member**, Lifeboat Foundation \hfill 2025 -- Present
 
@@ -388,7 +395,38 @@ _Genetic Variation, Aging & Relationship to COVID-19 | Joris Deelen, Albert Ying
 
 ## Journals Reviewed
 
-*Nature Aging*, *Nature Communications*, *Communications Medicine*, *Genome Medicine*, *BMC Nephrology*, *Lipids in Health and Disease*, *Clinical Proteomics*, *Evidence-Based Complementary and Alternative Medicine*, *Scientific Reports*
+*Nature*, *Nature Aging*, *Nature Communications*, *Communications Medicine*, *Genome Medicine*, *BMC Nephrology*, *Scientific Reports*, ...
+
+# Selected Press & Media
+\hrule
+
+**[Science](https://www.science.org/doi/10.1126/science.adv4414)** — Eric Topol, "Learning the language of life with AI" \hfill Jan 2025  
+Featuring MethylGPT.
+
+**[Nature Aging](https://www.nature.com/articles/s43587-024-00570-x)** — "Epigenetic clock work ticks forward" \hfill Feb 2024  
+Expert commentary featuring causal epigenetic clocks.
+
+**[Harvard Gazette](https://news.harvard.edu/gazette/story/2024/02/looking-to-rewind-the-aging-clock/)** — "Looking to rewind the aging clock" \hfill Feb 2024  
+Featuring causal epigenetic clocks.
+
+**[World Economic Forum](https://www.weforum.org/stories/2024/11/not-just-a-number-science-is-redefining-how-we-understand-ageing/)** — "Not just a number: Science is redefining how we understand ageing" \hfill Nov 2024  
+Featuring aging clocks for global policy audience.
+
+**[Nature Biotechnology](https://www.nature.com/articles/d41587-023-00008-6)** — "Scientists hone tools to measure aging and rejuvenation interventions" \hfill Aug 2023  
+Featuring ClockBase platform for aging intervention screening.
+
+**[Lifespan.io](https://lifespan.io/news/an-ai-based-system-has-found-a-potential-longevity-drug/)** — "An AI-Based System Has Found a Potential Longevity Drug" \hfill Dec 2025  
+Featuring ClockBase Agent and ouabain discovery.
+
+**[MIT Technology Review](https://www.mittrchina.com/news/detail/15539)** — "A 1990s-Born Chinese Scientist Sparks Anti-Aging Breakthrough" \hfill Dec 2025  
+Featuring AI agent-driven aging intervention discovery.
+
+**[PÚBLICO](https://www.publico.pt/2024/12/19/ciencia/noticia/genes-100-anos-jose-pedro-castro-ouviuos-atentamente-2114799)** (Portugal's leading newspaper) — "O que dizem os genes de quem tem 100 anos" \hfill Dec 2024
+Featuring centenarian longevity genes.
+
+**[Diário de Notícias](https://www.dn.pt/sociedade/que-segredos-escondem-os-genes-de-quem-vive-ate-aos-100-anos-um-investigador-portugues-foi-descobrir)** (Portugal) — "Que segredos escondem os genes de quem vive até aos 100 anos?" \hfill Dec 2024
+
+**[ScienceDaily](https://www.sciencedaily.com/releases/2024/02/240214203341.htm)** — "New epigenetic clocks reinvent how we measure age" \hfill Feb 2024
 
 # References
 \hrule
@@ -396,7 +434,7 @@ _Genetic Variation, Aging & Relationship to COVID-19 | Joris Deelen, Albert Ying
 **Dr. Tony Wyss-Coray**, Postdoctoral Co-Advisor \hfill twc\@stanford.edu  
 D.H. Chen Distinguished Professor of Neurology and Neurological Sciences, Stanford University
 
-**Dr. David Baker**, Postdoctoral Co-Advisor \hfill dbaker\@uw.edu  
+**Dr. David Baker**, Postdoctoral Co-Advisor \hfill dabaker\@uw.edu  
 Professor of Biochemistry, University of Washington
 
 **Dr. Vadim Gladyshev**, Dissertation Advisor \hfill vgladyshev\@bwh.harvard.edu  
