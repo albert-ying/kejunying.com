@@ -10,7 +10,7 @@ email: keying@stanford.edu | kying0@uw.edu
 fontsize: 11pt
 fontcolor: darktext
 backgroundcolor: darkbackground
-urlcolor: mycolor
+urlcolor: black
 github: albert-ying
 orcid: 0000-0002-1791-6176
 web: kejunying.com
@@ -23,8 +23,8 @@ csl: apa-cv.csl
 # Education & Experience
 \hrule
 
-**Peking University, School of Basic Medical Sciences** \hfill Beijing, China  
-*Assistant Professor* \hfill Expected Fall 2026
+<!-- **Peking University, School of Basic Medical Sciences** \hfill Beijing, China  
+*Assistant Professor* \hfill Expected Fall 2026 -->
 
 **Stanford University & University of Washington** \hfill Stanford, CA & Seattle, WA  
 *Postdoctoral Researcher* \hfill Spring 2025 -- Present
@@ -39,7 +39,6 @@ csl: apa-cv.csl
 \vspace{-0.5\baselineskip}
 - Dissertation: "On the Quantification of Aging"
 - Advisor: Dr. Vadim Gladyshev, Harvard Medical School, Brigham and Women's Hospital
-- Dissertation Advisory Committee: Dr. Brendan Manning, Dr. David Sinclair, Dr. Shamil Sunyaev
 
 **Harvard University** \hfill Cambridge, MA  
 *M.S., Computational Science Engineering* \hfill Summer 2023 -- Spring 2024
@@ -94,9 +93,9 @@ csl: apa-cv.csl
 # Grants
 \hrule
 
-**Overseas High-Level Talent Program** \hfill National Natural Science Foundation of China
+<!-- **Overseas High-Level Talent Program** \hfill National Natural Science Foundation of China
 
-*Funded proposal*, \hfill 2026 -- 2029
+*Funded proposal*, \hfill 2026 -- 2029 -->
 
 **THRIVE: Transforming Health: Reclaiming Intrinsic Vitality for Everyone** \hfill ARPA-H PROSPR
 
@@ -117,6 +116,12 @@ csl: apa-cv.csl
 
 *Funded proposal selected through open peer review*, \hfill 2026 -- 2027
 
+**OpenAI Researcher Access Program** \hfill OpenAI
+
+*Research credit grant supporting AI-driven aging biology and protein design*, \hfill 2026
+
+- USD $20,000 in API credits
+
 **K00 Post-doctoral Transition Award** \hfill NIH/NIA
 
 *Using causal aging biomarkers and protein design to develop novel anti-aging interventions*, \hfill 2025 -- 2028
@@ -134,6 +139,8 @@ csl: apa-cv.csl
 
 ## Selected Publications & Preprints
 
+\textbf{\underline{Ying, K.,}} Paulson, S., Reinhard, J., ..., Gladyshev, V. N. (2026). An Open Competition for Biomarkers of Aging. **Nature Aging (In Press)**. <https://doi.org/10.1101/2024.10.29.620782>
+
 Moqri, M.^\*^, \textbf{\underline{Ying, K.$^{*}$}}, Poganik, J.^\*^, Herzog, C.^\*^, ..., Marioni, R. E., Lasky-Su, J. A., Snyder, M. P., & Gladyshev, V. N. (2026). Integrative epigenetics and transcriptomics identify aging genes in human blood. **Nature Communications**, *16*, 67369. <https://doi.org/10.1038/s41467-025-67369-1>
 
 \textbf{\underline{Ying, K.,}} Paulson, S., Eames, A., Tyshkovskiy, A., ..., Gladyshev, V. N. (2025). *A Unified Framework for Systematic Curation and Evaluation of Aging Biomarkers*. **Nature Aging**. <https://www.nature.com/articles/s43587-025-00987-y>
@@ -142,7 +149,7 @@ Wu, X.^\*^, Liu, H.^\*^, \textbf{\underline{Ying, K.$^{*\dagger}$}} (2025). Biol
 
 \textbf{\underline{Ying, K.$^{\dagger}$}} (2024). Causal inference for epigenetic ageing. **Nature Reviews Genetics**, 1--1. <https://doi.org/10.1038/s41576-024-00799-7>
 
-\textbf{\underline{Ying, K.,}} Castro, J. P., Shindyapina, A. V., ..., Gladyshev, V. N. (2024). Depletion of loss-of-function germline mutations in centenarians reveals longevity genes. **Nature Communications**, *15*(1), 5956. <https://doi.org/10.1038/s41467-024-50098-2>
+\textbf{\underline{Ying, K.,}} Castro, J. P., Shindyapina, A. V., ..., Gladyshev, V. N. (2024). Depletion of loss-of-function germline mutations in centenarians reveals longevity genes. **Nature Communications**, *15*(1), 5956. <https://doi.org/10.1038/s41467-024-52967-2>
 
 \textbf{\underline{Ying, K.,}} Liu, H., Tarkhov, A. E., ..., Gladyshev, V. N. (2024). Causality-enriched epigenetic age uncouples damage and adaptation. **Nature Aging (February Cover)**, 1--16. <https://doi.org/10.1038/s43587-023-00557-0> 
 
@@ -152,11 +159,11 @@ Wu, X.^\*^, Liu, H.^\*^, \textbf{\underline{Ying, K.$^{*\dagger}$}} (2025). Biol
 
 \textbf{\underline{Ying, K.$^{\dagger}$,}} Song, J., Cui, H., ..., Gladyshev, V. N$^{\dagger}$. (2024). MethylGPT: a foundation model for the DNA methylome. **bioRxiv (Nature Aging 1st Revision)**. <https://doi.org/10.1101/2024.10.30.621013>
 
-\textbf{\underline{Ying, K.,}} Paulson, S., Reinhard, J., ..., Gladyshev, V. N. (2024). An Open Competition for Biomarkers of Aging. **bioRxiv**. <https://doi.org/10.1101/2024.10.29.620782>
-
 \textbf{\underline{Ying, K.,}} Tyshkovskiy, A., Chen, Q., ..., Gladyshev, V. N. (2024). High-dimensional Ageome Representations of Biological Aging across Functional Modules. **bioRxiv (Nature Aging 2nd Revision)**. <https://doi.org/10.1101/2024.09.21.570935>
 
 ## Other Publications
+
+Wu, F., Xuan, W., Qi, H., ..., \textbf{\underline{Ying, K.,}} ..., Choi, Y. (2026). Proteo-R1: Reasoning Foundation Models for De Novo Protein Design. **ICML 2026**. <https://arxiv.org/abs/2605.02937>
 
 Zhavoronkov, A., \textbf{\underline{Ying, K.,}} & Wilczok, D. (2026). Peakspan: Defining, Quantifying and Extending the Boundaries of Peak Productive Lifespan. **Aging and Disease**. <https://doi.org/10.14336/AD.2026.0080>
 
@@ -174,13 +181,13 @@ Rothi, M.H., Sarkar, G.C., Haddad, J.A., Mitchell, W., \textbf{\underline{Ying, 
 
 Grzeczka, A., Iqbal, S., \textbf{\underline{Ying, K.,}} Kordowitzki, P. (2025). Circular RNAs as regulators and biomarkers of mammalian ovarian ageing. **GeroScience**, 1--19. <https://doi.org/10.1007/s11357-025-01798-0>
 
-Jacques, E., Herzog, C., \textbf{\underline{Ying, K.,}} \... Gladyshev, V. N. (2025). Invigorating discovery and clinical translation of aging biomarkers. **Nature Aging**, 1--5.
+Jacques, E., Herzog, C., \textbf{\underline{Ying, K.,}} \... Gladyshev, V. N. (2025). Invigorating discovery and clinical translation of aging biomarkers. **Nature Aging**, 1--5. <https://doi.org/10.1038/s43587-025-00838-w>
 
-Goeminne, L. J. E., Vladimirova, A., Eames, A., Tyshkovskiy, A., Argentieri, M. A., \textbf{\underline{Ying, K.,}} Moqri, M., & Gladyshev, V. N. (2025). Plasma protein-based organ-specific aging and mortality models unveil diseases as accelerated aging of organismal systems. **Cell Metabolism**, <https://doi.org/10.1016/j.cmet.2024.03.007>
+Goeminne, L. J. E., Vladimirova, A., Eames, A., Tyshkovskiy, A., Argentieri, M. A., \textbf{\underline{Ying, K.,}} Moqri, M., & Gladyshev, V. N. (2025). Plasma protein-based organ-specific aging and mortality models unveil diseases as accelerated aging of organismal systems. **Cell Metabolism**, <https://doi.org/10.1016/j.cmet.2024.10.005>
 
 Gladyshev, V. N., Anderson, B., Barlit, H., ..., \textbf{\underline{Ying, K.,}} Yunes, J., Zhang, B., & Zhavoronkov, A. (2024). Disagreement on foundational principles of biological aging. **PNAS Nexus**, *3*(12), pgae499. <https://doi.org/10.1093/pnasnexus/pgae499>
 
-Lyu, YX.^\*^, Fu, Q.^\*^, Wilczok, D.^\*^, \textbf{\underline{Ying, K.$^{*}$}}, King, A., \..., Bakula, D. (2024). Longevity biotechnology: Bridging AI, biomarkers, geroscience and clinical applications for healthy longevity. **Aging**, *16*(1), 1--25. <https://doi.org/10.18632/aging.205397>
+Lyu, YX.^\*^, Fu, Q.^\*^, Wilczok, D.^\*^, \textbf{\underline{Ying, K.$^{*}$}}, King, A., \..., Bakula, D. (2024). Longevity biotechnology: Bridging AI, biomarkers, geroscience and clinical applications for healthy longevity. **Aging**, *16*(1), 1--25. <https://doi.org/10.18632/aging.206135>
 
 \textbf{\underline{Biomarkers of Aging Consortium$^{+}$}}, Herzog, C. M. S., Goeminne, L. J. E., Poganik, J. R., ..., Gladyshev, V. N. (2024). Challenges and recommendations for the translation of biomarkers of aging. **Nature Aging**, 1--12. <https://doi.org/10.1038/s43587-024-00683-3>
 
@@ -348,6 +355,8 @@ _Genetic Variation, Aging & Relationship to COVID-19 | Joris Deelen, Albert Ying
 
 # Honors
 \hrule
+
+**Butler-Williams Scholar** (Selected but unable to attend), National Institute on Aging (NIH) \hfill 2026
 
 **Semifinalist**, Harvard President's Innovation Challenge, Health Care and Life Sciences Track \hfill 2025
 

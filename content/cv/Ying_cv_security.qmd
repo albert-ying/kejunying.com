@@ -84,7 +84,7 @@ Wu, X.^\*^, Liu, H.^\*^, Ying, K.$^{*\dagger}$ (2025). Biological Age, Aging Clo
 
 Ying, K.$^{\dagger}$ (2024). Causal inference for epigenetic ageing. **Nature Reviews Genetics**, 1--1. <https://doi.org/10.1038/s41576-024-00799-7>
 
-Ying, K., Castro, J. P., Shindyapina, A. V., ..., Gladyshev, V. N. (2024). Depletion of loss-of-function germline mutations in centenarians reveals longevity genes. **Nature Communications**, *15*(1), 5956. <https://doi.org/10.1038/s41467-024-50098-2>
+Ying, K., Castro, J. P., Shindyapina, A. V., ..., Gladyshev, V. N. (2024). Depletion of loss-of-function germline mutations in centenarians reveals longevity genes. **Nature Communications**, *15*(1), 5956. <https://doi.org/10.1038/s41467-024-52967-2>
 
 Ying, K., Liu, H., Tarkhov, A. E., ..., Gladyshev, V. N. (2024). Causality-enriched epigenetic age uncouples damage and adaptation. **Nature Aging (February Cover)**, 1--16. <https://doi.org/10.1038/s43587-023-00557-0> 
 
@@ -96,13 +96,13 @@ Rothi, M.H., Sarkar, G.C., Haddad, J.A., Mitchell, W., Ying, K.,  et al. (2025).
 
 Grzeczka, A., Iqbal, S., Ying, K., Kordowitzki, P. (2025). Circular RNAs as regulators and biomarkers of mammalian ovarian ageing. **GeroScience**, 1--19. <https://doi.org/10.1007/s11357-025-01798-0>
 
-Jacques, E., Herzog, C., Ying, K., \... Gladyshev, V. N. (2025). Invigorating discovery and clinical translation of aging biomarkers. **Nature Aging**, 1--5.
+Jacques, E., Herzog, C., Ying, K., \... Gladyshev, V. N. (2025). Invigorating discovery and clinical translation of aging biomarkers. **Nature Aging**, 1--5. <https://doi.org/10.1038/s43587-025-00838-w>
 
-Goeminne, L. J. E., Vladimirova, A., Eames, A., Tyshkovskiy, A., Argentieri, M. A., Ying, K., Moqri, M., & Gladyshev, V. N. (2025). Plasma protein-based organ-specific aging and mortality models unveil diseases as accelerated aging of organismal systems. **Cell Metabolism**, <https://doi.org/10.1016/j.cmet.2024.03.007>
+Goeminne, L. J. E., Vladimirova, A., Eames, A., Tyshkovskiy, A., Argentieri, M. A., Ying, K., Moqri, M., & Gladyshev, V. N. (2025). Plasma protein-based organ-specific aging and mortality models unveil diseases as accelerated aging of organismal systems. **Cell Metabolism**, <https://doi.org/10.1016/j.cmet.2024.10.005>
 
 Gladyshev, V. N., Anderson, B., Barlit, H., ..., Ying, K., Yunes, J., Zhang, B., & Zhavoronkov, A. (2024). Disagreement on foundational principles of biological aging. **PNAS Nexus**, *3*(12), pgae499. <https://doi.org/10.1093/pnasnexus/pgae499>
 
-Lyu, YX.^\*^, Fu, Q.^\*^, Wilczok, D.^\*^, Ying, K.$^{*}$, King, A., \..., Bakula, D. (2024). Longevity biotechnology: Bridging AI, biomarkers, geroscience and clinical applications for healthy longevity. **Aging**, *16*(1), 1--25. <https://doi.org/10.18632/aging.205397>
+Lyu, YX.^\*^, Fu, Q.^\*^, Wilczok, D.^\*^, Ying, K.$^{*}$, King, A., \..., Bakula, D. (2024). Longevity biotechnology: Bridging AI, biomarkers, geroscience and clinical applications for healthy longevity. **Aging**, *16*(1), 1--25. <https://doi.org/10.18632/aging.206135>
 
 Biomarkers of Aging Consortium$^{+}$, Herzog, C. M. S., Goeminne, L. J. E., Poganik, J. R., ..., Gladyshev, V. N. (2024). Challenges and recommendations for the translation of biomarkers of aging. **Nature Aging**, 1--12. <https://doi.org/10.1038/s43587-024-00683-3>
 
