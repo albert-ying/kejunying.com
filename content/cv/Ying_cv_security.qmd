@@ -94,6 +94,8 @@ Farinas, A., Rutledge, J., Bot, V. A., Western, D., Ying, K., Lawrence, K. A., O
 
 Rothi, M.H., Sarkar, G.C., Haddad, J.A., Mitchell, W., Ying, K.,  et al. (2025). The 18S rRNA methyltransferase DIMT-1 regulates lifespan in the germline later in life. **Nature Communications**, 16, 6944. <https://doi.org/10.1038/s41467-025-62323-7>
 
+Tyshkovskiy, A., Kholdina, D., Ying, K., Davitadze, M., ..., Gladyshev, V. N. (2026). Universal transcriptomic hallmarks of mammalian ageing and mortality. **Nature**. <https://doi.org/10.1038/s41586-026-10542-3>
+
 Grzeczka, A., Iqbal, S., Ying, K., Kordowitzki, P. (2025). Circular RNAs as regulators and biomarkers of mammalian ovarian ageing. **GeroScience**, 1--19. <https://doi.org/10.1007/s11357-025-01798-0>
 
 Jacques, E., Herzog, C., Ying, K., \... Gladyshev, V. N. (2025). Invigorating discovery and clinical translation of aging biomarkers. **Nature Aging**, 1--5. <https://doi.org/10.1038/s43587-025-00838-w>
@@ -145,8 +147,6 @@ Mavrommatis, C., Belsky, D., Ying, K., Moqri, M., Campbell, A., Richmond, A., ..
 Zhang, O., ..., Wang, J., Ying, K., Kang, Y., Hsieh, C.-y., & Hou, T. (2025). *Graph Neural Networks in Modern AI-aided Drug Discovery*. **arXiv**. <https://arxiv.org/abs/2506.06915>
 
 Galkin, F., ..., Tyshkovskiy, A., Ying, K., Gladyshev, V. N., & Zhavoronkov, A. (2024). Precious3GPT: Multimodal Multi-Species Multi-Omics Multi-Tissue Transformer for Aging Research and Drug Discovery. **bioRxiv**. <https://doi.org/10.1101/2024.07.25.605062>
-
-Tyshkovskiy, A., Kholdina, D., Ying, K., Davitadze, M., ..., Gladyshev, V. N. (2024). Transcriptomic Hallmarks of Mortality Reveal Universal and Specific Mechanisms of Aging, Chronic Disease, and Rejuvenation. **bioRxiv**. <https://doi.org/10.1101/2024.07.04.601982>
 
 Moqri, M., Poganik, J. R., Herzog, C., Ying, K., Chen, Q., ..., Gladyshev, V. N. (2024). Integrative epigenetics and transcriptomics identify aging genes in human blood. **bioRxiv**. <https://doi.org/10.1101/2024.05.30.596713>
 

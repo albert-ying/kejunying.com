@@ -177,9 +177,9 @@ Mavrommatis, C., Belsky, D., \textbf{\underline{Ying, K.,}} Moqri, M., Campbell,
 
 Zhang, O., ..., Wang, J., \textbf{\underline{Ying, K.,}} Kang, Y., Hsieh, C.-y., & Hou, T. (2025). *Graph Neural Networks in Modern AI-aided Drug Discovery*. **arXiv**. <https://arxiv.org/abs/2506.06915>
 
-Galkin, F., ..., Tyshkovskiy, A., \textbf{\underline{Ying, K.,}} Gladyshev, V. N., & Zhavoronkov, A. (2024). Precious3GPT: Multimodal Multi-Species Multi-Omics Multi-Tissue Transformer for Aging Research and Drug Discovery. **bioRxiv**. <https://doi.org/10.1101/2024.07.25.605062>
+Tyshkovskiy, A., Kholdina, D., \textbf{\underline{Ying, K.,}} Davitadze, M., ..., Gladyshev, V. N. (2026). Universal transcriptomic hallmarks of mammalian ageing and mortality. **Nature**. <https://doi.org/10.1038/s41586-026-10542-3>
 
-Tyshkovskiy, A., Kholdina, D., \textbf{\underline{Ying, K.,}} Davitadze, M., ..., Gladyshev, V. N. (2024). Transcriptomic Hallmarks of Mortality Reveal Universal and Specific Mechanisms of Aging, Chronic Disease, and Rejuvenation. **bioRxiv**. <https://doi.org/10.1101/2024.07.04.601982>
+Galkin, F., ..., Tyshkovskiy, A., \textbf{\underline{Ying, K.,}} Gladyshev, V. N., & Zhavoronkov, A. (2024). Precious3GPT: Multimodal Multi-Species Multi-Omics Multi-Tissue Transformer for Aging Research and Drug Discovery. **bioRxiv**. <https://doi.org/10.1101/2024.07.25.605062>
 
 Moqri, M., Poganik, J. R., Herzog, C., \textbf{\underline{Ying, K.,}} Chen, Q., ..., Gladyshev, V. N. (2024). Integrative epigenetics and transcriptomics identify aging genes in human blood. **bioRxiv**. <https://doi.org/10.1101/2024.05.30.596713>
 

@@ -139,7 +139,7 @@ csl: apa-cv.csl
 
 ## Selected Publications & Preprints
 
-\textbf{\underline{Ying, K.,}} Paulson, S., Reinhard, J., ..., Gladyshev, V. N. (2026). An Open Competition for Biomarkers of Aging. **Nature Aging (In Press)**. <https://doi.org/10.1101/2024.10.29.620782>
+\textbf{\underline{Ying, K.,}} Paulson, S., Reinhard, J., ..., Gladyshev, V. N. (2026). An Open Competition for Biomarkers of Aging. **Nature Aging**. <https://doi.org/10.1038/s43587-026-01139-6>
 
 Moqri, M.^\*^, \textbf{\underline{Ying, K.$^{*}$}}, Poganik, J.^\*^, Herzog, C.^\*^, ..., Marioni, R. E., Lasky-Su, J. A., Snyder, M. P., & Gladyshev, V. N. (2026). Integrative epigenetics and transcriptomics identify aging genes in human blood. **Nature Communications**, *16*, 67369. <https://doi.org/10.1038/s41467-025-67369-1>
 
@@ -168,6 +168,8 @@ Wu, F., Xuan, W., Qi, H., ..., \textbf{\underline{Ying, K.,}} ..., Choi, Y. (202
 Zhavoronkov, A., \textbf{\underline{Ying, K.,}} & Wilczok, D. (2026). Peakspan: Defining, Quantifying and Extending the Boundaries of Peak Productive Lifespan. **Aging and Disease**. <https://doi.org/10.14336/AD.2026.0080>
 
 Kordowitzki, P., & \textbf{\underline{Ying, K.}} (2026). The pursuit of understanding human longevity. **npj Aging**, *12*(1), 25. <https://doi.org/10.1038/s41514-026-00339-z>
+
+Tyshkovskiy, A., Kholdina, D., \textbf{\underline{Ying, K.,}} Davitadze, M., ..., Gladyshev, V. N. (2026). Universal transcriptomic hallmarks of mammalian ageing and mortality. **Nature**. <https://doi.org/10.1038/s41586-026-10542-3>
 
 Mavrommatis, C., Belsky, D. W., \textbf{\underline{Ying, K.,}} Moqri, M., Campbell, A., Richmond, A., Gladyshev, V. N., Chandra, T., McCartney, D. L., & Marioni, R. E. (2025). An unbiased comparison of 14 epigenetic clocks in relation to 174 incident disease outcomes. **Nature Communications**, *16*, 11164. <https://doi.org/10.1038/s41467-025-66106-y>
 
@@ -229,8 +231,6 @@ Zhang, O., Zhang, X., Lin, H., Tan, C., Wang, Q., Mo, Y., ..., \textbf{\underlin
 Mavrommatis, C., Belsky, D., \textbf{\underline{Ying, K.,}} Moqri, M., Campbell, A., Richmond, A., ..., Gladyshev, V. N. (2025). *An unbiased comparison of 14 epigenetic clocks in relation to 10-year onset of 174 disease outcomes in 18,859 individuals*. **medRxiv**. <https://doi.org/10.1101/2025.07.14.25331494>
 
 Galkin, F., ..., Tyshkovskiy, A., \textbf{\underline{Ying, K.,}} Gladyshev, V. N., & Zhavoronkov, A. (2024). Precious3GPT: Multimodal Multi-Species Multi-Omics Multi-Tissue Transformer for Aging Research and Drug Discovery. **bioRxiv**. <https://doi.org/10.1101/2024.07.25.605062>
-
-Tyshkovskiy, A., Kholdina, D., \textbf{\underline{Ying, K.,}} Davitadze, M., ..., Gladyshev, V. N. (2024). Transcriptomic Hallmarks of Mortality Reveal Universal and Specific Mechanisms of Aging, Chronic Disease, and Rejuvenation. **bioRxiv**. <https://doi.org/10.1101/2024.07.04.601982>
 
 Rothi, M. H., Sarkar, G. C., Al Haddad, J., Mitchell, W., \textbf{\underline{Ying, K.,}} Pohl, N., ..., Greer, E. L. (2024). The 18S rRNA Methyltransferase DIMT-1 Regulates Lifespan in the Germline Later in Life. **bioRxiv**. <https://doi.org/10.1101/2024.05.15.570935>
 

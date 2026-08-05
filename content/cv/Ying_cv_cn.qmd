@@ -25,23 +25,18 @@ csl: apa-cv.csl
 \hrule
 
 **斯坦福大学 & 华盛顿大学** \hfill Stanford, CA & Seattle, WA  
-*博士后研究员，Tony Wyss-Coray实验室 & David Baker实验室（联合指导）* \hfill 2025年6月至今
+*博士后研究员* \hfill 2025年春至今
 
 \vspace{-0.5\baselineskip}
-- 由Wyss-Coray博士和Baker博士联合指导，获NIH/NIA F99/K00奖学金资助
-- 结合衰老生物学与蛋白质从头设计，应对神经退行性疾病
-- 专注于从头设计解聚酶以对抗神经元中的蛋白质聚集
-- 构建先进的衰老时钟和蛋白质组数据基础模型
+- 由 Tony Wyss-Coray 博士与 David Baker 博士联合指导
+- NIH/NIA F99/K00 Fellow
 
 **哈佛大学** \hfill Cambridge, MA  
-*Ph.D.，公共卫生生物科学* \hfill 2019年7月 -- 2025年5月
+*Ph.D.，公共卫生生物科学* \hfill 2019年秋 -- 2025年春
 
 \vspace{-0.5\baselineskip}
-- 论文："衰老的量化"
-- 导师：Vadim Gladyshev博士，哈佛医学院，布莱根妇女医院
-- 论文指导委员会：Brendan Manning博士、David Sinclair博士、Shamil Sunyaev博士
-- 研究方向：通过多组学建模和因果推断理解衰老的机制
-- 构建了**首个因果增强型衰老时钟** / **目前最大的生物年龄数据库和智能体系统（ClockBase Agent，200万+样本，4万+分析）** / **首个DNA甲基化组基础模型（MethylGPT）**
+- 论文："衰老的量化"（On the Quantification of Aging）
+- 导师：Vadim Gladyshev 博士，哈佛医学院，布莱根妇女医院
 
 **哈佛大学** \hfill Cambridge, MA  
 *M.S.，计算科学工程* \hfill 2023年7月 -- 2024年5月
@@ -53,12 +48,11 @@ csl: apa-cv.csl
 *访问学生，综合生物学* \hfill 2017年8月 -- 2017年12月
 
 **中山大学** \hfill 广州，中国  
-*B.S.，生命科学* \hfill 2015年9月 -- 2019年6月
+*B.S.，生命科学（逸仙荣誉学院）* \hfill 2015年秋 -- 2019年夏
 
 \vspace{-0.5\baselineskip}
 - 论文：基于活细胞中分子荧光互补系统筛选hTERC相互作用组
-- 逸仙荣誉学院项目（前0.5%）
-- 高考成绩（前0.6%）
+- 导师：松阳洲博士
 
 
 # 研究经历
@@ -107,6 +101,12 @@ csl: apa-cv.csl
 
 *通过公开同行评审遴选的资助提案*， \hfill 2026年 -- 2027年
 
+**OpenAI Researcher Access Program** \hfill OpenAI
+
+*支持 AI 驱动的衰老生物学与蛋白质设计研究的算力/信用资助*， \hfill 2026年
+
+- 2 万美元 API credits
+
 **K00博士后过渡奖** \hfill NIH/NIA
 *利用因果衰老生物标志物和蛋白质设计开发新型抗衰老干预措施*， \hfill 2025年 -- 2028年
 
@@ -141,11 +141,19 @@ Wu, X.^\*^，Liu, H.^\*^，\textbf{\underline{Ying, K.$^{*\dagger}$}} (2025). Bi
 
 \textbf{\underline{Ying, K.$^{\dagger}$,}} Song, J.，Cui, H.，...，Gladyshev, V. N$^{\dagger}$. (2024). MethylGPT: a foundation model for the DNA methylome。**bioRxiv（Nature Aging一审修订中）**. <https://doi.org/10.1101/2024.10.30.621013>
 
-\textbf{\underline{Ying, K.}}，Paulson, S.，Reinhard, J.，...，Gladyshev, V. N. (2024). An Open Competition for Biomarkers of Aging。**bioRxiv**. <https://doi.org/10.1101/2024.10.29.620782>
+\textbf{\underline{Ying, K.}}，Paulson, S.，Reinhard, J.，...，Gladyshev, V. N. (2026). An Open Competition for Biomarkers of Aging。**Nat. Aging**. <https://doi.org/10.1038/s43587-026-01139-6>
 
 \textbf{\underline{Ying, K.}}，Tyshkovskiy, A.，Chen, Q.，...，Gladyshev, V. N. (2024). High-dimensional Ageome Representations of Biological Aging across Functional Modules。**bioRxiv（Nature Aging二次修订中）**. <https://doi.org/10.1101/2024.09.21.570935>
 
 ## 其他论文
+
+Wu, F.，Xuan, W.，Qi, H.，...，\textbf{\underline{Ying, K.}}，...，Choi, Y. (2026). Proteo-R1: Reasoning Foundation Models for De Novo Protein Design。**ICML 2026**. <https://arxiv.org/abs/2605.02937>
+
+Zhavoronkov, A.，\textbf{\underline{Ying, K.}}，& Wilczok, D. (2026). Peakspan: Defining, Quantifying and Extending the Boundaries of Peak Productive Lifespan。**Aging and Disease**. <https://doi.org/10.14336/AD.2026.0080>
+
+Kordowitzki, P.，& \textbf{\underline{Ying, K.}} (2026). The pursuit of understanding human longevity。**npj Aging**，*12*(1)，25. <https://doi.org/10.1038/s41514-026-00339-z>
+
+Tyshkovskiy, A.，Kholdina, D.，\textbf{\underline{Ying, K.}}，Davitadze, M.，...，Gladyshev, V. N. (2026). Universal transcriptomic hallmarks of mammalian ageing and mortality。**Nature**. <https://doi.org/10.1038/s41586-026-10542-3>
 
 Mavrommatis, C.，Belsky, D. W.，\textbf{\underline{Ying, K.}}，Moqri, M.，Campbell, A.，Richmond, A.，Gladyshev, V. N.，Chandra, T.，McCartney, D. L.，& Marioni, R. E. (2025). An unbiased comparison of 14 epigenetic clocks in relation to 174 incident disease outcomes。**Nat. Commun.**，*16*，11164. <https://doi.org/10.1038/s41467-025-66106-y>
 
@@ -196,13 +204,17 @@ Zhu, J.，Xu, M.，Liu, Y.，Zhuang, L.，\textbf{\underline{Ying, K.}}，Liu, F
 
 ## 其他预印本
 
+Eames, A.，Glubokov, D.，Moldakozhayev, A.，Yücel, A. D.，Tyshkovskiy, A.，\textbf{\underline{Ying, K.}}，Goeminne, L. J. E.，de Magalhães, C. G.，& Gladyshev, V. N. (2026). Anatomy of aging through organ-resolved multi-modal imaging and deep learning。**medRxiv**. <https://doi.org/10.64898/2026.03.14.26348392>
+
+Roberts, K. F.，Abrams, Z. B.，Cappelletti, L.，Moqri, M.，...，\textbf{\underline{Ying, K.}}，...，Reese, J. T. (2026). OpenScientist: evaluating an open agentic AI co-scientist to accelerate biomedical discovery。**medRxiv**. <https://doi.org/10.64898/2026.03.15.26348338>
+
+Wu, Y. C.，Yin, M.，Shi, B.，Zhang, Z.，...，\textbf{\underline{Ying, K. A.}}，...，Wang, M.，& Cong, L. (2026). MedOS: AI-XR-Cobot World Model for Clinical Perception and Action。**medRxiv**. <https://doi.org/10.64898/2026.02.18.26345936>
+
 Zhang, O.，Zhang, X.，Lin, H.，Tan, C.，Wang, Q.，Mo, Y.，...，\textbf{\underline{Ying, K.}}，Li, J.，Zeng, Y.，Lang, L.，Pan, P.，Cao, H.，Song, Z.，Qiang, B.，Wang, J.，Ji, P.，Bai, L.，Zhang, J.，Hsieh, C.-Y.，Heng, P. A.，Sun, S.，Hou, T.，& Zheng, S. (2025). ODesign: A World Model for Biomolecular Interaction Design。**arXiv**. <https://odesign1.github.io/>
 
 Mavrommatis, C.，Belsky, D.，\textbf{\underline{Ying, K.}}，Moqri, M.，Campbell, A.，Richmond, A.，...，Gladyshev, V. N. (2025). *An unbiased comparison of 14 epigenetic clocks in relation to 10-year onset of 174 disease outcomes in 18,859 individuals*。**medRxiv**. <https://doi.org/10.1101/2025.07.14.25331494>
 
 Galkin, F.，...，Tyshkovskiy, A.，\textbf{\underline{Ying, K.}}，Gladyshev, V. N.，& Zhavoronkov, A. (2024). Precious3GPT: Multimodal Multi-Species Multi-Omics Multi-Tissue Transformer for Aging Research and Drug Discovery。**bioRxiv**. <https://doi.org/10.1101/2024.07.25.605062>
-
-Tyshkovskiy, A.，Kholdina, D.，\textbf{\underline{Ying, K.}}，Davitadze, M.，...，Gladyshev, V. N. (2024). Transcriptomic Hallmarks of Mortality Reveal Universal and Specific Mechanisms of Aging, Chronic Disease, and Rejuvenation。**bioRxiv**. <https://doi.org/10.1101/2024.07.04.601982>
 
 Zhang, B.，Tarkhov, A. E.，Ratzan, W.，\textbf{\underline{Ying, K.}}，Moqri, M.，...，Gladyshev, V. N. (2022). *Epigenetic profiling and incidence of disrupted development point to gastrulation as aging ground zero in Xenopus laevis*。**bioRxiv**. <https://doi.org/10.1101/2022.08.02.502559>
 

@@ -87,6 +87,8 @@ Yang, Z., Macdonald-Dunlop, E., Chen, J., Zhai, R., Li, T., Richmond, A., Klari�
 
 Li, T., Ning, Z., Yang, Z., Zhai, R., Zheng, C., Xu, W., Wang, Y., \textbf{\underline{Ying, K.,}} Chen, Y., & Shen, X. (2021). Total genetic contribution assessment across the human genome. **Nature Communications**, *12*(1), 2845. <https://doi.org/10.1038/s41467-021-23124-w> 
 
+Tyshkovskiy, A., Kholdina, D., \textbf{\underline{Ying, K.,}} Davitadze, M., Molière, A., Tongu, Y., Kasahara, T., Kats, L. M., Glubokov, D., Eames, A., Vladimirova, A., Moldakozhayev, A., Liu, H., Zhang, B., Khasanova, U., Moqri, M., Van Raamsdonk, J. M., Harrison, D. E., Strong, R., Abe, T., Dmitriev, S. E., & Gladyshev, V. N. (2026). Universal transcriptomic hallmarks of mammalian ageing and mortality. **Nature**. <https://doi.org/10.1038/s41586-026-10542-3>
+
 Bitto, A., Tung, H., \textbf{\underline{Ying, K.,}} Smith, D. L., Kayser, E.-B., Morgan, P. G., Sedensky, M. M., & Kaeberlein, M. (2019). AGING AND MITOCHONDRIAL DISEASE: SHARED MECHANISMS AND THERAPIES? **Innovation in Aging**, *3*(Supplement_1), S395--S395. <https://doi.org/10.1093/geroni/igz038.1459> 
 
 Zhu, J., Xu, M., Liu, Y., Zhuang, L., \textbf{\underline{Ying, K.,}} Liu, F., Liu, D., Ma, W., & Songyang, Z. (2019). Phosphorylation of PLIN3 by AMPK promotes dispersion of lipid droplets during starvation. **Protein & Cell**, *10*(5), 382--387. <https://doi.org/10.1007/s13238-018-0593-9>
@@ -95,8 +97,6 @@ Zhu, J., Xu, M., Liu, Y., Zhuang, L., \textbf{\underline{Ying, K.,}} Liu, F., Li
 \hrule
 
 \textbf{\underline{Ying, K.,}} Paulson, S., Eames, A., Tyshkovskiy, A., Li, S., Perez-Guevara, M., Emamifar, M., Martínez, M. C., Kwon, D., Kosheleva, A., Snyder, M. P., Gobel, D., Herzog, C., Poganik, J. R., Biomarker of Aging Consortium, Moqri, M., & Gladyshev, V. N. (2024). *A Unified Framework for Systematic Curation and Evaluation of Aging Biomarkers*. **bioRxiv**. <https://doi.org/10.1101/2023.12.02.569722>
-
-Tyshkovskiy, A., Kholdina, D., \textbf{\underline{Ying, K.,}} Davitadze, M., Molière, A., Tongu, Y., Kasahara, T., Kats, L. M., Vladimirova, A., Moldakozhayev, A., Liu, H., Zhang, B., Khasanova, U., Moqri, M., Van Raamsdonk, J. M., Harrison, D. E., Strong, R., Abe, T., Dmitriev, S. E., & Gladyshev, V. N. (2024). Transcriptomic Hallmarks of Mortality Reveal Universal and Specific Mechanisms of Aging, Chronic Disease, and Rejuvenation. **bioRxiv**. <https://doi.org/10.1101/2024.07.04.601982>
 
 Rothi, M. H., Sarkar, G. C., Al Haddad, J., Mitchell, W., \textbf{\underline{Ying, K.,}} Pohl, N., Sotomayor-Mena, R. G., Natale, J., Dellacono, S., Gladyshev, V. N., & Greer, E. L. (2024). The 18S rRNA Methyltransferase DIMT-1 Regulates Lifespan in the Germline Later in Life. **bioRxiv**. <https://doi.org/10.1101/2024.05.15.570935>
 
