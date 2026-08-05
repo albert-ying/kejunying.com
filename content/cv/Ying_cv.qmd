@@ -139,7 +139,7 @@ csl: apa-cv.csl
 
 ## Selected Publications & Preprints
 
-\textbf{\underline{Ying, K.,}} Paulson, S., Reinhard, J., ..., Gladyshev, V. N. (2026). An Open Competition for Biomarkers of Aging. **Nature Aging**. <https://doi.org/10.1038/s43587-026-01139-6>
+\textbf{\underline{Ying, K.,}} Paulson, S., Reinhard, J., ..., Gladyshev, V. N. (2026). An Open Competition for Biomarkers of Aging. **Nature Aging**, *6*, 1193--1195. <https://doi.org/10.1038/s43587-026-01139-6>
 
 Moqri, M.^\*^, \textbf{\underline{Ying, K.$^{*}$}}, Poganik, J.^\*^, Herzog, C.^\*^, ..., Marioni, R. E., Lasky-Su, J. A., Snyder, M. P., & Gladyshev, V. N. (2026). Integrative epigenetics and transcriptomics identify aging genes in human blood. **Nature Communications**, *16*, 67369. <https://doi.org/10.1038/s41467-025-67369-1>
 
@@ -163,13 +163,15 @@ Wu, X.^\*^, Liu, H.^\*^, \textbf{\underline{Ying, K.$^{*\dagger}$}} (2025). Biol
 
 ## Other Publications
 
+Kordowitzki, P., & \textbf{\underline{Ying, K.}} (2026). Novel consensus biomarkers and cancer hallmark fingerprints for ovarian endometroid and clear cell carcinomas in women put hypoxia and metabolic reprogramming at the front. **Antioxidants (In Press)**.
+
 Wu, F., Xuan, W., Qi, H., ..., \textbf{\underline{Ying, K.,}} ..., Choi, Y. (2026). Proteo-R1: Reasoning Foundation Models for De Novo Protein Design. **ICML 2026**. <https://arxiv.org/abs/2605.02937>
 
 Zhavoronkov, A., \textbf{\underline{Ying, K.,}} & Wilczok, D. (2026). Peakspan: Defining, Quantifying and Extending the Boundaries of Peak Productive Lifespan. **Aging and Disease**. <https://doi.org/10.14336/AD.2026.0080>
 
 Kordowitzki, P., & \textbf{\underline{Ying, K.}} (2026). The pursuit of understanding human longevity. **npj Aging**, *12*(1), 25. <https://doi.org/10.1038/s41514-026-00339-z>
 
-Tyshkovskiy, A., Kholdina, D., \textbf{\underline{Ying, K.,}} Davitadze, M., ..., Gladyshev, V. N. (2026). Universal transcriptomic hallmarks of mammalian ageing and mortality. **Nature**. <https://doi.org/10.1038/s41586-026-10542-3>
+Tyshkovskiy, A., Kholdina, D., \textbf{\underline{Ying, K.,}} Davitadze, M., ..., Gladyshev, V. N. (2026). Universal transcriptomic hallmarks of mammalian ageing and mortality. **Nature**, *654*, 173--188. <https://doi.org/10.1038/s41586-026-10542-3>
 
 Mavrommatis, C., Belsky, D. W., \textbf{\underline{Ying, K.,}} Moqri, M., Campbell, A., Richmond, A., Gladyshev, V. N., Chandra, T., McCartney, D. L., & Marioni, R. E. (2025). An unbiased comparison of 14 epigenetic clocks in relation to 174 incident disease outcomes. **Nature Communications**, *16*, 11164. <https://doi.org/10.1038/s41467-025-66106-y>
 
@@ -219,6 +221,8 @@ Zhu, J., Xu, M., Liu, Y., Zhuang, L., \textbf{\underline{Ying, K.,}} Liu, F., ..
 
 
 ## Other Preprints
+
+Zhang, S., Tyshkovskiy, A., \textbf{\underline{Ying, K.,}} Wang, S., & Gladyshev, V. N. (2026). Mammalian aging involves genome-wide splicing degeneration leading to functional decline. **bioRxiv**. <https://doi.org/10.64898/2026.06.26.734787>
 
 Eames, A., Glubokov, D., Moldakozhayev, A., Yücel, A. D., Tyshkovskiy, A., \textbf{\underline{Ying, K.,}} Goeminne, L. J. E., de Magalhães, C. G., & Gladyshev, V. N. (2026). Anatomy of aging through organ-resolved multi-modal imaging and deep learning. **medRxiv**. <https://doi.org/10.64898/2026.03.14.26348392>
 
@@ -355,6 +359,8 @@ _Genetic Variation, Aging & Relationship to COVID-19 | Joris Deelen, Albert Ying
 
 # Honors
 \hrule
+
+**WAIC Yunfan Award, "Tomorrow Star"**, World Artificial Intelligence Conference \hfill 2026
 
 **Butler-Williams Scholar** (Selected but unable to attend), National Institute on Aging (NIH) \hfill 2026
 
