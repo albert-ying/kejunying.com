@@ -93,10 +93,6 @@ csl: apa-cv.csl
 # Grants
 \hrule
 
-<!-- **Overseas High-Level Talent Program** \hfill National Natural Science Foundation of China
-
-*Funded proposal*, \hfill 2026 -- 2029 -->
-
 **THRIVE: Transforming Health: Reclaiming Intrinsic Vitality for Everyone** \hfill ARPA-H PROSPR
 
 *Developing PROSPR Intrinsic Capacity score for predicting 20-year health outcomes*, \hfill 2026 -- 2031
