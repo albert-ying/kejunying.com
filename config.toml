@@ -48,6 +48,11 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
         name = "I received the 2026 World Artificial Intelligence Conference (WAIC) Yunfan Award, recognizing 15 Chinese AI scholars under age 30!"
         url = ""
     [[params.news]]
+        date = "2026-06"
+        category = "publication"
+        name = "Our paper *An Open Competition for Biomarkers of Aging* is published in Nature Aging!"
+        url = "https://doi.org/10.1038/s43587-026-01139-6"
+    [[params.news]]
         date = "2026-02"
         category = "software"
         name = "Released Autonomous Lab — an MCP server that turns any senior-junior workflow into an autonomous AI loop. You make the decisions, AI handles the execution."
