@@ -24,7 +24,7 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
     author = "Kejun Albert Ying"
     introtag = "introduction"
 
-    intro = "Hello! I'm a postdoctoral fellow at [Stanford University](https://med.stanford.edu/) in [Tony Wyss-Coray's lab](https://wyss-coray.stanford.edu/) and [University of Washington](https://www.washington.edu/) in [David Baker's lab](https://www.bakerlab.org/), supported by an NIH/NIA F99K00 fellowship. I earned my Ph.D. in Biological Sciences from [Harvard Medical School](https://hms.harvard.edu/) (2025) in [Vadim Gladyshev's lab](https://gladyshevlab.bwh.harvard.edu/) and an M.Sc. in Computational Science and Engineering from [Harvard SEAS](https://seas.harvard.edu/) (2024). My research focuses on **AI for Science** and **AI for Aging**, using aging biology and **protein design** to study neurodegeneration, the causes of aging, epigenetics, metabolism, and multi-omics. I'm building the next generation of therapeutics through **machine learning** and **protein design**. "
+    intro = "Hello! I'm a postdoctoral fellow at [Stanford University](https://med.stanford.edu/) in [Tony Wyss-Coray's lab](https://wyss-coray.stanford.edu/) and [University of Washington](https://www.washington.edu/) in [David Baker's lab](https://www.bakerlab.org/), supported by an NIH/NIA F99K00 fellowship. I earned my Ph.D. in Biological Sciences from [Harvard Medical School](https://hms.harvard.edu/) (2025) in [Vadim Gladyshev's lab](https://gladyshevlab.bwh.harvard.edu/) and an M.Sc. in Computational Science and Engineering from [Harvard SEAS](https://seas.harvard.edu/) (2024). My research focuses on **AI for Science**, with an emphasis on **AI for Biology** and **AI for Aging**. I develop foundation models and world models for biological data, and build agentic systems. I model biological age and discover aging interventions, study brain aging and neurodegeneration, analyze cancer and age-related diseases systematically, and design de novo proteins for aging interventions."
 
     favicon = "avatar.png"
     highlightstyle  = "foundation"
@@ -32,7 +32,7 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
     iconsource = "simple-icons"
 
     description = "Kejun (Albert) Ying's personal website | 应可钧的个人网站"
-    keywords = "AI for Science, AI for Aging, aging biology, protein design, epigenetic clocks, machine learning, Kejun Ying"
+    keywords = "AI for Science, AI for Biology, AI for Aging, foundation models, world models, agentic systems, biological age modeling, aging intervention discovery, brain aging, neurodegeneration, cancer, age-related diseases, de novo protein design, Kejun Ying"
 
     customcss = ["custom_style.css"]
 
