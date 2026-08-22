@@ -43,6 +43,11 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
 
 # recent news
     [[params.news]]
+        date = "2026-07"
+        category = "award"
+        name = "I received the 2026 World Artificial Intelligence Conference (WAIC) Yunfan Award, recognizing 15 Chinese AI scholars under age 30!"
+        url = ""
+    [[params.news]]
         date = "2026-02"
         category = "software"
         name = "Released Autonomous Lab — an MCP server that turns any senior-junior workflow into an autonomous AI loop. You make the decisions, AI handles the execution."
@@ -87,12 +92,6 @@ ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$", "i
         category = "media"
         name = "MethylGPT is featured in Eric Topol's opinion piece in Science Magazine!"
         url = "https://www.science.org/doi/10.1126/science.adv4414"
-    [[params.news]]
-        date = "2025-01"
-        category = "career"
-        name = "I co-founded Avinasi Labs, a platform fostering collaboration and data sharing to overcome fragmented data and funding barriers in longevity science."
-        url = "https://www.avinasi.com/"
-
     [[params.news]]
         date = "2024-12"
         category = "media"
