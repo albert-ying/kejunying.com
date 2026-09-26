@@ -119,9 +119,11 @@ csl: apa-cv.csl
 # 发表论文
 \hrule
 
-^†^ 通讯作者；^\*^ 共同第一作者；^+^ 以联盟作者身份贡献
+$^{\dagger}$ 通讯作者；^\*^ 共同第一作者；^+^ 以联盟作者身份贡献
 
 ## 精选论文与预印本
+
+Wang, Z.，Zhang, O.，Wang, J.，Jiang, Y.，Ma, Z. C.，...，Gladyshev, V. N.，Wyss-Coray, T.，& \textbf{\underline{Ying, K.$^{\dagger}$}} (2026). A world model simulates the latent dynamics of human health。**medRxiv**. <https://doi.org/10.64898/2026.09.19.26363460>
 
 \textbf{\underline{Ying, K.}}，Paulson, S.，Eames, A.，Tyshkovskiy, A.，...，Gladyshev, V. N. (2025). *A Unified Framework for Systematic Curation and Evaluation of Aging Biomarkers*。**Nat. Aging**. <https://www.nature.com/articles/s43587-025-00987-y>
 
@@ -208,7 +210,6 @@ Zhu, J.，Xu, M.，Liu, Y.，Zhuang, L.，\textbf{\underline{Ying, K.}}，Liu, F
 
 ## 其他预印本
 
-Wang, Z.，Zhang, O.，Wang, J.，Jiang, Y.，Ma, Z. C.，...，Gladyshev, V. N.，Wyss-Coray, T.，& \textbf{\underline{Ying, K.}} (2026). A world model simulates the latent dynamics of human health。**medRxiv**. <https://doi.org/10.64898/2026.09.19.26363460>
 
 Zhang, S.，Tyshkovskiy, A.，\textbf{\underline{Ying, K.}}，Wang, S.，& Gladyshev, V. N. (2026). Mammalian aging involves genome-wide splicing degeneration leading to functional decline。**bioRxiv**. <https://doi.org/10.64898/2026.06.26.734787>
 

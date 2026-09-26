@@ -135,6 +135,8 @@ csl: apa-cv.csl
 
 ## Selected Publications & Preprints
 
+Wang, Z., Zhang, O., Wang, J., Jiang, Y., Ma, Z. C., ..., Gladyshev, V. N., Wyss-Coray, T., & \textbf{\underline{Ying, K.$^{\dagger}$}} (2026). A world model simulates the latent dynamics of human health. **medRxiv**. <https://doi.org/10.64898/2026.09.19.26363460>
+
 \textbf{\underline{Ying, K.,}} Paulson, S., Reinhard, J., ..., Gladyshev, V. N. (2026). An Open Competition for Biomarkers of Aging. **Nature Aging**, *6*, 1193--1195. <https://doi.org/10.1038/s43587-026-01139-6>
 
 Moqri, M.^\*^, \textbf{\underline{Ying, K.$^{*}$}}, Poganik, J.^\*^, Herzog, C.^\*^, ..., Marioni, R. E., Lasky-Su, J. A., Snyder, M. P., & Gladyshev, V. N. (2026). Integrative epigenetics and transcriptomics identify aging genes in human blood. **Nature Communications**, *16*, 67369. <https://doi.org/10.1038/s41467-025-67369-1>
@@ -220,7 +222,6 @@ Zhu, J., Xu, M., Liu, Y., Zhuang, L., \textbf{\underline{Ying, K.,}} Liu, F., ..
 
 ## Other Preprints
 
-Wang, Z., Zhang, O., Wang, J., Jiang, Y., Ma, Z. C., ..., Gladyshev, V. N., Wyss-Coray, T., & \textbf{\underline{Ying, K.}} (2026). A world model simulates the latent dynamics of human health. **medRxiv**. <https://doi.org/10.64898/2026.09.19.26363460>
 
 Zhang, S., Tyshkovskiy, A., \textbf{\underline{Ying, K.,}} Wang, S., & Gladyshev, V. N. (2026). Mammalian aging involves genome-wide splicing degeneration leading to functional decline. **bioRxiv**. <https://doi.org/10.64898/2026.06.26.734787>
 
