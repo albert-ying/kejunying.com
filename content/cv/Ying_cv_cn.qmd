@@ -210,14 +210,23 @@ Zhu, J.，Xu, M.，Liu, Y.，Zhuang, L.，\textbf{\underline{Ying, K.}}，Liu, F
 
 ## 其他预印本
 
+Cui, T.，Wang, X.，Li, Z.，Ding, J.，...，\textbf{\underline{Ying, K.,}} ...，Wu, Y. (2026). An immune world model for multiscale forecasting and therapeutic hypothesis generation。**arXiv**. [arXiv:2609.14709](https://arxiv.org/abs/2609.14709)
+
+Zhou, Y.，Wang, Y.，Wang, J.，Zhu, H.，...，\textbf{\underline{Ying, K.,}} ...，Zhang, O. (2026). ADMET-EvO: a self-evolving scientific agent for sustained research across heterogeneous tasks。**arXiv**. [arXiv:2609.10121](https://arxiv.org/abs/2609.10121)
+
+Jiang, S.，Fang, Z.，...，\textbf{\underline{Ying, K.,}} ...，Ding, J. (2026). The Landscape of Single-Cell Foundation Models: Design Principles, Applications, and Open Challenges。**Preprints.org**. [doi:10.20944/preprints202608.1166.v1](https://doi.org/10.20944/preprints202608.1166.v1)
+
+Xi, Z.，Zhou, E.，Fang, X.，...，\textbf{\underline{Ying, K.,}} ...，Huang, X. (2026). AI for Productivity in the Age of Agentic AI。**Preprints.org**. [doi:10.20944/preprints202608.1248.v1](https://doi.org/10.20944/preprints202608.1248.v1)
 
 Zhang, S.，Tyshkovskiy, A.，\textbf{\underline{Ying, K.}}，Wang, S.，& Gladyshev, V. N. (2026). Mammalian aging involves genome-wide splicing degeneration leading to functional decline。**bioRxiv**. <https://doi.org/10.64898/2026.06.26.734787>
 
-Eames, A.，Glubokov, D.，Moldakozhayev, A.，Yücel, A. D.，Tyshkovskiy, A.，\textbf{\underline{Ying, K.}}，Goeminne, L. J. E.，de Magalhães, C. G.，& Gladyshev, V. N. (2026). Anatomy of aging through organ-resolved multi-modal imaging and deep learning。**medRxiv**. <https://doi.org/10.64898/2026.03.14.26348392>
+Eames, A.，Glubokov, D.，Moldakozhayev, A.，Yücel, A. D.，Tyshkovskiy, A.，\textbf{\underline{Ying, K.}}，Goeminne, L. J. E.，de Magalhaes, C. G.，& Gladyshev, V. N. (2026). Anatomy of aging through organ-resolved multi-modal imaging and deep learning。**medRxiv**. <https://doi.org/10.64898/2026.03.14.26348392>
 
 Roberts, K. F.，Abrams, Z. B.，Cappelletti, L.，Moqri, M.，...，\textbf{\underline{Ying, K.}}，...，Reese, J. T. (2026). OpenScientist: evaluating an open agentic AI co-scientist to accelerate biomedical discovery。**medRxiv**. <https://doi.org/10.64898/2026.03.15.26348338>
 
-Wu, Y. C.，Yin, M.，Shi, B.，Zhang, Z.，...，\textbf{\underline{Ying, K. A.}}，...，Wang, M.，& Cong, L. (2026). MedOS: AI-XR-Cobot World Model for Clinical Perception and Action。**medRxiv**. <https://doi.org/10.64898/2026.02.18.26345936>
+Wu, Y. C.，Yin, M.，Shi, B.，Zhang, Z.，...，\textbf{\underline{Ying, K. A.}}，...，Wang, M.，& Cong, L. (2026). MedOS: AI-XR-Cobot World Model for Clinical Perception and Action。**medRxiv (withdrawn)**. <https://doi.org/10.64898/2026.02.18.26345936>
+
+Moldakozhayev, A.，Tyshkovskiy, A.，Nigro, P.，de Magalhaes, C. G.，\textbf{\underline{Ying, K.,}} ...，Gladyshev, V. N. (2025). Rejuvenation of white adipose tissue in a longitudinal heterochronic transplantation model。**bioRxiv**. [doi:10.64898/2025.12.28.696721](https://doi.org/10.64898/2025.12.28.696721)
 
 Zhang, O.，Zhang, X.，Lin, H.，Tan, C.，Wang, Q.，Mo, Y.，...，\textbf{\underline{Ying, K.}}，Li, J.，Zeng, Y.，Lang, L.，Pan, P.，Cao, H.，Song, Z.，Qiang, B.，Wang, J.，Ji, P.，Bai, L.，Zhang, J.，Hsieh, C.-Y.，Heng, P. A.，Sun, S.，Hou, T.，& Zheng, S. (2025). ODesign: A World Model for Biomolecular Interaction Design。**arXiv**. <https://odesign1.github.io/>
 
