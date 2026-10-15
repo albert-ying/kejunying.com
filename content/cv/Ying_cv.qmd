@@ -161,6 +161,8 @@ Wu, X.^\*^, Liu, H.^\*^, \textbf{\underline{Ying, K.$^{*\dagger}$}} (2025). Biol
 
 ## Other Publications
 
+\textbf{\underline{Ying, K.$^{\dagger}$}}, Tyshkovskiy, A., Moqri, M., Poganik, J. R., Horie, S., Han, J.-D. J., Ng, C., Gladyshev, V. N., Wyss-Coray, T., & Huang, Y. (2026). Unified frameworks for aging biomarkers: bridging discovery science and clinical translation. In *Toward healthy longevity: Integrating biology, AI, and clinical innovation* (pp. 26--28). **Science/AAAS Custom Publishing Office**. <https://www.science.org/content/resource/toward-healthy-longevity-integrating-biology-ai-and-clinical-innovation>
+
 Zhavoronkov, A., Galkin, F., Chen, S., ..., \textbf{\underline{Ying, K.}}, ..., Gladyshev, V. N. (2026). Integration of proteomic aging clocks in a phase 2a clinical trial supports simultaneous geroprotective assessment. **Nature Biotechnology**. <https://doi.org/10.1038/s41587-026-03286-y>
 
 Kordowitzki, P., & \textbf{\underline{Ying, K.}} (2026). Novel Exploratory Transcriptomic Candidates as Biomarkers and Cancer Hallmark Fingerprints for Ovarian Endometroid and Clear Cell Carcinomas in Women. **Antioxidants**, *15*(8), 979. <https://doi.org/10.3390/antiox15080979>
