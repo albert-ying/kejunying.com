@@ -23,9 +23,6 @@ csl: apa-cv.csl
 # Education & Experience
 \hrule
 
-<!-- **Peking University, School of Basic Medical Sciences** \hfill Beijing, China  
-*Assistant Professor* \hfill Expected Fall 2026 -->
-
 **Stanford University & University of Washington** \hfill Stanford, CA & Seattle, WA  
 *Postdoctoral Researcher* \hfill Spring 2025 -- Present
 
