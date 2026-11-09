@@ -114,10 +114,10 @@ A comprehensive database of biological age measurements across public molecular 
 <br/>
 
 {{<sidenote >}}
-<div class='altmetric-embed' data-badge-popover='bottom' data-doi='10.1101/2024.09.21.570935' data-hide-less-than=10 data-badge-type="donut"></div>
+<div class='altmetric-embed' data-badge-popover='bottom' data-doi='10.1101/2024.09.17.613599' data-hide-less-than=10 data-badge-type="donut"></div>
 {{</sidenote >}}
 
-#### [High-dimensional Ageome Representations of Biological Aging across Functional Modules](https://doi.org/10.1101/2024.09.21.570935)
+#### [High-dimensional Ageome Representations of Biological Aging across Functional Modules](https://doi.org/10.1101/2024.09.17.613599)
 
 ##### <ins>**K Ying**</ins>, A Tyshkovskiy, Q Chen, E Latorre-Crespo, B Zhang, H Liu, ..., VN Gladyshev
 

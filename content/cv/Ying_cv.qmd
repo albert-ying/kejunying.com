@@ -154,7 +154,7 @@ Wu, X.^\*^, Liu, H.^\*^, \textbf{\underline{Ying, K.$^{*\dagger}$}} (2025). Biol
 
 \textbf{\underline{Ying, K.$^{\dagger}$,}} Song, J., Cui, H., ..., Gladyshev, V. N$^{\dagger}$. (2024). MethylGPT: a foundation model for the DNA methylome. **bioRxiv (Nature Aging 1st Revision)**. <https://doi.org/10.1101/2024.10.30.621013>
 
-\textbf{\underline{Ying, K.,}} Tyshkovskiy, A., Chen, Q., ..., Gladyshev, V. N. (2024). High-dimensional Ageome Representations of Biological Aging across Functional Modules. **bioRxiv (Nature Aging 2nd Revision)**. <https://doi.org/10.1101/2024.09.21.570935>
+\textbf{\underline{Ying, K.,}} Tyshkovskiy, A., Chen, Q., ..., Gladyshev, V. N. (2024). High-dimensional Ageome Representations of Biological Aging across Functional Modules. **bioRxiv (Nature Aging 2nd Revision)**. <https://doi.org/10.1101/2024.09.17.613599>
 
 ## Other Publications
 
@@ -174,7 +174,7 @@ Tyshkovskiy, A., Kholdina, D., \textbf{\underline{Ying, K.,}} Davitadze, M., ...
 
 Mavrommatis, C., Belsky, D. W., \textbf{\underline{Ying, K.,}} Moqri, M., Campbell, A., Richmond, A., Gladyshev, V. N., Chandra, T., McCartney, D. L., & Marioni, R. E. (2025). An unbiased comparison of 14 epigenetic clocks in relation to 174 incident disease outcomes. **Nature Communications**, *16*, 11164. <https://doi.org/10.1038/s41467-025-66106-y>
 
-Zhang, O., Lin, H., Zhang, X., Wang, X., Wu, Z., Ye, Q., Zhao, W., Wang, J., \textbf{\underline{Ying, K.,}}, Kang, Y., Hsieh, C.-Y., Hou, T. (2025). Graph neural networks in modern AI-aided drug discovery. **Chemical Reviews**, 125, 10001–10103. <https://doi.org/10.1021/acs.chemrev.5b00254>
+Zhang, O., Lin, H., Zhang, X., Wang, X., Wu, Z., Ye, Q., Zhao, W., Wang, J., \textbf{\underline{Ying, K.,}}, Kang, Y., Hsieh, C.-Y., Hou, T. (2025). Graph neural networks in modern AI-aided drug discovery. **Chemical Reviews**, 125, 10001–10103. <https://doi.org/10.1021/acs.chemrev.5c00461>
 
 Zhang, O., ..., \textbf{\underline{Ying, K.,}} Huang, Y., Zhao, H., Kang, Y., Pan, P., Wang, J., Guo, D., Zheng, S., Hsieh, C.-Y., & Hou, T. (2025). ECloudGen: leveraging electron clouds as a latent variable to scale up structure-based molecular design. **Nature Computational Science**. <https://doi.org/10.1038/s43588-025-00886-7>
 
@@ -245,7 +245,7 @@ Mavrommatis, C., Belsky, D., \textbf{\underline{Ying, K.,}} Moqri, M., Campbell,
 
 Galkin, F., ..., Tyshkovskiy, A., \textbf{\underline{Ying, K.,}} Gladyshev, V. N., & Zhavoronkov, A. (2024). Precious3GPT: Multimodal Multi-Species Multi-Omics Multi-Tissue Transformer for Aging Research and Drug Discovery. **bioRxiv**. <https://doi.org/10.1101/2024.07.25.605062>
 
-Rothi, M. H., Sarkar, G. C., Al Haddad, J., Mitchell, W., \textbf{\underline{Ying, K.,}} Pohl, N., ..., Greer, E. L. (2024). The 18S rRNA Methyltransferase DIMT-1 Regulates Lifespan in the Germline Later in Life. **bioRxiv**. <https://doi.org/10.1101/2024.05.15.570935>
+Rothi, M. H., Sarkar, G. C., Al Haddad, J., Mitchell, W., \textbf{\underline{Ying, K.,}} Pohl, N., ..., Greer, E. L. (2025). The 18S rRNA methyltransferase DIMT-1 regulates lifespan in the germline later in life. **Nature Communications**, 16, 6944. <https://doi.org/10.1038/s41467-025-62323-7>
 
 Zhang, B., Tarkhov, A. E., Ratzan, W., \textbf{\underline{Ying, K.,}} Moqri, M., ..., Gladyshev, V. N. (2022). *Epigenetic profiling and incidence of disrupted development point to gastrulation as aging ground zero in Xenopus laevis*. **bioRxiv**. <https://doi.org/10.1101/2022.08.02.502559> 
 
