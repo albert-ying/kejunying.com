@@ -3,3 +3,16 @@
 /.luarc.json
 
 **/*.quarto_ipynb
+
+# Private documents kept outside the public site (moved 2026-11-08)
+content/cv/latex-nihbiosketch/
+content/cv/Study_Plan*
+content/cv/*security*
+content/cv/*incoming-ap*
+content/cv/*no_contact*
+content/cv/*research_accomplishments*
+content/cv/Ying_cv_2026-*
+content/cv/Ying_cv_.qmd
+content/cv/*cv_cn*
+content/cv/peer-reviewed.bib
+public/cv/latex-nihbiosketch/
