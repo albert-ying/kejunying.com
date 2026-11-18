@@ -132,11 +132,15 @@ csl: apa-cv.csl
 
 ## Selected Publications & Preprints
 
+\textbf{\underline{Ying, K.$^{*,\dagger}$}}, Roh, K. K.$^{*}$, Chen, K. L., ..., Wyss-Coray, T. (2026). Organelle Aging Predicts Human Disease. **bioRxiv**. <https://doi.org/10.64898/2026.11.01.763400>
+
 Wang, Z., Zhang, O., Wang, J., Jiang, Y., Ma, Z. C., ..., Gladyshev, V. N., Wyss-Coray, T., & \textbf{\underline{Ying, K.$^{\dagger}$}} (2026). A world model simulates the latent dynamics of human health. **medRxiv**. <https://doi.org/10.64898/2026.09.19.26363460>
+
+\textbf{\underline{Ying, K.}}, Bie, J., Chen, G., ..., Yang, Q. (2026). Advancing aging biomarkers and intervention discovery at the TimePie Longevity Forum. **Nature Aging** (Meeting Report), 6, 2054--2056. <https://doi.org/10.1038/s43587-026-01226-8>
 
 \textbf{\underline{Ying, K.,}} Paulson, S., Reinhard, J., ..., Gladyshev, V. N. (2026). An Open Competition for Biomarkers of Aging. **Nature Aging**, *6*, 1193--1195. <https://doi.org/10.1038/s43587-026-01139-6>
 
-Moqri, M.^\*^, \textbf{\underline{Ying, K.$^{*}$}}, Poganik, J.^\*^, Herzog, C.^\*^, ..., Marioni, R. E., Lasky-Su, J. A., Snyder, M. P., & Gladyshev, V. N. (2026). Integrative epigenetics and transcriptomics identify aging genes in human blood. **Nature Communications**, *16*, 67369. <https://doi.org/10.1038/s41467-025-67369-1>
+Moqri, M.^\*^, \textbf{\underline{Ying, K.$^{*}$}}, Poganik, J.^\*^, Herzog, C.^\*^, ..., Marioni, R. E., Lasky-Su, J. A., Snyder, M. P., & Gladyshev, V. N. (2026). Integrative epigenetics and transcriptomics identify aging genes in human blood. **Nature Communications**, *17*, 725. <https://doi.org/10.1038/s41467-025-67369-1>
 
 \textbf{\underline{Ying, K.,}} Paulson, S., Eames, A., Tyshkovskiy, A., ..., Gladyshev, V. N. (2025). *A Unified Framework for Systematic Curation and Evaluation of Aging Biomarkers*. **Nature Aging**. <https://www.nature.com/articles/s43587-025-00987-y>
 
@@ -154,9 +158,13 @@ Wu, X.^\*^, Liu, H.^\*^, \textbf{\underline{Ying, K.$^{*\dagger}$}} (2025). Biol
 
 \textbf{\underline{Ying, K.$^{\dagger}$,}} Song, J., Cui, H., ..., Gladyshev, V. N$^{\dagger}$. (2024). MethylGPT: a foundation model for the DNA methylome. **bioRxiv (Nature Aging 1st Revision)**. <https://doi.org/10.1101/2024.10.30.621013>
 
-\textbf{\underline{Ying, K.,}} Tyshkovskiy, A., Chen, Q., ..., Gladyshev, V. N. (2024). High-dimensional Ageome Representations of Biological Aging across Functional Modules. **bioRxiv (Nature Aging 2nd Revision)**. <https://doi.org/10.1101/2024.09.17.613599>
+\textbf{\underline{Ying, K.,}} Tyshkovskiy, A., Chen, Q., ..., Gladyshev, V. N. (2024). High-dimensional Ageome Representations of Biological Aging across Functional Modules. **bioRxiv (Nature Communications under revision)**. <https://doi.org/10.1101/2024.09.17.613599>
 
 ## Other Publications
+
+Roberts, K. F., Abrams, Z. B., Cappelletti, L., Moqri, M., ..., \textbf{\underline{Ying, K.,}} ..., Reese, J. T. (2026). An open agentic AI co-scientist for clinical and biomedical discovery. **Nature Medicine**. <https://doi.org/10.1038/s41591-026-04808-6>
+
+Moldakozhayev, A., Eames, A. W., Mitchell, W., ..., \textbf{\underline{Ying, K.,}} ..., Gladyshev, V. N. (2026). Ageing begins early: developmental origins of ageing trajectories. **Philosophical Transactions of the Royal Society B**, 381(1963), 20250326. <https://doi.org/10.1098/rstb.2025.0326>
 
 \textbf{\underline{Ying, K.$^{\dagger}$}}, Tyshkovskiy, A., Moqri, M., Poganik, J. R., Horie, S., Han, J.-D. J., Ng, C., Gladyshev, V. N., Wyss-Coray, T., & Huang, Y. (2026). Unified frameworks for aging biomarkers: bridging discovery science and clinical translation. In *Toward healthy longevity: Integrating biology, AI, and clinical innovation* (pp. 26--28). **Science/AAAS Custom Publishing Office**. <https://www.science.org/content/resource/toward-healthy-longevity-integrating-biology-ai-and-clinical-innovation>
 
@@ -198,11 +206,11 @@ Castro, J. P., Shindyapina, A. V., Barbieri, A., \textbf{\underline{Ying, K.,}} 
 
 Moqri, M., ..., de Sena Brandine, G., \textbf{\underline{Ying, K.,}} Tarkhov, A., ..., Sebastiano, V. (2024). PRC2-AgeIndex as a universal biomarker of aging and rejuvenation. **Nature Communications**, *15*(1), 5956. <https://doi.org/10.1038/s41467-024-50098-2>
 
-Tarkhov, A. E., Lindstrom-Vautrin, T., Zhang, S., \textbf{\underline{Ying, K.,}} Moqri, M., ..., Gladyshev, V. N. (2024). Nature of epigenetic aging from a single-cell perspective. **Nature Aging**, 1--17. <https://doi.org/10.1038/s43587-023-00555-2> 
+Tarkhov, A. E., Lindstrom-Vautrin, T., Zhang, S., \textbf{\underline{Ying, K.,}} Moqri, M., ..., Gladyshev, V. N. (2024). Nature of epigenetic aging from a single-cell perspective. **Nature Aging**, *4*, 854--870. <https://doi.org/10.1038/s43587-024-00616-0> 
 
 Moqri, M., Herzog, C., Poganik, J. R., \textbf{\underline{Ying, K.,}}, ... Ferrucci, L. (2024). Validation of biomarkers of aging. **Nature Medicine**, 1--13. <https://doi.org/10.1038/s41591-023-02784-9> 
 
-Griffin, P. T., ..., Kerepesi, C., \textbf{\underline{Ying, K.,}} ..., Sinclair, D. A. (2024). TIME-seq reduces time and cost of DNA methylation measurement for epigenetic clock construction. **Nature Aging**, 1--14. <https://doi.org/10.1038/s43587-023-00555-2> 
+Griffin, P. T., ..., Kerepesi, C., \textbf{\underline{Ying, K.,}} ..., Sinclair, D. A. (2024). TIME-seq reduces time and cost of DNA methylation measurement for epigenetic clock construction. **Nature Aging**, *4*, 261--274. <https://doi.org/10.1038/s43587-023-00555-2> 
 
 Moqri, M., Herzog, C., Poganik, J. R., \textbf{\underline{Biomarkers of Aging Consortium$^{+}$}}, ... Gladyshev, V. N. (2023). Biomarkers of aging for the identification and evaluation of longevity interventions. **Cell**, *186*(18), 3758--3775. <https://doi.org/10.1016/j.cell.2023.08.003>
 
@@ -221,6 +229,8 @@ Zhu, J., Xu, M., Liu, Y., Zhuang, L., \textbf{\underline{Ying, K.,}} Liu, F., ..
 
 ## Other Preprints
 
+He, Z., Park, J., Tan, J., ..., \textbf{\underline{Ying, K.,}} ..., Wyss-Coray, T. (2026). Disease aging clocks in the plasma proteome stratify risk and track preclinical progression. **Research Square**. <https://doi.org/10.21203/rs.3.rs-10675323/v1>
+
 Cui, T., Wang, X., Li, Z., Ding, J., ..., \textbf{\underline{Ying, K.,}} ..., Wu, Y. (2026). An immune world model for multiscale forecasting and therapeutic hypothesis generation. **arXiv**. [arXiv:2609.14709](https://arxiv.org/abs/2609.14709)
 
 Zhou, Y., Wang, Y., Wang, J., Zhu, H., ..., \textbf{\underline{Ying, K.,}} ..., Zhang, O. (2026). ADMET-EvO: a self-evolving scientific agent for sustained research across heterogeneous tasks. **arXiv**. [arXiv:2609.10121](https://arxiv.org/abs/2609.10121)
@@ -233,8 +243,6 @@ Zhang, S., Tyshkovskiy, A., \textbf{\underline{Ying, K.,}} Wang, S., & Gladyshev
 
 Eames, A., Glubokov, D., Moldakozhayev, A., Yücel, A. D., Tyshkovskiy, A., \textbf{\underline{Ying, K.,}} Goeminne, L. J. E., de Magalhães, C. G., & Gladyshev, V. N. (2026). Anatomy of aging through organ-resolved multi-modal imaging and deep learning. **medRxiv**. <https://doi.org/10.64898/2026.03.14.26348392>
 
-Roberts, K. F., Abrams, Z. B., Cappelletti, L., Moqri, M., ..., \textbf{\underline{Ying, K.,}} ..., Reese, J. T. (2026). OpenScientist: evaluating an open agentic AI co-scientist to accelerate biomedical discovery. **medRxiv**. <https://doi.org/10.64898/2026.03.15.26348338>
-
 Wu, Y. C., Yin, M., Shi, B., Zhang, Z., ..., \textbf{\underline{Ying, K. A.,}} ..., Wang, M., & Cong, L. (2026). MedOS: AI-XR-Cobot World Model for Clinical Perception and Action. **medRxiv (withdrawn)**. <https://doi.org/10.64898/2026.02.18.26345936>
 
 Moldakozhayev, A., Tyshkovskiy, A., Nigro, P., de Magalhães, C. G., \textbf{\underline{Ying, K.,}} ..., Gladyshev, V. N. (2025). Rejuvenation of white adipose tissue in a longitudinal heterochronic transplantation model. **bioRxiv**. [doi:10.64898/2025.12.28.696721](https://doi.org/10.64898/2025.12.28.696721)
@@ -244,8 +252,6 @@ Zhang, O., Zhang, X., Lin, H., Tan, C., Wang, Q., Mo, Y., ..., \textbf{\underlin
 Mavrommatis, C., Belsky, D., \textbf{\underline{Ying, K.,}} Moqri, M., Campbell, A., Richmond, A., ..., Gladyshev, V. N. (2025). *An unbiased comparison of 14 epigenetic clocks in relation to 10-year onset of 174 disease outcomes in 18,859 individuals*. **medRxiv**. <https://doi.org/10.1101/2025.07.14.25331494>
 
 Galkin, F., ..., Tyshkovskiy, A., \textbf{\underline{Ying, K.,}} Gladyshev, V. N., & Zhavoronkov, A. (2024). Precious3GPT: Multimodal Multi-Species Multi-Omics Multi-Tissue Transformer for Aging Research and Drug Discovery. **bioRxiv**. <https://doi.org/10.1101/2024.07.25.605062>
-
-Rothi, M. H., Sarkar, G. C., Al Haddad, J., Mitchell, W., \textbf{\underline{Ying, K.,}} Pohl, N., ..., Greer, E. L. (2025). The 18S rRNA methyltransferase DIMT-1 regulates lifespan in the germline later in life. **Nature Communications**, 16, 6944. <https://doi.org/10.1038/s41467-025-62323-7>
 
 Zhang, B., Tarkhov, A. E., Ratzan, W., \textbf{\underline{Ying, K.,}} Moqri, M., ..., Gladyshev, V. N. (2022). *Epigenetic profiling and incidence of disrupted development point to gastrulation as aging ground zero in Xenopus laevis*. **bioRxiv**. <https://doi.org/10.1101/2022.08.02.502559> 
 
@@ -260,11 +266,22 @@ V. N. Gladyshev, **K. Ying**, "Mapping CpG sites to quantify aging traits" (2024
 # Software and Database
 \hrule
 
+**AgingAgentBench** (2026) \hfill <https://albert-ying.github.io/AgingAgentBench/>  
+*Benchmark evaluating whether an analysis system, agent, pipeline, or language model recovers aging-clock effects reported in published studies of public GEO data, alongside an expert group choice and orientation task.*
+
 **Autonomous Lab** (2026) \hfill <https://github.com/albert-ying/autonomous-lab>  
 *MCP server for multi-agent autonomous workflows; AI agents execute senior-junior loops while humans steer decisions.*
 
+```{=latex}
+\begin{samepage}
+```
+
 **ClockBase Agent** (2025) \hfill <https://www.clockbase.org/>  
 *AI agent system that autonomously discovers aging-modifying interventions from ~2M human and mouse molecular profiles.*
+
+```{=latex}
+\end{samepage}
+```
 
 **MethylGPT** (2024) \hfill <https://github.com/albert-ying/MethylGPT>  
 *Foundation model for the DNA methylome, pretrained on 226K+ methylation profiles from 5,281 datasets.*
@@ -279,6 +296,12 @@ V. N. Gladyshev, **K. Ying**, "Mapping CpG sites to quantify aging traits" (2024
 \hrule
 
 ## Oral Presentations
+
+**Biomarkers of Aging Conference 2026** \hfill Boston, MA  
+_An Open World Model for Human Health and Mortality_ \hfill 2026
+
+**13th Aging Research and Drug Discovery Meeting (ARDD2026)** \hfill Boston, MA  
+_An open world model for human health and mortality_ \hfill 2026
 
 **Biomarkers of Aging Symposium 2025** \hfill Boston, MA  
 _Massive AI agent mining of aging-modifying interventions from millions of molecular profile_ \hfill 2025
