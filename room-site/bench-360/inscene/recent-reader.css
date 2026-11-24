@@ -1,0 +1,46 @@
+#recent-sheet[hidden]{display:none;opacity:0;pointer-events:none}
+#recent-sheet{
+  position:fixed;z-index:21;left:clamp(24px,5vw,78px);top:52px;
+  bottom:calc(var(--chrome-bottom,18px) + var(--chrome-height,30px));
+  box-sizing:border-box;width:min(35vw,67vh,calc(var(--recent-reader-edge,38vw) - clamp(24px,5vw,78px) - 18px));
+  display:flex;flex-direction:column;padding:22px 0 7px;
+  --recent-inset:clamp(22px,2vw,34px);
+  background:#ebe6d9;color:#1d1b18;
+  box-shadow:0 7px 24px #0008;font:18px/1.25 'Times New Roman','Songti SC',serif;
+  opacity:1;
+}
+#recent-reader{
+  flex:1;min-height:0;overflow:auto;padding:0 var(--recent-inset);
+  overscroll-behavior:contain;scrollbar-color:#796e57 #ebe6d9;
+}
+#recent-scroll-cue{
+  display:block;margin:6px var(--recent-inset) 0;padding:4px 0 1px;
+  border-top:1px solid #1d1b1850;font:15px/1.2 'Times New Roman',serif;
+}
+#recent-scroll-cue[hidden]{visibility:hidden}
+@media(prefers-reduced-motion:no-preference){
+  html:not([data-room-loading]) #recent-sheet{transition:opacity .28s ease,display .28s allow-discrete}
+  html:not([data-room-loading]) #recent-reader[hidden]{display:block;pointer-events:none}
+  @starting-style{html:not([data-room-loading]) #recent-sheet:not([hidden]){opacity:0}}
+}
+#recent-reader h1{margin:0 0 .4em;font-size:2.2em;line-height:1.12}
+#recent-reader h2{margin:.42em 0 .27em;font-size:1.24em;line-height:1.17}
+#recent-reader h3{margin:.7em 0 .25em;font:1em 'Courier New',monospace}
+#recent-reader p{margin:.28em 0 .48em}
+#recent-reader section{margin:0 0 .65em}
+#recent-reader section#news{border-top:1px solid #1d1b1850;padding-top:.45em}
+#recent-reader a,#recent-reader button{color:inherit;text-underline-offset:.13em}
+#recent-reader h2 button{font:inherit;background:none;border:0;padding:0;text-align:left;cursor:pointer}
+#recent-reader h2 button[aria-current]{text-decoration:underline;text-decoration-color:#9b7831}
+#recent-reader :is(a,button):focus-visible{outline:2px solid #8b6c32;outline-offset:3px}
+@media(max-width:800px){
+  #recent-sheet{position:relative;inset:auto;width:auto;max-width:46rem;margin:0 auto;padding:24px;box-shadow:none}
+  #recent-reader{padding:0;overflow:visible;clip-path:none!important}
+  #recent-scroll-cue{display:none}
+  html[data-room-loading]:has(#recent-reader) body{background:#ebe6d9;overflow:auto}
+  html[data-room-loading]:has(#recent-reader) #loading-poster{display:none}
+}
+
+@media(min-width:801px){
+  #recent-sheet[data-native-stock]{opacity:0;transition:none}
+}

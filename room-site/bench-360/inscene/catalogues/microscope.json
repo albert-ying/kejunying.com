@@ -1,0 +1,72 @@
+{
+  "causal-clocks": {
+    "title": "Causality-Enriched Epigenetic Age Uncouples Damage and Adaptation",
+    "year": 2024,
+    "shortTitle": "Causal clocks"
+  },
+  "centenarians": {
+    "title": "Depletion of Loss-of-function Germline Mutations in Centenarians Reveals Longevity Genes",
+    "year": 2024,
+    "shortTitle": "Centenarians"
+  },
+  "biolearn": {
+    "title": "A Unified Framework for Systematic Curation and Evaluation of Aging Biomarkers",
+    "year": 2025,
+    "shortTitle": "Biolearn"
+  },
+  "boa-challenge": {
+    "title": "An open competition for biomarkers of aging",
+    "year": 2026,
+    "shortTitle": "BoA Challenge"
+  },
+  "healthflux": {
+    "title": "A world model simulates the latent dynamics of human health",
+    "year": 2026,
+    "shortTitle": "HealthFlux"
+  },
+  "ageome": {
+    "title": "High-dimensional Ageome Representations of Biological Aging across Functional Modules",
+    "year": 2024,
+    "shortTitle": "Ageome"
+  },
+  "hallmarks": {
+    "title": "Universal transcriptomic hallmarks of mammalian ageing and mortality",
+    "year": 2026,
+    "shortTitle": "Ageing hallmarks"
+  },
+  "cv-042": {
+    "title": "Plasma protein-based organ-specific aging and mortality models unveil diseases as accelerated aging of organismal systems",
+    "year": 2024,
+    "shortTitle": "Organ aging"
+  },
+  "cv-063": {
+    "title": "Anatomy of aging through organ-resolved multi-modal imaging and deep learning",
+    "year": 2026,
+    "shortTitle": "Anatomy of aging"
+  },
+  "cv-048": {
+    "title": "Nature of epigenetic aging from a single-cell perspective",
+    "year": 2024,
+    "shortTitle": "Single-cell aging"
+  },
+  "cv-054": {
+    "title": "Characterization of naked mole-rat hematopoiesis reveals unique stem and progenitor cell patterns and neotenic traits",
+    "year": 2022,
+    "shortTitle": "Naked mole‑rat"
+  },
+  "cv-046": {
+    "title": "Age-associated clonal B cells drive B cell lymphoma in mice",
+    "year": 2024,
+    "shortTitle": "Clonal B cells"
+  },
+  "proteo-r1": {
+    "title": "Proteo-R1: reasoning foundation models for de novo protein design",
+    "year": 2026,
+    "shortTitle": "Proteo-R1"
+  },
+  "methylgpt": {
+    "title": "MethylGPT: A Foundation Model for the DNA Methylome",
+    "year": 2024,
+    "shortTitle": "MethylGPT"
+  }
+}

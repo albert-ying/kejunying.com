@@ -1,89 +1,38 @@
-# Workflow for building and deploying a Hugo site to GitHub Pages
-# Includes automatic PDF CV to HTML conversion
-name: Deploy Hugo site to Pages
+# Publishes the room homepage to GitHub Pages.
+# Since 24 November 2026 kejunying.com serves the prebuilt room site in room-site/
+# (built in /Users/A.Y/Desktop/Projects/website/kejunying-room, tools/dist-r34/build-dist.py).
+# The Hugo source stays in this repository; to publish it again, restore this
+# workflow from the commit before the room release.
+name: Deploy the room site to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches:
       - main
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
-# Default to bash
-defaults:
-  run:
-    shell: bash
-
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.125.4
     steps:
-      - name: Install Hugo CLI
-        run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
-          && sudo dpkg -i ${{ runner.temp }}/hugo.deb          
-      - name: Install Dart Sass
-        run: sudo snap install dart-sass
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
-          fetch-depth: 0
       - name: Setup Pages
-        id: pages
         uses: actions/configure-pages@v4
-      - name: Install Node.js dependencies
-        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
-      
-      # Convert PDF CV to HTML using pdf2htmlEX
-      - name: Convert PDF CV to HTML
-        run: |
-          if [ -f "content/cv/Ying_cv.pdf" ]; then
-            echo "Converting Ying_cv.pdf to HTML..."
-            docker run --rm \
-              -v "${{ github.workspace }}/content/cv:/pdf" \
-              pdf2htmlex/pdf2htmlex:0.18.8.rc2-master-20200820-alpine-3.12.0-x86_64 \
-              --data-dir pdf2htmlEX \
-              --zoom 1.2 \
-              Ying_cv.pdf
-            echo "PDF to HTML conversion complete"
-          else
-            echo "Warning: Ying_cv.pdf not found, skipping conversion"
-          fi
-      
-      - name: Build with Hugo
-        env:
-          # For maximum backward compatibility with Hugo modules
-          HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
-        run: |
-          hugo \
-            --gc \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"          
-      - name: Upload artifact
+      - name: Upload the room site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./room-site
 
-  # Deployment job
   deploy:
     environment:
       name: github-pages
