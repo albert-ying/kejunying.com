@@ -132,6 +132,8 @@ csl: apa-cv.csl
 
 ## Selected Publications & Preprints
 
+\textbf{\underline{Ying, K.}} (2026). Defining Aging Across Living and Non-Living Systems. **Preprints**. <https://doi.org/10.20944/preprints202611.1806.v2>
+
 \textbf{\underline{Ying, K.$^{*,\dagger}$}}, Roh, K. K.$^{*}$, Chen, K. L., ..., Wyss-Coray, T. (2026). Organelle Aging Predicts Human Disease. **bioRxiv**. <https://doi.org/10.64898/2026.11.01.763400>
 
 Wang, Z., Zhang, O., Wang, J., Jiang, Y., Ma, Z. C., ..., Gladyshev, V. N., Wyss-Coray, T., & \textbf{\underline{Ying, K.$^{\dagger}$}} (2026). A world model simulates the latent dynamics of human health. **medRxiv**. <https://doi.org/10.64898/2026.09.19.26363460>
