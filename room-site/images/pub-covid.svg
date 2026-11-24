@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bgCov" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#faf8f5"/>
+      <stop offset="100%" stop-color="#f0ede8"/>
+    </linearGradient>
+    <linearGradient id="goldCov" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c9a959"/>
+      <stop offset="100%" stop-color="#8b7355"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bgCov)" width="400" height="180" rx="8"/>
+  
+  <!-- Virus particle (simplified) -->
+  <circle cx="90" cy="90" r="30" fill="none" stroke="url(#goldCov)" stroke-width="2" opacity="0.6"/>
+  <circle cx="90" cy="90" r="20" fill="url(#goldCov)" opacity="0.2"/>
+  <!-- Spikes -->
+  <g stroke="url(#goldCov)" stroke-width="2" opacity="0.5">
+    <line x1="90" y1="55" x2="90" y2="45"/>
+    <circle cx="90" cy="42" r="4" fill="url(#goldCov)" opacity="0.6"/>
+    <line x1="120" y1="90" x2="130" y2="90"/>
+    <circle cx="133" cy="90" r="4" fill="url(#goldCov)" opacity="0.6"/>
+    <line x1="90" y1="125" x2="90" y2="135"/>
+    <circle cx="90" cy="138" r="4" fill="url(#goldCov)" opacity="0.6"/>
+    <line x1="60" y1="90" x2="50" y2="90"/>
+    <circle cx="47" cy="90" r="4" fill="url(#goldCov)" opacity="0.6"/>
+    <line x1="112" y1="68" x2="120" y2="60"/>
+    <circle cx="123" cy="57" r="3" fill="url(#goldCov)" opacity="0.5"/>
+    <line x1="68" y1="112" x2="60" y2="120"/>
+    <circle cx="57" cy="123" r="3" fill="url(#goldCov)" opacity="0.5"/>
+  </g>
+  
+  <!-- Arrow connecting to aging -->
+  <path d="M150 90 L190 90" stroke="#8b7355" stroke-width="2" opacity="0.5" stroke-dasharray="4,3"/>
+  <polygon points="195,90 185,85 185,95" fill="#8b7355" opacity="0.5"/>
+  
+  <!-- Aging clock representation -->
+  <circle cx="250" cy="90" r="35" fill="none" stroke="url(#goldCov)" stroke-width="2" opacity="0.6"/>
+  <circle cx="250" cy="90" r="3" fill="#8b7355"/>
+  <!-- Clock hands -->
+  <line x1="250" y1="90" x2="250" y2="65" stroke="#8b7355" stroke-width="2.5" opacity="0.7"/>
+  <line x1="250" y1="90" x2="270" y2="100" stroke="#8b7355" stroke-width="2" opacity="0.5"/>
+  <!-- Age markers -->
+  <text x="250" y="62" font-family="Inter, sans-serif" font-size="7" fill="#8b7355" text-anchor="middle" opacity="0.6">age</text>
+  
+  <!-- Causal arrow -->
+  <text x="170" y="75" font-family="Inter, sans-serif" font-size="10" fill="#c9a959" text-anchor="middle" font-weight="600">?</text>
+  
+  <!-- Labels -->
+  <text x="90" y="155" font-family="Inter, sans-serif" font-size="9" fill="#8b7355" text-anchor="middle" opacity="0.7">COVID-19</text>
+  <text x="250" y="155" font-family="Inter, sans-serif" font-size="9" fill="#8b7355" text-anchor="middle" opacity="0.7">Aging</text>
+  
+  <!-- Genetic/phenotypic analysis -->
+  <g transform="translate(310, 60)">
+    <rect x="0" y="0" width="60" height="70" fill="none" stroke="url(#goldCov)" stroke-width="1" opacity="0.4" rx="4"/>
+    <text x="30" y="20" font-family="Inter, sans-serif" font-size="8" fill="#8b7355" text-anchor="middle" opacity="0.8">Genetic</text>
+    <text x="30" y="32" font-family="Inter, sans-serif" font-size="8" fill="#8b7355" text-anchor="middle" opacity="0.8">+</text>
+    <text x="30" y="44" font-family="Inter, sans-serif" font-size="8" fill="#8b7355" text-anchor="middle" opacity="0.8">Phenotypic</text>
+    <text x="30" y="60" font-family="Inter, sans-serif" font-size="8" fill="#c9a959" text-anchor="middle" font-weight="600">Analysis</text>
+  </g>
+</svg>

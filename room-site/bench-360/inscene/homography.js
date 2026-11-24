@@ -1,0 +1,5 @@
+// Same eight-equation planar mapping used by the plotter-sheet loader.
+export function homography(from,to){const a=[],b=[];for(let i=0;i<4;i++){const[u,v]=from[i],[x,y]=to[i];a.push([u,v,1,0,0,0,-u*x,-v*x],[0,0,0,u,v,1,-u*y,-v*y]);b.push(x,y)}const r=a.map((v,i)=>[...v,b[i]]);for(let c=0;c<8;c++){let p=c;for(let j=c+1;j<8;j++)if(Math.abs(r[j][c])>Math.abs(r[p][c]))p=j;[r[c],r[p]]=[r[p],r[c]];const q=r[c][c];if(Math.abs(q)<1e-12)return null;for(let k=c;k<=8;k++)r[c][k]/=q;for(let j=0;j<8;j++)if(j!==c){const q=r[j][c];for(let k=c;k<=8;k++)r[j][k]-=q*r[c][k]}}return r.map(v=>v[8])}
+export function point(h,[u,v]){const w=h[6]*u+h[7]*v+1;return[(h[0]*u+h[1]*v+h[2])/w,(h[3]*u+h[4]*v+h[5])/w]}
+export function matrix(h){return[h[0],h[3],0,h[6],h[1],h[4],0,h[7],0,0,1,0,h[2],h[5],0,1]}
+export function hull(ps){const points=[...ps].sort((a,b)=>a[0]-b[0]||a[1]-b[1]),cross=(o,a,b)=>(a[0]-o[0])*(b[1]-o[1])-(a[1]-o[1])*(b[0]-o[0]);let a=[],b=[];for(const p of points){while(a.length>1&&cross(a.at(-2),a.at(-1),p)<=0)a.pop();a.push(p)}for(const p of points.reverse()){while(b.length>1&&cross(b.at(-2),b.at(-1),p)<=0)b.pop();b.push(p)}a.pop();b.pop();return a.concat(b)}

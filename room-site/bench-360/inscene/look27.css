@@ -1,0 +1,119 @@
+/* Round 27 look reference, drawn by the coordinator.
+   One material set for the film box and the slide tray:
+   stained wood, dark green felt, brass plates, cream paper, typed Courier. */
+:root{
+  --wood-a:#4a3323; --wood-b:#5a3f2b; --wood-hi:#7a5639; --wood-lo:#24170f;
+  --felt:#18221d; --felt-lo:#0d1411;
+  --brass-a:#8f7f52; --brass-b:#cdb981; --brass-ink:#2a2418;
+  --paper:#ece4d2; --paper-ink:#231f19; --paper-dim:#6b6252;
+  --focus:#ead2a5;
+  --face:'Courier New',monospace;
+}
+
+/* ---------- film box ---------- */
+.film-box27{
+  --can:clamp(120px,min(21.5vh,11vw),194px);
+  --gap:calc(var(--can)*.06);
+  position:relative; box-sizing:border-box; width:max-content;
+  padding:calc(var(--can)*.085);
+  border-radius:3px;
+  background:
+    repeating-linear-gradient(91deg,#0000 0 7px,#0000000f 7px 8px,#0000 8px 19px,#ffffff08 19px 20px),
+    linear-gradient(180deg,var(--wood-hi),var(--wood-b) 9%,var(--wood-a) 88%,var(--wood-lo));
+  box-shadow:0 34px 70px #000b, 0 6px 14px #0009, inset 0 1px 0 #ffffff26, inset 0 -2px 0 #0006;
+}
+.film-box27-well{
+  display:grid; grid-template-columns:repeat(4,var(--can)); gap:var(--gap);
+  padding:calc(var(--can)*.055);
+  border-radius:2px;
+  background:
+    radial-gradient(120% 120% at 30% 20%,#0000 40%,#0007),
+    var(--felt);
+  /* the walls throw a shadow from the upper left */
+  box-shadow:inset 9px 12px 16px #000c, inset -2px -3px 5px #ffffff0d, 0 1px 0 #ffffff1f;
+}
+.film-can27{
+  all:unset; position:relative; display:block; box-sizing:border-box;
+  width:var(--can); height:var(--can); border-radius:50%;
+  cursor:pointer; transition:transform .12s ease-out, filter .12s ease-out;
+}
+.film-can27 canvas{position:absolute; inset:0; width:100%; height:100%; pointer-events:none}
+.film-can27:hover,.film-can27:focus-visible{transform:translateY(-4px); filter:drop-shadow(0 9px 8px #0009)}
+.film-can27:focus-visible::after{
+  content:''; position:absolute; inset:5%; border-radius:50%;
+  box-shadow:0 0 0 1.5px color-mix(in srgb,var(--focus) 55%,#0000);
+}
+.film-label27{
+  position:absolute; left:50%; top:50%; box-sizing:border-box;
+  width:62%; padding:calc(var(--can)*.034) calc(var(--can)*.03) calc(var(--can)*.028);
+  transform:translate(-50%,-50%) rotate(var(--tilt,0deg));
+  text-align:center; color:var(--paper-ink);
+  background:linear-gradient(175deg,#f3ecdc,var(--paper) 55%,#ddd3bd);
+  box-shadow:0 1px 2px #0009, 0 0 0 .5px #5a503e66;
+  font:700 clamp(10.5px,calc(var(--can)*.0625),12.75px)/1.2 var(--face);
+  letter-spacing:-.01em; text-wrap:balance;
+}
+.film-label27 i{
+  display:block; margin-top:.3em; font-style:normal; font-weight:400;
+  font-size:.92em; color:var(--paper-dim);
+}
+
+/* ---------- slide tray ---------- */
+.slide-tray27{
+  --slide-w:clamp(96px,calc((100vw - 250px)/9.4),132px);
+  --slide-h:calc(var(--slide-w)/3);
+  box-sizing:border-box; display:flex; width:max-content; max-width:100%;
+  padding:6px 9px 9px; gap:9px; border-radius:3px;
+  background:
+    repeating-linear-gradient(91deg,#0000 0 7px,#0000000f 7px 8px,#0000 8px 19px,#ffffff08 19px 20px),
+    linear-gradient(180deg,var(--wood-hi),var(--wood-b) 12%,var(--wood-a) 86%,var(--wood-lo));
+  box-shadow:0 14px 26px #000a, inset 0 1px 0 #ffffff26, inset 0 -2px 0 #0006;
+}
+.slide-tray27 section{display:flex; flex-direction:column; gap:5px}
+.slide-tray27 h3{
+  margin:0; align-self:flex-start; padding:0 7px;
+  font:700 10.5px/17px var(--face); letter-spacing:.06em; text-transform:uppercase;
+  color:var(--brass-ink);
+  background:linear-gradient(100deg,var(--brass-a),var(--brass-b) 46%,var(--brass-a));
+  box-shadow:inset 0 0 0 1px #2f261a88, 0 1px 1px #0008; border-radius:1px;
+  text-shadow:0 1px #f0deb055;
+}
+.slide-well27{
+  display:grid; grid-auto-flow:column; grid-template-rows:repeat(2,var(--slide-h));
+  gap:5px; padding:5px; border-radius:2px;
+  background:var(--felt);
+  box-shadow:inset 4px 5px 7px #000c, inset -1px -2px 3px #ffffff0d, 0 1px 0 #ffffff1f;
+}
+.slide27{
+  all:unset; position:relative; box-sizing:border-box; display:flex; align-items:stretch;
+  width:var(--slide-w); height:var(--slide-h); cursor:pointer;
+  /* glass: faint green body, bright ground edge at the top, dark edge below */
+  background:linear-gradient(168deg,#e4f5ec4d,#c9e4d629 46%,#e4f5ec42);
+  box-shadow:inset 0 1px 0 #f2fff7a6, inset 0 -1px 0 #0b1a1299, inset 1px 0 0 #f2fff740, inset -1px 0 0 #0b1a1266, 1px 2px 2px #000a;
+  transition:transform .12s ease-out, box-shadow .12s ease-out;
+}
+.slide27:hover,.slide27:focus-visible{
+  transform:translateY(-2px);
+  box-shadow:inset 0 1px 0 #f2fff7a6, inset 0 -1px 0 #0b1a1299, inset 1px 0 0 #f2fff740, inset -1px 0 0 #0b1a1266, 2px 6px 6px #000b;
+}
+.slide27:focus-visible{outline:1.5px solid color-mix(in srgb,var(--focus) 55%,#0000); outline-offset:1px}
+.slide27 span{
+  /* the paper label at the frosted end */
+  flex:0 0 62%; box-sizing:border-box; margin:3px 0 3px 3px; padding:0 4px;
+  display:flex; flex-direction:column; justify-content:center;
+  background:linear-gradient(175deg,#f3ecdc,var(--paper) 60%,#ddd3bd); color:var(--paper-ink);
+  font:700 clamp(9.5px,calc(var(--slide-w)*.083),11px)/1.12 var(--face); letter-spacing:-.02em;
+  overflow:hidden;
+}
+.slide27 small{display:block; font:400 .86em/1.1 var(--face); color:var(--paper-dim); margin-top:1px}
+.slide27 img{
+  /* the specimen under its cover slip */
+  flex:1 1 auto; min-width:0; margin:5px 7px 5px 6px; object-fit:cover; object-position:50% 20%;
+  box-shadow:0 0 0 2.5px #eefaf32e, 0 0 0 3px #f2fff766, 1px 1px 0 3px #0b1a124d;
+  filter:saturate(.85) contrast(.96);
+}
+.slide27[aria-pressed=true]{
+  /* this slide is on the stage: its place in the tray is empty */
+  background:none; box-shadow:inset 0 0 0 1px #ffffff14; cursor:default; transform:none;
+}
+.slide27[aria-pressed=true]>*{visibility:hidden}

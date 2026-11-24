@@ -1,0 +1,143 @@
+/* Round 34 text pages. Coordinator's design, 23 November 2026.
+   Tokens from the phone pages (site/phone/phone.css, round 25-m): stock #ebe6d9, ink #1d1b18, gold #bda469,
+   Times New Roman / Songti SC, the newspaper's fibre grain. One responsive page serves desk and phone. */
+:root{
+  color-scheme:light;
+  --paper:#ebe6d9; --ink:#1d1b18; --ink-2:#4d4539; --rule:#1d1b18; --hair:#b9b1a2; --gold:#bda469;
+  --serif:'Times New Roman',Times,'Songti SC','STSong',serif;
+  --mono:'Courier Prime','Courier New',Courier,monospace;
+  --measure:40rem; --wide:52rem; --body:1.25rem;
+}
+*{box-sizing:border-box}
+html{background:var(--paper);color:var(--ink);font:400 var(--body)/1.6 var(--serif);-webkit-text-size-adjust:100%;text-size-adjust:100%;text-rendering:optimizeLegibility;font-kerning:normal}
+body{margin:0;background:var(--paper) url('grain.svg') repeat;min-height:100vh}
+a{color:inherit;text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:.18em;text-decoration-color:color-mix(in srgb,var(--ink) 55%,transparent)}
+a:hover{text-decoration-color:var(--gold);text-decoration-thickness:2px}
+a:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:0}
+.skip:focus{left:1rem;top:1rem;background:var(--paper);padding:.4rem .7rem;z-index:2}
+
+/* Masthead: the newspaper's name and rules, the sections, and the way into the room. */
+.mast{max-width:var(--wide);margin:0 auto;padding:2.2rem 1.5rem 0}
+.mast .name{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;border-top:1px solid var(--rule);border-bottom:6px double var(--rule);padding:.9rem 0 1rem}
+.mast .name a{text-decoration:none;font-weight:700;font-size:1.65rem;letter-spacing:-.01em;line-height:1.1}
+.mast .room{font-size:1rem;font-variant:small-caps;letter-spacing:.06em;text-decoration:none;white-space:nowrap;border-bottom:1px solid var(--ink-2);padding-bottom:.1rem}
+.mast .room:hover{border-color:var(--gold)}
+.mast nav{display:flex;flex-wrap:wrap;gap:.2rem 1.35rem;border-bottom:1px solid var(--rule);padding:.55rem 0 .6rem;font-size:1.02rem}
+.mast nav a{text-decoration:none}
+.mast nav a[aria-current=page]{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.3em}
+
+main{max-width:var(--wide);margin:0 auto;padding:0 1.5rem}
+.column{max-width:var(--measure);margin:0 auto}
+
+/* An essay. */
+.kicker{font-variant:small-caps;letter-spacing:.04em;font-size:1rem;color:var(--ink-2);margin:3.2rem 0 .7rem}
+.kicker span+span::before{content:"·";margin:0 .55em}
+h1.title{font-size:3.05rem;line-height:1.04;letter-spacing:-.022em;font-weight:700;margin:0 0 1.1rem;text-wrap:balance}
+.standfirst{font-style:italic;font-size:1.42rem;line-height:1.38;margin:0 0 1.4rem;color:var(--ink);text-wrap:pretty}
+.byline{font-size:1rem;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:.5rem 0;margin:0 0 2.2rem;display:flex;justify-content:space-between;gap:1rem;font-variant:small-caps;letter-spacing:.03em}
+.prose p{margin:0 0 1.05em;text-wrap:pretty}
+.prose h2{font-size:1.62rem;line-height:1.18;letter-spacing:-.01em;margin:2.6rem 0 1rem;text-wrap:balance}
+.prose h3{font-size:1.3rem;margin:2rem 0 .7rem}
+.prose ol,.prose ul{margin:0 0 1.2em;padding-left:1.6em}
+.prose li{margin:.3em 0;padding-left:.2em}
+.prose ol li::marker{font-weight:700}
+.prose blockquote{margin:1.6em 0;padding:0 0 0 1.1em;border-left:2px solid var(--gold);font-style:italic}
+.prose code{font-family:var(--mono);font-size:.86em;background:rgba(29,27,24,.06);padding:.05em .3em;border-radius:3px}
+.prose pre{font:.82rem/1.5 var(--mono);background:rgba(29,27,24,.05);border:1px solid var(--hair);padding:1rem;overflow-x:auto}
+.prose pre code{background:none;padding:0}
+.prose hr{border:0;border-top:1px solid var(--hair);margin:2.4rem auto;width:40%}
+.prose figure{margin:2.2rem calc((var(--measure) - min(var(--wide),100vw - 3rem))/2)}
+.prose figure img{display:block;width:100%;height:auto;border:1px solid rgba(29,27,24,.12);background:#f4f0e6}
+.prose figcaption{font-size:.95rem;font-style:italic;line-height:1.4;color:var(--ink-2);margin:.65rem auto 0;max-width:var(--measure)}
+.prose .chinese,.prose [lang|=zh]{font-family:'Songti SC','STSong',var(--serif)}
+
+/* The end of an essay: where it was first published, and more writing. */
+.coda{border-top:6px double var(--rule);margin:3.2rem 0 0;padding:1.4rem 0 0}
+.coda h2{font-size:1rem;font-variant:small-caps;letter-spacing:.06em;font-weight:400;margin:0 0 1rem;color:var(--ink-2)}
+.more{list-style:none;margin:0;padding:0}
+.more li{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;padding:.75rem 0;border-bottom:1px solid var(--hair)}
+.more time{font-variant:small-caps;color:var(--ink-2);font-size:1rem;padding-top:.15rem}
+.more a{font-weight:700;text-decoration:none;font-size:1.15rem;line-height:1.3}
+.more a:hover{text-decoration:underline}
+.more p{margin:.25rem 0 0;font-size:1rem;line-height:1.45;color:var(--ink-2)}
+
+/* The writing index. */
+.index-head{margin:3.2rem 0 1.6rem}
+.index-head h1{font-size:2.6rem;line-height:1.05;margin:0 0 .6rem;letter-spacing:-.02em}
+.index-head p{margin:0;font-style:italic;color:var(--ink-2)}
+.entries{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.entries li{display:grid;grid-template-columns:8.5rem 1fr;gap:1.4rem;padding:1.3rem 0;border-bottom:1px solid var(--hair)}
+.entries time{font-variant:small-caps;color:var(--ink-2);font-size:1rem;padding-top:.35rem}
+.entries h2{font-size:1.55rem;line-height:1.15;margin:0 0 .4rem;letter-spacing:-.01em}
+.entries h2 a{text-decoration:none}
+.entries h2 a:hover{text-decoration:underline}
+.entries p{margin:0;font-size:1.08rem;line-height:1.5}
+.entries .meta{font-size:.95rem;color:var(--ink-2);margin-top:.35rem;font-variant:small-caps}
+
+footer.site{max-width:var(--wide);margin:4rem auto 0;padding:1.1rem 1.5rem 3rem;font-size:.95rem;color:var(--ink-2)}
+footer.site .row{border-top:1px solid var(--rule);padding-top:.9rem;display:flex;flex-wrap:wrap;gap:.3rem 1.2rem;justify-content:space-between}
+footer.site nav{display:flex;flex-wrap:wrap;gap:.3rem 1.1rem}
+
+@media (max-width:700px){
+  :root{--body:1.0625rem}
+  .mast{padding:1.2rem 1.1rem 0}
+  .mast .name{flex-wrap:wrap;row-gap:.35rem}
+  .mast .name a{font-size:1.28rem}
+  .mast .room{font-size:.95rem}
+  .prose p{hyphens:auto}
+  .mast nav{gap:.1rem 1rem;font-size:1rem}
+  .mast nav a{padding:.35rem 0}
+  main{padding:0 1.1rem}
+  .kicker{margin-top:2rem;font-size:.95rem}
+  h1.title{font-size:2.1rem}
+  .standfirst{font-size:1.2rem}
+  .prose figure{margin:1.6rem 0}
+  .more li,.entries li{grid-template-columns:1fr;gap:.25rem}
+  .index-head h1{font-size:2.1rem}
+  footer.site{padding:1rem 1.1rem 2.4rem}
+}
+@media print{
+  body{background:none}
+  .mast nav,.mast .room,.coda,footer.site{display:none}
+  a{text-decoration:none}
+}
+
+/* Existing section content in the same text column. */
+.text-section .prose img{max-width:100%;height:auto}
+.text-section .prose figure{margin:1.5rem 0}
+.text-section .prose figure img{width:auto;max-width:100%}
+.text-section .prose figcaption{margin:.4rem 0 0}
+.text-section .prose hr{width:100%;margin-block:1.6rem}
+.text-section .prose h4{margin:1.25rem 0 .45rem}
+.text-section .prose iframe{border:0;max-width:100%}
+.text-section .prose table{width:100%;border-collapse:collapse}
+.text-section .prose td,.text-section .prose th{padding:.35em .5em;border-bottom:1px solid var(--hair);text-align:left}
+.text-section .prose video{max-width:100%}
+.text-section .prose .story p,.text-section .prose .poem-verse{white-space:pre-line}
+.text-section .prose{overflow-wrap:anywhere}
+.text-section .cv-document{width:100%;height:75vh}
+.article-links{margin-top:1.5rem;font-size:.95rem;color:var(--ink-2)}
+.article-links a{margin-right:.7em}
+.prose img{max-width:100%;height:auto}
+
+@media(max-width:600px){.text-section p > time{display:block}}
+.phone-room-preview{margin:2rem 0 0}
+.phone-room-preview img{display:block;width:100%;height:auto}
+
+@media(min-width:701px){
+  .text-section .prose .about-portrait{float:right;width:34%;margin:0 0 1.05em 1.4em}
+  .about-portrait + .headline{margin-top:0}
+  .about-portrait ~ .story{display:flow-root}
+  .about-portrait ~ .banner-text{clear:both}
+}
+@media(max-width:700px){
+  .mast .name{flex-wrap:nowrap;gap:.45rem;padding:.55rem 0 .65rem;white-space:nowrap}
+  .mast .name a{font-size:clamp(.79rem,3.95vw,1.15rem)}
+  .mast .name .room{font-size:clamp(.72rem,3.55vw,.95rem)}
+  .mast nav{flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;scroll-padding-inline:.2rem;padding-inline:.2rem}
+  .mast nav a{flex:none}
+  .mast nav a:focus-visible{outline-offset:1px}
+  .entries h2 a{text-decoration:underline;text-decoration-thickness:1px}
+  .entries h2 a:is(:hover,:focus-visible){text-decoration-thickness:2px}
+}

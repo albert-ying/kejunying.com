@@ -1,0 +1,13 @@
+<h2 id="software-autonomous-lab-name">NAME</h2><p>Autonomous Lab</p><h2 id="software-autonomous-lab-synopsis">SYNOPSIS</h2><p>Add to your MCP client config:</p><div class="highlight"><pre><code class="language-json"><span><span>{
+</span></span><span><span>  <span>"mcpServers"</span>: {
+</span></span><span><span>    <span>"autonomous-lab"</span>: {
+</span></span><span><span>      <span>"command"</span>: <span>"uvx"</span>,
+</span></span><span><span>      <span>"args"</span>: [<span>"autonomous-lab"</span>],
+</span></span><span><span>      <span>"timeout"</span>: <span>600</span>,
+</span></span><span><span>      <span>"env"</span>: {
+</span></span><span><span>        <span>"MCP_WEB_PORT"</span>: <span>"8766"</span>
+</span></span><span><span>      }
+</span></span><span><span>    }
+</span></span><span><span>  }
+</span></span><span><span>}
+</span></span></code></pre></div><h2 id="software-autonomous-lab-description">DESCRIPTION</h2><p>MCP server that turns any senior-junior workflow into an autonomous loop. AI handles the execution. You make the decisions.</p><p>It runs inside the coding agent you already pay for.</p><h2 id="software-autonomous-lab-example">EXAMPLE</h2><p>Then tell your agent: “Initialize an autonomous lab project on [your topic].”</p><h2 id="software-autonomous-lab-output">OUTPUT</h2><p>Two AI personas (senior + junior) iterate on your project in a loop. They design, execute, write, and revise.</p><p>When work is ready, you review it. Accept, request revisions, or reject. The loop continues until you’re satisfied.</p><h2 id="software-autonomous-lab-see-also">SEE ALSO</h2><p><a href="https://github.com/albert-ying/autonomous-lab">Source README</a> · <a href="https://autolab.kejunying.com">Website</a></p>

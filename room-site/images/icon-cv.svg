@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <linearGradient id="cvGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c9a959"/>
+      <stop offset="100%" stop-color="#8b7355"/>
+    </linearGradient>
+  </defs>
+  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="url(#cvGrad)"/>
+  <polyline points="14 2 14 8 20 8" stroke="url(#cvGrad)"/>
+  <circle cx="10" cy="13" r="2" stroke="url(#cvGrad)" opacity="0.7"/>
+  <path d="M14 17h-8" stroke="url(#cvGrad)" opacity="0.5"/>
+  <path d="M14 13h2" stroke="url(#cvGrad)" opacity="0.5"/>
+</svg>

@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "source_sha256": "43edacc9424d146c3f458a188fdd1eef8a6b8e651b11ff116f654aaecb546b70",
+  "inputs": {
+    "blender/bench/360/room-manifest.json": "909f203ae93818cd4d8aaba37fa7bde0face0eb36de00e4604cb61df63123e8a",
+    "blender/bench/360/build/camera-projection-qualification.json": "4589da1e97a01da2b2aace81374f314a006759847cbf671e619001ba450f3e1e",
+    "site/bench-live/interact.js": "14ada75ce01e6688f0aed57d32e373877411f85fd6502f80d3d45b7b64ce3fa5",
+    "blender/bench/360/build/references-final/back-reference.json": "26ba2dabacda2a163d50c9faf083edec8f4e0a74d4b9acc9bda559d03aa0dad1",
+    "blender/bench/360/build/references-final/shelf-reference.json": "c057f96b105e8499b9d5d11f9bb70238ddba7e1db73a51477d036a6dc236720b",
+    "blender/bench/360/build/references-final/side_bench-reference.json": "0e09748c5cdbf9e5797d3b46cc0474b704a1dcaeed40b9b29825d7ab525ef66b",
+    "blender/bench/360/build/references-final/door-reference.json": "6ebfb944f888bfe36f6c90edea30cf9d1ab213e60dc049709a479633d7677fb1"
+  },
+  "views": {
+    "back": {
+      "matrix": [
+        -0.9992009401321411,
+        -3.64642218642075e-08,
+        0.03996800631284714,
+        0.0,
+        0.005537101998925209,
+        0.9903569221496582,
+        0.13842856884002686,
+        0.0,
+        -0.03958259895443916,
+        0.13853926956653595,
+        -0.9895656108856201,
+        0.0,
+        -0.20000000298023224,
+        1.5299999713897705,
+        1.0,
+        1.0
+      ],
+      "fov": 37.64941927792143
+    },
+    "shelf": {
+      "matrix": [
+        -0.6808899641036987,
+        5.0883386393252295e-08,
+        -0.7323857545852661,
+        0.0,
+        -0.11181803047657013,
+        0.9882762432098389,
+        0.10395590960979462,
+        0.0,
+        0.7237994074821472,
+        0.15267646312713623,
+        -0.6729073524475098,
+        0.0,
+        0.2800000011920929,
+        1.4500000476837158,
+        1.7000000476837158,
+        1.0
+      ],
+      "fov": 37.64941927792143
+    },
+    "side_bench": {
+      "matrix": [
+        -4.371138828673793e-08,
+        1.8396532297515478e-08,
+        1.0,
+        0.0,
+        0.24795874953269958,
+        0.9687705636024475,
+        -6.983397415893933e-09,
+        0.0,
+        -0.9687705636024475,
+        0.24795874953269958,
+        -4.69078891285335e-08,
+        0.0,
+        -0.550000011920929,
+        1.5099999904632568,
+        1.4800000190734863,
+        1.0
+      ],
+      "fov": 37.64941927792143
+    },
+    "door": {
+      "matrix": [
+        -0.9847230911254883,
+        5.25370786874646e-08,
+        0.1741277277469635,
+        0.0,
+        0.013550804927945137,
+        0.9969673752784729,
+        0.07663189619779587,
+        0.0,
+        -0.17359966039657593,
+        0.07782077044248581,
+        -0.9817367792129517,
+        0.0,
+        -0.14000000059604645,
+        1.559999942779541,
+        1.4500000476837158,
+        1.0
+      ],
+      "fov": 37.64941927792143
+    }
+  },
+  "clearance_m": 0.3,
+  "zones": [
+    {
+      "min": [
+        -1.15,
+        1.1,
+        0.15
+      ],
+      "max": [
+        1.15,
+        1.95,
+        2.8000000000000003
+      ]
+    }
+  ],
+  "pitch_degrees": [
+    -85,
+    85
+  ],
+  "yaw": "unbounded",
+  "admission": "Candidate domain keeps the promoted front-depth and eye-height limits, and extends width and rear reach to the closed shell inset by clearance. The source finite plate does not prove every look from every point in this box. Source-selected cameras are retained exactly; scene collision and refreshed shell-ray guards admit movement and turns. Continuous paths and complete turns at the approved centre and back witnesses require Chrome qualification after the rear tier lands.",
+  "clearance_volumes": [
+    {
+      "name": "bookshelf",
+      "min": [
+        -1.392,
+        -0.000972,
+        2.655
+      ],
+      "max": [
+        -0.512,
+        2.119028,
+        3.045
+      ]
+    },
+    {
+      "name": "cabinet",
+      "min": [
+        -1.395144,
+        -0.000959,
+        1.200037
+      ],
+      "max": [
+        -0.925,
+        0.76892,
+        1.719963
+      ]
+    },
+    {
+      "name": "refrigerator",
+      "min": [
+        0.825,
+        -0.000972,
+        2.554956
+      ],
+      "max": [
+        1.375,
+        1.529028,
+        3.045
+      ]
+    },
+    {
+      "name": "side bench",
+      "min": [
+        0.835,
+        -0.000972,
+        0.865
+      ],
+      "max": [
+        1.395,
+        0.849028,
+        2.095
+      ]
+    }
+  ],
+  "clearance_provenance": "Structural scan bounds from room-manifest.json converted to [x,z,-y]. Runtime adds static furniture bounds before batching. Sweep expands all boxes by clearance_m."
+}
