@@ -7,8 +7,11 @@ if(matchMedia('(pointer:fine) and (min-width:801px)').matches){
  const key=context.key||(!q.has('computer')&&!q.has('view')&&!seen?'about':null);
  const eligible=['about','papers','contact','lab-join'].includes(key)||context.roomPath?.startsWith('/room/papers/');
  if(eligible){
+  const openingURL=location.href;
+  const openingTitle=document.title;
+  const firstNewspaper=!context.key&&typeof window.roomLoading?.showWaitingWelcome==='function';
   const proof=window.earlyReading25={key,startedAt:performance.now(),frames:[],turns:[],errors:[],visible:false,page:Math.max(0,Number(q.get('page')||1)-1)};
-  let sheetURL26b=null;let broadsheet;let worker,serial=0,state,id,size,metadata,assets={},shown=false,closed=false,painting=false;let resolveHandover26;const handover=new Promise(resolve=>resolveHandover26=resolve);
+  let sheetURL26b=null;let broadsheet;let worker,serial=0,state,id,size,metadata,assets={},shown=false,closed=false,painting=false,presentation=0;let resolveHandover26;const handover=new Promise(resolve=>resolveHandover26=resolve);
   let resolveRelease;const released=new Promise(resolve=>resolveRelease=resolve);
   const adjacent26b=new Map();const jobs=new Map(),shared=new Map(),originalFetch=window.fetch.bind(window);
   // Reuse source bytes across the early painter, welcome and native reader.
@@ -56,7 +59,22 @@ result.bitmap.close();
 metadata=result;proof.page=Math.max(0,Math.min(proof.page,(metadata.pages||1)-1));if(state.pdf?.available)metadata.pages=state.pdf.pages.length;mirror.innerHTML=metadata.mirror;for(const link of mirror.querySelectorAll('a,button'))link.tabIndex=-1;updateTargets();proof.paintedAt=performance.now();if(!state.pdf?.available)prepareAdjacent26b();}finally{painting=false}}
   // round26b: prepare both paper directions while the current leaf is read.
   function prepareAdjacent26b(){const count=metadata?.pages||1;if(count<2)return;const pages=[(proof.page+1)%count,(proof.page-1+count)%count];for(const [page,promise]of adjacent26b)if(!pages.includes(page)){adjacent26b.delete(page);promise.then(r=>r.bitmap.close()).catch(()=>{});}for(const page of pages)if(!adjacent26b.has(page)){const promise=(async()=>{if(id==='presence')await pageAssets(page);return job('paint',{withMetadata:true,earlyBlob26b:true,state:{...state,page,assets}});})();adjacent26b.set(page,promise);promise.catch(error=>{adjacent26b.delete(page);proof.errors.push('Neighbor preparation: '+error.message)});}}
-  async function show(){root.inert=false;if(closed||shown)return;shown=true;document.querySelector('#load-hint')?.remove();try{const handover=(async()=>{while(!window.benchProof?.welcomeHandover26d&&!closed)await new Promise(resolve=>requestAnimationFrame(resolve));if(!closed)await window.benchProof?.welcomeHandover26d?.();})();await prepared;if(window.benchProof?.roomReady)await handover;else void handover.catch(error=>proof.errors.push('Welcome handover: '+error.message));if(closed)return;sheet.style.transform='translate(-50%,-50%)';sheet.style.top='50%';carrier.style.transform='translate3d(0,92.5vh,0)';root.hidden=false;root.style.pointerEvents='auto';pill.hidden=false;document.documentElement.dataset.earlyReading25='';root.style.background='rgba(0,0,0,0)';// round26c: the backing dim shares the capped sheet clock. // round26b: dim behind the paper only.
+  async function show(){
+   if(closed||shown||firstNewspaper&&window.benchProof?.establishedAt)return;
+   shown=true;
+   const current=++presentation,stillShowing=()=>!closed&&presentation===current;
+   if(firstNewspaper)proof.dismissed=false;
+   else document.querySelector('#load-hint')?.remove();
+   try{
+    const handover=(async()=>{
+     while(!window.benchProof?.welcomeHandover26d&&stillShowing())await new Promise(resolve=>requestAnimationFrame(resolve));
+     if(stillShowing())await window.benchProof?.welcomeHandover26d?.();
+    })();
+    await prepared;
+    if(window.benchProof?.roomReady)await handover;
+    else void handover.catch(error=>proof.errors.push('Welcome handover: '+error.message));
+    if(!stillShowing())return;
+    root.inert=false;sheet.style.transform='translate(-50%,-50%)';sheet.style.top='50%';carrier.style.transform='translate3d(0,92.5vh,0)';root.hidden=false;root.style.pointerEvents='auto';pill.hidden=false;document.documentElement.dataset.earlyReading25='';root.style.background='rgba(0,0,0,0)';// round26c: the backing dim shares the capped sheet clock. // round26b: dim behind the paper only.
 
  // round26-k: reserve the sheet's composite layer before its 420 ms rise.
  sheet.style.top='50%';carrier.style.willChange='transform';carrier.style.transform='translate3d(0,92.5vh,0)';
@@ -68,7 +86,7 @@ metadata=result;proof.page=Math.max(0,Math.min(proof.page,(metadata.pages||1)-1)
  let start26b=null,lastRiseFrame=null,presenceElapsed=0;
  const ease26b=x=>{let lo=0,hi=1,t=x;for(let i=0;i<18;i++){const v=3*(1-t)*(1-t)*t*.45+3*(1-t)*t*t*.2+t*t*t;if(v<x)lo=t;else hi=t;t=(lo+hi)/2;}return 3*(1-t)*t*t+t*t*t;};
  const rise={cancel(){},finished:new Promise(resolve=>{function frame(now){
-  if(closed){resolve();return;}
+  if(!stillShowing()){resolve();return;}
   const clock=roomMotion26c.tick(now);
   if(start26b===null)start26b=clock;
   // Advance the newspaper by at most one display interval after a delayed composite.
@@ -82,13 +100,13 @@ metadata=result;proof.page=Math.max(0,Math.min(proof.page,(metadata.pages||1)-1)
  const falloff=ease26b(Math.min(1,elapsed/400));
  root.style.background=`rgba(0,0,0,${(id==='presence'?.375:.18)*falloff})`;
  if(id==='presence')root.style.backdropFilter=`blur(${2.5*falloff}px)`;if(t<1)requestAnimationFrame(frame);else resolve();}requestAnimationFrame(frame);})};
- rise.finished.then(()=>{if(closed)return;carrier.style.transform='none';rise.cancel();document.title=(key==='about'?'About':key==='contact'?'Contact':key==='papers'?'Papers':state.record?.title||key)+' | 「应可钧」Kejun Albert Ying';if(key==='about')history.replaceState(history.state,'','/room/about/'+(proof.page?'?page='+(proof.page+1):''));proof.readableAt=performance.now();updateTargets();sheet.focus({preventScroll:true});resolveHandover26();}).catch(()=>resolveHandover26());
+ rise.finished.then(()=>{if(!stillShowing())return;carrier.style.transform='none';rise.cancel();document.title=(key==='about'?'About':key==='contact'?'Contact':key==='papers'?'Papers':state.record?.title||key)+' | 「应可钧」Kejun Albert Ying';if(key==='about')history.replaceState(history.state,'','/room/about/'+(proof.page?'?page='+(proof.page+1):''));proof.readableAt=performance.now();updateTargets();sheet.focus({preventScroll:true});resolveHandover26();}).catch(()=>resolveHandover26());
  proof.visible=true;
  if(!window.benchProof?.roomReady){
   const intro=window.roomLoading;
-  if(intro?.showEarlyReader)intro.showEarlyReader();
+  if(intro?.showEarlyReader)intro.showEarlyReader(firstNewspaper);
   else if(intro){intro.dismissWelcome();document.querySelector('#load').hidden=true;}
- }
+ }else if(firstNewspaper)window.roomLoading?.showEarlyReader(true);
  dispatchEvent(new Event('early-reader25-ready'));}catch(e){resolveHandover26();shown=false;proof.errors.push(String(e));dispatchEvent(new CustomEvent('early-reader25-ready',{detail:{error:String(e)}}));console.warn('Early reader unavailable',e)}}
   // round26c: protect the old leaf before binding the next decoded image.
   async function turn(delta){if(!proof.visible||painting||proof.turning)return;const started=performance.now();window.roomPageTurning25=true;proof.turning=true;let old;try{
@@ -100,6 +118,68 @@ metadata=result;proof.page=Math.max(0,Math.min(proof.page,(metadata.pages||1)-1)
 
   function requestNative(next){window.benchProof?.queueRoomIntent(()=>window.inScene.open(next),next);}
   function release(){if(closed)return;resolveHandover26();resolveRelease();closed=true;for(const promise of adjacent26b.values())promise.then(r=>r.bitmap.close()).catch(()=>{});adjacent26b.clear();proof.turning=false;window.roomPageTurning25=false;proof.activeSurfaceBytes=0;proof.visible=false;proof.releasedAt=performance.now();delete document.documentElement.dataset.earlyReading25;style.remove();if(sheetURL26b)URL.revokeObjectURL(sheetURL26b);broadsheet?.release();sheet.src='';sheet.width=sheet.height=1;root.remove();if(!proof.workerBorrowed)worker?.terminate();state?.pdfImage?.close();for(const image of Object.values(assets))image.close();assets={};shared.clear();}
+  function dismiss(){
+   proof.dismissed=true;
+   if(firstNewspaper){
+    history.replaceState(history.state,'',openingURL);
+    document.title=openingTitle;
+    if(!window.benchProof?.establishedAt){
+     presentation++;
+     shown=false;
+     root.hidden=true;
+     root.inert=true;
+     proof.visible=false;
+     delete proof.readableAt;
+     delete document.documentElement.dataset.earlyReading25;
+     resolveHandover26();
+     window.roomLoading?.showWaitingWelcome();
+     return;
+    }
+   }
+   if(!context.key){
+    sessionStorage.setItem('room.newspaper.seen','1');
+    if(!firstNewspaper)history.replaceState(history.state,'',openingURL);
+   }
+   release();
+  }
+  if(firstNewspaper)addEventListener('room-established',()=>{
+   if(proof.dismissed){
+    sessionStorage.setItem('room.newspaper.seen','1');
+    release();
+   }
+  },{once:true});
+  function outsideSheet(event){
+   if(event.target!==root)return false;
+   const bounds=sheet.getBoundingClientRect();
+   return event.clientX<bounds.left||event.clientX>bounds.right||event.clientY<bounds.top||event.clientY>bounds.bottom;
+  }
+  let waitingLook=null;
+  document.addEventListener('pointerdown',event=>{
+   if(proof.visible&&!window.benchProof?.establishedAt&&event.isPrimary&&event.button===0&&outsideSheet(event)){
+    waitingLook={id:event.pointerId,x:event.clientX,y:event.clientY};
+   }
+  },true);
+  document.addEventListener('pointermove',event=>{
+   if(waitingLook?.id!==event.pointerId||!proof.visible)return;
+   if(Math.hypot(event.clientX-waitingLook.x,event.clientY-waitingLook.y)<=6&&!proof.pendingLook)return;
+   if(firstNewspaper){
+    waitingLook=null;
+    dismiss();
+    event.preventDefault();event.stopImmediatePropagation();
+    return;
+   }
+   proof.pendingLook={x:waitingLook.x,y:waitingLook.y,toX:event.clientX,toY:event.clientY};
+   root.style.opacity='0';
+   event.preventDefault();event.stopImmediatePropagation();
+  },true);
+  for(const type of ['pointerup','pointercancel'])document.addEventListener(type,event=>{
+   if(waitingLook?.id!==event.pointerId)return;
+   waitingLook=null;
+   if(!proof.pendingLook||!proof.visible)return;
+   event.preventDefault();event.stopImmediatePropagation();
+   dismiss();
+   window.benchProof?.interaction?.applyWaitingLook();
+  },true);
   function adoptBroadsheet(){
    if(!broadsheet||window.inScene?.held!=='profile'||matchMedia('(prefers-reduced-motion:reduce)').matches){release();return;}
    if(proof.adoptionStarted)return;
@@ -119,11 +199,29 @@ metadata=result;proof.page=Math.max(0,Math.min(proof.page,(metadata.pages||1)-1)
    requestAnimationFrame(frame);
   }
   // Native adoption starts after the first rise reaches its reading pose.
-  const update=()=>{if(closed)return;const a=window.benchProof,loading=window.roomLoading?.snapshot;if(!shown&&loading?.welcomeCompletedAt&&loading?.skipped)void show();pill.textContent=a?.roomReady?'Put the paper down · Esc':'Room arriving · '+Math.floor((loading?.fraction||0)*100)+'%';pill.setAttribute('aria-disabled',String(!a?.roomReady));if(proof.visible&&proof.readableAt&&!painting&&!window.roomPageTurning25&&a?.roomReady&&window.inScene&&!window.inSceneProof.active&&a.establishedAt){if(['presence','reprint'].includes(id)&&proof.page!==inScene.state.page&&window.inScene.resumeEarlyReader25){if(!proof.handoffPending){proof.handoffPending=true;void inScene.resumeEarlyReader25(proof.page).then(result=>{if(result===false)release()}).finally(()=>{proof.handoffPending=false;update()});}}else{adoptBroadsheet();}}if(!closed)setTimeout(update,80)};
-  pill.onclick=()=>{if(!window.benchProof?.roomReady)return;release();void window.inScene?.home({push:false})};
-  document.addEventListener('keydown',e=>{if(!proof.visible)return;if(e.code==='Space'&&!window.benchProof?.rearReady&&!e.target.closest?.('a,button')){e.preventDefault();e.stopImmediatePropagation();return;}if(['Escape','ArrowRight','ArrowLeft','PageDown','PageUp'].includes(e.key)){e.preventDefault();e.stopImmediatePropagation();if(e.key==='Escape'){if(window.benchProof?.roomReady){release();void window.inScene?.home({push:false})}}else void turn(['ArrowLeft','PageUp'].includes(e.key)?-1:1);}},true);
+  const update=()=>{if(closed)return;const a=window.benchProof,loading=window.roomLoading?.snapshot;if(!shown&&!proof.dismissed&&loading?.welcomeCompletedAt&&loading?.skipped)void show();pill.textContent=firstNewspaper||a?.roomReady?'Put the paper down · Esc':'Room arriving · '+Math.floor((loading?.fraction||0)*100)+'%';pill.setAttribute('aria-disabled',String(!firstNewspaper&&!a?.roomReady));if(proof.visible&&proof.readableAt&&!painting&&!window.roomPageTurning25&&a?.roomReady&&window.inScene&&!window.inSceneProof.active&&a.establishedAt){if(['presence','reprint'].includes(id)&&proof.page!==inScene.state.page&&window.inScene.resumeEarlyReader25){if(!proof.handoffPending){proof.handoffPending=true;void inScene.resumeEarlyReader25(proof.page).then(result=>{if(result===false)release()}).finally(()=>{proof.handoffPending=false;update()});}}else{adoptBroadsheet();}}if(!closed)setTimeout(update,80)};
+  pill.onclick=()=>{
+   if(firstNewspaper){dismiss();if(window.benchProof?.establishedAt)void window.inScene?.home({push:false});return;}
+   if(!window.benchProof?.roomReady)return;
+   release();void window.inScene?.home({push:false});
+  };
+  document.addEventListener('keydown',e=>{
+   if(!proof.visible)return;
+   if(e.code==='Space'&&!window.benchProof?.rearReady&&!e.target.closest?.('a,button')){
+    e.preventDefault();e.stopImmediatePropagation();return;
+   }
+   if(!['Escape','ArrowRight','ArrowLeft','PageDown','PageUp'].includes(e.key))return;
+   e.preventDefault();e.stopImmediatePropagation();
+   if(e.key==='Escape'){
+    delete proof.pendingLook;
+    dismiss();
+    if(window.benchProof?.establishedAt&&(window.inScene?.mode||window.inSceneProof?.active===key)){
+     void window.inScene.home({push:false});
+    }
+   }else void turn(['ArrowLeft','PageUp'].includes(e.key)?-1:1);
+  },true);
   sheet.onclick=e=>{if(e.target===sheet)void turn(1)};addEventListener('resize',resizePaper);function resizePaper(){if(!closed&&shown){broadsheet?.draw();updateTargets();}}// round25d: prepare the newspaper before Home without waiting for the welcome.
-  const prepared=paint().then(async()=>{if(closed||shown)return;root.hidden=false;root.inert=true;carrier.style.transform='translate3d(0,101vh,0)';root.style.background='transparent';root.style.pointerEvents='none';pill.hidden=true;await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));proof.prewarmedAt26c=performance.now();});prepared.catch(()=>{});window.roomEarlyReader={show,turn,release,proof,prepared,handover,released,adoptPainter(){if(!proof.preparedAt||proof.errors.length)return null;proof.workerBorrowed=true;return{request}}};update();
+  const prepared=paint().then(async()=>{if(closed||shown)return;root.hidden=false;root.inert=true;carrier.style.transform='translate3d(0,101vh,0)';root.style.background='transparent';root.style.pointerEvents='none';pill.hidden=true;await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));proof.prewarmedAt26c=performance.now();});prepared.catch(()=>{});window.roomEarlyReader={show,turn,release,dismiss,outsideSheet,proof,prepared,handover,released,firstNewspaper,get opening(){return shown&&!closed;},adoptPainter(){if(closed||!proof.preparedAt||proof.errors.length)return null;proof.workerBorrowed=true;return{request}}};update();
  }
 }
 

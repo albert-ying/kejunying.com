@@ -123,7 +123,18 @@ footer.site nav{display:flex;flex-wrap:wrap;gap:.3rem 1.1rem}
 
 @media(max-width:600px){.text-section p > time{display:block}}
 .phone-room-preview{margin:2rem 0 0}
+.phone-room-preview a{display:block}
 .phone-room-preview img{display:block;width:100%;height:auto}
+.phone-front .index-head{margin:2rem 0 1rem}
+.phone-list{margin-block:2rem}
+.phone-list h2{margin:0 0 .35rem}
+.phone-list ul{list-style:none;padding:0;margin:0;border-top:1px solid var(--rule)}
+.phone-list li{padding:.65rem 0 .9rem;border-bottom:1px solid var(--hair)}
+.phone-list h3{margin:0;font-size:1.25rem;line-height:1.18}
+.phone-list p{margin:.3rem 0 0}
+.phone-list .phone-meta{font-size:1rem;color:var(--ink-2);margin:0}
+.phone-list .phone-meta time{display:inline}
+.phone-links{display:flex;flex-wrap:wrap;gap:0 1rem;margin-bottom:0}
 
 @media(min-width:701px){
   .text-section .prose .about-portrait{float:right;width:34%;margin:0 0 1.05em 1.4em}
@@ -132,12 +143,22 @@ footer.site nav{display:flex;flex-wrap:wrap;gap:.3rem 1.1rem}
   .about-portrait ~ .banner-text{clear:both}
 }
 @media(max-width:700px){
-  .mast .name{flex-wrap:nowrap;gap:.45rem;padding:.55rem 0 .65rem;white-space:nowrap}
-  .mast .name a{font-size:clamp(.79rem,3.95vw,1.15rem)}
-  .mast .name .room{font-size:clamp(.72rem,3.55vw,.95rem)}
-  .mast nav{flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;scroll-padding-inline:.2rem;padding-inline:.2rem}
-  .mast nav a{flex:none}
+  :root{--body:1.125rem;--phone-gutter:20px;--phone-target:44px}
+  .mast,main,footer.site{padding-inline:var(--phone-gutter)}
+  .prose{overflow-wrap:anywhere}
+  .mast .name{flex-wrap:nowrap;align-items:center;gap:.5rem;padding:.2rem 0}
+  .mast .name a{font-size:clamp(.875rem,4vw,1.15rem)}
+  .mast .name .room{border:0;text-decoration:underline;font-size:clamp(.875rem,3.55vw,.95rem)}
+  .mast nav{display:grid;grid-template-columns:repeat(5,max-content);align-items:center;
+    column-gap:clamp(10px,calc(18vw - 54px),15px);row-gap:0;padding:.2rem 0;font-size:1rem}
+  @media (max-width:340px){.mast nav{font-size:.9rem}} /* Coordinator, 25 Nov 2026: a 10 px floor between sections; 14.4 px type keeps five columns at 320 px. */
+  .mast .name a,.mast nav a,footer.site a,.phone-links a,.phone-list h3 a,.phone-list h2 a{
+    display:inline-flex;align-items:center;min-height:var(--phone-target);padding:0}
+  .mast nav a{min-width:var(--phone-target)}
   .mast nav a:focus-visible{outline-offset:1px}
+  .phone-front h1.title{font-size:clamp(1.7rem,9.62vw,2.1rem)}
+  .phone-front .prose p{hyphens:manual}
+  .phone-list h3 a{padding-block:.25rem;box-sizing:border-box}
   .entries h2 a{text-decoration:underline;text-decoration-thickness:1px}
   .entries h2 a:is(:hover,:focus-visible){text-decoration-thickness:2px}
 }

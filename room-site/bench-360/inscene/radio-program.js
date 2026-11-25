@@ -4,7 +4,7 @@ const KEY='room.radio27';
 const clamp=(n,a=0,b=1)=>Math.max(a,Math.min(b,n));
 export function createRadioProgram({engine,onChange=()=>{}}){
  let saved={};try{saved=JSON.parse(sessionStorage.getItem(KEY)||'{}')}catch{}
- const state={on:saved.on!==false,station:clamp(saved.station|0,0,2),volume:clamp(Number.isFinite(saved.volume)?saved.volume:1),pieces:[0,0,0],recording:false,loading:false,error:null};
+ const state={on:saved.on!==false,station:clamp(saved.station|0,0,2),volume:clamp(Number.isFinite(saved.volume)?saved.volume:.4) /* Coordinator, 25 Nov 2026: Albert asked for the music lower; default 0.4 (about -8 dB), the dial still reaches 1. */,pieces:[0,0,0],recording:false,loading:false,error:null};
  state.pieces=state.pieces.map((_,i)=>clamp(saved.pieces?.[i]|0,0,radioStations[i].pieces.length-1));
  const events=[],requests=[];let audio=null,ctx=null,gain=null,filter=null,pan=null,analyser=null,source=null,blob=null,loaded=null,abort=null,revision=0,timer=0,delayUntil=0,lastSpatial='',lastTitleAt=0,spatialGain=1,fadeUntil=0;
  const samples=new Float32Array(256),listeners=new Set();
