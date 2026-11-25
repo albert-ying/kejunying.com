@@ -46,3 +46,9 @@
 .card30.news h1{margin:16px 0 0; font:700 104px/.94 'Times New Roman',serif; letter-spacing:-.02em; text-wrap:balance}
 .card30.news .intro{margin:22px 0 0; max-width:800px; font:400 36px/1.16 'Times New Roman',serif; text-wrap:balance}
 .card30.news::before{content:''; position:absolute; left:64px; right:64px; top:54px; border-top:2px solid var(--ink)}
+
+.card30.paper-b .words.preprint{padding:38px 36px 0 34px}
+.card30.paper-b .preprint .kind{font-size:19px;letter-spacing:.045em;white-space:nowrap;text-transform:none}
+.card30.paper-b .preprint h2{font-size:36px; padding-bottom:12px}
+.card30.paper-b .preprint .authors{margin:14px 0 0; font:400 18px/1.18 'Courier New',monospace; color:var(--dim)}
+.card30.paper-b .preprint .intro{margin:16px 0 0; font:400 25px/1.15 'Times New Roman',serif}

@@ -31,8 +31,8 @@
 #recent-reader section#news{border-top:1px solid #1d1b1850;padding-top:.45em}
 #recent-reader a,#recent-reader button{color:inherit;text-underline-offset:.13em}
 #recent-reader h2 button{font:inherit;background:none;border:0;padding:0;text-align:left;cursor:pointer}
-#recent-reader h2 button[aria-current]{text-decoration:underline;text-decoration-color:#9b7831}
-#recent-reader :is(a,button):focus-visible{outline:2px solid #8b6c32;outline-offset:3px}
+#recent-reader h2 button:is([aria-current],:focus-visible){outline:none;text-decoration:underline;text-decoration-color:#8e6c2e;text-decoration-skip-ink:none}
+#recent-reader a:focus-visible{outline:2px solid #8b6c32;outline-offset:3px}
 @media(max-width:800px){
   #recent-sheet{position:relative;inset:auto;width:auto;max-width:46rem;margin:0 auto;padding:24px;box-shadow:none}
   #recent-reader{padding:0;overflow:visible;clip-path:none!important}

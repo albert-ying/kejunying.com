@@ -117,3 +117,21 @@
   background:none; box-shadow:inset 0 0 0 1px #ffffff14; cursor:default; transform:none;
 }
 .slide27[aria-pressed=true]>*{visibility:hidden}
+
+/* Notebook index stock follows the held spread's projected edge. */
+button.scene-target.notebook-tab {
+  z-index: 18;
+  padding: 0 1px;
+  border: 1px solid #a29a89;
+  background: #d8cfb9;
+  color: #30271f;
+  font: 13px/1 "Courier New", "Songti SC", monospace;
+  white-space: normal;
+  overflow: hidden;
+  transition: transform 120ms ease;
+}
+button.scene-target.notebook-tab[data-stock="poem"] { background: #c3c8b7; }
+button.scene-target.notebook-tab[data-selected="true"] { background: #ebe7dc; }
+button.scene-target.notebook-tab:hover { transform: translate(-2px, -2px); }
+@media (min-width: 1600px) { button.scene-target.notebook-tab { font-size: 14px; } }
+@media (prefers-reduced-motion: reduce) { button.scene-target.notebook-tab { transition: none; } }
