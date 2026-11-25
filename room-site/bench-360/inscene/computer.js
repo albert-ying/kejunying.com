@@ -225,7 +225,7 @@ if(room.queueRoomIntent&&(!room.roomReady||!room.entered||!room.establishedAt)){
  function hide(){remember();if(panel.hidden)return Promise.resolve();const token=++fadeEpoch;finishTyping?.();++epoch;paintRest(true);return phosphor26c(0).then(()=>{if(token===fadeEpoch){visible=false;panel.hidden=true;panel.querySelector('iframe')?.remove();paintRest(true);}});}
 
  function frame(){
-  if(!visible){if(window.roomLoading?.snapshot.welcomeRetained){window.roomLoading.tickWelcome();return;}if(room.state.view==='home'){const next=Math.floor(performance.now()/700)%2===0;if(next!==cursor){cursor=next;paintRest();}}return;}
+  if(!visible){if(window.roomLoading?.snapshot.welcomeRetained){window.roomLoading.tickWelcome();return;}if(room.state.view==='home'){const next=matchMedia('(prefers-reduced-motion: reduce)').matches||Math.floor(performance.now()/700)%2===0;if(next!==cursor){cursor=next;paintRest();}}return;}
   // round26c: the DOM face stays mapped to the glass throughout the lean.
   // round19-q: inscribe the flat 4:3 live document inside the tube so glyphs retain their aspect.
   const ps=(room.monitor23?.glass||cfg.crt).map(p=>new T.Vector3(...p)) // round23

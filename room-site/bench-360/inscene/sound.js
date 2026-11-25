@@ -188,7 +188,7 @@ export function createSound({ api } = {}) {
     engine = createAudio({ scene: 'lab', autoStart: false, soundtrackUrls: [],
       musicDuration: music.duration, musicGain: music.gain });
     engine.setMusicEnabled(false,{fade:0});
-    programReady=(api?.afterEnter?.()||Promise.resolve()).then(()=>import('./radio-program.js')).then(({createRadioProgram})=>{program=createRadioProgram({engine,onChange:notify});window.roomRadioProgram=program;if(recording)program.recording(true);notify();return program}).catch(error=>{warn('radio',error);return null});
+    programReady=import('./radio-program.js').then(({createRadioProgram})=>{program=createRadioProgram({engine,onChange:notify});window.roomRadioProgram=program;if(recording)program.recording(true);notify();return program}).catch(error=>{warn('radio',error);return null});
     engine.onChange(notify);
     setInterval(()=>{if(program?.playing&&performance.now()-program.titleAt>=5000&&performance.now()-program.titleAt<6100)notify()},1000);
     // round25-l: boot does not download an inaudible soundtrack.

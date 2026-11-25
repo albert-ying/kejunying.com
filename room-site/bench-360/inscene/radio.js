@@ -2,12 +2,14 @@
 export async function createRadio({a,sound,mode}){
  const n=a.contentNative,T=n.toolkit,V=T.Vector3,program=sound.radio||await sound.radioReady;
  if(!program)throw Error('Radio programme is unavailable');
- const base='/bench-360/radio/',response=await fetch(base+'geometry.json.gz');
- if(!response.ok)throw Error('Radio geometry HTTP '+response.status);
- const data=await new Response(response.body.pipeThrough(new DecompressionStream('gzip'))).json(),root=new T.Group();root.name='live_radio27';
+ const base='/bench-360/radio/',geometry=fetch(base+'geometry.json.gz').then(response=>{
+  if(!response.ok)throw Error('Radio geometry HTTP '+response.status);
+  return new Response(response.body.pipeThrough(new DecompressionStream('gzip'))).json();
+ });
+ const root=new T.Group();root.name='live_radio27';
  const lamp={value:0},groups=new Map(),loadedTextures=[];
  async function texture(name){const r=await fetch(base+name);if(!r.ok)throw Error('Radio texture HTTP '+r.status);const bitmap=await createImageBitmap(await r.blob()),canvas=document.createElement('canvas');canvas.width=bitmap.width;canvas.height=bitmap.height;canvas.getContext('2d').drawImage(bitmap,0,0);bitmap.close();const t=n.texture(canvas,'radio27-'+name,{sharedPool:false});t.name='radio27.'+name;loadedTextures.push(t);return t;}
- const [map,contact]=await Promise.all([texture('combined.png'),texture('contact.png')]);
+ const [data,map,contact]=await Promise.all([geometry,texture('combined.png'),texture('contact.png')]);
  const shader=(tex,shadow=false,diffuseGain=1,weave=false)=>new T.ShaderMaterial({transparent:shadow,depthWrite:!shadow,side:T.DoubleSide,uniforms:{map:{value:tex},diffuseGain:{value:diffuseGain},weave:{value:weave?1:0},lamp,dialCentre:{value:new V(...data.dial)},deskCentre:{value:new T.Vector2(data.dial[0]-.035,data.dial[2]+.08)}},vertexShader:'varying vec2 v;varying vec3 world;void main(){v=uv;world=(modelMatrix*vec4(position,1.)).xyz;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',fragmentShader:shadow?'uniform sampler2D map;uniform float lamp;uniform vec2 deskCentre;varying vec2 v;varying vec3 world;void main(){float ao=texture2D(map,v).r;float shadow=clamp((1.-ao)*.65,0.,.48);gl_FragColor=vec4(0.,0.,0.,shadow);\n#include <tonemapping_fragment>\n#include <colorspace_fragment>\n}':'uniform sampler2D map;uniform float lamp;uniform float diffuseGain,weave;uniform vec3 dialCentre;varying vec2 v;varying vec3 world;void main(){vec3 c=texture2D(map,v).rgb*diffuseGain;vec2 threads=vec2(dot(world.xz,vec2(.921,.389)),world.y)*680.;vec2 fade=1.-smoothstep(vec2(.28),vec2(.85),fwidth(threads));vec2 strand=sin(6.28318*threads);float interlace=cos(3.14159*floor(threads.x))*cos(3.14159*floor(threads.y));c*=1.+weave*(.18*dot(strand,fade)+.14*interlace*strand.x*strand.y*fade.x*fade.y);float r=length(world-dialCentre);float dial=1.-smoothstep(.023,.026,r);c+=vec3(.30,.125,.018)*lamp*dial*exp(-r*r/ .00065);gl_FragColor=vec4(c,1.);\n#include <tonemapping_fragment>\n#include <colorspace_fragment>\n}'});
  const material=shader(map),clothMaterial=shader(map,false,1.44,true),shadowMaterial=shader(contact,true);
  // The clear cover keeps the printed scale and needle behind glass.
@@ -17,7 +19,7 @@ export async function createRadio({a,sound,mode}){
  for(const mesh of data.meshes){
   // The tuning spindle runs under the separate title window.
   if(/dial pin$/.test(mesh.name))continue;
-  const kind=/dial graduation/.test(mesh.name)?'scale':/station mark/.test(mesh.name)?'marks':/woven speaker/.test(mesh.name)?'cloth':mesh.group;mesh.group=kind;const g=groups.get(kind)||{position:[],normal:[],uv:[]};for(const key of ['position','normal','uv'])g[key].push(...mesh[key]);groups.set(mesh.group,g);}
+  const kind=/dial graduation/.test(mesh.name)?'scale':/station mark/.test(mesh.name)?'marks':/woven speaker/.test(mesh.name)?'cloth':mesh.group;mesh.group=kind;const g=groups.get(kind)||{position:[],uv:[]};for(const key of ['position','uv'])g[key].push(...mesh[key]);groups.set(mesh.group,g);}
  const scaleMaterial=new T.ShaderMaterial({uniforms:{lamp},vertexShader:'void main(){gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',fragmentShader:'uniform float lamp;void main(){gl_FragColor=vec4(mix(vec3(.22,.24,.19),vec3(.72,.52,.25),lamp),1.);\n#include <tonemapping_fragment>\n#include <colorspace_fragment>\n}'}),redMaterial=new T.ShaderMaterial({vertexShader:'void main(){gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',fragmentShader:'void main(){gl_FragColor=vec4(.48,.032,.018,1.);\n#include <tonemapping_fragment>\n#include <colorspace_fragment>\n}'});
  const moving={};
  for(const [group,attrs]of groups){const g=n.geometry(new T.BufferGeometry());for(const [key,array]of Object.entries(attrs))g.setAttribute(key,new T.Float32BufferAttribute(array,key==='uv'?2:3));
@@ -72,7 +74,7 @@ export async function createRadio({a,sound,mode}){
  const disc=document.createElement('div');disc.id='radio27-dial';disc.hidden=true;disc.tabIndex=-1;disc.setAttribute('role','dialog');disc.setAttribute('aria-label','Change station');disc.setAttribute('aria-modal','true');
  const stationButtons=program.stations.map((station,i)=>{const b=document.createElement('button');b.type='button';b.textContent=station.name;b.setAttribute('role','radio');b.onclick=e=>{e.stopPropagation();choose(i);closeDial()};disc.append(b);return b});
  const centre=document.createElement('button');centre.type='button';centre.onclick=e=>{e.stopPropagation();program.next(candidate);paintDial()};disc.append(centre);document.body.append(disc);
- let focus=false,opened=false,candidate=program.state.station,original=candidate,press=null,holdTimer=0,suppressClick=0,volumeDrag=null,registered=false,lastFrame=0,smoothedLamp=0,knobPower=0,knobVolume=0,needleLevel=0,meter=null,screen=null,screenView=null,screenFov=0,screenAspect=0,lastLabel='',returnView='home',openingPointer=null,needleAngle=candidate*2*Math.PI/3,painted='';
+ let focus=false,opened=false,candidate=program.state.station,original=candidate,press=null,holdTimer=0,suppressClick=0,volumeDrag=null,registered=false,lastFrame=0,smoothedLamp=program.state.on?1:0,knobPower=0,knobVolume=(program.state.volume-.5)*Math.PI*1.5,needleLevel=0,meter=null,screen=null,screenView=null,screenFov=0,screenAspect=0,lastLabel='',returnView='home',openingPointer=null,needleAngle=candidate*2*Math.PI/3,painted='';
  const events=[];const event=(kind,extra={})=>{events.push({kind,at:performance.now(),...extra});if(events.length>256)events.shift()};
  const reduced=()=>matchMedia('(prefers-reduced-motion:reduce)').matches;
  const point=p=>{const v=p.clone().project(a.camera);return {x:(v.x+1)*innerWidth/2,y:(1-v.y)*innerHeight/2,front:v.z<1}};
@@ -265,5 +267,5 @@ export async function createRadio({a,sound,mode}){
     const angle=i*2*Math.PI/3,v=dialPoint.clone().addScaledVector(dialRight,.019*Math.sin(angle));v.y+=.021*Math.cos(angle);return point(v);
    }):null,textures:loadedTextures.map(t=>[t.image.width,t.image.height]),groups:groups.size};
  }
- const api={root,neighbourMoves,descriptor,events,program,frame,openDial,closeDial,get dialOpen(){return opened},get candidate(){return candidate},get focus(){return focus},proof:{}};window.roomRadio=api;program.onChange(()=>{updateLabel();if(!opened)candidate=program.state.station;paintDial()});updateLabel();paintDial();event('ready');return api;
+ const api={root,neighbourMoves,descriptor,events,program,frame,openDial,closeDial,get dialOpen(){return opened},get candidate(){return candidate},get focus(){return focus},proof:{}};window.roomRadio=api;program.onChange(()=>{updateLabel();if(!opened)candidate=program.state.station;paintDial()});updateLabel();paintDial();frame(performance.now());event('ready');return api;
 }
