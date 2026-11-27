@@ -9,11 +9,11 @@ showdate: true
 draft: false
 ---
 
-Six days ago I wrote about [the future of science without human understanding](/blog/science-without-human-understanding/). The thesis was that scientific concepts and theories are lossy compressions of raw measurements, and that models will eventually reason directly over raw records rather than human summaries. That same week, Xinming Tu and Leo Tianlai Chen [showed](https://xinmingtu.cn/blog/2026/claude-opus-5-5-protein-sequences/) that a frontier language model, handed half a protein sequence with no tools and no fine-tuning, could predict the next amino acid. That result triggered an immediate debate in computational biology: are general language models about to replace protein language models?
+Last week, Xinming Tu and Leo Tianlai Chen [showed](https://xinmingtu.cn/blog/2026/claude-opus-5-5-protein-sequences/) that a frontier language model, handed half a protein sequence with no tools and no fine-tuning, could predict the next amino acid. That same week I wrote about [the future of science without human understanding](/blog/science-without-human-understanding/): scientific concepts and theories are lossy compressions of raw measurements, and capable models will eventually reason directly over raw records rather than human summaries. Tu and Chen's result set off an immediate debate in computational biology: are general language models about to replace protein language models?
 
-I wanted to know whether proteins were a fluke or whether the same thing was already happening across all of science. Over the past week I built [RawSci-Bench](https://lab.kejunying.com/rawsci-bench/), **54 raw-record benchmarks plus two post-cutoff controls spanning six scientific domains and 20 measurement modalities**, and ran seven frontier language models across the full matrix with **zero tools, zero code execution and zero fine-tuning**.
+I wanted to know whether proteins were a special case, or whether frontier language models can already reason directly on raw data across the rest of science. Over the past week I built [RawSci-Bench](https://lab.kejunying.com/rawsci-bench/) to test that ability across **six scientific domains and 20 measurement modalities** (biological sequences, molecules and materials, single-cell omics, brain imaging and physiological signals, clinical records, and earth and astronomical systems): **54 raw-record benchmarks plus two post-cutoff controls**, evaluated across seven frontier language models with **zero tools, zero code execution and zero fine-tuning**.
 
-**Proteins are not special.** Across **24,020 scored answers**, general language models are already beating most published domain models on raw scientific data:
+**I was shocked by what came back.** Proteins are not special at all. Across **24,020 scored answers**, general language models are already approaching domain specialists directly on raw scientific data:
 
 - **38 of 49 benchmarks (78%):** a zero-shot frontier LLM outright beats the entry-level published domain specialist.
 - **37 of 47 benchmarks (79%):** a zero-shot LLM matches or beats the median published domain specialist within 95% confidence intervals (**25 of 49** match or beat SOTA; **14** win outright on point estimate).
@@ -21,7 +21,7 @@ I wanted to know whether proteins were a fluke or whether the same thing was alr
 - **95 of 143 record-removal tests drop significantly (0 improve):** removing the raw record collapses performance, backed by two post-cutoff proofs (2026 NEON ecological forecasts and July to November 2026 PDB protein contacts) and RDKit SMILES randomization.
 - **The boundary is perceptual, not scientific:** zero-shot LLMs beat **34 of 36 entry specialists (94%)** on sparse or symbolic records (sequences, SMILES, NMR, MS/MS, single-cell RNA, brain fMRI connectomes), versus **4 of 13 (31%)** on dense waveforms and pixel grids. Yet on **512 by 512 clinical brain tumor MRI**, all four vision models still hit **90.0% to 92.5% accuracy** zero-shot.
 
-You can inspect every benchmark, model, confidence interval and negative control on the [RawSci-Bench explorer](https://lab.kejunying.com/rawsci-bench/).
+You can inspect every benchmark, model, confidence interval and negative control on the [RawSci-Bench explorer](https://lab.kejunying.com/rawsci-bench/), or check the harness, benchmark cards and full score tables on [GitHub](https://github.com/albert-ying/RawSci-Bench).
 
 ![RawSci-Bench interactive specimen showcase comparing seven frontier language models against published entry, median and SOTA specialists across 54 raw-record scientific benchmarks](/blog/general-models-raw-scientific-data/cover.png)
 
