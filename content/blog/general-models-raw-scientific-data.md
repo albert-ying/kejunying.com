@@ -1,5 +1,5 @@
 ---
-title: "LLMs reason directly on raw scientific data, better than most domain expert models"
+title: "LLMs reason directly on raw scientific data, approaching domain expert models"
 date: 2026-11-26
 description: "Across 54 raw-record benchmarks and seven frontier models with zero tools and zero fine-tuning, general language models already beat entry specialists on 38 of 49 tasks and match or beat the median specialist on 37 of 47."
 author: "Kejun Albert Ying"
