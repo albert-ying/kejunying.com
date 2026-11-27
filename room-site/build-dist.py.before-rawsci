@@ -1,0 +1,401 @@
+#!/opt/homebrew/bin/python3
+"""Package installed room pages and their local dependencies without editing site/."""
+
+from collections import Counter, defaultdict, deque
+from datetime import datetime, timezone
+from hashlib import file_digest, sha256
+from html import unescape
+from html.parser import HTMLParser
+from pathlib import Path
+from shutil import copyfile
+from urllib.parse import unquote, urljoin, urlsplit
+import argparse
+import gzip
+import json
+import os
+import re
+import sys
+import tomllib
+
+
+DIST = Path(__file__).resolve().parent
+SITE = DIST.parent.parent / "site"
+EVIDENCE = DIST.parent / "round34-review" / "dist" / "builds"
+PAGE_DIRS = {
+    "about", "blog", "categories", "contact", "credits", "cv", "lab", "media",
+    "news", "papers", "phone", "poetry", "recent", "research", "room", "software",
+    "tags", "talks", "text",
+}
+ROOT_FILES = ("index.html", "404.html", "favicon.ico", "robots.txt",
+              "sitemap.xml", "index.xml", "site.webmanifest")
+SITE_HOSTS = {"kejunying.com", "www.kejunying.com"}
+TEXT_FILE = re.compile(r"\.(?:html?|css|m?js|json|xml|txt|webmanifest|svg)(?:\.gz)?$")
+FILE_PATH = re.compile(
+    r"(?<![\w:/])(/(?:[\w.%~@+!()=-]+/)*[\w.%~@+!()=-]+\."
+    r"(?:avif|bin|css|gif|glb|gz|html?|ico|jpe?g|json|ktx2|m4a|map|m?js|mp[34]|"
+    r"ogg|pdf|png|svg|wasm|webm|webp|woff2?|xml))(?=[^\w.-]|$)", re.I
+)
+JS_IMPORT = re.compile(
+    r"""(?:\b(?:import|export)\s+[^;'"\n]*?\bfrom\s*|\bimport\s*\(\s*|"""
+    r"""\bimport\s*|\bnew\s+(?:URL|Worker|SharedWorker)\(\s*)['"]((?:\.{1,2}/|/)[^'"]+)['"]"""
+)
+BENCH_RELATIVE = re.compile(
+    r"""['"]((?:\.{1,2}/)?[\w%-][\w%./-]*\.(?:bin|css|exr|glb|gz|json|ktx2|"""
+    r"""m?js|meshopt|png|wasm|webp))['"]"""
+)
+CSS_URL = re.compile(r"""\burl\(\s*['"]?([^'"\s)]+)|@import\s*['"]([^'"]+)""", re.I)
+SOURCE_MAP = re.compile(r"sourceMappingURL=([^\s*]+)")
+SKIP_DIRS = frozenset({"backup", "backups", "dev", "evidence", "outdated", "proof",
+                       "test", "tests", "qa", "templates", "node_modules"})
+# These request families use a record key or extension assembled in JavaScript.
+RUNTIME_GLOBS = {
+    "bench-360/assets/r30c/*.ktx2": "runtime builds projector shelf atlas URLs by key",
+    "bench-360/assets/r33b2/*.ktx2": "runtime builds B2 texture URLs by atlas key",
+    "bench-360/assets/r33b2/*.webp": "runtime builds B2 fallback texture URLs by atlas key",
+    "bench-360/assets/r33b2/*.bin.gz": "runtime selects the front or rear B2 geometry",
+    "bench-360/radio/geometry.json.gz": "radio.js fetches compressed geometry",
+    "bench-360/assets/r34s2/rear.meshopt.zst": "runtime fetches the compressed rear geometry (coordinator, 25 Nov 2026: the literal pattern misses .meshopt.zst)",
+    "bench-360/radio/combined.png": "radio.js fetches the radio texture",
+    "bench-360/radio/contact.png": "radio.js fetches the contact texture",
+    "content/papers/*.json": "flat-reader.js and pdf-paper.js load paper keys",
+    "content/surfaces/objects/*/[0-9]*.json": "host requests object and page keys",
+    "content/surfaces/records/*.json": "host requests surface record keys",
+    "bench-360/inscene/catalogues/*.json": "host requests catalogue keys",
+    "bench-360/inscene/specimens/*.webp": "microscope requests specimen keys",
+    "bench-360/inscene/sticky-handwriting-*.png": "host requests a note by index",
+    "vendor/three-0.169.0/addons/libs/basis/basis_transcoder.*": "KTX2 fallback loader",
+}
+MEDIA_TYPES = {
+    ".ktx2": "image/ktx2",
+    ".glb": "model/gltf-binary",
+    ".bin": "application/octet-stream",
+    ".gz": "application/gzip",
+    ".wasm": "application/wasm",
+    ".zst": "application/octet-stream",
+    # The runtime fetches gzip bytes and explicitly decompresses them.
+    ".json.gz": "application/gzip",
+}
+
+
+def eligible(path):
+    return all(
+        not (name.startswith(".") or name.lower() in SKIP_DIRS
+             or name.lower().startswith(("evidence-", "proof-", "backup-"))
+             or name.lower().endswith((".bak", ".backup", ".orig", "~"))
+             or name.lower() in {"auth.json", "tokens", "tokens.json", "keychains"}
+             or ".keychain" in name.lower()
+             or (name.lower().startswith("bench-") and index == 0 and name != "bench-360"))
+        for index, name in enumerate(Path(path).parts)
+    ) and path not in {
+        "bench-360/index.html", "bench-360/fixture.html", "bench-360/integration.html",
+        "bench-360/fixture.js", "bench-360/inscene/test-cards.js",
+    }
+
+
+class HTMLReferences(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.references = []
+
+    def handle_starttag(self, tag, attrs):
+        values = dict(attrs)
+        for key in ("href", "src", "poster", "data-src", "data-href", "data-poster"):
+            if values.get(key):
+                self.references.append(values[key])
+        if values.get("srcset"):
+            self.references.extend(part.split()[0] for part in values["srcset"].split(",") if part.strip())
+        if tag == "meta" and values.get("content"):
+            field = values.get("property") or values.get("name") or ""
+            if re.fullmatch(r"(?:og|twitter):(?:image(?::(?:url|secure_url))?|url)", field):
+                self.references.append(values["content"])
+            if values.get("http-equiv", "").lower() == "refresh":
+                match = re.search(r"\burl\s*=\s*(.*)", values["content"], re.I)
+                if match:
+                    self.references.append(match.group(1).strip("'\042"))
+        if tag == "object" and values.get("data"):
+            self.references.append(values["data"])
+
+    handle_startendtag = handle_starttag
+
+
+def local_path(value, base=""):
+    value = unescape(value).strip()
+    if not value or value[0] in "#?" or any(char in value for char in ("\n", "{", "}", "\\")):
+        return None
+    try:
+        url = urlsplit(urljoin("https://kejunying.com/" + base, value))
+    except ValueError:
+        return None
+    if url.scheme not in {"http", "https"} or url.hostname not in SITE_HOSTS:
+        return None
+    path = unquote(url.path).lstrip("/")
+    if ".." in Path(path).parts:
+        return None
+    if not eligible(path):
+        return None
+    return path
+
+
+def fingerprint(path):
+    with path.open("rb") as file:
+        return file_digest(file, "sha256").hexdigest()
+
+
+def references(path, text):
+    if path.endswith((".html", ".htm", ".xml", ".svg")):
+        parser = HTMLReferences()
+        parser.feed(text)
+        yield from ((value, True) for value in parser.references)
+    if path.endswith(".xml"):
+        for value in re.findall(r"<(?:loc|link)>([^<]+)</(?:loc|link)>", text):
+            yield value, True
+    if path.endswith(".css"):
+        css = [text]
+    elif path.endswith(".html"):
+        css = re.findall(r"<style[^>]*>(.*?)</style>", text, re.I | re.S)
+    else:
+        css = []
+    for style in css:
+        for first, second in CSS_URL.findall(style):
+            yield first or second, True
+    if path == "bench-360/inscene/radio-stations.js":
+        for stem in re.findall(r'"stem":"(/assets/audio/radio/[^"]+)"', text):
+            for suffix in (".ogg", ".m4a"):
+                yield stem + suffix, True
+    for value in JS_IMPORT.findall(text):
+        if not value.endswith("/"):
+            yield value, True
+    for value in SOURCE_MAP.findall(text):
+        yield value, True
+    if path == "bench-360/runtime.bundle.js.gz" or (path.startswith("bench-360/assets/") and path.endswith(".json.gz")):
+        # The bundled runtime resolves its own relative URLs at /bench-360/
+        # and resolves data manifest entries at /bench-360/assets/.
+        text_without_source_geometry = re.sub(r'"source_geometry"\s*:\s*"[^"]+"', "", text)
+        for value in BENCH_RELATIVE.findall(text_without_source_geometry):
+            # The bundled Zs helper appends .gz to its geometry names.
+            if value.endswith((".glb", ".meshopt")):
+                value += ".gz"
+            for prefix in ("bench-360/", "bench-360/assets/"):
+                yield "/" + prefix + value, False
+    # Reachable JSON, HTML inline scripts and gzipped bundles contain URL strings.
+    for value in FILE_PATH.findall(text):
+        yield value, False
+    if path.endswith((".json", ".webmanifest", ".json.gz")):
+        for value in re.findall(r'"((?:https?://(?:www\.)?kejunying\.com)?/[\w.%~/+@=-]*/)"', text):
+            yield value, False
+        if path.endswith(".webmanifest"):
+            for icon in json.loads(text).get("icons", []):
+                yield icon["src"], True
+
+
+def netlify_toml(files):
+    output = ["[build]", '  publish = "."', "",
+              "[build.processing.html]", "  pretty_urls = true", "",
+              "# Keep HTML and unversioned files revalidatable.",
+              "[[headers]]", '  for = "/*"', "  [headers.values]",
+              '    Cache-Control = "public, max-age=0, must-revalidate"', ""]
+    # Exact paths sidestep wildcard depth and overlapping suffix rules.
+    handled = set()
+    for path in sorted(files):
+        suffix = ".json.gz" if path.endswith(".json.gz") else Path(path).suffix
+        if suffix in MEDIA_TYPES:
+            handled.add(suffix)
+            output.extend(("[[headers]]", f"  for = {json.dumps('/' + path, ensure_ascii=False)}",
+                           "  [headers.values]",
+                           f'    Content-Type = "{MEDIA_TYPES[suffix]}"', ""))
+    for suffix in sorted(MEDIA_TYPES.keys() - handled):
+        output.extend(("[[headers]]", f'  for = "/*{suffix}"', "  [headers.values]",
+                       f'    Content-Type = "{MEDIA_TYPES[suffix]}"', ""))
+    return "\n".join(output)
+
+
+def redirects(files, source_rules):
+    shipped = {}
+    mapped = []
+    for origin, target, status in source_rules:
+        if origin.rstrip("/") == target.rstrip("/"):
+            action = "Netlify Pretty URLs"
+        else:
+            # A legacy route can still have its own physical HTML file.
+            forced = (origin.strip("/") + "/index.html") in files or origin.strip("/") in files
+            if forced and not status.endswith("!"):
+                status += "!"
+            shipped[origin] = (target, status)
+            action = "explicit"
+        mapped.append({"from": origin, "to": target, "status": status, "mapping": action})
+    # Track W can supply static phone aliases with a meta refresh. Promote those to
+    # a single HTTP redirect at the edge and keep the HTML for plain static hosts.
+    for path in sorted(p for p in files if p.startswith("phone/") and p.endswith("/index.html")):
+        source = (SITE / path).read_text()
+        match = re.search(r'<meta\b[^>]*http-equiv=["\']refresh["\'][^>]*content=["\'][^"\']*?url\s*=\s*([^"\']+)', source, re.I)
+        if match:
+            origin = "/" + path.removesuffix("index.html")
+            target = unescape(match.group(1)).strip()
+            if target.startswith("/") and not target.startswith("/phone/"):
+                shipped[origin] = (target, "301!")
+                mapped.append({"from": origin, "to": target, "status": "301!", "mapping": "phone HTML alias"})
+    rendered = "# Slash canonicalization uses Netlify Pretty URLs.\n" + "".join(
+        f"{origin} {target} {status}\n" for origin, (target, status) in shipped.items()
+    )
+    return rendered, mapped
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--require-round34", action="store_true",
+                        help="Return nonzero when the Track W install is absent")
+    args = parser.parse_args()
+    queue = deque()
+    reasons = defaultdict(set)
+    missing = defaultdict(set)
+    timestamps = {}
+    source_rules = [line.split() for line in (SITE / "_redirects").read_text().splitlines()
+                    if line.strip() and not line.lstrip().startswith("#")]
+    redirect_sources = {row[0].rstrip("/") for row in source_rules}
+
+    def add(value, why, strict=False, base=""):
+        path = local_path(value, base)
+        if path is None:
+            return
+        # Use directory index files for page URLs, including slashless links.
+        if not path or (SITE / path).is_dir() or path.endswith("/"):
+            path = (path.rstrip("/") + "/index.html").lstrip("/")
+        if not eligible(path):
+            return
+        if not (SITE / path).is_file():
+            if strict and ("/" + path.removesuffix("/index.html").rstrip("/")) not in redirect_sources:
+                missing[path].add(why)
+            return
+        if not reasons[path]:
+            queue.append(path)
+        reasons[path].add(why)
+
+    for root in ROOT_FILES:
+        add("/" + root, "public entry", True)
+    for directory in sorted(PAGE_DIRS):
+        for page in sorted((SITE / directory).rglob("*")):
+            if page.name == "index.html" or page.suffix == ".xml":
+                add("/" + page.relative_to(SITE).as_posix(), "public page or feed")
+    for _, target, _ in source_rules:
+        add(target, "redirect target", True)
+    for pattern, reason in RUNTIME_GLOBS.items():
+        for src in sorted(SITE.glob(pattern)):
+            name = "/" + src.relative_to(SITE).as_posix()
+            add(name, reason)
+            if pattern == "bench-360/assets/r30c/*.ktx2":
+                add(name.removesuffix(".ktx2") + ".webp", "projector shelf atlas fallback", True)
+    plan = "bench-360/load-plan.json.gz"
+    add("/" + plan, "room load plan", True)
+    with gzip.open(SITE / plan, "rt") as stream:
+        entries = json.load(stream)["entries"]
+    for entry in entries:
+        add(entry["url"], plan + " phase " + entry["phase"], True)
+
+    while queue:
+        path = queue.popleft()
+        source = SITE / path
+        timestamps[path] = source.stat().st_mtime_ns
+        if not TEXT_FILE.search(path):
+            continue
+        text = gzip.open(source, "rt").read() if path.endswith(".gz") else source.read_text(errors="replace")
+        for value, strict in references(path, text):
+            add(value, path, strict, base=path)
+
+    # Asset versions recorded before copying detect an install occurring during packaging.
+    for path, mtime in timestamps.items():
+        if (SITE / path).stat().st_mtime_ns != mtime:
+            raise RuntimeError(f"Source changed during traversal: {SITE / path}")
+
+    control = {}
+    control["_redirects"], mappings = redirects(reasons, source_rules)
+    control["netlify.toml"] = netlify_toml(reasons)
+    tomllib.loads(control["netlify.toml"])
+    expected = [
+        SITE / "blog/science-without-human-understanding/index.html",
+        SITE / "blog/index.xml",
+    ]
+    absent = [str(path) for path in expected if not path.is_file()]
+    for path in absent:
+        print(f"Missing Track W input: {path}", file=sys.stderr)
+
+    now = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+    previous = sorted(EVIDENCE.glob("*/inventory.json"))
+    owned = json.loads(previous[-1].read_text())["files"] if previous else {}
+    new = set(reasons) | set(control)
+    source_hash = {path: fingerprint(SITE / path) for path in sorted(reasons)}
+    source_hash.update({path: sha256(text.encode()).hexdigest() for path, text in control.items()})
+    # Rebuilds remove only a prior build's files, and preserve any foreign edit.
+    for path in sorted(new | owned.keys()):
+        dest = DIST / path
+        if dest.is_file():
+            digest = fingerprint(dest)
+            former = owned.get(path, {}).get("sha256")
+            if digest not in {source_hash.get(path), former}:
+                raise RuntimeError(f"Output differs from source and previous build: {dest}")
+
+    for path in sorted(new):
+        dest = DIST / path
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        if dest.is_file() and fingerprint(dest) == source_hash[path]:
+            continue
+        temporary = dest.with_name(f".{dest.name}.{now}.partial")
+        try:
+            if path in control:
+                temporary.write_text(control[path])
+            else:
+                copyfile(SITE / path, temporary)
+            if fingerprint(temporary) != source_hash[path]:
+                raise RuntimeError(f"Source changed while copying: {SITE / path}")
+            os.replace(temporary, dest)
+        finally:
+            temporary.unlink(missing_ok=True)
+    for path in sorted(owned.keys() - new, reverse=True):
+        dest = DIST / path
+        dest.unlink(missing_ok=True)
+        for parent in dest.parents:
+            if parent == DIST:
+                break
+            try:
+                parent.rmdir()
+            except OSError:
+                break
+
+    present = {p.relative_to(DIST).as_posix() for p in DIST.rglob("*") if p.is_file()}
+    unmanaged = sorted(present - new - {Path(__file__).name})
+    files = {
+        path: {"bytes": (DIST / path).stat().st_size, "sha256": source_hash[path],
+               "reasons": sorted(reasons.get(path, []))}
+        for path in sorted(new)
+    }
+    stats = {
+        "file_count": len(files), "site_file_count": len(reasons),
+        "bytes": sum(entry["bytes"] for entry in files.values()),
+        "build_script_bytes": Path(__file__).stat().st_size,
+        "source_install": {path: source_hash.get(path) for path in (
+            "index.html", "blog/index.html", "blog/index.xml", "recent/index.html",
+            "blog/science-without-human-understanding/index.html",
+            "bench-360/runtime.bundle.js.gz", "bench-360/inscene/host.js.gz",
+        )},
+        "counts_by_suffix": Counter(Path(path).suffix for path in files),
+        "largest": sorted(files, key=lambda path: (-files[path]["bytes"], path))[:20],
+        "over_25_MB": [path for path in files if files[path]["bytes"] > 25_000_000],
+        "over_100_MB": [path for path in files if files[path]["bytes"] > 100_000_000],
+        "load_plan_entries": len(entries),
+        "missing": {path: sorted(refs) for path, refs in sorted(missing.items())},
+        "missing_track_w_inputs": absent, "unmanaged_files": unmanaged,
+        "redirects": mappings,
+    }
+    out = EVIDENCE / now
+    out.mkdir(parents=True)
+    (out / "inventory.json").write_text(json.dumps({**stats, "files": files}, indent=2) + "\n")
+    (out / "summary.json").write_text(json.dumps(stats, indent=2) + "\n")
+    print(f"{len(files)} packaged files, {stats['bytes']:,} bytes, "
+          f"{len(missing)} unresolved literal references; {out}")
+    return 1 if unmanaged or (args.require_round34 and absent) else 0
+
+
+if __name__ == "__main__":
+    try:
+        sys.exit(main())
+    except (OSError, RuntimeError, ValueError) as error:
+        sys.exit(f"Release build failed: {error}")

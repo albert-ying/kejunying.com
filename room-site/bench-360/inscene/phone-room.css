@@ -1,0 +1,159 @@
+html[data-phone-room] {
+ --phone-top:max(10px, env(safe-area-inset-top));
+ --phone-bottom:max(8px, env(safe-area-inset-bottom));
+ overflow:hidden;
+}
+html[data-phone-room] body {overflow:hidden}
+html[data-phone-room] canvas[aria-label="Explore the room"],
+html[data-phone-room] #loading-poster,
+html[data-phone-room] #poster {width:100vw;height:100dvh}
+html[data-phone-room] canvas[aria-label="Explore the room"] {touch-action:none}
+html[data-phone-room] #loading-poster {position:fixed;inset:0;object-fit:cover}
+html[data-phone-room] #room-home,
+html[data-phone-room] #room-entry-summary,
+html[data-phone-room] #scene-menu,
+html[data-phone-room] #scene-legend {display:none!important}
+html[data-phone-room] #load:not([hidden]) {display:block}
+html[data-phone-room] #load-body {visibility:hidden}
+html[data-phone-room] #load-text,
+html[data-phone-room] #load-sound {
+ position:fixed;top:auto;bottom:var(--phone-bottom);
+ min-height:44px;display:inline-flex;align-items:center;
+ font:14px/1.2 var(--room-control-face);pointer-events:auto;
+ background:#101718e6;color:var(--room-control-paper);border:1px solid #ece5d54d;
+ padding:0 12px;border-radius:15px;text-decoration:none;
+}
+html[data-phone-room][data-room-loading] #load #load-text {
+ top:auto;left:12px;right:auto;bottom:var(--phone-bottom);
+}
+html[data-phone-room][data-room-loading] #load #load-sound:not([hidden]) {
+ display:inline-flex!important;right:12px;bottom:var(--phone-bottom);
+}
+html[data-phone-room] #load-name {left:12px;top:var(--phone-top);font-size:16px}
+html[data-phone-room] #room-arrival-progress:not([hidden]) {
+ display:block;position:fixed;z-index:25;right:12px;
+ bottom:calc(var(--phone-bottom) + 52px);padding:7px 10px;
+ background:#1d1b18;color:#ead2a5;border:1px solid #ead2a5;
+ border-radius:15px;font:14px/1.2 var(--room-control-face);
+}
+html[data-phone-room] #scene-name {
+ left:12px;top:var(--phone-top);padding:0;font-size:16px;line-height:25px;
+}
+html[data-phone-room] #scene-sections {
+ display:flex;flex-wrap:wrap;justify-content:flex-start;gap:0 4px;
+ position:fixed;left:8px;right:8px;top:calc(var(--phone-top) + 29px);
+ max-width:none;padding:0;background:none;box-shadow:none;
+ font:14px/1.2 var(--room-control-face);
+}
+html[data-phone-room] #scene-sections button {padding:5px 4px;min-height:30px}
+html[data-phone-room]:not([data-inscene]) #scene-sections,
+html[data-phone-room][data-room-loading] #scene-sections {visibility:hidden}
+html[data-phone-room] #scene-controls {
+ position:fixed;left:12px;right:12px;bottom:var(--phone-bottom);
+ justify-content:space-between;gap:5px;z-index:26;
+}
+html[data-phone-room][data-inscene] #scene-controls :is(button,a) {
+ height:auto;min-height:44px;padding:6px 10px;font-size:14px;
+}
+html[data-phone-room] :is(#scene-sound,#load-sound)[data-room-sound] {
+ min-width:44px;padding:6px;justify-content:center;flex:none;
+}
+html[data-phone-room] :is(#scene-sound,#load-sound)[data-room-sound] svg {display:block}
+html[data-phone-room] :is(#scene-sound,#load-sound) [data-sound-label] {display:none}
+html[data-phone-room] #scene-controls :is(#phone-room-back,#scene-text) {
+ flex:none;white-space:nowrap;
+}
+html[data-phone-room] #scene-controls #hint:not([hidden]) {
+ position:fixed;left:12px;bottom:calc(var(--phone-bottom) + 51px);
+ min-width:0;max-width:calc(100vw - 24px);
+}
+html[data-phone-room] #scene-credits,
+html[data-phone-room][data-phone-sheet] #scene-controls #hint,
+html[data-phone-room]:not([data-phone-sheet]) #phone-room-back {display:none!important}
+html[data-phone-room][data-phone-sheet] :is(#scene-sections,#scene-name,.scene-target) {visibility:hidden!important}
+html[data-phone-room][data-phone-sheet] #scene-controls {justify-content:space-between}
+html[data-phone-room] #phone-sheet-backdrop {display:none}
+html[data-phone-room][data-phone-sheet] #phone-sheet-backdrop {
+ display:block;position:fixed;inset:0;z-index:23;background:#000b;cursor:pointer;
+}
+html[data-phone-room] #scene-content-mirror[data-phone-paper]:not(:empty),
+html[data-phone-room] #recent-sheet:not([hidden]) {
+ --phone-paper:#ebe6d9;
+ position:fixed;inset:calc(var(--phone-top) + 5px) 12px calc(var(--phone-bottom) + 52px);
+ width:auto;height:auto;max-width:none;margin:0;z-index:24;
+ background:var(--phone-paper);color:#211d18;box-shadow:0 7px 24px #0008;
+ clip-path:none;pointer-events:auto;opacity:1;
+ font:17px/1.45 'Times New Roman', 'Songti SC',serif;
+ animation:phone-paper-rise .42s cubic-bezier(.45,0,.2,1) both;
+}
+html[data-phone-room] #scene-content-mirror[data-phone-paper="paper"]:not(:empty) {--phone-paper:#f5f3ed}
+html[data-phone-room] #scene-content-mirror[data-phone-paper]:not(:empty) {
+ overflow:auto;overscroll-behavior:contain;padding:28px 16px 20px;
+ overflow-wrap:anywhere;touch-action:pan-y;
+}
+html[data-phone-room] #scene-content-mirror[data-phone-paper]:focus-within * {
+ clip-path:none;pointer-events:auto;
+}
+html[data-phone-room] #phone-sheet-grip {display:none}
+html[data-phone-room][data-phone-sheet] #phone-sheet-grip {
+ display:block;position:fixed;left:12px;right:12px;
+ top:calc(var(--phone-top) + 5px);height:25px;z-index:25;touch-action:none;
+}
+html[data-phone-room] #phone-sheet-grip::before {
+ content:'';display:block;width:32px;height:3px;margin:11px auto 0;
+ background:#796e57;border-radius:99px;pointer-events:none;
+}
+html[data-phone-room] #recent-sheet:not([hidden]) {padding:26px 0 0}
+html[data-phone-room] #recent-reader:not([hidden]) {
+ overflow:auto;overscroll-behavior:contain;padding:0 16px 16px;
+ clip-path:none!important;touch-action:pan-y;
+}
+html[data-phone-room] #recent-scroll-cue {display:none}
+html[data-phone-room] #scene-content-mirror[data-phone-paper] h1 {font-size:1.55em;line-height:1.15;margin:.25em 0 .6em}
+html[data-phone-room] #scene-content-mirror[data-phone-paper] h2 {font-size:1.25em;line-height:1.2;margin:1em 0 .45em}
+html[data-phone-room] #scene-content-mirror[data-phone-paper] :is(a,button) {
+ color:inherit;font:inherit;text-decoration:underline;text-underline-offset:.15em;
+}
+html[data-phone-room] #scene-content-mirror[data-phone-paper] button {
+ border:0;padding:0;background:none;text-align:left;
+}
+html[data-phone-room] #scene-content-mirror[data-phone-paper] figure {margin:1em 0}
+html[data-phone-room] #scene-content-mirror[data-phone-paper] img {display:block;max-width:100%;height:auto}
+html[data-phone-room] #scene-content-mirror[data-phone-paper] table {width:100%;table-layout:fixed}
+html[data-phone-room] #scene-content-mirror[data-phone-paper] nav[aria-label="Notebook index"] {
+ position:sticky;top:0;z-index:1;display:flex;align-items:end;gap:3px;overflow-x:auto;
+ margin-inline:-16px;padding-inline:12px;background:var(--phone-paper);
+ border-bottom:1px solid #796e57;scrollbar-width:none;touch-action:pan-x;
+}
+html[data-phone-room] #scene-content-mirror[data-phone-paper] nav[aria-label="Notebook index"] button {
+ flex:none;min-height:44px;padding:3px 8px 0;white-space:nowrap;text-decoration:none;color:#30271f;
+ font:13px/1.15 var(--room-control-face);background:#d8cfb9;
+ border:1px solid #a29a89;border-bottom:0;border-radius:4px 4px 0 0;
+}
+html[data-phone-room] #scene-content-mirror[data-phone-paper] nav[aria-label="Notebook index"] button[data-stock="poem"] {
+ background:#c3c8b7;
+}
+html[data-phone-room] #scene-content-mirror[data-phone-paper] nav[aria-label="Notebook index"] button[aria-current="true"] {
+ min-height:51px;font-weight:bold;border-color:#796e57;
+}
+@keyframes phone-paper-rise {from {transform:translateY(100dvh)} to {transform:translateY(0)}}
+@media (prefers-reduced-motion:reduce){
+ html[data-phone-room] #scene-content-mirror[data-phone-paper]:not(:empty),
+ html[data-phone-room] #recent-sheet:not([hidden]) {animation:none}
+}
+@media (orientation:portrait) {
+ html[data-phone-room] #welcome-phosphor26 {
+  left:5px!important;top:50%!important;transform:translateY(-50%)!important;
+  width:calc(100% - 10px)!important;height:auto!important;
+  min-height:220px;padding:20px 16px 35px;
+  font-size:15px!important;line-height:1.4!important;
+ }
+ html[data-phone-room] #welcome-phosphor26>div {position:static!important;width:auto!important}
+ html[data-phone-room] #welcome-phosphor26 p {margin:0 0 12px!important}
+ html[data-phone-room] #welcome-phosphor26 p:last-child {margin:0!important}
+ html[data-phone-room] #welcome-phosphor26 [data-welcome-percentage] {bottom:-20px!important}
+ html[data-phone-room] #welcome-phosphor26 #load-hint {
+  position:static!important;min-height:44px;padding:0!important;font-size:15px!important;
+ }
+ html[data-phone-room] #load-welcome {visibility:hidden!important}
+}

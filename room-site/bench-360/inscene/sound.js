@@ -50,9 +50,11 @@ export function createSound({ api } = {}) {
       element.dataset.sound = on ? 'on' : engine?.enabled ? hasGesture()?'ready':'waiting' : 'off';
       const musicOn=on&&(program?.state.on??true);
       element.querySelector('[data-sound-label]').textContent = (musicOn?'Mute music':'Play music')+(musicOn&&program?.playing?' · '+program.title:'');
-      element.querySelector('[data-sound-waves]').style.visibility = on ? 'visible' : 'hidden';
-      element.title = musicOn?'Mute music':'Play music';
-      element.setAttribute('aria-label', element.querySelector('[data-sound-label]').textContent);
+      const state=musicOn?'Mute music':'Play music';
+      const label=window.roomPhone35?state+' · '+(program?.title||music.title):element.querySelector('[data-sound-label]').textContent;
+      element.querySelector('[data-sound-waves]').style.visibility = (window.roomPhone35?musicOn:on) ? 'visible' : 'hidden';
+      element.title = window.roomPhone35?label:state;
+      element.setAttribute('aria-label', label);
     }
     program?.sync();
     for (const fn of listeners) safely('listener', () => fn(on));

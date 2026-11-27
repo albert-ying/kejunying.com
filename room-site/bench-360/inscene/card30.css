@@ -52,3 +52,6 @@
 .card30.paper-b .preprint h2{font-size:36px; padding-bottom:12px}
 .card30.paper-b .preprint .authors{margin:14px 0 0; font:400 18px/1.18 'Courier New',monospace; color:var(--dim)}
 .card30.paper-b .preprint .intro{margin:16px 0 0; font:400 25px/1.15 'Times New Roman',serif}
+.card30.paper-b .words.long-essay{padding:38px 36px 0 34px}
+.card30.paper-b .long-essay h2{font-size:36px; padding-bottom:12px}
+.card30.paper-b .long-essay .intro{margin:16px 0 0; font:400 27px/1.17 'Times New Roman',serif}
