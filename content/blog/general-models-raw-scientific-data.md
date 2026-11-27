@@ -51,7 +51,28 @@ Only 8 of the 46 benchmarks stay below the entry-level published specialist, and
 
 ![Task inspector for NMRArena showing native-unit 95% confidence intervals against entry, median and SOTA published specialists](/blog/general-models-raw-scientific-data/inspector.png)
 
-## 3. Two post-cutoff proofs and five channel ablations
+## 3. Intrinsic data reasoning versus pretraining literature
+
+A fair question arises as soon as you see frontier language models beating domain specialists: how much of this comes from intrinsic reasoning inside the raw record, and how much comes from recognizing familiar biological or clinical entities that appeared in pretraining literature?
+
+To answer that honestly instead of lumping all 51 benchmarks together, I grouped every task into four mechanistic regimes by whether pretraining literature can plausibly help on the input:
+
+| Reasoning regime | Tasks | Best vs SOTA (median) | Beat entry | Beat median (95% CI) | Beat SOTA pt (95% CI) |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **1A. Intrinsic signal: numeric, spectral and synthetic sequences** | 10 (+2 post-cutoff) | 0.884 | 8 / 8 (100%) | 7 / 8 (8 / 8) | 3 / 10 (6 / 10) |
+| **2. Symbolic structure and physical or chemical rules** | 16 | 0.786 | 14 / 15 (93%) | 6 / 14 (12 / 14) | 4 / 16 (6 / 16) |
+| **3. Entity- and literature-coupled records** | 12 | 1.035 | 11 / 12 (92%) | 6 / 11 (11 / 11) | 7 / 12 (10 / 12) |
+| **1B. Intrinsic signal: dense waveforms and raw images** | 13 | 0.689 | 3 / 11 (27%) | 1 / 11 (4 / 11) | 0 / 13 (1 / 13) |
+
+That split clarifies two things at once.
+
+First, **pretraining entity and literature knowledge genuinely boosts scores on Regime 3** (12 tasks, median standing 1.035 of SOTA, accounting for 7 of the 14 SOTA point-estimate wins). These are raw records whose tokens identify named human genes (`scGPT hPancreas`, `scGPT MS`, `scGPT Myeloid`), named clinical ICU labs (`PhysioNet 2012`), or well-characterized proteins and families (`CARE enzyme class`, `ProteinShake`, `CAFA3`, `Bernett PPI`, `ProteinGym clinical`, `ProteinGym substitutions`, `PEER GFP`, `FLIP Meltome`). Here a frontier model can fuse raw-record reading with biomedical priors learned from papers and databases, and on `CARE` our memory check explicitly catches Claude and Gemini recalling exact UniProt accessions for 7 of 40 sequences.
+
+Second, **removing every entity- or literature-coupled task does not make the effect disappear.** On **Regime 1A** alone (10 pure intrinsic benchmarks with zero gene, protein or drug names: `NMRArena` 1H/13C peak lists, `Nine-Species` yeast MS/MS b/y-ion ladders, `MassSpecGym`, `M1 yearly`, `FluSight`, `German COVID nowcast`, `Tu and Chen` unstudied microbial proteins, `EternaBench` synthetic RNAs, `Tsuboyama` mini-protein unfolding stability and `Stargazer` stellar spectra, plus the two post-cutoff controls), the best frontier model still beats the entry published specialist on **8 of 8 (100%)**, beats the median published specialist on **7 of 8 (88%; 8 of 8 within 95% CI)**, reaches **0.884** median standing against SOTA, and beats SOTA outright on `NMRArena`, `M1 yearly` and `FluSight`. Similarly, on **Regime 2** (16 symbolic-structure tasks with no biological entity names: SMILES reactions, atom mapping, ADMET graphs, crystal CIFs and unlabeled DNA/RNA strings), frontier models beat entry specialists on **14 of 15 (93%)** and match or beat median specialists on **12 of 14 (86%)**, and `USPTO-MIT` holds steady under full RDKit SMILES randomization.
+
+By contrast, **Regime 1B** (13 dense continuous waveform and raw pixel-grid benchmarks: ECG, multi-channel EEG, IMU, medical scans, galaxy morphology and satellite imagery) is the only regime where frontier models systematically stall (0 of 13 SOTA wins, 3 of 11 entry wins, 0.689 median standing). What separates wins from losses is not whether the task appears in biomedical text; it is whether the raw signal survives tokenization intact.
+
+## 4. Two post-cutoff proofs and five channel ablations
 
 Any strong score on public benchmarks raises a fair objection: memorization. Stripping dataset names does not guarantee a model never saw a sequence or reaction during pretraining. Two strictly post-cutoff controls and five paired channel ablations test that directly.
 
@@ -69,7 +90,7 @@ Five paired channel ablations on identical 40-unit samples separate genuine scie
 
 Those negative controls matter as much as the wins. A benchmark that cannot tell signal reading apart from identifier recall or header shortcuts cannot tell us what a model actually learned.
 
-## 4. The dense-signal wall points straight to the adapter
+## 5. The dense-signal wall points straight to the adapter
 
 Look across all 51 benchmarks and one clean structural boundary separates wins from losses. Whenever a domain specialist recovers at least 70% skill above baseline, the specialist stays ahead on 24 of 34 tasks, and every wide gap shares the same root cause: dense continuous waveforms, pixel grids or residue-aligned coordinate fields that plain text or generic vision patches break apart.
 
@@ -79,7 +100,7 @@ Medical and scientific imaging shows the same adapter ceiling on exact same-unit
 
 Meanwhile, the reasoning backbone itself is moving fast. Across the 13 shared v2 tasks completed across five Claude Opus generations (4.5 through 5.5), median skill climbed from 0.093 to 0.492, and Claude Fable 5.2 pushes the full 51-task median to 0.526 while running faster per call (6.9 seconds median latency vs 8.5 seconds for Opus 5.5). Across 14 shared tasks, GPT Sol climbed from 0.217 (5.6) to 0.417 (6.2). Test-time compute also pays off heavily: Gemini 4 Neon spends a median of 5,486.5 output tokens (59.1 seconds per call) compared with 449.5 tokens for Claude Fable 5.2 and 218.0 for GPT-6.2 Sol, driving its breakthroughs on NMR structure elucidation, Nine-Species peptide MS/MS and post-cutoff protein contacts.
 
-## 5. Every domain specialist with the right adapter
+## 6. Every domain specialist with the right adapter
 
 That returns us to the question sweeping computational biology. People are asking whether general language models will absorb protein language models only because amino-acid strings already look like text, so the overlap showed up there first.
 
