@@ -53,24 +53,34 @@ Only 8 of the 46 benchmarks stay below the entry-level published specialist, and
 
 ## 3. Intrinsic data reasoning versus pretraining literature
 
-A fair question arises as soon as you see frontier language models beating domain specialists: how much of this comes from intrinsic reasoning inside the raw record, and how much comes from recognizing familiar biological or clinical entities that appeared in pretraining literature?
+A fair question arises as soon as you see frontier language models beating domain specialists: how much of this comes from intrinsic reasoning inside the raw record, and how much comes from recognizing familiar biological entities or applying textbook rules from pretraining corpora?
 
-To answer that honestly instead of lumping all 51 benchmarks together, I grouped every task into four mechanistic regimes by whether pretraining literature can plausibly help on the input:
+Answering that cleanly requires separating two orthogonal axes instead of mixing them into one list: **knowledge source** (how much pretraining literature or entity knowledge could plausibly help) and **input channel** (whether the raw signal enters as discrete tokens or as dense continuous waveforms and pixel grids).
 
-| Reasoning regime | Tasks | Best vs SOTA (median) | Beat entry | Beat median (95% CI) | Beat SOTA pt (95% CI) |
+### Axis 1: Knowledge source across all 51 benchmarks
+
+| Knowledge regime | Tasks | Best vs SOTA (median) | Beat entry | Beat median (95% CI) | Beat SOTA pt (95% CI) |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **1A. Intrinsic signal: numeric, spectral and synthetic sequences** | 10 (+2 post-cutoff) | 0.884 | 8 / 8 (100%) | 7 / 8 (8 / 8) | 3 / 10 (6 / 10) |
-| **2. Symbolic structure and physical or chemical rules** | 16 | 0.786 | 14 / 15 (93%) | 6 / 14 (12 / 14) | 4 / 16 (6 / 16) |
+| **1. Zero-entity / de novo signal (all)** | 22 (+2 post-cutoff) | 0.701 | 9 / 18 (50%) | 5 / 17 (9 / 17) | 1 / 22 (6 / 22) |
+| *Sparse / token-native zero-entity subset* | 9 (+2 post-cutoff) | 0.733 | 6 / 7 (86%) | 4 / 6 (5 / 6) | 1 / 9 (5 / 9) |
+| *Dense waveform and raw image zero-entity subset* | 13 | 0.689 | 3 / 11 (27%) | 1 / 11 (4 / 11) | 0 / 13 (1 / 13) |
+| **2. Domain rules and structural priors** | 17 | 0.911 | 16 / 16 (100%) | 9 / 16 (15 / 16) | 6 / 17 (7 / 17) |
 | **3. Entity- and literature-coupled records** | 12 | 1.035 | 11 / 12 (92%) | 6 / 11 (11 / 11) | 7 / 12 (10 / 12) |
-| **1B. Intrinsic signal: dense waveforms and raw images** | 13 | 0.689 | 3 / 11 (27%) | 1 / 11 (4 / 11) | 0 / 13 (1 / 13) |
 
-That split clarifies two things at once.
+### Axis 2: Input channel across all 51 benchmarks
 
-First, **pretraining entity and literature knowledge genuinely boosts scores on Regime 3** (12 tasks, median standing 1.035 of SOTA, accounting for 7 of the 14 SOTA point-estimate wins). These are raw records whose tokens identify named human genes (`scGPT hPancreas`, `scGPT MS`, `scGPT Myeloid`), named clinical ICU labs (`PhysioNet 2012`), or well-characterized proteins and families (`CARE enzyme class`, `ProteinShake`, `CAFA3`, `Bernett PPI`, `ProteinGym clinical`, `ProteinGym substitutions`, `PEER GFP`, `FLIP Meltome`). Here a frontier model can fuse raw-record reading with biomedical priors learned from papers and databases, and on `CARE` our memory check explicitly catches Claude and Gemini recalling exact UniProt accessions for 7 of 40 sequences.
+| Input channel | Tasks | Best vs SOTA (median) | Beat entry | Beat median (95% CI) | Beat SOTA pt (95% CI) |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Sparse, discrete or symbolic tokens** | 38 | 0.852 | 33 / 35 (94%) | 19 / 33 (31 / 33) | 14 / 38 (22 / 38) |
+| **Dense continuous waveforms and raw images** | 13 | 0.689 | 3 / 11 (27%) | 1 / 11 (4 / 11) | 0 / 13 (1 / 13) |
 
-Second, **removing every entity- or literature-coupled task does not make the effect disappear.** On **Regime 1A** alone (10 pure intrinsic benchmarks with zero gene, protein or drug names: `NMRArena` 1H/13C peak lists, `Nine-Species` yeast MS/MS b/y-ion ladders, `MassSpecGym`, `M1 yearly`, `FluSight`, `German COVID nowcast`, `Tu and Chen` unstudied microbial proteins, `EternaBench` synthetic RNAs, `Tsuboyama` mini-protein unfolding stability and `Stargazer` stellar spectra, plus the two post-cutoff controls), the best frontier model still beats the entry published specialist on **8 of 8 (100%)**, beats the median published specialist on **7 of 8 (88%; 8 of 8 within 95% CI)**, reaches **0.884** median standing against SOTA, and beats SOTA outright on `NMRArena`, `M1 yearly` and `FluSight`. Similarly, on **Regime 2** (16 symbolic-structure tasks with no biological entity names: SMILES reactions, atom mapping, ADMET graphs, crystal CIFs and unlabeled DNA/RNA strings), frontier models beat entry specialists on **14 of 15 (93%)** and match or beat median specialists on **12 of 14 (86%)**, and `USPTO-MIT` holds steady under full RDKit SMILES randomization.
+Separating those two axes makes both effects unmistakable without hiding the hard tasks.
 
-By contrast, **Regime 1B** (13 dense continuous waveform and raw pixel-grid benchmarks: ECG, multi-channel EEG, IMU, medical scans, galaxy morphology and satellite imagery) is the only regime where frontier models systematically stall (0 of 13 SOTA wins, 3 of 11 entry wins, 0.689 median standing). What separates wins from losses is not whether the task appears in biomedical text; it is whether the raw signal survives tokenization intact.
+First, **there is a real knowledge-source gradient (0.701 to 0.911 to 1.035 median standing vs SOTA).** Pretraining entity and biomedical literature knowledge clearly helps on **Group 3** (12 tasks: 3 named-gene `scGPT` benchmarks, named-variable `PhysioNet 2012` ICU records, and 8 well-studied protein tasks including `CARE`, `ProteinShake`, `CAFA3`, `Bernett PPI`, `ProteinGym`, `PEER GFP` and `FLIP Meltome`), accounting for 7 of the 14 SOTA point-estimate wins. On **Group 2** (17 tasks: `NMRArena` spectroscopy, organic reactions, 5 small-molecule SMILES tasks, 3 crystal CIF tasks, classical `ArchiveII` ncRNA, `CB513` secondary structure, `Tsuboyama` mini-protein unfolding, plus `FluSight` and `German COVID` which carry real calendar dates and locations), models apply textbook physical, chemical or epidemiological rules directly to the raw record, beating 16 of 16 entry specialists and matching or beating 15 of 16 median specialists. Here `USPTO-MIT` is verified invariant under full RDKit SMILES randomization, whereas possible overlap with public PubChem compounds, Rfam families or historical seasons has not yet been randomized out on TDC, crystals, ArchiveII or surveillance forecasting.
+
+Second, **even on Group 1 (22 zero-entity tasks where no named gene, drug, date or classic literature family can answer the item), intrinsic signal reading survives cleanly whenever tokenization preserves the signal.** Across all 22 zero-entity tasks combined, the overall rate looks modest (9 of 18 entry, 5 of 17 median) only because 13 of those 22 tasks are dense waveforms and raw images. Look at the 9 sparse zero-entity tasks (anonymous `M1` annual series, `Nine-Species` yeast MS/MS b/y-ion ladders, `MassSpecGym`, `Stargazer`, synthetic `EternaBench` RNA, unlabeled DNA in `DeepSTARR`, `Mouse enhancers` and `GUE`, plus `Tu and Chen` unstudied microbial proteins where Claude draws on raw sequence pretraining rather than papers): frontier models still beat **6 of 7 entry specialists (86%)**, match or beat **5 of 6 median specialists (83%)**, and match or beat **5 of 9 SOTA specialists within 95% CI**, backed up by the two strictly post-cutoff controls (`NEON` water temperature and `PDB` long-range protein contacts).
+
+Third, **Axis 2 isolates where frontier models systematically fail.** Every single SOTA point-estimate win (14 of 14) and 33 of 35 entry-specialist wins (94%) occur on sparse, discrete or symbolic inputs. On the 13 dense waveform and raw image tasks, SOTA wins drop to 0 of 13 and entry wins drop to 3 of 11 (27%). Pretraining literature raises the ceiling on named biomedical tasks, but the wall separating wins from losses is perceptual encoding.
 
 ## 4. Two post-cutoff proofs and five channel ablations
 
