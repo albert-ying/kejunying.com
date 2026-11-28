@@ -26,9 +26,9 @@ The paper is here: [**A benchmark of general language models on raw scientific r
 
 You can inspect every benchmark, model, interval and negative control on the [RawSci-Bench explorer](https://albert-ying.github.io/RawSci-Bench/), and check the harness, benchmark cards and score tables on [GitHub](https://github.com/albert-ying/RawSci-Bench).
 
-![Figure 1 of the paper: how a specialist benchmark becomes a test for a general language model, the controls on the record, and the 54 benchmarks by domain and record class](/blog/general-models-raw-scientific-data/fig1.png)
+![One NMR test unit from the RawSci-Bench explorer: the paired peak lists, the question, and the scores of the published NMR models and the three best language models](/blog/general-models-raw-scientific-data/site-nmr-example.png)
 
-*Figure 1 of the paper. A benchmark built for specialist models keeps its test split, answer key and scorer; the language model receives the raw record of each test unit in one call without tools (a). Controls remove, replace or transform the record, or use data measured after training (b). The 54 benchmarks by domain and record class (c).*
+*One test unit from the [explorer](https://albert-ying.github.io/RawSci-Bench/). The paired ¹H and ¹³C peak lists of one molecule go to each model in a single call, and the answers are scored against the four published NMR models.*
 
 ## 1. Fifty-four raw scientific benchmarks without tools
 
@@ -40,15 +40,19 @@ The 54 benchmarks cover six domains: biological sequences (15 tasks), molecules 
 
 Skill rescales each metric so that the trivial baseline is 0 and the best possible value is 1. **On the 45 text benchmarks all seven took, Claude Fable 5.2 and Gemini 4 Neon lead.** Claude Fable 5.2 reaches a median skill of **0.526** and Gemini 4 Neon **0.500**. Claude Opus 5.5 follows at 0.442, ahead of Gemini 4 Hydrogen (0.414), GPT-6.2 Astra (0.370), GPT-6.2 Sol (0.351) and Gemini 3.8 Flash (0.333). Across all 54 benchmarks, Claude Fable 5.2 reaches a median skill of **0.522** and its interval clears the baseline on 42 of 51 benchmarks. The other three are Claude Opus 5.5 at 0.441 (36 of 51), GPT-6.2 Astra at 0.405 (35 of 51) and GPT-6.2 Sol at 0.400 (35 of 51). **Removing the raw record lowers the score on 95 of 143 paired comparisons** across Claude Opus 5.5 (35 of 51), GPT-6.2 Sol (29 of 48) and Gemini 4 Neon (31 of 44), and raises it on none.
 
+![Record removal for three models across all benchmarks: black squares mark benchmarks where the score fell without the record](/blog/general-models-raw-scientific-data/site-record-removal.png)
+
+*From the explorer: one square per benchmark and model. Black means the score fell when the record was removed from the prompt; none rose.*
+
 ## 2. Ranking among the published specialists
 
 Comparing a zero-shot model only with the winning leaderboard entry hides how science works. **Most labs do not deploy last month's winning ensemble; they train a standard published model** such as a GCN, CNN, ResNet, LSTM, ESM-1v, DeepNovo or a classical RNA folder. So we placed each model's score in the full list of published specialists of its benchmark, on the same split and metric, and counted how many of them it equals or beats.
 
 **Taking the best of the seven models on each benchmark, it equals or beats every published specialist on 14 of 48, at least half of them on 20, and at least one on 34.** On the remaining 14 it beats none. Across all 48 lists it equals or beats **903 of the 1,667 published specialist scores**. One model at a time, **Claude Fable 5.2 alone beats every specialist on 12 benchmarks, at least half on 19 and at least one on 33**. Gemini 4 Neon does so on 10, 14 and 26 of its 41 text benchmarks, and the small Gemini 3.8 Flash still beats at least one specialist on 21 of 41.
 
-![Figure 2 of the paper: skill of the seven models on each benchmark against the published specialists, and the share of specialists each model matches or exceeds](/blog/general-models-raw-scientific-data/fig2.png)
+![Published specialist range on each of the 48 benchmarks with the best of seven language models, grouped by the share of specialists it equals or beats](/blog/general-models-raw-scientific-data/site-specialist-range.png)
 
-*Figure 2 of the paper. Each row is a benchmark; grey ticks are the published specialists and coloured marks the seven models (b). The heat map gives the share of specialists each model equals or beats (c), and the bars count benchmarks by that share (d).*
+*The 48 benchmarks with a published list, from the explorer. Each grey bar spans the published specialists of one benchmark, weakest to strongest, and the dot is the best of the seven language models. Benchmarks are grouped by the share of specialists that model equals or beats.*
 
 Here is what that looks like on concrete benchmarks:
 
@@ -60,6 +64,10 @@ Here is what that looks like on concrete benchmarks:
 - **RNA secondary structure (ArchiveII):** **Gemini 4 Neon (0.679 F1) and Claude Fable 5.2 (0.631)** rank above 6 of 10 published folding methods. BPfold leads at 0.820.
 - **Forecasting:** On the M1 annual series, **Claude Opus 5.5 (MASE 2.37) is more accurate than all 40 published forecasters**, including a fine-tuned TimesFM (3.28).
 - **Without a comparable list:** On brain tumour MRI, **all four vision models classify meningioma, glioma and pituitary tumour at 90.0% to 92.5%**, against 45.0% with the image removed. On yeast tandem mass spectra, **Gemini 4 Neon decodes 65.0% of peptides exactly**. Published specialists on both datasets used other splits or protocols, so neither enters the ranking.
+
+![NMR peak lists, the structure proposed by Claude Fable 5.2 and the answer key, with right and wrong answers for each model on 40 molecules](/blog/general-models-raw-scientific-data/panel-nmr-answer.png)
+
+*Figure 3c of the paper. The ¹H and ¹³C peaks of one molecule (left), the structure Claude Fable 5.2 proposed (rust) and the answer key (black); numbers tie each fragment to its peaks. The strip on the right marks every model right (filled) or wrong (open) on the 40 molecules.*
 
 **On 14 of the 48 benchmarks the best model beats no published specialist.** Ten of them are dense waveforms or images: 12-lead ECG, three EEG tasks, smartphone motion sensors, blood cell and histology microscopy, abdominal CT, chest X-ray and satellite land use. The other four are sparse: human core promoters, fly enhancer activity, protein unfolding free energy and stellar radial velocities. Two of those four have only one published specialist.
 
@@ -86,6 +94,10 @@ Answering that needs two separate axes. One is **knowledge source**: how much li
 | **Sparse, discrete or symbolic tokens** | 36 | 14 | 20 | 32 | 0.68 |
 | **Dense continuous waveforms and images** | 12 | 0 | 0 | 2 | 0.00 |
 
+![How a SMILES string, an ECG and an image reach a language model, and the share of specialists the best model matches on each benchmark by knowledge source and record class](/blog/general-models-raw-scientific-data/panel-sparse-dense.png)
+
+*Figure 5a,b of the paper. A SMILES string reaches the model as written, an ECG as 12,000 numbers and an image as patches (a). The share of published specialists the best model equals or beats on each benchmark, by knowledge source and record class (b).*
+
 Separating the two axes makes both effects visible.
 
 **First, pretraining literature raises the ceiling.** The median share of specialists beaten climbs from 0 on records with no named entity to 0.49 with domain rules and 1.00 with named entities. On the 12 named-entity benchmarks (three single-cell annotation tasks with gene names, ICU records with named variables, and eight well-studied protein tasks), the best model beats at least one specialist on all 12 and every specialist on 7. On the 16 domain-rule benchmarks (NMR spectroscopy, reactions, SMILES property tasks, crystals, RNA and protein structure, and the COVID-19 nowcast), models apply physical, chemical and epidemiological rules to the record, beating at least one specialist on 15. Reaction prediction holds up under full RDKit SMILES randomization (section 4). Overlap with public compounds, RNA families and past seasons has not yet been randomized out on the property, crystal, RNA and surveillance tasks.
@@ -102,9 +114,9 @@ Any strong score on a public benchmark invites an obvious objection: memorizatio
 
 **Second, on 40 single-chain proteins deposited in the Protein Data Bank between July and November 2026, all three models predict sparse, high-precision long-range Cβ contacts.** The test counts contacts with a sequence separation of at least 24 residues: 11,017 contacts, a base rate of 1.56%, and 2.9% for a sequence-blind rule. **Claude Opus 5.5 reaches 39.2% precision** (217 of 554 pairs correct), **Gemini 4 Neon 31.3%** (975 of 3,111; top-L/5 precision 31.4%) and **GPT-6.2 Sol 25.5%** (117 of 458). Shuffling each chain while keeping its length and composition drops all three to chance (1.84%, 2.73% and 1.89%). We compared each chain with every PDB structure from before July 2026 at 80% sequence identity, which gives 27 novel chains and 13 with close homologues. **Every model scores slightly higher on the 27 novel chains.**
 
-![Figure 4 of the paper: scores with and without the record on every benchmark, the identifier-only and rewritten-record controls, and the two tests on data recorded after the training cutoffs](/blog/general-models-raw-scientific-data/fig4.png)
+![Water-temperature forecasts made after the training cutoffs: three language models against three statistical baselines](/blog/general-models-raw-scientific-data/site-water-temperature.png)
 
-*Figure 4 of the paper. Skill with and without the record on every benchmark for three models (b), recall from identifiers alone (d), rewritten or partly removed records (e, f), and the two tests on data recorded after the training cutoffs (g to k).*
+*From the explorer: forecast error on the 40 NEON windows measured after every model's training cutoff.*
 
 Five paired channel ablations on the same 40-unit samples separate signal reading from shortcuts:
 
@@ -124,9 +136,9 @@ Where specialists stay ahead, the record is almost always a dense continuous wav
 
 **Medical and scientific imaging splits by resolution.** On **512 by 512 clinical brain tumour MRI**, all four vision models are **90.0% to 92.5%** accurate. On 28 by 28 medical scans and on specialized microscopy and remote sensing, the gap returns at once. On chest X-ray pneumonia the best model reaches 0.807 AUROC against 0.942 for the weakest published specialist. Blood cell microscopy scores 0.450 against 0.878, abdominal CT 0.375 against 0.762, histology 0.840 against 0.934 and satellite land use 0.775 against 0.941. Dermoscopy (0.724 balanced accuracy, above 100 of 340 challenge entries) and galaxy morphology (0.650, above 43 of 100) are the two image tasks where the best model beats any specialist. Crystal and activity-cliff tasks, though written as text, stay low too. Crystal stability reaches 0.364 F1 against 0.941 for the best of 57 published models, formation energy 0.143 eV per atom against 0.027, and activity cliffs 1.26 RMSE against 0.82. Stellar radial velocities pass at 20% against 95% for the classical pipeline.
 
-![Figure 5 of the paper: how records reach the model, the share of specialists matched on sparse and dense benchmarks, every waveform and image benchmark against its specialists, and scaling across model generations](/blog/general-models-raw-scientific-data/fig5.png)
+![Every waveform and image benchmark with one record each, the published specialists and the seven language models](/blog/general-models-raw-scientific-data/panel-waveforms-images.png)
 
-*Figure 5 of the paper. The same model reads a SMILES string, an ECG written as numbers and an image cut into patches (a). Sparse records reach the upper half of the specialists on 20 of 36 benchmarks, dense ones on none of 12 (b, c). Each waveform and image benchmark against its published specialists (d), skill by record length and image size (e, f), and scaling across model generations (g).*
+*Figure 5d of the paper. Every waveform and image benchmark, with one record of each (left empty where the record may not be redistributed). Grey dashes are the published specialists, coloured marks the seven models.*
 
 **Meanwhile the general backbone is improving fast.** On 13 benchmarks shared by five Claude Opus generations (4.5 to 5.5), **the median skill rose from 0.093 to 0.492**. Claude Fable 5.2 reaches 0.57 on the same 13 while answering faster (7.0 seconds median latency against 8.4 for Opus 5.5). On 14 shared benchmarks, GPT Sol rose from 0.217 (5.6) to 0.417 (6.2). The models also spend very different amounts of compute. Gemini 4 Neon uses a median of 5,297 output tokens and 58.7 seconds per call, against 452 tokens for Claude Fable 5.2 and 198.5 for GPT-6.2 Sol.
 
